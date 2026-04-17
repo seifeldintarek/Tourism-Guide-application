@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter_application_1/screens/login/login.dart';
 
 class AppRoot extends StatelessWidget {
   const AppRoot({super.key});
@@ -8,7 +8,8 @@ class AppRoot extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(body: Center(child: Text('Hello World!'))),
+      theme: ThemeData(useMaterial3: true),
+      home: Login(),
     );
   }
 }
