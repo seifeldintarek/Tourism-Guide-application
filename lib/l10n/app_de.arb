@@ -1,0 +1,314 @@
+{
+  "@@locale": "de",
+  "@@context": "AppTranslations",
+
+  "signInToYourJournal": "Melde dich bei deinem Tagebuch an",
+  "@signInToYourJournal": {
+    "description": "Sentence: Header for the sign-in form."
+  },
+  "welcomeBackExplorer": "Willkommen zurück, Entdecker",
+  "@welcomeBackExplorer": {
+    "description": "Sentence: Greeting message."
+  },
+  "emailAddress": "E-Mail-Adresse",
+  "@emailAddress": {
+    "description": "Noun/Word: Used as a label for the email input field."
+  },
+  "emailHint": "z. B. journal@archive.com",
+  "@emailHint": {
+    "description": "Sentence: Placeholder hint inside the email input field."
+  },
+  "password": "Passwort",
+  "@password": {
+    "description": "Noun/Word: Used as a label for the password input field."
+  },
+  "continueJourney": "Reise fortsetzen",
+  "@continueJourney": {
+    "description": "Action Phrase: Button text to submit the sign-in form."
+  },
+  "forgotPassword": "Passwort vergessen?",
+  "@forgotPassword": {
+    "description": "Sentence/Question: Link for password recovery."
+  },
+  "or": "oder",
+  "@or": {
+    "description": "Word: Divider text."
+  },
+  "signInWithGoogle": "Mit Google anmelden",
+  "@signInWithGoogle": {
+    "description": "Action Phrase: Button text for Google OAuth."
+  },
+  "newHere": "Neu hier?",
+  "@newHere": {
+    "description": "Sentence/Question: Prompt asking if the user needs to register."
+  },
+  "createAnAccount": "Konto erstellen",
+  "@createAnAccount": {
+    "description": "Action Phrase: Link to navigate to the registration page."
+  },
+  "tellUsAboutYourself": "Erzähl uns von dir",
+  "@tellUsAboutYourself": {
+    "description": "Sentence: Header for the sign-up form."
+  },
+  "firstName": "Vorname",
+  "@firstName": {
+    "description": "Noun Phrase: Label for the first name input field."
+  },
+  "lastName": "Nachname",
+  "@lastName": {
+    "description": "Noun Phrase: Label for the last name input field."
+  },
+  "createPassword": "Passwort erstellen",
+  "@createPassword": {
+    "description": "Action Phrase: Label for the new password input field."
+  },
+  "confirmPassword": "Passwort bestätigen",
+  "@confirmPassword": {
+    "description": "Action Phrase: Label for the confirm password input field."
+  },
+  "language": "Sprache",
+  "@language": {
+    "description": "Noun/Word: Label for the language dropdown."
+  },
+  "currency": "Währung",
+  "@currency": {
+    "description": "Noun/Word: Label for the currency dropdown."
+  },
+  "agreeToTermsPrefix": "Mit der Kontoerstellung akzeptiere ich die ",
+  "@agreeToTermsPrefix": {
+    "description": "Sentence fragment: The beginning of the checkbox agreement text. Left a trailing space for RichText merging."
+  },
+  "termsOfService": "Nutzungsbedingungen",
+  "@termsOfService": {
+    "description": "Noun Phrase: Clickable Terms of Service link."
+  },
+  "and": " und die ",
+  "@and": {
+    "description": "Word: Conjunction in the agreement text. Includes padding spaces."
+  },
+  "privacyPolicy": "Datenschutzrichtlinie",
+  "@privacyPolicy": {
+    "description": "Noun Phrase: Clickable Privacy Policy link."
+  },
+  "alreadyAMember": "Bereits Mitglied?",
+  "@alreadyAMember": {
+    "description": "Sentence/Question: Prompt asking if the user already has an account."
+  },
+  "signIn": "Anmelden",
+  "@signIn": {
+    "description": "Action Phrase: Link to navigate back to the login page."
+  },
+  "curatedJourneys": "KURATIERTE REISEN",
+  "@curatedJourneys": {
+    "description": "Small overline text above the main title"
+  },
+  "exploreTheCollections": "Entdecke die Kollektionen",
+  "@exploreTheCollections": {
+    "description": "Main title on the home screen (Sentence)"
+  },
+  "searchDestination": "Reiseziel suchen...",
+  "@searchDestination": {
+    "description": "Placeholder text in the search bar (Sentence)"
+  },
+  "recentlyViewed": "Zuletzt angesehen",
+  "@recentlyViewed": {
+    "description": "Section title for recently viewed items (Phrase)"
+  },
+  "savedPlaces": "Gespeicherte Orte",
+  "@savedPlaces": {
+    "description": "App bar title and section title (Phrase)"
+  },
+  "explorer": "Entdecker",
+  "@explorer": {
+    "description": "User title or subtitle (Word)"
+  },
+  "visited": "BESUCHT",
+  "@visited": {
+    "description": "Label for number of visited places (Word)"
+  },
+  "saved": "GESPEICHERT",
+  "@saved": {
+    "description": "Label for number of saved places (Word)"
+  },
+  "reviews": "BEWERTUNGEN",
+  "@reviews": {
+    "description": "Label for number of reviews (Word)"
+  },
+  "viewAll": "ALLE ANSEHEN",
+  "@viewAll": {
+    "description": "Button text to see all items in a list (Phrase)"
+  },
+  "historicSite": "HISTORISCHE STÄTTE",
+  "@historicSite": {
+    "description": "Category tag for a place (Phrase)"
+  },
+  "historicMuseum": "HISTORISCHES MUSEUM",
+  "@historicMuseum": {
+    "description": "Category tag for a museum (Phrase)"
+  },
+  "nature": "NATUR",
+  "@nature": {
+    "description": "Category tag for natural places (Word)"
+  },
+  "wadiElRayan": "Wadi El Rayan",
+  "elFayoumEgypt": "Fayyum, Ägypten",
+  "saltLake": "Salzsee",
+  "siwaOasisEgypt": "Oase Siwa, Ägypten",
+  "abuSimbelTemple": "Tempel von Abu Simbel",
+  "aswanEgypt": "Assuan, Ägypten",
+  "redSea": "Rotes Meer",
+  "hurghadaEgypt": "Hurghada, Ägypten",
+  "pyramids": "Pyramiden",
+  "gizaEgypt": "Gizeh, Ägypten",
+  "theGrandEgyptianMuseum": "Das Große Ägyptische Museum",
+  "kebdetElPrince": "Kebdet El-Prince",
+  "sheikhZayedGizaEgypt": "Scheich Zayed, Gizeh, Ägypten",
+  "cairo": "Kairo",
+  "philaeTemple": "Tempel von Philae",
+  "aswan": "Assuan",
+  "egyptianMuseum": "Ägyptisches Museum",
+  "@egyptianMuseum": {
+    "description": "Main title of the screen (Phrase)"
+  },
+  "siwaOasis": "Oase Siwa",
+  "westernDesert": "Westliche Wüste",
+  "historical": "HISTORISCH",
+  "@historical": {
+    "description": "Filter/Category tag (Word)"
+  },
+  "artifacts": "ARTEFAKTE",
+  "@artifacts": {
+    "description": "Filter/Category tag (Phrase)"
+  },
+  "landmark": "WAHRZEICHEN",
+  "@landmark": {
+    "description": "Filter/Category tag (Word)"
+  },
+  "about": "Über",
+  "@about": {
+    "description": "Section title for the description (Word)."
+  },
+  "status": "STATUS",
+  "@status": {
+    "description": "Label for current operational state (Word)"
+  },
+  "open": "Geöffnet",
+  "@open": {
+    "description": "State indicating the place is currently operating (Word)"
+  },
+  "hours": "ÖFFNUNGSZEITEN",
+  "@hours": {
+    "description": "Label for operating hours (Phrase)."
+  },
+  "starting": "AB",
+  "@starting": {
+    "description": "Label for base ticket price (Phrase)."
+  },
+  "egp": "EGP",
+  "@egp": {
+    "description": "Currency abbreviation for Egyptian Pound (Word/Abbreviation)."
+  },
+  "gallery": "Galerie",
+  "@gallery": {
+    "description": "Section title for the image grid (Word)"
+  },
+  "photos": "FOTOS",
+  "@photos": {
+    "description": "Label for photo count (Word)."
+  },
+  "planMyVisit": "MEINEN BESUCH PLANEN",
+  "@planMyVisit": {
+    "description": "Call to action button text (Sentence/Command)"
+  },
+  "heritage": "Kulturerbe",
+  "@heritage": {
+    "description": "Category title for historical sites"
+  },
+  "all": "Alle",
+  "@all": {
+    "description": "Filter button to show all items"
+  },
+  "templeOfHatshepsut": "Hatschepsut-Tempel",
+  "luxorEgypt": "Luxor, Ägypten",
+  "blueHole": "Blue Hole",
+  "dahabEgypt": "Dahab, Ägypten",
+  "jabalMousa": "Gebel Musa",
+  "sinaiEgypt": "Sinai, Ägypten",
+  "northCoast": "Nordküste",
+  "food": "Essen",
+  "@food": {
+    "description": "Category title (Word)"
+  },
+  "spiritual": "Spirituell",
+  "@spiritual": {
+    "description": "Category title (Word)"
+  },
+  "qasrElkababgi": "Qasr Elkababgi",
+  "@qasrElkababgi": {
+    "description": "Restaurant name (Phrase)"
+  },
+  "newCairoCairoEgypt": "Neu-Kairo, Kairo, Ägypten",
+  "@newCairoCairoEgypt": {
+    "description": "Location (Phrase)"
+  },
+  "abouTarek": "Abou Tarek",
+  "@abouTarek": {
+    "description": "Restaurant name (Phrase)"
+  },
+  "cairoEgypt": "Kairo, Ägypten",
+  "@cairoEgypt": {
+    "description": "Location (Phrase)"
+  },
+  "arabiata": "Arabiata",
+  "@arabiata": {
+    "description": "Restaurant name (Word)"
+  },
+  "elKorbaCairoEgypt": "El Korba, Kairo, Ägypten",
+  "@elKorbaCairoEgypt": {
+    "description": "Location (Phrase)"
+  },
+  "asmak": "Asmak",
+  "@asmak": {
+    "description": "Restaurant name (Word)"
+  },
+  "amrIbnAlAsMosque": "Amr-ibn-al-As-Moschee",
+  "@amrIbnAlAsMosque": {
+    "description": "Landmark name (Phrase)"
+  },
+  "alFustatOldCairoEgypt": "Al-Fustat (Alt-Kairo), Ägypten",
+  "@alFustatOldCairoEgypt": {
+    "description": "Location (Phrase)"
+  },
+  "alAzharMosque": "Al-Azhar-Moschee",
+  "@alAzharMosque": {
+    "description": "Landmark name (Phrase)"
+  },
+  "islamicCairoEgypt": "Islamisches Kairo, Ägypten",
+  "@islamicCairoEgypt": {
+    "description": "Location (Phrase)"
+  },
+  "theHangingChurch": "Die Hängende Kirche",
+  "@theHangingChurch": {
+    "description": "Landmark name (Phrase)"
+  },
+  "copticCairoOldCairoEgypt": "Koptisches Kairo, Alt-Kairo, Ägypten",
+  "@copticCairoOldCairoEgypt": {
+    "description": "Location (Phrase)"
+  },
+  "alHusseinMosque": "Al-Hussein-Moschee",
+  "@alHusseinMosque": {
+    "description": "Landmark name (Phrase)"
+  },
+  "husseinSquareCairoEgypt": "Hussein-Platz, Kairo, Ägypten",
+  "@husseinSquareCairoEgypt": {
+    "description": "Location (Phrase)"
+  },
+  "saintCatherineMonastery": "Katharinenkloster",
+  "@saintCatherineMonastery": {
+    "description": "Landmark name (Phrase)"
+  },
+  "southSinaiEgypt": "Süd-Sinai, Ägypten",
+  "@southSinaiEgypt": {
+    "description": "Location (Phrase)"
+  }
+}

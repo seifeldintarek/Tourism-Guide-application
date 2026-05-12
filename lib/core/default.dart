@@ -5,6 +5,9 @@ class Default {
   // double width = MediaQuery.of(context).size.width,
   //     height = MediaQuery.of(context).size.height;
 
+  // to use multiple langs
+  // final lang = AppLocalizations.of(context)!;
+
   static final backgroundColor = Colors.white70;
   static final buttonColor = Colors.brown.shade900;
 
