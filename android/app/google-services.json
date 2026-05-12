@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "288626687274",
+    "project_id": "egypt-tourism-guide",
+    "storage_bucket": "egypt-tourism-guide.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:288626687274:android:545115a0e240f7fe64b253",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "288626687274-onnnn34tnjld1395ir4qgd20qss00uql.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.flutter_application_1",
+            "certificate_hash": "38d733dc280db1efb1a31194f533b78b51dcdb41"
+          }
+        },
+        {
+          "client_id": "288626687274-hjrg234bjbs9tva4nicp7q3380df3gjp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARijbkvptGXfAvagw58tr0wvgXAXnPb3o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "288626687274-hjrg234bjbs9tva4nicp7q3380df3gjp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "288626687274-oltd1b0h8g9v62ch113ti8sgle9nkkmc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flutterApplication1"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
