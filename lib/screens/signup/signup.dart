@@ -434,24 +434,12 @@ class _SignUpState extends State<SignUp> {
               SizedBox(height: sectionGap * 1.5),
 
               // ── Create Account button ──────────────────────────────────────
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
+              Center(
+                child: Default.Button(
                   onPressed: isButtonEnabled ? handleCreateAccount : null,
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF463427),
-                    padding: EdgeInsets.symmetric(vertical: buttonPaddingV),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30),
-                    ),
-                  ),
-                  child: Text(
-                    lang.createAccount,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: buttonFontSize,
-                    ),
-                  ),
+                  child: lang.createAccount,
+                  width: width * 0.6,
+                  height: height * 0.07,
                 ),
               ),
 
@@ -475,7 +463,7 @@ class _SignUpState extends State<SignUp> {
                       tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                     ),
                     child: Text(
-                      " Sign in",
+                      " " + lang.signIn,
                       style: TextStyle(
                         fontSize: bodyFontSize,
                         color: const Color(0xFF4E453E),

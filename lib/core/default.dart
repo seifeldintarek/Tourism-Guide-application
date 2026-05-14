@@ -11,8 +11,11 @@ class Default {
 
   static final backgroundColor =
       NudePalette.nude; // Updated to use your palette
-  static final buttonColor = Color(
-    0xFF463427,
+  static final buttonColor = Color.fromARGB(
+    255,
+    72,
+    52,
+    38,
   ); // Matching the primary color from your HTML
   static final textColor =
       Colors.black; // Matching the primary color for text from your HTML
