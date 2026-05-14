@@ -39,6 +39,9 @@ class AppLocalizationsFr extends AppLocalizations {
   String get newHere => 'Nouveau ici ?';
 
   @override
+  String get createAccount => 'Create account';
+
+  @override
   String get createAnAccount => 'Créer un compte';
 
   @override

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/core/default.dart';
 import 'package:flutter_application_1/l10n/app_localizations.dart';
 import 'package:flutter_application_1/screens/home/home.dart';
 import 'package:flutter_application_1/screens/login/login.dart';
+import 'package:flutter_application_1/screens/signup/widget.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
@@ -11,7 +13,6 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
-  // Separate controllers for every field
   final TextEditingController _firstNameController = TextEditingController();
   final TextEditingController _lastNameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
@@ -38,11 +39,11 @@ class _SignUpState extends State<SignUp> {
   final List<String> currencies = ["USD", "EUR", "EGP", "SAR", "AED"];
 
   bool _isAccepted = false;
+
   @override
   void initState() {
     super.initState();
 
-    // Create a listener function that triggers a UI rebuild
     void refreshUI() {
       setState(() {
         _emailError = null;
@@ -51,7 +52,6 @@ class _SignUpState extends State<SignUp> {
       });
     }
 
-    // Attach the listener to all your text controllers
     _firstNameController.addListener(refreshUI);
     _lastNameController.addListener(refreshUI);
     _emailController.addListener(refreshUI);
@@ -61,7 +61,6 @@ class _SignUpState extends State<SignUp> {
 
   @override
   void dispose() {
-    // Always clean up controllers when the widget is removed
     _firstNameController.dispose();
     _lastNameController.dispose();
     _emailController.dispose();
@@ -87,7 +86,6 @@ class _SignUpState extends State<SignUp> {
           ? null
           : "Invalid email format";
 
-      // Password Complexity Validation
       if (password.length < 8) {
         _passwordError = "Password must be at least 8 characters";
       } else if (!hasUpper) {
@@ -102,7 +100,6 @@ class _SignUpState extends State<SignUp> {
         _passwordError = null;
       }
 
-      // Matching Validation
       if (password != confirmPassword) {
         _confirmPasswordError = "Passwords do not match";
       } else {
@@ -124,6 +121,24 @@ class _SignUpState extends State<SignUp> {
 
   @override
   Widget build(BuildContext context) {
+    // ── Responsive sizing ────────────────────────────────────────────────────
+    final double width = MediaQuery.of(context).size.width;
+    final double height = MediaQuery.of(context).size.height;
+
+    // Derive proportional spacings from screen dimensions
+    final double hPadding = width * 0.05; // ~20 dp on 400 wide
+    final double sectionGap = height * 0.025; // ~20 dp on 800 tall
+    final double smallGap = height * 0.01; // ~8 dp
+    final double buttonPaddingV = height * 0.02; // ~16 dp
+
+    // Slightly reduced font sizes, still readable
+    final double titleFontSize = width * 0.08; // ~32 dp
+    final double labelFontSize = width * 0.028; // ~11 dp
+    final double bodyFontSize = width * 0.032; // ~13 dp
+    final double hintFontSize = width * 0.031; // ~12.5 dp
+    final double buttonFontSize = width * 0.038; // ~15 dp
+
+    // ── State ────────────────────────────────────────────────────────────────
     bool allFieldsFilled =
         _firstNameController.text.isNotEmpty &&
         _lastNameController.text.isNotEmpty &&
@@ -140,45 +155,110 @@ class _SignUpState extends State<SignUp> {
 
     bool isButtonEnabled = allFieldsFilled && hasNoErrors && _isAccepted;
 
-    double width = MediaQuery.of(context).size.width,
-        height = MediaQuery.of(context).size.height;
-
     final lang = AppLocalizations.of(context)!;
 
+    // ── Reusable local builders ───────────────────────────────────────────────
+    Widget buildLabel(String text) => Text(
+      text,
+      style: TextStyle(
+        fontSize: labelFontSize,
+        fontWeight: FontWeight.w600,
+        color: Default.textColor,
+        letterSpacing: 0.5,
+      ),
+    );
+
+    InputDecoration buildInputDecoration({
+      required String hint,
+      String? errorText,
+      Widget? suffixIcon,
+    }) => InputDecoration(
+      filled: true,
+      fillColor: const Color(0xFFF2EDE6),
+      hintText: hint,
+      hintStyle: TextStyle(color: Colors.grey, fontSize: hintFontSize),
+      errorText: errorText,
+      errorStyle: TextStyle(fontSize: hintFontSize * 0.9),
+      suffixIcon: suffixIcon,
+      contentPadding: EdgeInsets.symmetric(
+        horizontal: width * 0.04,
+        vertical: height * 0.018,
+      ),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(12),
+        borderSide: BorderSide.none,
+      ),
+    );
+
+    // ── Responsive dropdown (no overflow) ────────────────────────────────────
+    Widget buildDropdown({
+      required String? value,
+      required String hint,
+      required List<String> items,
+      required ValueChanged<String?> onChanged,
+    }) => DropdownButtonHideUnderline(
+      child: Container(
+        padding: EdgeInsets.symmetric(horizontal: width * 0.035),
+        decoration: BoxDecoration(
+          color: const Color(0xFFF2EDE6),
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: DropdownButton<String>(
+          value: value,
+          isExpanded: true, // ← key fix: fills width, no overflow
+          hint: Text(
+            hint,
+            style: TextStyle(color: Colors.grey, fontSize: hintFontSize),
+            overflow: TextOverflow.ellipsis,
+          ),
+          icon: const Icon(Icons.keyboard_arrow_down, color: Colors.grey),
+          style: TextStyle(color: Default.textColor, fontSize: bodyFontSize),
+          dropdownColor: const Color(0xFFF2EDE6),
+          borderRadius: BorderRadius.circular(12),
+          items: items
+              .map(
+                (item) => DropdownMenuItem<String>(
+                  value: item,
+                  child: Text(
+                    item,
+                    style: TextStyle(fontSize: bodyFontSize),
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+              )
+              .toList(),
+          onChanged: onChanged,
+        ),
+      ),
+    );
+
+    // ── UI ────────────────────────────────────────────────────────────────────
     return Scaffold(
-      backgroundColor: const Color(0xFFFAF6F0),
+      backgroundColor: Default.backgroundColor,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: const Color(0xFFFEF9F4),
-        title: Row(
-          children: [
-            const Icon(Icons.arrow_back, size: 18, color: Color(0xFF463427)),
-            const SizedBox(width: 10),
-            const Text(
-              "Join the Archive",
-              style: TextStyle(color: Color(0xFF463427), fontSize: 18),
-            ),
-            const SizedBox(width: 15),
-
-            // Custom small horizontal line
-          ],
+        backgroundColor: Default.backgroundColor,
+        leading: IconButton(
+          onPressed: () => Navigator.pop(context),
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
         ),
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: EdgeInsets.all(hPadding),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
+              // ── Title ──────────────────────────────────────────────────────
+              Text(
                 "Tell us about \nyourself",
                 style: TextStyle(
-                  fontSize: 36,
+                  fontSize: titleFontSize,
                   fontWeight: FontWeight.bold,
-                  color: Color(0xFF463427),
+                  color: Default.textColor,
                 ),
               ),
-              const SizedBox(height: 10),
+              SizedBox(height: smallGap),
               Container(
                 width: 40,
                 height: 1,
@@ -187,28 +267,28 @@ class _SignUpState extends State<SignUp> {
                   borderRadius: BorderRadius.circular(2),
                 ),
               ),
-              const SizedBox(height: 50),
+              SizedBox(height: sectionGap * 2),
 
-              // NAME SECTION
-              const Row(
+              // ── Name row ───────────────────────────────────────────────────
+              Row(
                 children: [
-                  Expanded(child: _LabelText("FIRST NAME")),
-                  SizedBox(width: 10),
-                  Expanded(child: _LabelText("LAST NAME")),
+                  Expanded(child: buildLabel(lang.firstName.toUpperCase())),
+                  SizedBox(width: width * 0.025),
+                  Expanded(child: buildLabel(lang.lastName.toUpperCase())),
                 ],
               ),
-              const SizedBox(height: 8),
+              SizedBox(height: smallGap),
               Row(
                 children: [
                   Expanded(
-                    child: _CustomTextField(
+                    child: customTextField(
                       controller: _firstNameController,
                       hint: "Enter first name",
                     ),
                   ),
-                  const SizedBox(width: 10),
+                  SizedBox(width: width * 0.025),
                   Expanded(
-                    child: _CustomTextField(
+                    child: customTextField(
                       controller: _lastNameController,
                       hint: "Enter last name",
                     ),
@@ -216,36 +296,30 @@ class _SignUpState extends State<SignUp> {
                 ],
               ),
 
-              const SizedBox(height: 30),
-              const _LabelText("EMAIL ADDRESS"),
-              const SizedBox(height: 8),
+              SizedBox(height: sectionGap),
+
+              // ── Email ──────────────────────────────────────────────────────
+              buildLabel(lang.emailAddress.toUpperCase()),
+              SizedBox(height: smallGap),
               TextField(
                 controller: _emailController,
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: const Color(0xFFF2EDE6),
-                  hintText: "Enter your email",
-                  hintStyle: const TextStyle(color: Colors.grey, fontSize: 14),
-                  errorText: _emailError, // Added error display
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12),
-                    borderSide: BorderSide.none,
-                  ),
+                decoration: buildInputDecoration(
+                  hint: lang.emailHint,
+                  errorText: _emailError,
                 ),
               ),
 
-              const SizedBox(height: 30),
-              const _LabelText("CREATE PASSWORD"),
-              const SizedBox(height: 8),
+              SizedBox(height: sectionGap),
+
+              // ── Password ───────────────────────────────────────────────────
+              buildLabel(lang.createPassword.toUpperCase()),
+              SizedBox(height: smallGap),
               TextField(
                 controller: _passwordController,
                 onChanged: (val) => setState(() {}),
-                obscureText: _obscurePassword, // Toggle applied here
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: const Color(0xFFF2EDE6),
-                  hintText: "Enter your password",
-                  hintStyle: const TextStyle(color: Colors.grey, fontSize: 14),
+                obscureText: _obscurePassword,
+                decoration: buildInputDecoration(
+                  hint: "Enter your password",
                   errorText: _passwordError,
                   suffixIcon: IconButton(
                     icon: Icon(
@@ -256,24 +330,19 @@ class _SignUpState extends State<SignUp> {
                     onPressed: () =>
                         setState(() => _obscurePassword = !_obscurePassword),
                   ),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12),
-                    borderSide: BorderSide.none,
-                  ),
                 ),
               ),
 
-              const SizedBox(height: 30),
-              const _LabelText("CONFIRM PASSWORD"),
-              const SizedBox(height: 8),
+              SizedBox(height: sectionGap),
+
+              // ── Confirm Password ───────────────────────────────────────────
+              buildLabel(lang.confirmPassword.toUpperCase()),
+              SizedBox(height: smallGap),
               TextField(
                 controller: _confirmPasswordController,
-                obscureText: _obscureConfirmPassword, // Toggle applied here
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: const Color(0xFFF2EDE6),
-                  hintText: "Confirm your password",
-                  hintStyle: const TextStyle(color: Colors.grey, fontSize: 14),
+                obscureText: _obscureConfirmPassword,
+                decoration: buildInputDecoration(
+                  hint: lang.confirmPassword.toUpperCase(),
                   errorText: _confirmPasswordError,
                   suffixIcon: IconButton(
                     icon: Icon(
@@ -285,27 +354,24 @@ class _SignUpState extends State<SignUp> {
                       () => _obscureConfirmPassword = !_obscureConfirmPassword,
                     ),
                   ),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12),
-                    borderSide: BorderSide.none,
-                  ),
                 ),
               ),
 
-              const SizedBox(height: 30),
+              SizedBox(height: sectionGap),
 
-              const Row(
+              // ── Language + Currency dropdowns ──────────────────────────────
+              Row(
                 children: [
-                  Expanded(child: _LabelText("LANGUAGE")),
-                  SizedBox(width: 10),
-                  Expanded(child: _LabelText("CURRENCY")),
+                  Expanded(child: buildLabel(lang.language.toUpperCase())),
+                  SizedBox(width: width * 0.025),
+                  Expanded(child: buildLabel("CURRENCY")),
                 ],
               ),
-              const SizedBox(height: 8),
+              SizedBox(height: smallGap),
               Row(
                 children: [
                   Expanded(
-                    child: _CustomDropdown(
+                    child: buildDropdown(
                       value: _selectedLanguage,
                       hint: "Select Language",
                       items: languages,
@@ -313,9 +379,9 @@ class _SignUpState extends State<SignUp> {
                           setState(() => _selectedLanguage = val),
                     ),
                   ),
-                  const SizedBox(width: 10),
+                  SizedBox(width: width * 0.025),
                   Expanded(
-                    child: _CustomDropdown(
+                    child: buildDropdown(
                       value: _selectedCurrency,
                       hint: "Select Currency",
                       items: currencies,
@@ -326,7 +392,9 @@ class _SignUpState extends State<SignUp> {
                 ],
               ),
 
-              const SizedBox(height: 30),
+              SizedBox(height: sectionGap),
+
+              // ── Terms checkbox ─────────────────────────────────────────────
               CheckboxListTile(
                 value: _isAccepted,
                 onChanged: (bool? value) =>
@@ -335,25 +403,25 @@ class _SignUpState extends State<SignUp> {
                 contentPadding: EdgeInsets.zero,
                 activeColor: const Color(0xFF463427),
                 title: RichText(
-                  text: const TextSpan(
+                  text: TextSpan(
                     style: TextStyle(
-                      color: Color(0xFF4E453E),
-                      fontSize: 13,
+                      color: const Color(0xFF4E453E),
+                      fontSize: bodyFontSize,
                       height: 1.4,
                     ),
                     children: [
-                      TextSpan(text: "By creating an account, I agree to the "),
+                      TextSpan(text: lang.agreeToTermsPrefix),
                       TextSpan(
-                        text: "Terms of Service",
-                        style: TextStyle(
+                        text: lang.termsOfService,
+                        style: const TextStyle(
                           decoration: TextDecoration.underline,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      TextSpan(text: " and "),
+                      TextSpan(text: lang.and),
                       TextSpan(
-                        text: "Privacy Policy",
-                        style: TextStyle(
+                        text: lang.privacyPolicy,
+                        style: const TextStyle(
                           decoration: TextDecoration.underline,
                           fontWeight: FontWeight.bold,
                         ),
@@ -363,156 +431,71 @@ class _SignUpState extends State<SignUp> {
                 ),
               ),
 
-              const SizedBox(height: 40),
+              SizedBox(height: sectionGap * 1.5),
+
+              // ── Create Account button ──────────────────────────────────────
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: isButtonEnabled ? handleCreateAccount : null,
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFF463427),
-                    padding: const EdgeInsets.symmetric(vertical: 18),
+                    padding: EdgeInsets.symmetric(vertical: buttonPaddingV),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30),
                     ),
                   ),
-                  child: const Text(
-                    "Create Account",
-                    style: TextStyle(color: Colors.white, fontSize: 16),
+                  child: Text(
+                    lang.createAccount,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: buttonFontSize,
+                    ),
                   ),
                 ),
               ),
 
-              const SizedBox(height: 20),
+              SizedBox(height: sectionGap),
 
+              // ── Already a member ───────────────────────────────────────────
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text(
-                    "Already have an account?", // Remove the trailing space here if there is one
-                    style: TextStyle(fontSize: 14, color: Color(0xFF4E453E)),
+                  Text(
+                    lang.alreadyAMember,
+                    style: TextStyle(
+                      fontSize: bodyFontSize,
+                      color: const Color(0xFF4E453E),
+                    ),
                   ),
                   TextButton(
                     style: TextButton.styleFrom(
-                      padding: EdgeInsets.zero, // 1. Removes internal padding
-                      minimumSize:
-                          Size.zero, // 2. Removes the default width/height
-                      tapTargetSize: MaterialTapTargetSize
-                          .shrinkWrap, // 3. Tightens the hit box
+                      padding: EdgeInsets.zero,
+                      minimumSize: Size.zero,
+                      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                     ),
-                    child: const Text(
-                      " Sign in", // Add exactly one space here for a natural look
+                    child: Text(
+                      " Sign in",
                       style: TextStyle(
-                        fontSize: 14,
-                        color: Color(0xFF4E453E),
+                        fontSize: bodyFontSize,
+                        color: const Color(0xFF4E453E),
                         fontWeight: FontWeight.bold,
-                        decoration:
-                            TextDecoration.underline, // Matches the image style
+                        decoration: TextDecoration.underline,
                       ),
                     ),
                     onPressed: () => Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(
-                        builder: (context) =>
-                            const Home(), //when a profile screen is created
-                      ),
+                      MaterialPageRoute(builder: (context) => const Home()),
                     ),
                   ),
                 ],
               ),
+
+              SizedBox(height: sectionGap),
             ],
           ),
         ),
       ),
-    );
-  }
-}
-
-class _LabelText extends StatelessWidget {
-  final String text;
-  const _LabelText(this.text);
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: const TextStyle(
-        fontSize: 11,
-        letterSpacing: 1.2,
-        fontWeight: FontWeight.bold,
-        color: Color(0xFF4E453E),
-      ),
-    );
-  }
-}
-
-class _CustomTextField extends StatelessWidget {
-  final TextEditingController controller;
-  final String hint;
-  final bool isPassword;
-
-  const _CustomTextField({
-    required this.controller,
-    required this.hint,
-    this.isPassword = false,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return TextField(
-      controller: controller,
-      obscureText: isPassword,
-      decoration: InputDecoration(
-        filled: true,
-        fillColor: const Color(0xFFF2EDE6),
-        hintText: hint,
-        hintStyle: const TextStyle(color: Colors.grey, fontSize: 14),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide.none,
-        ),
-        contentPadding: const EdgeInsets.symmetric(
-          horizontal: 16,
-          vertical: 14,
-        ),
-      ),
-    );
-  }
-}
-
-class _CustomDropdown extends StatelessWidget {
-  final String? value;
-  final String hint;
-  final List<String> items;
-  final Function(String?) onChanged;
-
-  const _CustomDropdown({
-    this.value,
-    required this.hint,
-    required this.items,
-    required this.onChanged,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return DropdownButtonFormField<String>(
-      value: value,
-      hint: Text(hint, style: const TextStyle(fontSize: 14)),
-      decoration: InputDecoration(
-        filled: true,
-        fillColor: const Color(0xFFF2EDE6),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide.none,
-        ),
-        contentPadding: const EdgeInsets.symmetric(
-          horizontal: 16,
-          vertical: 14,
-        ),
-      ),
-      items: items
-          .map((i) => DropdownMenuItem(value: i, child: Text(i)))
-          .toList(),
-      onChanged: onChanged,
     );
   }
 }

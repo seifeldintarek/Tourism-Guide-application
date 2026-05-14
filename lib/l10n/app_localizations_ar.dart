@@ -39,6 +39,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get newHere => 'هل أنت جديد هنا؟';
 
   @override
+  String get createAccount => 'Create account';
+
+  @override
   String get createAnAccount => 'إنشاء حساب';
 
   @override
