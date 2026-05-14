@@ -1,0 +1,314 @@
+{
+  "@@locale": "ar",
+  "@@context": "AppTranslations",
+
+  "signInToYourJournal": "تسجيل الدخول إلى يومياتك",
+  "@signInToYourJournal": {
+    "description": "Sentence: Header for the sign-in form."
+  },
+  "welcomeBackExplorer": "مرحباً بعودتك، أيها المستكشف",
+  "@welcomeBackExplorer": {
+    "description": "Sentence: Greeting message."
+  },
+  "emailAddress": "البريد الإلكتروني",
+  "@emailAddress": {
+    "description": "Noun/Word: Used as a label for the email input field."
+  },
+  "emailHint": "على سبيل المثال: journal@archive.com",
+  "@emailHint": {
+    "description": "Sentence: Placeholder hint inside the email input field."
+  },
+  "password": "كلمة المرور",
+  "@password": {
+    "description": "Noun/Word: Used as a label for the password input field."
+  },
+  "continueJourney": "مواصلة الرحلة",
+  "@continueJourney": {
+    "description": "Action Phrase: Button text to submit the sign-in form."
+  },
+  "forgotPassword": "هل نسيت كلمة المرور؟",
+  "@forgotPassword": {
+    "description": "Sentence/Question: Link for password recovery."
+  },
+  "or": "أو",
+  "@or": {
+    "description": "Word: Divider text."
+  },
+  "signInWithGoogle": "تسجيل الدخول باستخدام Google",
+  "@signInWithGoogle": {
+    "description": "Action Phrase: Button text for Google OAuth."
+  },
+  "newHere": "هل أنت جديد هنا؟",
+  "@newHere": {
+    "description": "Sentence/Question: Prompt asking if the user needs to register."
+  },
+  "createAnAccount": "إنشاء حساب",
+  "@createAnAccount": {
+    "description": "Action Phrase: Link to navigate to the registration page."
+  },
+  "tellUsAboutYourself": "أخبرنا عن نفسك",
+  "@tellUsAboutYourself": {
+    "description": "Sentence: Header for the sign-up form."
+  },
+  "firstName": "الاسم الأول",
+  "@firstName": {
+    "description": "Noun Phrase: Label for the first name input field."
+  },
+  "lastName": "اسم العائلة",
+  "@lastName": {
+    "description": "Noun Phrase: Label for the last name input field."
+  },
+  "createPassword": "إنشاء كلمة مرور",
+  "@createPassword": {
+    "description": "Action Phrase: Label for the new password input field."
+  },
+  "confirmPassword": "تأكيد كلمة المرور",
+  "@confirmPassword": {
+    "description": "Action Phrase: Label for the confirm password input field."
+  },
+  "language": "اللغة",
+  "@language": {
+    "description": "Noun/Word: Label for the language dropdown."
+  },
+  "currency": "العملة",
+  "@currency": {
+    "description": "Noun/Word: Label for the currency dropdown."
+  },
+  "agreeToTermsPrefix": "بإنشاء حساب، فإنني أوافق على ",
+  "@agreeToTermsPrefix": {
+    "description": "Sentence fragment: The beginning of the checkbox agreement text. Left a trailing space for RichText merging."
+  },
+  "termsOfService": "شروط الخدمة",
+  "@termsOfService": {
+    "description": "Noun Phrase: Clickable Terms of Service link."
+  },
+  "and": " و ",
+  "@and": {
+    "description": "Word: Conjunction in the agreement text. Includes padding spaces."
+  },
+  "privacyPolicy": "سياسة الخصوصية",
+  "@privacyPolicy": {
+    "description": "Noun Phrase: Clickable Privacy Policy link."
+  },
+  "alreadyAMember": "هل أنت عضو بالفعل؟",
+  "@alreadyAMember": {
+    "description": "Sentence/Question: Prompt asking if the user already has an account."
+  },
+  "signIn": "تسجيل الدخول",
+  "@signIn": {
+    "description": "Action Phrase: Link to navigate back to the login page."
+  },
+  "curatedJourneys": "رحلات منتقاة",
+  "@curatedJourneys": {
+    "description": "Small overline text above the main title"
+  },
+  "exploreTheCollections": "استكشف المجموعات",
+  "@exploreTheCollections": {
+    "description": "Main title on the home screen (Sentence)"
+  },
+  "searchDestination": "ابحث عن وجهة...",
+  "@searchDestination": {
+    "description": "Placeholder text in the search bar (Sentence)"
+  },
+  "recentlyViewed": "تم عرضها مؤخراً",
+  "@recentlyViewed": {
+    "description": "Section title for recently viewed items (Phrase)"
+  },
+  "savedPlaces": "الأماكن المحفوظة",
+  "@savedPlaces": {
+    "description": "App bar title and section title (Phrase)"
+  },
+  "explorer": "مستكشف",
+  "@explorer": {
+    "description": "User title or subtitle (Word)"
+  },
+  "visited": "زيارات",
+  "@visited": {
+    "description": "Label for number of visited places (Word)"
+  },
+  "saved": "محفوظات",
+  "@saved": {
+    "description": "Label for number of saved places (Word)"
+  },
+  "reviews": "تقييمات",
+  "@reviews": {
+    "description": "Label for number of reviews (Word)"
+  },
+  "viewAll": "عرض الكل",
+  "@viewAll": {
+    "description": "Button text to see all items in a list (Phrase)"
+  },
+  "historicSite": "موقع تاريخي",
+  "@historicSite": {
+    "description": "Category tag for a place (Phrase)"
+  },
+  "historicMuseum": "متحف تاريخي",
+  "@historicMuseum": {
+    "description": "Category tag for a museum (Phrase)"
+  },
+  "nature": "طبيعة",
+  "@nature": {
+    "description": "Category tag for natural places (Word)"
+  },
+  "wadiElRayan": "وادي الريان",
+  "elFayoumEgypt": "الفيوم، مصر",
+  "saltLake": "بحيرة الملح",
+  "siwaOasisEgypt": "واحة سيوة، مصر",
+  "abuSimbelTemple": "معبد أبو سمبل",
+  "aswanEgypt": "أسوان، مصر",
+  "redSea": "البحر الأحمر",
+  "hurghadaEgypt": "الغردقة، مصر",
+  "pyramids": "الأهرامات",
+  "gizaEgypt": "الجيزة، مصر",
+  "theGrandEgyptianMuseum": "المتحف المصري الكبير",
+  "kebdetElPrince": "كبدة البرنس",
+  "sheikhZayedGizaEgypt": "الشيخ زايد، الجيزة، مصر",
+  "cairo": "القاهرة",
+  "philaeTemple": "معبد فيلة",
+  "aswan": "أسوان",
+  "egyptianMuseum": "المتحف المصري",
+  "@egyptianMuseum": {
+    "description": "Main title of the screen (Phrase)"
+  },
+  "siwaOasis": "واحة سيوة",
+  "westernDesert": "الصحراء الغربية",
+  "historical": "تاريخي",
+  "@historical": {
+    "description": "Filter/Category tag (Word)"
+  },
+  "artifacts": "قطع أثرية",
+  "@artifacts": {
+    "description": "Filter/Category tag (Phrase)"
+  },
+  "landmark": "مَعْلَم",
+  "@landmark": {
+    "description": "Filter/Category tag (Word)"
+  },
+  "about": "نبذة",
+  "@about": {
+    "description": "Section title for the description (Word). 'نبذة' (Overview/About) is standard in Arabic UIs."
+  },
+  "status": "الحالة",
+  "@status": {
+    "description": "Label for current operational state (Word)"
+  },
+  "open": "مفتوح",
+  "@open": {
+    "description": "State indicating the place is currently operating (Word)"
+  },
+  "hours": "ساعات العمل",
+  "@hours": {
+    "description": "Label for operating hours (Phrase). Lit: 'Working hours'."
+  },
+  "starting": "يبدأ من",
+  "@starting": {
+    "description": "Label for base ticket price (Phrase). Lit: 'Starts from'."
+  },
+  "egp": "ج.م",
+  "@egp": {
+    "description": "Currency abbreviation for Egyptian Pound (Word/Abbreviation). 'ج.م' stands for 'جنيه مصري'."
+  },
+  "gallery": "المعرض",
+  "@gallery": {
+    "description": "Section title for the image grid (Word)"
+  },
+  "photos": "صورة",
+  "@photos": {
+    "description": "Label for photo count (Word). Note: In Arabic grammar, counts from 11-99 use the singular noun, so '24 PHOTOS' translates to '24 صورة'."
+  },
+  "planMyVisit": "خطط لزيارتي",
+  "@planMyVisit": {
+    "description": "Call to action button text (Sentence/Command)"
+  },
+  "heritage": "تراث",
+  "@heritage": {
+    "description": "Category title for historical sites"
+  },
+  "all": "الكل",
+  "@all": {
+    "description": "Filter button to show all items"
+  },
+  "templeOfHatshepsut": "معبد حتشبسوت",
+  "luxorEgypt": "الأقصر، مصر",
+  "blueHole": "البلو هول",
+  "dahabEgypt": "دهب، مصر",
+  "jabalMousa": "جبل موسى",
+  "sinaiEgypt": "سيناء، مصر",
+  "northCoast": "الساحل الشمالي",
+  "food": "طعام",
+  "@food": {
+    "description": "Category title (Word)"
+  },
+  "spiritual": "روحاني",
+  "@spiritual": {
+    "description": "Category title (Word)"
+  },
+  "qasrElkababgi": "قصر الكبابجي",
+  "@qasrElkababgi": {
+    "description": "Restaurant name (Phrase)"
+  },
+  "newCairoCairoEgypt": "القاهرة الجديدة، القاهرة، مصر",
+  "@newCairoCairoEgypt": {
+    "description": "Location (Phrase)"
+  },
+  "abouTarek": "أبو طارق",
+  "@abouTarek": {
+    "description": "Restaurant name (Phrase)"
+  },
+  "cairoEgypt": "القاهرة، مصر",
+  "@cairoEgypt": {
+    "description": "Location (Phrase)"
+  },
+  "arabiata": "أرابياتا",
+  "@arabiata": {
+    "description": "Restaurant name (Word)"
+  },
+  "elKorbaCairoEgypt": "الكوربة، القاهرة، مصر",
+  "@elKorbaCairoEgypt": {
+    "description": "Location (Phrase)"
+  },
+  "asmak": "أسماك",
+  "@asmak": {
+    "description": "Restaurant name (Word)"
+  },
+  "amrIbnAlAsMosque": "جامع عمرو بن العاص",
+  "@amrIbnAlAsMosque": {
+    "description": "Landmark name (Phrase)"
+  },
+  "alFustatOldCairoEgypt": "الفسطاط (القاهرة القديمة)، مصر",
+  "@alFustatOldCairoEgypt": {
+    "description": "Location (Phrase)"
+  },
+  "alAzharMosque": "الجامع الأزهر",
+  "@alAzharMosque": {
+    "description": "Landmark name (Phrase)"
+  },
+  "islamicCairoEgypt": "القاهرة الإسلامية، مصر",
+  "@islamicCairoEgypt": {
+    "description": "Location (Phrase)"
+  },
+  "theHangingChurch": "الكنيسة المعلقة",
+  "@theHangingChurch": {
+    "description": "Landmark name (Phrase)"
+  },
+  "copticCairoOldCairoEgypt": "القاهرة القبطية، القاهرة القديمة، مصر",
+  "@copticCairoOldCairoEgypt": {
+    "description": "Location (Phrase)"
+  },
+  "alHusseinMosque": "مسجد الحسين",
+  "@alHusseinMosque": {
+    "description": "Landmark name (Phrase)"
+  },
+  "husseinSquareCairoEgypt": "ميدان الحسين، القاهرة، مصر",
+  "@husseinSquareCairoEgypt": {
+    "description": "Location (Phrase)"
+  },
+  "saintCatherineMonastery": "دير سانت كاترين",
+  "@saintCatherineMonastery": {
+    "description": "Landmark name (Phrase)"
+  },
+  "southSinaiEgypt": "جنوب سيناء، مصر",
+  "@southSinaiEgypt": {
+    "description": "Location (Phrase)"
+  }
+}
