@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/l10n/app_localizations.dart';
 import 'package:flutter_application_1/screens/home/home.dart';
-import 'package:flutter_application_1/screens/profile/profile.dart';
-import 'package:flutter_application_1/screens/signup/widget.dart';
+import 'package:flutter_application_1/screens/login/login.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
@@ -115,11 +115,10 @@ class _SignUpState extends State<SignUp> {
         _confirmPasswordError == null) {
       print("All validations passed!");
     }
-    Navigator.pushReplacement(
+    Navigator.pushAndRemoveUntil(
       context,
-      MaterialPageRoute(
-        builder: (context) => const Home(), //when a profile screen is created
-      ),
+      MaterialPageRoute(builder: (context) => const Login()),
+      (route) => false,
     );
   }
 
@@ -140,6 +139,12 @@ class _SignUpState extends State<SignUp> {
         _confirmPasswordError == null;
 
     bool isButtonEnabled = allFieldsFilled && hasNoErrors && _isAccepted;
+
+    double width = MediaQuery.of(context).size.width,
+        height = MediaQuery.of(context).size.height;
+
+    final lang = AppLocalizations.of(context)!;
+
     return Scaffold(
       backgroundColor: const Color(0xFFFAF6F0),
       appBar: AppBar(
