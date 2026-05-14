@@ -6,6 +6,9 @@ class Default {
   // double width = MediaQuery.of(context).size.width,
   //        height = MediaQuery.of(context).size.height;
 
+  // to use multiple langs
+  // final lang = AppLocalizations.of(context)!;
+
   static final backgroundColor =
       NudePalette.nudeLight; // Updated to use your palette
   static final buttonColor = Color(
