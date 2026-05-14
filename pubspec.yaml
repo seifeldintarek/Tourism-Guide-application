@@ -25,6 +25,11 @@ flutter:
 
   assets:
     - assets/images/test.jpg
+    - assets/images/Khan el-Khalili.png
+    - assets/images/Siwa Oasis.png
+    - assets/images/Temple of Philae.png
+    - assets/images/Journaling background.png
+    - assets/images/User Avatar.png
 
   fonts:
     - family: Test
