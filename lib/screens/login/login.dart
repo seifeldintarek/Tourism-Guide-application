@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/controller/navigationbar.dart';
+import 'package:flutter_application_1/core/default.dart';
 import 'package:flutter_application_1/screens/signup/signup.dart';
 import 'package:flutter_application_1/l10n/app_localizations.dart';
 import 'package:flutter_application_1/screens/login/widget.dart';
@@ -11,7 +12,7 @@ class Login extends StatefulWidget {
   State<Login> createState() => _LoginState();
 }
 
-class _LoginState extends State<Login> { 
+class _LoginState extends State<Login> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
 
@@ -25,77 +26,73 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     final lang = AppLocalizations.of(context)!;
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF5EDE3),
+      backgroundColor: Default.backgroundColor,
       appBar: AppBar(
-        backgroundColor: const Color(0xFFF5EDE3),
+        backgroundColor: Default.backgroundColor,
         elevation: 0,
         leading: const Icon(Icons.menu, color: Colors.black),
         centerTitle: true,
-        title: const Text(
-          'THE ARCHIVE',
-          style: TextStyle(
-            fontFamily: 'serif',
-            fontWeight: FontWeight.bold,
-            fontSize: 18,
-            letterSpacing: 3,
-            color: Colors.black,
-          ),
-        ),
-        actions: const [
-          Padding(
-            padding: EdgeInsets.only(right: 16),
-            child: Icon(Icons.search, color: Colors.black),
-          ),
-        ],
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(horizontal: 24),
+        padding: EdgeInsets.symmetric(horizontal: width * 0.06),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(height: 40),
-            const LoginHeader(),
-            const SizedBox(height: 40),
-            LabeledTextField(
+            SizedBox(height: height * 0.05),
+            loginHeader(context, width, height),
+            SizedBox(height: height * 0.05),
+            labeledTextField(
               label: lang.emailAddress,
               hintText: lang.emailHint,
               controller: _emailController,
+              width: width,
+              height: height,
             ),
-            const SizedBox(height: 20),
-            LabeledTextField(
+            SizedBox(height: height * 0.025),
+            labeledTextField(
               label: lang.password,
               hintText: '••••••••',
               controller: _passwordController,
               obscureText: true,
+              width: width,
+              height: height,
             ),
-            const SizedBox(height: 32),
-            ContinueJourneyButton(
+            SizedBox(height: height * 0.04),
+            continueJourneyButton(
+              context,
+              width,
+              height,
               onPressed: () => Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => Footer()),
               ),
             ),
-            const SizedBox(height: 20),
+            SizedBox(height: height * 0.025),
             Center(
               child: Text(
                 lang.forgotPassword,
                 style: const TextStyle(fontSize: 14, color: Colors.black87),
               ),
             ),
-            const SizedBox(height: 32),
-            const OrDivider(),
-            const SizedBox(height: 24),
-            const SocialLoginButtons(),
-            const SizedBox(height: 32),
-            SignUpPrompt(
+            SizedBox(height: height * 0.04),
+            orDivider(width, height),
+            SizedBox(height: height * 0.03),
+            socialLoginButtons(context, width, height),
+            SizedBox(height: height * 0.04),
+            signUpPrompt(
+              context,
+              width,
+              height,
               onTap: () => Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => SignUp()),
               ),
             ),
-            const SizedBox(height: 32),
+            SizedBox(height: height * 0.04),
           ],
         ),
       ),
