@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/default.dart';
+import 'package:flutter_application_1/models/User.dart';
 import 'package:flutter_application_1/screens/home/home.dart';
 import 'package:flutter_application_1/screens/info/info.dart';
 import 'package:flutter_application_1/screens/profile/profile.dart';
 
 class Footer extends StatefulWidget {
-  const Footer({super.key});
+  const Footer({super.key, required AppUser user});
 
   @override
   State<Footer> createState() => _FooterState();

@@ -110,10 +110,16 @@ abstract class AppLocalizations {
   /// **'Sign in to your journal'**
   String get signInToYourJournal;
 
+  /// Sentence: user logged in with wrong email/password
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid email or password'**
+  String get invalidcreds;
+
   /// Sentence: Greeting message.
   ///
   /// In en, this message translates to:
-  /// **'Welcome back, Explorer'**
+  /// **'Welcome back, \nExplorer'**
   String get welcomeBackExplorer;
 
   /// Noun/Word: Used as a label for the email input field.
