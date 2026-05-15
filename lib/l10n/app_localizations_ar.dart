@@ -39,6 +39,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get newHere => 'هل أنت جديد هنا؟';
 
   @override
+  String get createAccount => 'Create account';
+
+  @override
   String get createAnAccount => 'إنشاء حساب';
 
   @override
@@ -296,4 +299,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get southSinaiEgypt => 'جنوب سيناء، مصر';
+
+  @override
+  String get failtostoreuser => 'Failed to store user data. Please try again.';
 }
