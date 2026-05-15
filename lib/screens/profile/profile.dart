@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/default.dart';
 import 'widget.dart';
+import 'package:flutter_application_1/l10n/app_localizations.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -12,12 +13,15 @@ class Profile extends StatefulWidget {
 class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width,
+          height = MediaQuery.of(context).size.height;
+    final lang = AppLocalizations.of(context)!;
     return Scaffold(
-      backgroundColor: NudePalette.nudeLight,
+      backgroundColor: Default.backgroundColor,
       appBar: AppBar(
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.menu, color: Color(0xFF3B2F2F)),
+          icon: Icon(Icons.menu, color: Default.buttonColor),
           onPressed: () {},
         ),
        
@@ -33,8 +37,8 @@ class _ProfileState extends State<Profile> {
               Column(
                 children: [
                   Container(
-                    height: 335,
-                    width: double.infinity,
+                    height: height * 0.36,
+                    width: width,
                     decoration: BoxDecoration(
                       color: NudePalette.nude,
                       borderRadius: BorderRadius.vertical(
@@ -42,14 +46,14 @@ class _ProfileState extends State<Profile> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 60),
+                  SizedBox(height: height * 0.07),
                   Padding(
                     padding: EdgeInsetsGeometry.only(left: 20, right: 20),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Saved Places',
+                          lang.savedPlaces,
                           style: TextStyle(
                             fontSize: 25,
                             fontWeight: FontWeight.bold,
@@ -57,24 +61,23 @@ class _ProfileState extends State<Profile> {
                             color: Colors.black87,
                           ),
                         ),
-                        SizedBox(height: 20),
+                        SizedBox(height: height * 0.02),
                         ListView.separated(
                           shrinkWrap: true,
                           physics: NeverScrollableScrollPhysics(),
                           itemCount: placesData.length,
                           separatorBuilder: (context, index) =>
-                              SizedBox(height: 12),
+                              SizedBox(height: height * 0.013),
                           itemBuilder: (context, index) {
                             final place = placesData[index];
                             return buildPlaceCard(
                               place['title'],
                               place['subtitle'],
-                              place['color'],
                               place['img'],
                             );
                           },
                         ),
-                        SizedBox(height: 50),
+                        SizedBox(height: height * 0.07),
                         
                       ],
                     ),
@@ -82,7 +85,7 @@ class _ProfileState extends State<Profile> {
                 ],
               ),
             Positioned(
-              top: 50,
+              top: height * 0.06,
               left: 0,
               right: 0, 
               child: Column(
@@ -106,31 +109,31 @@ class _ProfileState extends State<Profile> {
                       backgroundImage: AssetImage("assets/images/User Avatar.png"),
                     ),
                   ),
-                  SizedBox(height: 16),
+                  SizedBox(height: height * 0.01),
                   Text(
                     name,
                     style: TextStyle(
                       fontSize: 32,
                       fontWeight: FontWeight.bold,
                       fontFamily: 'Times New Roman',
-                      color: Color(0xFF3B2F2F),
+                      color: NudePalette.nudeDark,
                     ),
                   ),
-                  const SizedBox(height: 4),
-                  const Text(
-                    'Explorer • Cairo',
+                  SizedBox(height: height * 0.005),
+                  Text(
+                    '${lang.explorer}  • Cairo',
                     style: TextStyle(
                       fontSize: 16,
                       fontFamily: 'Times New Roman',
-                      color: Color(0xFF8A7D72),
+                      color: NudePalette.nudeBrown,
                     ),
                   ),
-                  const SizedBox(height: 24), // Add some space before the card
+                  SizedBox(height: 24), // Add some space before the card
                   
                   // --- STATS CARD STARTS HERE ---
                   Container(
-                    margin: const EdgeInsets.symmetric(horizontal: 24), // Keeps it from touching the screen edges
-                    padding: const EdgeInsets.symmetric(vertical: 16), // Padding inside the card
+                    margin: EdgeInsets.symmetric(horizontal: 24), // Keeps it from touching the screen edges
+                    padding: EdgeInsets.symmetric(vertical: 16), // Padding inside the card
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(16),
@@ -138,18 +141,18 @@ class _ProfileState extends State<Profile> {
                         BoxShadow(
                           color: Colors.black.withOpacity(0.05), // A very soft shadow
                           blurRadius: 10,
-                          offset: const Offset(0, 5), // Pushes the shadow down slightly
+                          offset: Offset(0, 5), // Pushes the shadow down slightly
                         ),
                       ],
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        buildStatColumn('42', 'VISITED'),
-                        Container(height: 30, width: 1, color: Colors.grey.withOpacity(0.3)),
-                        buildStatColumn('128', 'SAVED'),
-                        Container(height: 30, width: 1, color: Colors.grey.withOpacity(0.3)),
-                        buildStatColumn('15', 'REVIEWS'),
+                        buildStatColumn('42', lang.visited),
+                        Container(height: height * 0.03, width: 1, color: Colors.grey.withOpacity(0.3)),
+                        buildStatColumn('128', lang.saved),
+                        Container(height: height * 0.03, width: 1, color: Colors.grey.withOpacity(0.3)),
+                        buildStatColumn('15', lang.reviews),
                       ],
                     ),
                   ),

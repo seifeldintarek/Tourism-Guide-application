@@ -5,26 +5,23 @@ final List<Map<String, dynamic>> placesData = [
   {
     'title': 'Philae Temple',
     'subtitle': 'HISTORIC SITE • ASWAN',
-    'color': Color(0xFFE5A967),
     'img': "assets/images/Temple of Philae.png",
   },
   {
     'title': 'Khan el-Khalili',
     'subtitle': 'MARKET • OLD CAIRO',
-    'color': Color(0xFF2B211E),
     'img': "assets/images/Khan el-Khalili.png",
   },
   {
     'title': 'Siwa Oasis',
     'subtitle': 'NATURE • WESTERN DESERT',
-    'color': Color(0xFF5A94C6),
     'img': "assets/images/Siwa Oasis.png",
   },
 ];
 
 String name = "Julian Thorne";
 
-Widget buildPlaceCard(String title, String subtitle, Color color, String img) {
+Widget buildPlaceCard(String title, String subtitle, String img) {
   return Container(
       padding: EdgeInsets.all(12),
       decoration: BoxDecoration(
@@ -54,7 +51,7 @@ Widget buildPlaceCard(String title, String subtitle, Color color, String img) {
                   style: TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
-                    color: Color(0xFF3B2F2F),
+                    color: NudePalette.nudeDark,
                   ),
                 ),
                 SizedBox(height: 4),
@@ -63,7 +60,7 @@ Widget buildPlaceCard(String title, String subtitle, Color color, String img) {
                   style: TextStyle(
                     fontSize: 9,
                     fontWeight: FontWeight.w600,
-                    color: Color(0xFF8A7D72),
+                    color: NudePalette.nudeBrown,
                     letterSpacing: 0.8,
                   ),
                 ),
@@ -71,7 +68,7 @@ Widget buildPlaceCard(String title, String subtitle, Color color, String img) {
             ),
           ),
           IconButton(
-            icon: Icon(Icons.bookmark_border, color: Color(0xFF3B2F2F)),
+            icon: Icon(Icons.bookmark_border, color: NudePalette.nudeDark),
             onPressed: () {},
           ),
         ],
@@ -89,7 +86,7 @@ Widget buildPlaceCard(String title, String subtitle, Color color, String img) {
             fontSize: 22,
             fontWeight: FontWeight.bold,
             fontFamily: 'Times New Roman',
-            color: Color(0xFF3B2F2F),
+            color: NudePalette.nudeDark,
           ),
         ),
         const SizedBox(height: 4),
@@ -98,7 +95,7 @@ Widget buildPlaceCard(String title, String subtitle, Color color, String img) {
           style: const TextStyle(
             fontSize: 10,
             fontWeight: FontWeight.w600,
-            color: Color(0xFF8A7D72),
+            color: NudePalette.nudeBrown,
             letterSpacing: 1.2,
           ),
         ),
