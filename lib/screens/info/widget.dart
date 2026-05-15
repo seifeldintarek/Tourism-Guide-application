@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/default.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class TagChip extends StatelessWidget {
   final String label;

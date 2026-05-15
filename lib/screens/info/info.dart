@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/default.dart';
 import 'widget.dart';
+import 'package:flutter_application_1/l10n/app_localizations.dart';
 
 class Infoscreen extends StatefulWidget {
   const Infoscreen({super.key});
@@ -14,12 +15,13 @@ class _InfoscreenState extends State<Infoscreen> {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
+    final lang = AppLocalizations.of(context)!;
 
     return Scaffold(
       backgroundColor: Default.backgroundColor,
       appBar: Default.archiveAppBar(
         context: context,
-        title: 'THE ARCHIVE',
+        title: "",
         trailingIcon: const Icon(
           Icons.bookmark_border,
           color: NudePalette.nudeBrown,
@@ -33,8 +35,8 @@ class _InfoscreenState extends State<Infoscreen> {
             const MainImageHeader(),
             const SizedBox(height: 24),
 
-            const Text(
-              'Egyptian\nMuseum',
+            Text(
+              lang.egyptianMuseum,
               style: TextStyle(
                 fontFamily: 'NotoSerif',
                 fontSize: 36,
@@ -67,11 +69,11 @@ class _InfoscreenState extends State<Infoscreen> {
             ),
             const SizedBox(height: 16),
 
-            const Row(
+            Row(
               children: [
-                TagChip(label: 'Historical'),
-                TagChip(label: 'Artifacts'),
-                TagChip(label: 'Landmark'),
+                TagChip(label: lang.historical),
+                TagChip(label: lang.artifacts),
+                TagChip(label: lang.landmark),
               ],
             ),
             const SizedBox(height: 24),
@@ -81,7 +83,7 @@ class _InfoscreenState extends State<Infoscreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Default.sectionTitle('About'),
+                  Default.sectionTitle(lang.about),
                   const SizedBox(height: 12),
                   const Text(
                     'Ancient Egyptian artifacts collection with over 120,000 items.',
@@ -100,14 +102,14 @@ class _InfoscreenState extends State<Infoscreen> {
             // --- 2. Status & Hours Box (Now SECOND) ---
             InfoBox(
               backgroundColor: NudePalette.nudeDark,
-              child: const Row(
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'STATUS',
+                        lang.status,
                         style: TextStyle(
                           color: Colors.white70,
                           fontSize: 10,
@@ -115,7 +117,7 @@ class _InfoscreenState extends State<Infoscreen> {
                         ),
                       ),
                       Text(
-                        'Open',
+                        lang.open,
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
@@ -129,7 +131,7 @@ class _InfoscreenState extends State<Infoscreen> {
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       Text(
-                        'HOURS',
+                        lang.hours,
                         style: TextStyle(
                           color: Colors.white70,
                           fontSize: 10,
@@ -169,11 +171,11 @@ class _InfoscreenState extends State<Infoscreen> {
                     ),
                   ),
                   const SizedBox(width: 12),
-                  const Column(
+                  Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'STARTING',
+                        lang.starting,
                         style: TextStyle(
                           fontSize: 10,
                           color: Colors.black54,
@@ -181,7 +183,7 @@ class _InfoscreenState extends State<Infoscreen> {
                         ),
                       ),
                       Text(
-                        'EGP 200',
+                        '${lang.egp} 200',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 16,
@@ -196,10 +198,10 @@ class _InfoscreenState extends State<Infoscreen> {
             const SizedBox(height: 24),
 
             Default.sectionTitle(
-              'Gallery',
-              trailing: const Text(
-                '4 PHOTOS',
-                style: TextStyle(
+              lang.gallery,
+              trailing: Text(
+                '4 ${lang.photos}',
+                style: const TextStyle(
                   fontSize: 10,
                   fontFamily: 'WorkSans',
                   fontWeight: FontWeight.bold,
@@ -230,7 +232,7 @@ class _InfoscreenState extends State<Infoscreen> {
                     "https://egymonuments.com/book-date/3",
                   );
                 },
-                child: 'BOOK NOW',
+                child: lang.planMyVisit,
                 width: width * 0.85,
                 height: height * 0.08,
               ),
