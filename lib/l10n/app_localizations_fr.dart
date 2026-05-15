@@ -12,6 +12,9 @@ class AppLocalizationsFr extends AppLocalizations {
   String get signInToYourJournal => 'Connectez-vous à votre journal';
 
   @override
+  String get invalidcreds => 'Invalid email or password';
+
+  @override
   String get welcomeBackExplorer => 'Bon retour, Explorateur';
 
   @override

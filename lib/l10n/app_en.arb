@@ -5,8 +5,12 @@
   "signInToYourJournal": "Sign in to your journal",
   "@signInToYourJournal": {
     "description": "Sentence: Header for the sign-in form."
+  },  
+  "invalidcreds": "Invalid email or password",
+  "@invalidcreds": {
+    "description": "Sentence: user logged in with wrong email/password"
   },
-  "welcomeBackExplorer": "Welcome back, Explorer",
+  "welcomeBackExplorer": "Welcome back, \nExplorer",
   "@welcomeBackExplorer": {
     "description": "Sentence: Greeting message."
   },

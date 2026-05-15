@@ -12,7 +12,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get signInToYourJournal => 'Sign in to your journal';
 
   @override
-  String get welcomeBackExplorer => 'Welcome back, Explorer';
+  String get invalidcreds => 'Invalid email or password';
+
+  @override
+  String get welcomeBackExplorer => 'Welcome back, \nExplorer';
 
   @override
   String get emailAddress => 'Email Address';

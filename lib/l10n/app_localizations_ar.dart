@@ -12,6 +12,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get signInToYourJournal => 'تسجيل الدخول إلى يومياتك';
 
   @override
+  String get invalidcreds => 'Invalid email or password';
+
+  @override
   String get welcomeBackExplorer => 'مرحباً بعودتك، أيها المستكشف';
 
   @override

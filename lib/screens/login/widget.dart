@@ -1,5 +1,88 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/l10n/app_localizations.dart';
+import 'package:flutter_application_1/core/default.dart';
+import 'package:flutter_application_1/models/User.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter_application_1/screens/signup/widget.dart';
+
+Future<AppUser?> loginUser({
+  required BuildContext context,
+  required AppLocalizations lang,
+  required String email,
+  required String password,
+}) async {
+  try {
+    final hashedPass = hashPassword(password);
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
+      email: email,
+      password: hashedPass,
+    );
+
+    final firebaseUser = FirebaseAuth.instance.currentUser;
+
+    if (firebaseUser == null) {
+      return null;
+    }
+
+    final doc = await FirebaseFirestore.instance
+        .collection("users")
+        .doc(firebaseUser.uid)
+        .get();
+
+    if (!doc.exists || doc.data() == null) {
+      return null;
+    }
+
+    AppUser user = AppUser.fromMap(doc.data()!);
+
+    return user;
+  } on FirebaseAuthException catch (e) {
+    print("Auth Error: ${e.code}");
+    return null;
+  } catch (e) {
+    print("Login Error: $e");
+
+    return null;
+  }
+}
+
+String? validateEmail(String? value) {
+  if (value == null || value.isEmpty) {
+    return 'Please enter your email';
+  }
+  if (!RegExp(
+    r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+",
+  ).hasMatch(value)) {
+    return "Invalid email format";
+  }
+  return null;
+}
+
+String? validatePassword(String? value) {
+  if (value == null || value.isEmpty) {
+    return 'Please enter your password';
+  }
+
+  final hasUpper = RegExp(r'[A-Z]').hasMatch(value);
+  final hasLower = RegExp(r'[a-z]').hasMatch(value);
+  final hasDigit = RegExp(r'[0-9]').hasMatch(value);
+  final hasSpecial = RegExp(r'[^a-zA-Z0-9]').hasMatch(value);
+
+  if (value.length < 8) {
+    return "Password must be at least 8 characters";
+  } else if (!hasUpper) {
+    return "Add at least one capital letter";
+  } else if (!hasLower) {
+    return "Add at least one small letter";
+  } else if (!hasDigit) {
+    return "Add at least one number";
+  } else if (!hasSpecial) {
+    return "Add at least one special character";
+  }
+
+  return null;
+}
 
 Widget loginHeader(BuildContext context, double width, double height) {
   final lang = AppLocalizations.of(context)!;
@@ -15,7 +98,6 @@ Widget loginHeader(BuildContext context, double width, double height) {
           ),
         ),
       ),
-      // Utilizing height for relative spacing
       SizedBox(height: height * 0.015),
       Center(
         child: Text(
@@ -40,16 +122,18 @@ Widget labeledTextField({
   bool obscureText = false,
   required double width,
   required double height,
+  String? Function(String?)? validator, // Accept validator
 }) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       Text(label, style: const TextStyle(fontSize: 14, color: Colors.black87)),
-      // Utilizing height for relative spacing
       SizedBox(height: height * 0.01),
-      TextField(
+      TextFormField(
+        // Changed to TextFormField for validation support
         controller: controller,
         obscureText: obscureText,
+        validator: validator, // Apply validator
         decoration: InputDecoration(
           hintText: hintText,
           hintStyle: const TextStyle(color: Colors.black38),
@@ -98,7 +182,6 @@ Widget orDivider(double width, double height) {
     children: [
       const Expanded(child: Divider(color: Colors.black26)),
       Padding(
-        // Utilizing width for relative padding
         padding: EdgeInsets.symmetric(horizontal: width * 0.03),
         child: const Text(
           'OR CONTINUE WITH',
@@ -128,15 +211,10 @@ Widget socialLoginButtons(BuildContext context, double width, double height) {
           ),
           label: Text(
             lang.signInWithGoogle,
-            style: const TextStyle(color: Colors.black87),
+            style: TextStyle(color: Default.textColor),
           ),
           style: OutlinedButton.styleFrom(
-            // Utilizing height for relative padding
-            padding: EdgeInsets.symmetric(vertical: height * 0.018),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
-            ),
-            side: const BorderSide(color: Colors.black26),
+            side: const BorderSide(color: Colors.transparent),
           ),
         ),
       ),
