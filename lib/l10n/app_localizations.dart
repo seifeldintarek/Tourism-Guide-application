@@ -164,6 +164,12 @@ abstract class AppLocalizations {
   /// **'New here?'**
   String get newHere;
 
+  /// Action Phrase: Register to db.
+  ///
+  /// In en, this message translates to:
+  /// **'Create account'**
+  String get createAccount;
+
   /// Action Phrase: Link to navigate to the registration page.
   ///
   /// In en, this message translates to:
@@ -239,7 +245,7 @@ abstract class AppLocalizations {
   /// Sentence/Question: Prompt asking if the user already has an account.
   ///
   /// In en, this message translates to:
-  /// **'Already a member?'**
+  /// **'Already have an account?'**
   String get alreadyAMember;
 
   /// Action Phrase: Link to navigate back to the login page.
@@ -679,6 +685,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'South Sinai, Egypt'**
   String get southSinaiEgypt;
+
+  /// Action Phrase: error uploading user
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to store user data. Please try again.'**
+  String get failtostoreuser;
 }
 
 class _AppLocalizationsDelegate

@@ -39,6 +39,9 @@ class AppLocalizationsEs extends AppLocalizations {
   String get newHere => '¿Nuevo aquí?';
 
   @override
+  String get createAccount => 'Create account';
+
+  @override
   String get createAnAccount => 'Crear una cuenta';
 
   @override
@@ -296,4 +299,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get southSinaiEgypt => 'Sinaí del Sur, Egipto';
+
+  @override
+  String get failtostoreuser => 'Failed to store user data. Please try again.';
 }
