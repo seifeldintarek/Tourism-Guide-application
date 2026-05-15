@@ -69,58 +69,75 @@ class _SignUpState extends State<SignUp> {
     super.dispose();
   }
 
-  void handleCreateAccount() {
-    final password = _passwordController.text;
-    final confirmPassword = _confirmPasswordController.text;
-
-    final hasUpper = RegExp(r'[A-Z]').hasMatch(password);
-    final hasLower = RegExp(r'[a-z]').hasMatch(password);
-    final hasDigit = RegExp(r'[0-9]').hasMatch(password);
-    final hasSpecial = RegExp(r'[^a-zA-Z0-9]').hasMatch(password);
-
-    setState(() {
-      _emailError =
-          RegExp(
-            r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+",
-          ).hasMatch(_emailController.text)
-          ? null
-          : "Invalid email format";
-
-      if (password.length < 8) {
-        _passwordError = "Password must be at least 8 characters";
-      } else if (!hasUpper) {
-        _passwordError = "Add at least one capital letter";
-      } else if (!hasLower) {
-        _passwordError = "Add at least one small letter";
-      } else if (!hasDigit) {
-        _passwordError = "Add at least one number";
-      } else if (!hasSpecial) {
-        _passwordError = "Add at least one special character";
-      } else {
-        _passwordError = null;
-      }
-
-      if (password != confirmPassword) {
-        _confirmPasswordError = "Passwords do not match";
-      } else {
-        _confirmPasswordError = null;
-      }
-    });
-
-    if (_emailError == null &&
-        _passwordError == null &&
-        _confirmPasswordError == null) {
-      print("All validations passed!");
-    }
-    Navigator.pushAndRemoveUntil(
-      context,
-      MaterialPageRoute(builder: (context) => const Login()),
-      (route) => false,
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
+    final lang = AppLocalizations.of(context)!;
+
+    void handleCreateAccount() async {
+      final password = _passwordController.text;
+      final confirmPassword = _confirmPasswordController.text;
+      final hasUpper = RegExp(r'[A-Z]').hasMatch(password);
+      final hasLower = RegExp(r'[a-z]').hasMatch(password);
+      final hasDigit = RegExp(r'[0-9]').hasMatch(password);
+      final hasSpecial = RegExp(r'[^a-zA-Z0-9]').hasMatch(password);
+
+      setState(() {
+        _emailError =
+            RegExp(
+              r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+",
+            ).hasMatch(_emailController.text)
+            ? null
+            : "Invalid email format";
+
+        if (password.length < 8) {
+          _passwordError = "Password must be at least 8 characters";
+        } else if (!hasUpper) {
+          _passwordError = "Add at least one capital letter";
+        } else if (!hasLower) {
+          _passwordError = "Add at least one small letter";
+        } else if (!hasDigit) {
+          _passwordError = "Add at least one number";
+        } else if (!hasSpecial) {
+          _passwordError = "Add at least one special character";
+        } else {
+          _passwordError = null;
+        }
+
+        _confirmPasswordError = password != confirmPassword
+            ? "Passwords do not match"
+            : null;
+      });
+
+      // ← Stop if validation failed
+      if (_emailError != null ||
+          _passwordError != null ||
+          _confirmPasswordError != null)
+        return;
+
+      final success = await storeUser({
+        "firstName": _firstNameController.text.trim(),
+        "lastName": _lastNameController.text.trim(),
+        "email": _emailController.text.trim(),
+        "password": _passwordController.text.trim(),
+        "language": _selectedLanguage!.trim(),
+      }, context);
+
+      // ← Guard after async gap
+      if (!mounted) return;
+
+      if (success) {
+        Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(builder: (context) => const Login()),
+          (route) => false,
+        );
+      } else {
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text(lang.failtostoreuser)));
+      }
+    }
+
     // ── Responsive sizing ────────────────────────────────────────────────────
     final double width = MediaQuery.of(context).size.width;
     final double height = MediaQuery.of(context).size.height;
@@ -129,14 +146,12 @@ class _SignUpState extends State<SignUp> {
     final double hPadding = width * 0.05; // ~20 dp on 400 wide
     final double sectionGap = height * 0.025; // ~20 dp on 800 tall
     final double smallGap = height * 0.01; // ~8 dp
-    final double buttonPaddingV = height * 0.02; // ~16 dp
 
     // Slightly reduced font sizes, still readable
     final double titleFontSize = width * 0.08; // ~32 dp
     final double labelFontSize = width * 0.028; // ~11 dp
     final double bodyFontSize = width * 0.032; // ~13 dp
     final double hintFontSize = width * 0.031; // ~12.5 dp
-    final double buttonFontSize = width * 0.038; // ~15 dp
 
     // ── State ────────────────────────────────────────────────────────────────
     bool allFieldsFilled =
@@ -154,8 +169,6 @@ class _SignUpState extends State<SignUp> {
         _confirmPasswordError == null;
 
     bool isButtonEnabled = allFieldsFilled && hasNoErrors && _isAccepted;
-
-    final lang = AppLocalizations.of(context)!;
 
     // ── Reusable local builders ───────────────────────────────────────────────
     Widget buildLabel(String text) => Text(

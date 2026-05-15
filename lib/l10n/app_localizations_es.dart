@@ -299,4 +299,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get southSinaiEgypt => 'Sinaí del Sur, Egipto';
+
+  @override
+  String get failtostoreuser => 'Failed to store user data. Please try again.';
 }

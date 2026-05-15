@@ -685,6 +685,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'South Sinai, Egypt'**
   String get southSinaiEgypt;
+
+  /// Action Phrase: error uploading user
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to store user data. Please try again.'**
+  String get failtostoreuser;
 }
 
 class _AppLocalizationsDelegate

@@ -314,5 +314,9 @@
   "southSinaiEgypt": "South Sinai, Egypt",
   "@southSinaiEgypt": {
     "description": "Location (Phrase)"
-  }
+  },
+"failtostoreuser": "Failed to store user data. Please try again.",
+"@failtostoreuser": {
+  "description": "Action Phrase: error uploading user"
+}
 }
