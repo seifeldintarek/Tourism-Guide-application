@@ -34,6 +34,7 @@ flutter:
 
   assets:
     - assets/images/test.jpg
+    - assets/images/splash_logo.png
 
   fonts:
     - family: Test
