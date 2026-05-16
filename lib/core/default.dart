@@ -10,7 +10,7 @@ class Default {
   // final lang = AppLocalizations.of(context)!;
 
   static final backgroundColor =
-      NudePalette.nude; // Updated to use your palette
+      NudePalette.nudeLight; // Updated to use your palette
   static final buttonColor = Color.fromARGB(
     255,
     72,
@@ -152,11 +152,8 @@ class NudePalette {
   static const Color nudeLight = Color(
     0xFFFEF9F2,
   ); // Updated to match HTML surface-bright
-  static const Color nude = Color.fromARGB(
-    255,
-    240,
-    221,
-    202,
+  static const Color nude = Color(
+    0xFFF4DFCB,
   ); // Updated to match HTML secondary-container
   static const Color nudePink = Color(0xFFD8A7A0);
   static const Color nudeBrown = Color(

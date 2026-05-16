@@ -104,6 +104,12 @@ abstract class AppLocalizations {
     Locale('fr'),
   ];
 
+  /// No description provided for @egypttourismguide.
+  ///
+  /// In en, this message translates to:
+  /// **'Egypt Tourism Guide'**
+  String get egypttourismguide;
+
   /// Sentence: Header for the sign-in form.
   ///
   /// In en, this message translates to:

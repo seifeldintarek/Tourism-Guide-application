@@ -4,6 +4,7 @@ import 'package:flutter_application_1/l10n/app_localizations.dart';
 import 'package:flutter_application_1/screens/home/home.dart';
 import 'package:flutter_application_1/screens/login/login.dart';
 import 'package:flutter_application_1/screens/signup/widget.dart';
+import 'package:flutter_application_1/screens/signup/service.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
@@ -119,7 +120,6 @@ class _SignUpState extends State<SignUp> {
         "lastName": _lastNameController.text.trim(),
         "email": _emailController.text.trim(),
         "password": _passwordController.text.trim(),
-        "language": _selectedLanguage!.trim(),
       }, context);
 
       // ← Guard after async gap
