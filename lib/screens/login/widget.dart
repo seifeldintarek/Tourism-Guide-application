@@ -73,7 +73,7 @@ Widget loginHeader(BuildContext context, double width, double height) {
 Widget passwordTextfield(
   TextEditingController _passwordController,
   bool _obscurePassword,
-  Function setState,
+  VoidCallback onToggle,
   double height,
   double width,
   double hintFontSize,
@@ -103,8 +103,7 @@ Widget passwordTextfield(
               _obscurePassword ? Icons.visibility_off : Icons.visibility,
               color: Colors.black54,
             ),
-            onPressed: () =>
-                setState(() => _obscurePassword = !_obscurePassword),
+            onPressed: onToggle,
           ),
         ),
       ),

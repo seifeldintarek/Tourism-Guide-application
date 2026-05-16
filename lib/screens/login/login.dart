@@ -67,7 +67,7 @@ class _LoginState extends State<Login> {
               passwordTextfield(
                 _passwordController,
                 _obscurePassword,
-                setState,
+                () => setState(() => _obscurePassword = !_obscurePassword),
                 height,
                 width,
                 width * 0.031,

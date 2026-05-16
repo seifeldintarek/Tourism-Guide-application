@@ -17,14 +17,13 @@ Widget passwordTextfield(
   TextEditingController _passwordController,
   String? _passwordError,
   bool _obscurePassword,
-  Function setState,
+  VoidCallback onToggle,
   double height,
   double width,
   double hintFontSize,
 ) {
   return TextField(
     controller: _passwordController,
-    onChanged: (val) => setState(() {}),
     obscureText: _obscurePassword,
     decoration: buildInputDecoration(
       height: height,
@@ -34,7 +33,7 @@ Widget passwordTextfield(
       errorText: _passwordError,
       suffixIcon: IconButton(
         icon: Icon(_obscurePassword ? Icons.visibility_off : Icons.visibility),
-        onPressed: () => setState(() => _obscurePassword = !_obscurePassword),
+        onPressed: onToggle,
       ),
     ),
   );
@@ -44,14 +43,13 @@ Widget confirmPasswordTextfield(
   TextEditingController _confirmPasswordController,
   String? _confirmPasswordError,
   bool _obscureConfirmPassword,
-  Function setState,
+  VoidCallback onToggle,
   double height,
   double width,
   double hintFontSize,
 ) {
   return TextField(
     controller: _confirmPasswordController,
-    onChanged: (val) => setState(() {}),
     obscureText: _obscureConfirmPassword,
     decoration: buildInputDecoration(
       height: height,
@@ -63,8 +61,7 @@ Widget confirmPasswordTextfield(
         icon: Icon(
           _obscureConfirmPassword ? Icons.visibility_off : Icons.visibility,
         ),
-        onPressed: () =>
-            setState(() => _obscureConfirmPassword = !_obscureConfirmPassword),
+        onPressed: onToggle,
       ),
     ),
   );
