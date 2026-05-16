@@ -23,7 +23,6 @@ class _ProfileState extends State<Profile> {
     return Scaffold(
       backgroundColor: Default.backgroundColor,
       appBar: AppBar(
-        elevation: 0,
         leading: IconButton(
           icon: Icon(Icons.menu, color: Default.buttonColor),
           onPressed: () {},

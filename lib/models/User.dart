@@ -36,7 +36,7 @@ class AppUser {
       "email": email,
       "language": language,
       "hashedPassword": hashedPassword,
-      "JoinedAt": Timestamp.fromDate(DateTime.now()),
+      "JoinedAt": JoinedAt.toIso8601String(),
     };
   }
 
@@ -49,7 +49,9 @@ class AppUser {
       email: map["email"] ?? "",
       language: map["language"] ?? "",
       hashedPassword: map["hashedPassword"] ?? "",
-      JoinedAt: (map["JoinedAt"] as Timestamp).toDate(),
+      JoinedAt: map["JoinedAt"] is Timestamp
+          ? (map["JoinedAt"] as Timestamp).toDate()
+          : DateTime.parse(map["JoinedAt"]),
     );
   }
 
