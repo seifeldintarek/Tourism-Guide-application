@@ -104,16 +104,28 @@ abstract class AppLocalizations {
     Locale('fr'),
   ];
 
+  /// No description provided for @egypttourismguide.
+  ///
+  /// In en, this message translates to:
+  /// **'Egypt Tourism Guide'**
+  String get egypttourismguide;
+
   /// Sentence: Header for the sign-in form.
   ///
   /// In en, this message translates to:
   /// **'Sign in to your journal'**
   String get signInToYourJournal;
 
+  /// Sentence: user logged in with wrong email/password
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid email or password'**
+  String get invalidcreds;
+
   /// Sentence: Greeting message.
   ///
   /// In en, this message translates to:
-  /// **'Welcome back, Explorer'**
+  /// **'Welcome back, \nExplorer'**
   String get welcomeBackExplorer;
 
   /// Noun/Word: Used as a label for the email input field.
@@ -163,6 +175,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'New here?'**
   String get newHere;
+
+  /// Action Phrase: Register to db.
+  ///
+  /// In en, this message translates to:
+  /// **'Create account'**
+  String get createAccount;
 
   /// Action Phrase: Link to navigate to the registration page.
   ///
@@ -239,7 +257,7 @@ abstract class AppLocalizations {
   /// Sentence/Question: Prompt asking if the user already has an account.
   ///
   /// In en, this message translates to:
-  /// **'Already a member?'**
+  /// **'Already have an account?'**
   String get alreadyAMember;
 
   /// Action Phrase: Link to navigate back to the login page.
@@ -679,6 +697,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'South Sinai, Egypt'**
   String get southSinaiEgypt;
+
+  /// Action Phrase: error uploading user
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to store user data. Please try again.'**
+  String get failtostoreuser;
 }
 
 class _AppLocalizationsDelegate

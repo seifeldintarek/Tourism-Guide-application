@@ -11,9 +11,14 @@ class Default {
 
   static final backgroundColor =
       NudePalette.nudeLight; // Updated to use your palette
-  static final buttonColor = Color(
-    0xFF463427,
+  static final buttonColor = Color.fromARGB(
+    255,
+    72,
+    52,
+    38,
   ); // Matching the primary color from your HTML
+  static final textColor =
+      Colors.black; // Matching the primary color for text from your HTML
 
   static Widget Button({
     required void Function()? onPressed,
@@ -148,7 +153,7 @@ class NudePalette {
     0xFFFEF9F2,
   ); // Updated to match HTML surface-bright
   static const Color nude = Color(
-    0xFFF4DFCB,
+    0xFFFEF9F2,
   ); // Updated to match HTML secondary-container
   static const Color nudePink = Color(0xFFD8A7A0);
   static const Color nudeBrown = Color(

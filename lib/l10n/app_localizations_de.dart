@@ -9,7 +9,13 @@ class AppLocalizationsDe extends AppLocalizations {
   AppLocalizationsDe([String locale = 'de']) : super(locale);
 
   @override
+  String get egypttourismguide => 'Egypt Tourism Guide';
+
+  @override
   String get signInToYourJournal => 'Melde dich bei deinem Tagebuch an';
+
+  @override
+  String get invalidcreds => 'Invalid email or password';
 
   @override
   String get welcomeBackExplorer => 'Willkommen zurück, Entdecker';
@@ -37,6 +43,9 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get newHere => 'Neu hier?';
+
+  @override
+  String get createAccount => 'Create account';
 
   @override
   String get createAnAccount => 'Konto erstellen';
@@ -296,4 +305,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get southSinaiEgypt => 'Süd-Sinai, Ägypten';
+
+  @override
+  String get failtostoreuser => 'Failed to store user data. Please try again.';
 }
