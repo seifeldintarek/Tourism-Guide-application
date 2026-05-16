@@ -38,7 +38,7 @@ class _SplashScreenState extends State<SplashScreen> {
             Spacer(),
 
             Image.asset(
-              'assets/images/splash_logo.png',
+              'assets/images/splash/splash_logo.png',
               width: width * 0.8,
               height: height * 0.4,
               fit: BoxFit.contain,
