@@ -6,7 +6,9 @@ import 'package:flutter_application_1/screens/info/info.dart';
 import 'package:flutter_application_1/screens/profile/profile.dart';
 
 class Footer extends StatefulWidget {
-  const Footer({super.key, required AppUser user});
+  const Footer({super.key, required this.user});
+
+  final AppUser user;
 
   @override
   State<Footer> createState() => _FooterState();
@@ -15,11 +17,11 @@ class Footer extends StatefulWidget {
 class _FooterState extends State<Footer> {
   int index = 0;
 
-  final List<Widget> screens = [
+  late final List<Widget> screens = [
     const Home(),
     const Infoscreen(),
     Container(),
-    const Profile(),
+    Profile(user: widget.user),
   ];
 
   @override

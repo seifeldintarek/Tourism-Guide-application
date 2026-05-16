@@ -18,6 +18,8 @@ class _LoginState extends State<Login> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
 
+  bool _obscurePassword = true;
+
   // Added FormKey to manage validation state
   final _formKey = GlobalKey<FormState>();
 
@@ -62,15 +64,24 @@ class _LoginState extends State<Login> {
                 validator: validateEmail, // Calling the extracted function
               ),
               SizedBox(height: height * 0.025),
-              labeledTextField(
-                label: lang.password,
-                hintText: '••••••••',
-                controller: _passwordController,
-                obscureText: true,
-                width: width,
-                height: height,
-                validator: validatePassword, // Calling the extracted function
+              passwordTextfield(
+                _passwordController,
+                _obscurePassword,
+                setState,
+                height,
+                width,
+                width * 0.031,
+                lang.password,
               ),
+              // labeledTextField(
+              //   label: lang.password,
+              //   hintText: '••••••••',
+              //   controller: _passwordController,
+              //   obscureText: true,
+              //   width: width,
+              //   height: height,
+              //   validator: validatePassword, // Calling the extracted function
+              // ),
               SizedBox(height: height * 0.04),
               continueJourneyButton(
                 context,

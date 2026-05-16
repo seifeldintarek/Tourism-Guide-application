@@ -26,6 +26,8 @@ Future<bool> storeUser(final userData, BuildContext context) async {
   try {
     final locale = context.read<LocaleProvider>().locale;
 
+    DateTime now = DateTime.now();
+
     final doc = FirebaseFirestore.instance.collection("users").doc(uid);
     await doc.set({
       "id": uid,
@@ -35,7 +37,7 @@ Future<bool> storeUser(final userData, BuildContext context) async {
       "email": userData["email"],
       "password": hashedPass,
       "language": locale.toString(),
-      "JoinedAt": DateTime.now(),
+      "JoinedAt": now,
       "pp": "",
     });
 
@@ -46,6 +48,8 @@ Future<bool> storeUser(final userData, BuildContext context) async {
       email: userData["email"],
       language: locale.toString(),
       hashedPassword: hashedPass,
+      fullName: "${userData["firstName"]} ${userData["lastName"]}",
+      JoinedAt: now,
     );
     await appUser.saveToCache();
 

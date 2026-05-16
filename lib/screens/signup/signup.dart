@@ -170,81 +170,6 @@ class _SignUpState extends State<SignUp> {
 
     bool isButtonEnabled = allFieldsFilled && hasNoErrors && _isAccepted;
 
-    // ── Reusable local builders ───────────────────────────────────────────────
-    Widget buildLabel(String text) => Text(
-      text,
-      style: TextStyle(
-        fontSize: labelFontSize,
-        fontWeight: FontWeight.w600,
-        color: Default.textColor,
-        letterSpacing: 0.5,
-      ),
-    );
-
-    InputDecoration buildInputDecoration({
-      required String hint,
-      String? errorText,
-      Widget? suffixIcon,
-    }) => InputDecoration(
-      filled: true,
-      fillColor: const Color(0xFFF2EDE6),
-      hintText: hint,
-      hintStyle: TextStyle(color: Colors.grey, fontSize: hintFontSize),
-      errorText: errorText,
-      errorStyle: TextStyle(fontSize: hintFontSize * 0.9),
-      suffixIcon: suffixIcon,
-      contentPadding: EdgeInsets.symmetric(
-        horizontal: width * 0.04,
-        vertical: height * 0.018,
-      ),
-      border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(12),
-        borderSide: BorderSide.none,
-      ),
-    );
-
-    // ── Responsive dropdown (no overflow) ────────────────────────────────────
-    Widget buildDropdown({
-      required String? value,
-      required String hint,
-      required List<String> items,
-      required ValueChanged<String?> onChanged,
-    }) => DropdownButtonHideUnderline(
-      child: Container(
-        padding: EdgeInsets.symmetric(horizontal: width * 0.035),
-        decoration: BoxDecoration(
-          color: const Color(0xFFF2EDE6),
-          borderRadius: BorderRadius.circular(12),
-        ),
-        child: DropdownButton<String>(
-          value: value,
-          isExpanded: true, // ← key fix: fills width, no overflow
-          hint: Text(
-            hint,
-            style: TextStyle(color: Colors.grey, fontSize: hintFontSize),
-            overflow: TextOverflow.ellipsis,
-          ),
-          icon: const Icon(Icons.keyboard_arrow_down, color: Colors.grey),
-          style: TextStyle(color: Default.textColor, fontSize: bodyFontSize),
-          dropdownColor: const Color(0xFFF2EDE6),
-          borderRadius: BorderRadius.circular(12),
-          items: items
-              .map(
-                (item) => DropdownMenuItem<String>(
-                  value: item,
-                  child: Text(
-                    item,
-                    style: TextStyle(fontSize: bodyFontSize),
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ),
-              )
-              .toList(),
-          onChanged: onChanged,
-        ),
-      ),
-    );
-
     // ── UI ────────────────────────────────────────────────────────────────────
     return Scaffold(
       backgroundColor: Default.backgroundColor,
@@ -264,7 +189,7 @@ class _SignUpState extends State<SignUp> {
             children: [
               // ── Title ──────────────────────────────────────────────────────
               Text(
-                "Tell us about \nyourself",
+                lang.tellUsAboutYourself,
                 style: TextStyle(
                   fontSize: titleFontSize,
                   fontWeight: FontWeight.bold,
@@ -285,9 +210,19 @@ class _SignUpState extends State<SignUp> {
               // ── Name row ───────────────────────────────────────────────────
               Row(
                 children: [
-                  Expanded(child: buildLabel(lang.firstName.toUpperCase())),
+                  Expanded(
+                    child: buildLabel(
+                      lang.firstName.toUpperCase(),
+                      labelFontSize,
+                    ),
+                  ),
                   SizedBox(width: width * 0.025),
-                  Expanded(child: buildLabel(lang.lastName.toUpperCase())),
+                  Expanded(
+                    child: buildLabel(
+                      lang.lastName.toUpperCase(),
+                      labelFontSize,
+                    ),
+                  ),
                 ],
               ),
               SizedBox(height: smallGap),
@@ -312,62 +247,66 @@ class _SignUpState extends State<SignUp> {
               SizedBox(height: sectionGap),
 
               // ── Email ──────────────────────────────────────────────────────
-              buildLabel(lang.emailAddress.toUpperCase()),
+              buildLabel(lang.emailAddress.toUpperCase(), labelFontSize),
               SizedBox(height: smallGap),
               TextField(
                 controller: _emailController,
                 decoration: buildInputDecoration(
                   hint: lang.emailHint,
                   errorText: _emailError,
+                  height: height,
+                  width: width,
+                  hintFontSize: hintFontSize,
+                  suffixIcon: Icon(Icons.email),
                 ),
               ),
 
               SizedBox(height: sectionGap),
 
               // ── Password ───────────────────────────────────────────────────
-              buildLabel(lang.createPassword.toUpperCase()),
+              buildLabel(lang.createPassword.toUpperCase(), labelFontSize),
               SizedBox(height: smallGap),
-              TextField(
-                controller: _passwordController,
-                onChanged: (val) => setState(() {}),
-                obscureText: _obscurePassword,
-                decoration: buildInputDecoration(
-                  hint: "Enter your password",
-                  errorText: _passwordError,
-                  suffixIcon: IconButton(
-                    icon: Icon(
-                      _obscurePassword
-                          ? Icons.visibility_off
-                          : Icons.visibility,
-                    ),
-                    onPressed: () =>
-                        setState(() => _obscurePassword = !_obscurePassword),
-                  ),
-                ),
+              passwordTextfield(
+                _passwordController,
+                _passwordError,
+                _obscurePassword,
+                setState,
+                height,
+                width,
+                hintFontSize,
               ),
 
+              // TextField(
+              //   controller: _passwordController,
+              //   onChanged: (val) => setState(() {}),
+              //   obscureText: _obscurePassword,
+              //   decoration: buildInputDecoration(
+              //     hint: "Enter your password",
+              //     errorText: _passwordError,
+              //     suffixIcon: IconButton(
+              //       icon: Icon(
+              //         _obscurePassword
+              //             ? Icons.visibility_off
+              //             : Icons.visibility,
+              //       ),
+              //       onPressed: () =>
+              //           setState(() => _obscurePassword = !_obscurePassword),
+              //     ),
+              //   ),
+              // ),
               SizedBox(height: sectionGap),
 
               // ── Confirm Password ───────────────────────────────────────────
-              buildLabel(lang.confirmPassword.toUpperCase()),
+              buildLabel(lang.confirmPassword.toUpperCase(), labelFontSize),
               SizedBox(height: smallGap),
-              TextField(
-                controller: _confirmPasswordController,
-                obscureText: _obscureConfirmPassword,
-                decoration: buildInputDecoration(
-                  hint: lang.confirmPassword.toUpperCase(),
-                  errorText: _confirmPasswordError,
-                  suffixIcon: IconButton(
-                    icon: Icon(
-                      _obscureConfirmPassword
-                          ? Icons.visibility_off
-                          : Icons.visibility,
-                    ),
-                    onPressed: () => setState(
-                      () => _obscureConfirmPassword = !_obscureConfirmPassword,
-                    ),
-                  ),
-                ),
+              confirmPasswordTextfield(
+                _confirmPasswordController,
+                _confirmPasswordError,
+                _obscureConfirmPassword,
+                setState,
+                height,
+                width,
+                hintFontSize,
               ),
 
               SizedBox(height: sectionGap),
@@ -375,9 +314,14 @@ class _SignUpState extends State<SignUp> {
               // ── Language + Currency dropdowns ──────────────────────────────
               Row(
                 children: [
-                  Expanded(child: buildLabel(lang.language.toUpperCase())),
+                  Expanded(
+                    child: buildLabel(
+                      lang.language.toUpperCase(),
+                      labelFontSize,
+                    ),
+                  ),
                   SizedBox(width: width * 0.025),
-                  Expanded(child: buildLabel("CURRENCY")),
+                  Expanded(child: buildLabel("CURRENCY", labelFontSize)),
                 ],
               ),
               SizedBox(height: smallGap),
@@ -385,6 +329,9 @@ class _SignUpState extends State<SignUp> {
                 children: [
                   Expanded(
                     child: buildDropdown(
+                      bodyFontSize: bodyFontSize,
+                      hintFontSize: hintFontSize,
+                      width: width,
                       value: _selectedLanguage,
                       hint: "Select Language",
                       items: languages,
@@ -395,6 +342,9 @@ class _SignUpState extends State<SignUp> {
                   SizedBox(width: width * 0.025),
                   Expanded(
                     child: buildDropdown(
+                      bodyFontSize: bodyFontSize,
+                      hintFontSize: hintFontSize,
+                      width: width,
                       value: _selectedCurrency,
                       hint: "Select Currency",
                       items: currencies,

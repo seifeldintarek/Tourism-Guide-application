@@ -70,6 +70,71 @@ Widget loginHeader(BuildContext context, double width, double height) {
   );
 }
 
+Widget passwordTextfield(
+  TextEditingController _passwordController,
+  bool _obscurePassword,
+  Function setState,
+  double height,
+  double width,
+  double hintFontSize,
+  String label,
+) {
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Text(label, style: const TextStyle(fontSize: 14, color: Colors.black87)),
+      SizedBox(height: height * 0.01),
+      TextFormField(
+        controller: _passwordController,
+        obscureText: _obscurePassword,
+        validator: validatePassword,
+        autovalidateMode: AutovalidateMode.onUserInteraction,
+        decoration: InputDecoration(
+          hintText: '••••••••',
+          hintStyle: const TextStyle(color: Colors.black38),
+          filled: true,
+          fillColor: const Color(0xFFEDE4D8),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(12),
+            borderSide: BorderSide.none,
+          ),
+          suffixIcon: IconButton(
+            icon: Icon(
+              _obscurePassword ? Icons.visibility_off : Icons.visibility,
+              color: Colors.black54,
+            ),
+            onPressed: () =>
+                setState(() => _obscurePassword = !_obscurePassword),
+          ),
+        ),
+      ),
+    ],
+  );
+}
+
+InputDecoration buildInputDecoration({
+  required String hint,
+  Widget? suffixIcon,
+  required double width,
+  required double height,
+  required double hintFontSize,
+}) => InputDecoration(
+  filled: true,
+  fillColor: const Color(0xFFF2EDE6),
+  hintText: hint,
+  hintStyle: TextStyle(color: Colors.grey, fontSize: hintFontSize),
+  errorStyle: TextStyle(fontSize: hintFontSize * 0.9),
+  suffixIcon: suffixIcon,
+  contentPadding: EdgeInsets.symmetric(
+    horizontal: width * 0.04,
+    vertical: height * 0.018,
+  ),
+  border: OutlineInputBorder(
+    borderRadius: BorderRadius.circular(12),
+    borderSide: BorderSide.none,
+  ),
+);
+
 Widget labeledTextField({
   required String label,
   required String hintText,
