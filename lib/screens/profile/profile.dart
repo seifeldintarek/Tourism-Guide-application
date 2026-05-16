@@ -3,6 +3,7 @@ import 'package:flutter_application_1/core/default.dart';
 import 'package:flutter_application_1/models/User.dart';
 import 'widget.dart';
 import 'package:flutter_application_1/l10n/app_localizations.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key, required this.user});
@@ -43,7 +44,7 @@ class _ProfileState extends State<Profile> {
                     height: height * 0.36,
                     width: width,
                     decoration: BoxDecoration(
-                      color: NudePalette.nude,
+                      color: NudePalette.nudeUser,
                       borderRadius: BorderRadius.vertical(
                         bottom: Radius.circular(30),
                       ),
@@ -58,10 +59,11 @@ class _ProfileState extends State<Profile> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                        SizedBox(height: height * 0.02),
                         Text(
                           lang.visited,
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 16,
                             fontWeight: FontWeight.bold,
                             fontFamily: 'Times New Roman',
                             color: Colors.black87,
@@ -112,37 +114,40 @@ class _ProfileState extends State<Profile> {
                       child: CircleAvatar(
                         radius: 60,
                         backgroundImage: AssetImage(
-                          "assets/images/User Avatar.png",
+                          "assets/images/profile/anonymus.jpg",
                         ),
                       ),
                     ),
                     SizedBox(height: height * 0.01),
-                    Text(
+                    AutoSizeText(
                       widget.user.fullName,
                       style: TextStyle(
-                        fontSize: 32,
+                        fontSize: 18,
                         fontWeight: FontWeight.bold,
                         fontFamily: 'Times New Roman',
                         color: NudePalette.nudeDark,
                       ),
+                      overflow: TextOverflow.ellipsis,
                     ),
                     SizedBox(height: height * 0.005),
                     Text(
                       '${lang.explorer}  • Cairo',
                       style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 13,
                         fontFamily: 'Times New Roman',
                         color: NudePalette.nudeBrown,
                       ),
                     ),
-                    SizedBox(height: 24), // Add some space before the card
+                    SizedBox(
+                      height: height * 0.01,
+                    ), // Add some space before the card
                     // --- STATS CARD STARTS HERE ---
                     Container(
                       margin: EdgeInsets.symmetric(
-                        horizontal: 24,
+                        horizontal: width * 0.1,
                       ), // Keeps it from touching the screen edges
                       padding: EdgeInsets.symmetric(
-                        vertical: 16,
+                        vertical: height * 0.02,
                       ), // Padding inside the card
                       decoration: BoxDecoration(
                         color: Colors.white,
@@ -163,13 +168,13 @@ class _ProfileState extends State<Profile> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          buildStatColumn('42', lang.visited),
+                          buildStatColumn('42', lang.visited, height * 0.003),
                           Container(
                             height: height * 0.03,
                             width: width * 0.004,
                             color: Colors.grey.withOpacity(0.3),
                           ),
-                          buildStatColumn('128', lang.saved),
+                          buildStatColumn('128', lang.saved, height * 0.003),
                         ],
                       ),
                     ),

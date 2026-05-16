@@ -14,9 +14,9 @@ Future<AppUser?> loginUser({
   required String password,
 }) async {
   try {
-    final hashedPass = hashPassword(password);
+    final hashedPass = hashPassword(password.trim());
     await FirebaseAuth.instance.signInWithEmailAndPassword(
-      email: email,
+      email: email.trim(),
       password: hashedPass,
     );
 

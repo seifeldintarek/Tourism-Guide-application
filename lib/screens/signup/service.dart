@@ -36,7 +36,7 @@ Future<bool> storeUser(final userData, BuildContext context) async {
       "fullName": "${userData["firstName"]} ${userData["lastName"]}",
       "email": userData["email"],
       "password": hashedPass,
-      "language": locale.toString(),
+      "language": locale.toString().trim(),
       "JoinedAt": now,
       "pp": "",
     });
@@ -46,7 +46,7 @@ Future<bool> storeUser(final userData, BuildContext context) async {
       firstName: userData["firstName"],
       lastName: userData["lastName"],
       email: userData["email"],
-      language: locale.toString(),
+      language: locale.toString().trim(),
       hashedPassword: hashedPass,
       fullName: "${userData["firstName"]} ${userData["lastName"]}",
       JoinedAt: now,

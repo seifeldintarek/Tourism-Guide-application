@@ -276,24 +276,6 @@ class _SignUpState extends State<SignUp> {
                 hintFontSize,
               ),
 
-              // TextField(
-              //   controller: _passwordController,
-              //   onChanged: (val) => setState(() {}),
-              //   obscureText: _obscurePassword,
-              //   decoration: buildInputDecoration(
-              //     hint: "Enter your password",
-              //     errorText: _passwordError,
-              //     suffixIcon: IconButton(
-              //       icon: Icon(
-              //         _obscurePassword
-              //             ? Icons.visibility_off
-              //             : Icons.visibility,
-              //       ),
-              //       onPressed: () =>
-              //           setState(() => _obscurePassword = !_obscurePassword),
-              //     ),
-              //   ),
-              // ),
               SizedBox(height: sectionGap),
 
               // ── Confirm Password ───────────────────────────────────────────

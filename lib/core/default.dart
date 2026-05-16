@@ -155,7 +155,7 @@ class NudePalette {
   static const Color nude = Color(
     0xFFFEF9F2,
   ); // Updated to match HTML secondary-container
-  static const Color nudePink = Color(0xFFD8A7A0);
+  static const Color nudeUser = Color.fromARGB(255, 255, 217, 164);
   static const Color nudeBrown = Color(
     0xFF80756D,
   ); // Updated to match HTML outline
