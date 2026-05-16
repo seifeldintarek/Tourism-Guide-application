@@ -53,7 +53,7 @@ class _ProfileState extends State<Profile> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          lang.savedPlaces,
+                          lang.visited,
                           style: TextStyle(
                             fontSize: 22,
                             fontWeight: FontWeight.bold,
@@ -151,8 +151,6 @@ class _ProfileState extends State<Profile> {
                         buildStatColumn('42', lang.visited),
                         Container(height: height * 0.03, width: width * 0.004, color: Colors.grey.withOpacity(0.3)),
                         buildStatColumn('128', lang.saved),
-                        Container(height: height * 0.03, width: width * 0.004, color: Colors.grey.withOpacity(0.3)),
-                        buildStatColumn('15', lang.reviews),
                       ],
                     ),
                   ),
