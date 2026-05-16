@@ -153,7 +153,7 @@ class NudePalette {
     0xFFFEF9F2,
   ); // Updated to match HTML surface-bright
   static const Color nude = Color(
-    0xFFF4DFCB,
+    0xFFFEF9F2,
   ); // Updated to match HTML secondary-container
   static const Color nudePink = Color(0xFFD8A7A0);
   static const Color nudeBrown = Color(
