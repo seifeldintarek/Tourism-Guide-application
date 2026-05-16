@@ -1,9 +1,7 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/default.dart';
-import 'package:flutter_application_1/screens/login/login.dart';
-import 'widget.dart';
+import 'package:flutter_application_1/l10n/app_localizations.dart';
+import 'package:flutter_application_1/screens/splash/service.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -18,14 +16,8 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-
-    Timer(const Duration(seconds: 3), () {
-      if (!mounted) return;
-
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => const Login()),
-      );
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      initializeApp(context);
     });
   }
 
@@ -33,6 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
     final double height = MediaQuery.of(context).size.height;
+    final AppLocalizations lang = AppLocalizations.of(context)!;
 
     return Scaffold(
       backgroundColor: Default.backgroundColor,
@@ -41,15 +34,20 @@ class _SplashScreenState extends State<SplashScreen> {
         height: height,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
+          children: [
             Spacer(),
 
-            SplashLogo(),
+            Image.asset(
+              'assets/images/splash_logo.png',
+              width: width * 0.8,
+              height: height * 0.4,
+              fit: BoxFit.contain,
+            ),
 
             Spacer(),
 
             Text(
-              'Egypt Tourism Guide',
+              lang.egypttourismguide,
               style: TextStyle(
                 fontFamily: 'WorkSans',
                 fontSize: 14,
@@ -58,7 +56,7 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
             ),
 
-            SizedBox(height: 32),
+            SizedBox(height: height * 0.06),
           ],
         ),
       ),
