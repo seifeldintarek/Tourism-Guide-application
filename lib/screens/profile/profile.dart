@@ -48,14 +48,14 @@ class _ProfileState extends State<Profile> {
                   ),
                   SizedBox(height: height * 0.07),
                   Padding(
-                    padding: EdgeInsetsGeometry.only(left: 20, right: 20),
+                    padding: EdgeInsetsGeometry.only(left: width * 0.05, right: width * 0.05),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           lang.savedPlaces,
                           style: TextStyle(
-                            fontSize: 25,
+                            fontSize: 22,
                             fontWeight: FontWeight.bold,
                             fontFamily: 'Times New Roman',
                             color: Colors.black87,
@@ -149,9 +149,9 @@ class _ProfileState extends State<Profile> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         buildStatColumn('42', lang.visited),
-                        Container(height: height * 0.03, width: 1, color: Colors.grey.withOpacity(0.3)),
+                        Container(height: height * 0.03, width: width * 0.004, color: Colors.grey.withOpacity(0.3)),
                         buildStatColumn('128', lang.saved),
-                        Container(height: height * 0.03, width: 1, color: Colors.grey.withOpacity(0.3)),
+                        Container(height: height * 0.03, width: width * 0.004, color: Colors.grey.withOpacity(0.3)),
                         buildStatColumn('15', lang.reviews),
                       ],
                     ),
