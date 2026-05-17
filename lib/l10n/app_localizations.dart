@@ -146,6 +146,18 @@ abstract class AppLocalizations {
   /// **'Password'**
   String get password;
 
+  /// No description provided for @currentpassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Current Password'**
+  String get currentpassword;
+
+  /// No description provided for @newpassword.
+  ///
+  /// In en, this message translates to:
+  /// **'New Password'**
+  String get newpassword;
+
   /// Action Phrase: Button text to submit the sign-in form.
   ///
   /// In en, this message translates to:

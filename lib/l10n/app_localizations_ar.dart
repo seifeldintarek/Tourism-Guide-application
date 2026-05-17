@@ -30,6 +30,12 @@ class AppLocalizationsAr extends AppLocalizations {
   String get password => 'كلمة المرور';
 
   @override
+  String get currentpassword => 'Current Password';
+
+  @override
+  String get newpassword => 'New Password';
+
+  @override
   String get continueJourney => 'مواصلة الرحلة';
 
   @override

@@ -11,9 +11,8 @@ class AppUser {
   final String email;
   final String language;
   final String hashedPassword;
-  final DateTime JoinedAt;
-
-  // final String? profilePictureUrl;
+  final DateTime joinedAt;
+  String? profilePictureUrl;
 
   AppUser({
     required this.id,
@@ -23,10 +22,12 @@ class AppUser {
     required this.email,
     required this.language,
     required this.hashedPassword,
-    required this.JoinedAt,
+    required this.joinedAt,
+    this.profilePictureUrl,
   });
 
-  // Convert object to Map for Firestore
+  static const String cacheKey = 'cached_user';
+
   Map<String, dynamic> toMap() {
     return {
       "id": id,
@@ -36,11 +37,26 @@ class AppUser {
       "email": email,
       "language": language,
       "hashedPassword": hashedPassword,
-      "JoinedAt": JoinedAt.toIso8601String(),
+      "joinedAt": joinedAt.toIso8601String(),
+      "profilePictureUrl": profilePictureUrl,
     };
   }
 
   static AppUser fromMap(Map<String, dynamic> map) {
+    DateTime parsedJoinedAt;
+
+    if (map["joinedAt"] is Timestamp) {
+      parsedJoinedAt = (map["joinedAt"] as Timestamp).toDate();
+    } else if (map["JoinedAt"] is Timestamp) {
+      parsedJoinedAt = (map["JoinedAt"] as Timestamp).toDate();
+    } else if (map["joinedAt"] != null) {
+      parsedJoinedAt = DateTime.parse(map["joinedAt"]);
+    } else if (map["JoinedAt"] != null) {
+      parsedJoinedAt = DateTime.parse(map["JoinedAt"]);
+    } else {
+      parsedJoinedAt = DateTime.now();
+    }
+
     return AppUser(
       id: map["id"] ?? "",
       firstName: map["firstName"] ?? "",
@@ -49,28 +65,42 @@ class AppUser {
       email: map["email"] ?? "",
       language: map["language"] ?? "",
       hashedPassword: map["hashedPassword"] ?? "",
-      JoinedAt: map["JoinedAt"] is Timestamp
-          ? (map["JoinedAt"] as Timestamp).toDate()
-          : DateTime.parse(map["JoinedAt"]),
+      joinedAt: parsedJoinedAt,
+      profilePictureUrl: map["profilePictureUrl"],
     );
   }
 
   Future<void> saveToCache() async {
     final prefs = await SharedPreferences.getInstance();
-    await prefs.setString('cached_user', jsonEncode(toMap()));
+    await prefs.setString(cacheKey, jsonEncode(toMap()));
   }
 
-  // Load user from SharedPreferences
   static Future<AppUser?> loadFromCache() async {
     final prefs = await SharedPreferences.getInstance();
-    final cached = prefs.getString('cached_user');
-    if (cached == null) return null;
-    return AppUser.fromMap(jsonDecode(cached));
+
+    final cachedUser = prefs.getString(cacheKey);
+
+    if (cachedUser == null) {
+      return null;
+    }
+
+    final Map<String, dynamic> userMap = jsonDecode(cachedUser);
+
+    return AppUser.fromMap(userMap);
   }
 
-  // Clear cached user on logout
   static Future<void> clearCache() async {
     final prefs = await SharedPreferences.getInstance();
-    await prefs.remove('cached_user');
+    await prefs.remove(cacheKey);
+  }
+
+  static Future<void> updateCachedProfilePicture(String imageUrl) async {
+    final user = await AppUser.loadFromCache();
+
+    if (user == null) return;
+
+    user.profilePictureUrl = imageUrl;
+
+    await user.saveToCache();
   }
 }

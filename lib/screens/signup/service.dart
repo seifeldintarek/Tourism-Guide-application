@@ -37,8 +37,8 @@ Future<bool> storeUser(final userData, BuildContext context) async {
       "email": userData["email"],
       "password": hashedPass,
       "language": locale.toString().trim(),
-      "JoinedAt": now,
-      "pp": "",
+      "joinedAt": now,
+      "profilePictureUrl": "",
     });
 
     final appUser = AppUser(
@@ -49,7 +49,8 @@ Future<bool> storeUser(final userData, BuildContext context) async {
       language: locale.toString().trim(),
       hashedPassword: hashedPass,
       fullName: "${userData["firstName"]} ${userData["lastName"]}",
-      JoinedAt: now,
+      joinedAt: now,
+      profilePictureUrl: "",
     );
     await appUser.saveToCache();
 

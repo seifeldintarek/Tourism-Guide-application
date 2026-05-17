@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/default.dart';
@@ -160,10 +161,34 @@ class _ProfileState extends State<Profile> {
                               ),
                             ],
                           ),
-                          child: const CircleAvatar(
+                          child: CircleAvatar(
                             radius: 60,
-                            backgroundImage: AssetImage(
-                              "assets/images/profile/anonymus.jpg",
+                            backgroundColor: Colors.grey.shade200,
+                            child: ClipOval(
+                              child:
+                                  (widget.user.profilePictureUrl != null &&
+                                      widget.user.profilePictureUrl!.isNotEmpty)
+                                  ? CachedNetworkImage(
+                                      imageUrl: widget.user.profilePictureUrl!,
+                                      width: 120,
+                                      height: 120,
+                                      fit: BoxFit.cover,
+                                      placeholder: (context, url) =>
+                                          const CircularProgressIndicator(),
+                                      errorWidget: (context, url, error) =>
+                                          Image.asset(
+                                            'assets/images/profile/anonymus.jpg',
+                                            width: 120,
+                                            height: 120,
+                                            fit: BoxFit.cover,
+                                          ),
+                                    )
+                                  : Image.asset(
+                                      'assets/images/profile/anonymus.jpg',
+                                      width: 120,
+                                      height: 120,
+                                      fit: BoxFit.cover,
+                                    ),
                             ),
                           ),
                         ),

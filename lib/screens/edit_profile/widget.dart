@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/default.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 Widget labelText(String text) {
   return Text(
@@ -210,4 +212,58 @@ Widget buildPlaceCard({
       ),
     ),
   );
+}
+
+Future<String?> captureORselect(BuildContext context, String uid) async {
+  return showDialog<String>(
+    context: context,
+    builder: (BuildContext ctx) {
+      return AlertDialog(
+        title: const Text("Choose Image Source"),
+        actionsAlignment: MainAxisAlignment.spaceEvenly,
+        actions: [
+          TextButton(
+            onPressed: () async {
+              final path = await captureImageFromCamera();
+              if (ctx.mounted) {
+                Navigator.of(
+                  ctx,
+                ).pop(path); // only pops after capture completes
+              }
+            },
+            child: const Text("Capture"),
+          ),
+          TextButton(
+            onPressed: () async {
+              final path = await selectImageFromGallery();
+              if (ctx.mounted) {
+                Navigator.of(
+                  ctx,
+                ).pop(path); // only pops after gallery selection
+              }
+            },
+            child: const Text("Select"),
+          ),
+        ],
+      );
+    },
+  );
+}
+
+Future<String?> selectImageFromGallery() async {
+  if (await Permission.photos.request().isDenied) {
+    // The user denied permission
+    openAppSettings(); // optional: open app settings
+  }
+  final picker = ImagePicker();
+  final XFile? picked = await picker.pickImage(source: ImageSource.gallery);
+
+  return picked?.path; // returns null if user cancels
+}
+
+Future<String?> captureImageFromCamera() async {
+  final picker = ImagePicker();
+  final XFile? captured = await picker.pickImage(source: ImageSource.camera);
+
+  return captured?.path; // returns null if cancelled
 }

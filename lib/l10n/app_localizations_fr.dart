@@ -30,6 +30,12 @@ class AppLocalizationsFr extends AppLocalizations {
   String get password => 'Mot de passe';
 
   @override
+  String get currentpassword => 'Current Password';
+
+  @override
+  String get newpassword => 'New Password';
+
+  @override
   String get continueJourney => 'Continuer le voyage';
 
   @override

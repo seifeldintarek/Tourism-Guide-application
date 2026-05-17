@@ -30,6 +30,14 @@
   "@password": {
     "description": "Noun/Word: Used as a label for the password input field."
   },
+  "currentpassword": "Current Password",
+  "@password": {
+    "description": "Noun/Word: Used as a label for the password input field."
+  },
+  "newpassword": "New Password",
+  "@password": {
+    "description": "Noun/Word: Used as a label for the password input field."
+  },
   "continueJourney": "Continue Journey",
   "@continueJourney": {
     "description": "Action Phrase: Button text to submit the sign-in form."
