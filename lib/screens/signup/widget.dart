@@ -71,6 +71,7 @@ Widget customTextField({
   required TextEditingController controller,
   required String hint,
   bool isPassword = false,
+  String? errorText, // ← added (optional, so existing callers unaffected)
 }) {
   return TextField(
     controller: controller,
@@ -79,7 +80,7 @@ Widget customTextField({
       filled: true,
       fillColor: const Color(0xFFF2EDE6),
       hintText: hint,
-      hintStyle: const TextStyle(color: Colors.grey, fontSize: 14),
+      hintStyle: const TextStyle(color: Colors.grey, fontSize: 10),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(12),
         borderSide: BorderSide.none,

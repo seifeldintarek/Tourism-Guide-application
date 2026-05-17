@@ -311,7 +311,7 @@ abstract class AppLocalizations {
   /// Label for number of saved places (Word)
   ///
   /// In en, this message translates to:
-  /// **'SAVED'**
+  /// **'Save'**
   String get saved;
 
   /// Label for number of reviews (Word)
@@ -703,6 +703,126 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Failed to store user data. Please try again.'**
   String get failtostoreuser;
+
+  /// App bar title for the language selection screen (Word)
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get languageTitle;
+
+  /// Overline text above the main title on the language screen (Phrase)
+  ///
+  /// In en, this message translates to:
+  /// **'PREFERENCE SELECTION'**
+  String get preferenceSelection;
+
+  /// Main title on the language selection screen (Sentence/Command)
+  ///
+  /// In en, this message translates to:
+  /// **'Curate Your Experience'**
+  String get curateYourExperience;
+
+  /// No description provided for @countryEgypt.
+  ///
+  /// In en, this message translates to:
+  /// **'Egypt'**
+  String get countryEgypt;
+
+  /// No description provided for @countryUk.
+  ///
+  /// In en, this message translates to:
+  /// **'UK'**
+  String get countryUk;
+
+  /// No description provided for @countrySpain.
+  ///
+  /// In en, this message translates to:
+  /// **'Spain'**
+  String get countrySpain;
+
+  /// No description provided for @countryItaly.
+  ///
+  /// In en, this message translates to:
+  /// **'Italy'**
+  String get countryItaly;
+
+  /// No description provided for @countryGermany.
+  ///
+  /// In en, this message translates to:
+  /// **'Germany'**
+  String get countryGermany;
+
+  /// App bar title for the edit profile screen (Phrase)
+  ///
+  /// In en, this message translates to:
+  /// **'Edit Profile'**
+  String get editProfileTitle;
+
+  /// Action text under the avatar to change the profile photo (Phrase)
+  ///
+  /// In en, this message translates to:
+  /// **'CHANGE PHOTO'**
+  String get changePhoto;
+
+  /// Label for the full name input field (Phrase)
+  ///
+  /// In en, this message translates to:
+  /// **'FULL NAME'**
+  String get fullNameLabel;
+
+  /// Label for the user role/title input field (Word)
+  ///
+  /// In en, this message translates to:
+  /// **'TITLE'**
+  String get titleLabel;
+
+  /// Section header for managing saved locations (Phrase)
+  ///
+  /// In en, this message translates to:
+  /// **'Manage Saved Places'**
+  String get manageSavedPlaces;
+
+  /// Action button to enter edit mode for saved places list (Phrase)
+  ///
+  /// In en, this message translates to:
+  /// **'EDIT SAVED'**
+  String get editSaved;
+
+  /// Primary button to submit and save profile edits (Phrase)
+  ///
+  /// In en, this message translates to:
+  /// **'Save Changes'**
+  String get saveChanges;
+
+  /// Secondary button to discard profile edits (Word)
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancel;
+
+  /// No description provided for @firstNameHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit your first name'**
+  String get firstNameHint;
+
+  /// No description provided for @lastNameHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit your last name'**
+  String get lastNameHint;
+
+  /// No description provided for @passwordHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit your password'**
+  String get passwordHint;
+
+  /// No description provided for @nodatafound.
+  ///
+  /// In en, this message translates to:
+  /// **'No data found'**
+  String get nodatafound;
 }
 
 class _AppLocalizationsDelegate

@@ -17,6 +17,7 @@ class AppRoot extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         appBarTheme: AppBarTheme(
+          centerTitle: true,
           backgroundColor: Default.backgroundColor,
           elevation: 0,
           scrolledUnderElevation: 0,

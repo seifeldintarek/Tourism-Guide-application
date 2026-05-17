@@ -111,7 +111,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get visited => 'VISITED';
 
   @override
-  String get saved => 'SAVED';
+  String get saved => 'Save';
 
   @override
   String get reviews => 'REVIEWS';
@@ -307,4 +307,64 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get failtostoreuser => 'Failed to store user data. Please try again.';
+
+  @override
+  String get languageTitle => 'Language';
+
+  @override
+  String get preferenceSelection => 'PREFERENCE SELECTION';
+
+  @override
+  String get curateYourExperience => 'Curate Your Experience';
+
+  @override
+  String get countryEgypt => 'Egypt';
+
+  @override
+  String get countryUk => 'UK';
+
+  @override
+  String get countrySpain => 'Spain';
+
+  @override
+  String get countryItaly => 'Italy';
+
+  @override
+  String get countryGermany => 'Germany';
+
+  @override
+  String get editProfileTitle => 'Edit Profile';
+
+  @override
+  String get changePhoto => 'CHANGE PHOTO';
+
+  @override
+  String get fullNameLabel => 'FULL NAME';
+
+  @override
+  String get titleLabel => 'TITLE';
+
+  @override
+  String get manageSavedPlaces => 'Manage Saved Places';
+
+  @override
+  String get editSaved => 'EDIT SAVED';
+
+  @override
+  String get saveChanges => 'Save Changes';
+
+  @override
+  String get cancel => 'Cancel';
+
+  @override
+  String get firstNameHint => 'Edit your first name';
+
+  @override
+  String get lastNameHint => 'Edit your last name';
+
+  @override
+  String get passwordHint => 'Edit your password';
+
+  @override
+  String get nodatafound => 'No data found';
 }

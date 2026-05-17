@@ -73,15 +73,6 @@ class _LoginState extends State<Login> {
                 width * 0.031,
                 lang.password,
               ),
-              // labeledTextField(
-              //   label: lang.password,
-              //   hintText: '••••••••',
-              //   controller: _passwordController,
-              //   obscureText: true,
-              //   width: width,
-              //   height: height,
-              //   validator: validatePassword, // Calling the extracted function
-              // ),
               SizedBox(height: height * 0.04),
               continueJourneyButton(
                 context,

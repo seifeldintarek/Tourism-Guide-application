@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -25,6 +26,8 @@ class Default {
     required String? child,
     required double width,
     required double height,
+    Color buttonColor = const Color.fromARGB(255, 72, 52, 38),
+    Color textColor = const Color(0xFFFFFFFF),
   }) {
     return SizedBox(
       height: height,
@@ -37,10 +40,11 @@ class Default {
             borderRadius: BorderRadius.circular(12),
           ), // Matching the 'xl' style in HTML
         ),
-        child: Text(
+        child: AutoSizeText(
           child!.toUpperCase(),
-          style: const TextStyle(
-            color: Colors.white,
+          style: TextStyle(
+            fontSize: 14,
+            color: textColor,
             fontFamily: 'WorkSans', // Added WorkSans
             fontWeight: FontWeight.w600,
             letterSpacing: 1.5,
@@ -145,6 +149,10 @@ class Default {
         ),
       ),
     );
+  }
+
+  static void appMsg(BuildContext context, String msg) {
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(msg)));
   }
 }
 

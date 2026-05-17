@@ -138,7 +138,7 @@
   "@visited": {
     "description": "Label for number of visited places (Word)"
   },
-  "saved": "SAVED",
+  "saved": "Save",
   "@saved": {
     "description": "Label for number of saved places (Word)"
   },
@@ -326,5 +326,73 @@
 "failtostoreuser": "Failed to store user data. Please try again.",
 "@failtostoreuser": {
   "description": "Action Phrase: error uploading user"
-}
+},
+
+  "languageTitle": "Language",
+  "@languageTitle": {
+    "description": "App bar title for the language selection screen (Word)"
+  },
+  "preferenceSelection": "PREFERENCE SELECTION",
+  "@preferenceSelection": {
+    "description": "Overline text above the main title on the language screen (Phrase)"
+  },
+  "curateYourExperience": "Curate Your Experience",
+  "@curateYourExperience": {
+    "description": "Main title on the language selection screen (Sentence/Command)"
+  },
+  
+  "countryEgypt": "Egypt",
+  "countryUk": "UK",
+  "countrySpain": "Spain",
+  "countryItaly": "Italy",
+  "countryGermany": "Germany",
+
+  "editProfileTitle": "Edit Profile",
+  "@editProfileTitle": {
+    "description": "App bar title for the edit profile screen (Phrase)"
+  },
+  "changePhoto": "CHANGE PHOTO",
+  "@changePhoto": {
+    "description": "Action text under the avatar to change the profile photo (Phrase)"
+  },
+  "fullNameLabel": "FULL NAME",
+  "@fullNameLabel": {
+    "description": "Label for the full name input field (Phrase)"
+  },
+  "titleLabel": "TITLE",
+  "@titleLabel": {
+    "description": "Label for the user role/title input field (Word)"
+  },
+  "manageSavedPlaces": "Manage Saved Places",
+  "@manageSavedPlaces": {
+    "description": "Section header for managing saved locations (Phrase)"
+  },
+  "editSaved": "EDIT SAVED",
+  "@editSaved": {
+    "description": "Action button to enter edit mode for saved places list (Phrase)"
+  },
+  "saveChanges": "Save Changes",
+  "@saveChanges": {
+    "description": "Primary button to submit and save profile edits (Phrase)"
+  },
+  "cancel": "Cancel",
+  "@cancel": {
+    "description": "Secondary button to discard profile edits (Word)"
+  },
+  "firstNameHint": "Edit your first name",
+  "@fullNameHint": {
+    "description": "Hint or placeholder text for the full name input field (Name)"
+  },
+  "lastNameHint": "Edit your last name",
+  "@fullNameHint": {
+    "description": "Hint or placeholder text for the full name input field (Name)"
+  },
+  "passwordHint": "Edit your password",
+  "@fullNameHint": {
+    "description": "Hint or placeholder text for the full name input field (Name)"
+  },
+  "nodatafound": "No data found",
+  "@fullNameHint": {
+    "description": "404"
+  }
 }
