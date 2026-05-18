@@ -10,7 +10,7 @@ class Place {
   final List<String> tags;
   final String status; // calculated
   final String hours;
-  final String ticketPrice;
+  final String? ticketPrice;
   final List<String> galleryImages; //detailed pics
   final String mapUrl;
   final String bookingUrl;
@@ -49,7 +49,7 @@ class Place {
       tags: List<String>.from(map['tags'] ?? []),
       status: map['status'] ?? '',
       hours: map['hours'] ?? '',
-      ticketPrice: map['ticketPrice'] ?? '',
+      ticketPrice: map['ticketPrice'] ?? null,
       galleryImages: List<String>.from(map['galleryImages'] ?? []),
       mapUrl: map['mapUrl'] ?? '',
       bookingUrl: map['bookingUrl'] ?? '',
@@ -70,7 +70,7 @@ class Place {
       'tags': place.tags,
       'status': place.status,
       'hours': place.hours,
-      'ticketPrice': place.ticketPrice,
+      'ticketPrice': place.ticketPrice ?? null,
       'galleryImages': place.galleryImages,
       'mapUrl': place.mapUrl,
       'bookingUrl': place.bookingUrl,
