@@ -373,4 +373,42 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get nodatafound => 'No data found';
+
+  @override
+  String get heritagequote =>
+      '\"To know the heart of a culture, one must walk through the echoes of its stone\"';
+
+  @override
+  String get spiritualquote =>
+      '\"Where faith and silence meet, the spirit begins to heal.\"';
+
+  @override
+  String get naturequote =>
+      '\"To understand the earth, one must listen to the stories written in its rivers, skies, and silence.\"';
+
+  @override
+  String get foodquote =>
+      '\"Every dish tells a story, seasoned with culture, history, and the warmth of its people.\"';
+
+  @override
+  String get pyramidsname => 'Pyramids';
+
+  @override
+  String get aboutpyramids =>
+      'The world-famous pyramids of ancient Egypt, built as royal tombs and considered one of the Seven Wonders of the Ancient World.';
+
+  @override
+  String get alharam => 'Al Haram';
+
+  @override
+  String get giza => 'Giza';
+
+  @override
+  String get pyramidstag0 => 'PYRAMIDS';
+
+  @override
+  String get pyramidstag1 => 'WONDER';
+
+  @override
+  String get pyramidstag2 => 'LANDMARK';
 }

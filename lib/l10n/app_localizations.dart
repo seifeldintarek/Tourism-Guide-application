@@ -835,6 +835,72 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'No data found'**
   String get nodatafound;
+
+  /// quote of heritage
+  ///
+  /// In en, this message translates to:
+  /// **'\"To know the heart of a culture, one must walk through the echoes of its stone\"'**
+  String get heritagequote;
+
+  /// quote of spiritual
+  ///
+  /// In en, this message translates to:
+  /// **'\"Where faith and silence meet, the spirit begins to heal.\"'**
+  String get spiritualquote;
+
+  /// quote of nature
+  ///
+  /// In en, this message translates to:
+  /// **'\"To understand the earth, one must listen to the stories written in its rivers, skies, and silence.\"'**
+  String get naturequote;
+
+  /// quote of food
+  ///
+  /// In en, this message translates to:
+  /// **'\"Every dish tells a story, seasoned with culture, history, and the warmth of its people.\"'**
+  String get foodquote;
+
+  /// name of pyramids
+  ///
+  /// In en, this message translates to:
+  /// **'Pyramids'**
+  String get pyramidsname;
+
+  /// about description of pyramids
+  ///
+  /// In en, this message translates to:
+  /// **'The world-famous pyramids of ancient Egypt, built as royal tombs and considered one of the Seven Wonders of the Ancient World.'**
+  String get aboutpyramids;
+
+  /// location of pyramids
+  ///
+  /// In en, this message translates to:
+  /// **'Al Haram'**
+  String get alharam;
+
+  /// city of pyramids
+  ///
+  /// In en, this message translates to:
+  /// **'Giza'**
+  String get giza;
+
+  /// first tag of pyramids
+  ///
+  /// In en, this message translates to:
+  /// **'PYRAMIDS'**
+  String get pyramidstag0;
+
+  /// second tag of pyramids
+  ///
+  /// In en, this message translates to:
+  /// **'WONDER'**
+  String get pyramidstag1;
+
+  /// third tag of pyramids
+  ///
+  /// In en, this message translates to:
+  /// **'LANDMARK'**
+  String get pyramidstag2;
 }
 
 class _AppLocalizationsDelegate

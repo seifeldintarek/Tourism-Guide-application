@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/root/themes.dart';
+import 'package:flutter_application_1/todb.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_application_1/firebase_options.dart';
 import 'package:flutter_application_1/root/app_root.dart';
@@ -19,12 +20,14 @@ void main() async {
   );
   print("supabase initialized successfully");
 
-  runApp(
-    MultiProvider(
-      providers: [ChangeNotifierProvider(create: (_) => LocaleProvider())],
-      child: const MainApp(),
-    ),
-  );
+  await todb();
+
+  // runApp(
+  //   MultiProvider(
+  //     providers: [ChangeNotifierProvider(create: (_) => LocaleProvider())],
+  //     child: const MainApp(),
+  //   ),
+  // );
 }
 
 class MainApp extends StatelessWidget {
@@ -35,5 +38,3 @@ class MainApp extends StatelessWidget {
     return AppRoot();
   }
 }
-
-//CANCEL BUTTON

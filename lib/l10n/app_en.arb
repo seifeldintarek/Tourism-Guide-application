@@ -399,8 +399,65 @@
   "@fullNameHint": {
     "description": "Hint or placeholder text for the full name input field (Name)"
   },
+
   "nodatafound": "No data found",
   "@fullNameHint": {
     "description": "404"
-  }
+  },
+
+"heritagequote": "\"To know the heart of a culture, one must walk through the echoes of its stone\"",
+"@heritagequote": {
+  "description": "quote of heritage"
+},
+
+"spiritualquote": "\"Where faith and silence meet, the spirit begins to heal.\"",
+"@spiritualquote": {
+  "description": "quote of spiritual"
+},
+
+"naturequote": "\"To understand the earth, one must listen to the stories written in its rivers, skies, and silence.\"",
+"@naturequote": {
+  "description": "quote of nature"
+},
+
+"foodquote": "\"Every dish tells a story, seasoned with culture, history, and the warmth of its people.\"",
+"@foodquote": {
+  "description": "quote of food"
+},
+
+"pyramidsname": "Pyramids",
+"@pyramidsname": {
+  "description": "name of pyramids"
+},
+
+"aboutpyramids": "The world-famous pyramids of ancient Egypt, built as royal tombs and considered one of the Seven Wonders of the Ancient World.",
+"@aboutpyramids": {
+  "description": "about description of pyramids"
+},
+
+"alharam": "Al Haram",
+"@alharam": {
+  "description": "location of pyramids"
+},
+
+"giza": "Giza",
+"@giza": {
+  "description": "city of pyramids"
+},
+
+"pyramidstag0": "PYRAMIDS",
+"@pyramidstag0": {
+  "description": "first tag of pyramids"
+},
+
+"pyramidstag1": "WONDER",
+"@pyramidstag1": {
+  "description": "second tag of pyramids"
+},
+
+"pyramidstag2": "LANDMARK",
+"@pyramidstag2": {
+  "description": "third tag of pyramids"
+}
+
 }
