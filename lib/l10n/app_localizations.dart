@@ -542,7 +542,7 @@ abstract class AppLocalizations {
   /// **'PLAN MY VISIT'**
   String get planMyVisit;
 
-  /// Category title for historical sites
+  /// heritage category
   ///
   /// In en, this message translates to:
   /// **'Heritage'**

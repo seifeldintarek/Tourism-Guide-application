@@ -458,6 +458,13 @@
 "pyramidstag2": "LANDMARK",
 "@pyramidstag2": {
   "description": "third tag of pyramids"
+},
+
+"heritage": "Heritage",
+"@heritage": {
+  "description": "heritage category"
 }
+
+
 
 }

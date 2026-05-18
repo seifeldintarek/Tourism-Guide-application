@@ -15,16 +15,16 @@ import 'package:flutter_application_1/models/Place.dart';
 Future<void> todb() async {
   //edit the place data
   Place place = Place(
-    id: "pyramids", //nfs esm el place lowercase
-    name: "pyramidsname",
-    location: "alharam",
-    city: "giza",
+    id: "pyramids", //nfs esm el place lowercase //XX
+    name: "pyramidsname", //XX
+    location: "alharam", //XX
+    city: "giza", //XX
     mainImage:
         "https://prfwmjmedmfqauccmqgv.supabase.co/storage/v1/object/public/pictures/places/heirtage/pyramids/main%20image/giza-pyramids-cairo-egypt-with-palm.webp",
-    category: "heritage",
+    category: "heritage", //XX
     rating: 4.7,
-    about: "aboutpyramids",
-    tags: ["pyramidstag0", "pyramidstag1", "pyramidstag2"],
+    about: "aboutpyramids", //XX
+    tags: ["pyramidstag0", "pyramidstag1", "pyramidstag2"], //XX
     ticketPriceEgyptian: 30,
     ticketPrice: 350,
     galleryImages: [
