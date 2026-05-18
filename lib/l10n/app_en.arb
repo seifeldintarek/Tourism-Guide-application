@@ -463,8 +463,158 @@
 "heritage": "Heritage",
 "@heritage": {
   "description": "heritage category"
+},
+
+
+"arabiataname": "Pyramids",
+"@arabiataname": {
+  "description": "name of arabiata"
+},
+
+"aboutarabiata": "A popular Egyptian restaurant serving authentic foul, falafel, and traditional breakfast meals.",
+"@aboutarabiata": {
+  "description": "about description of arabiata"
+},
+
+"nasrcity": "Nasr City",
+"@nasrcity": {
+  "description": "location of arabiata"
+},
+
+"arabiatatag0": "Breakfast",
+"@arabiatatag0": {
+  "description": "first tag of arabiata"
+},
+
+"arabiatatag1": "StreetFood",
+"@arabiatatag1": {
+  "description": "second tag of arabiata"
+},
+
+"arabiatatag2": "Oriental",
+"@arabiatatag2": {
+  "description": "third tag of arabiata"
+},
+
+"food": "Food",
+"@food": {
+  "description": "food category"
+},
+
+"qasrelkababginame": "Qasr Elkababgi",
+"@qasrelkababginame": {
+  "description": "name of qasr-elkababgi"
+},
+
+"aboutqasrelkababgi": "A renowned Egyptian restaurant chain celebrated for authentic oriental cuisine, traditional grills, and theatrical dining experiences",
+"@aboutqasrelkababgi": {
+  "description": "about description of qasr-elkababgi"
+},
+
+"fifthsettlement": "Fifth Settlement",
+"@fifthsettlement": {
+  "description": "location of qasr-elkababgi"
+},
+
+"qasrelkababgitag0": "Grills",
+"@qasrelkababgitag0": {
+  "description": "first tag of qasr-elkababgi"
+},
+
+"qasrelkababgitag1": "Dining",
+"@qasrelkababgitag1": {
+  "description": "second tag of qasr-elkababgi"
+},
+
+"qasrelkababgitag2": "Oriental",
+"@qasrelkababgitag2": {
+  "description": "third tag of qasr-elkababgi"
+},
+
+
+"baharyname": "Bahary",
+"@baharyname": {
+  "description": "name of bahary"
+},
+
+"aboutbahary": "A modern seafood restaurant famous for grilled fish, seafood platters, and fresh Mediterranean flavors.",
+"@aboutbahary": {
+  "description": "about description of bahary"
+},
+
+"baharytag0": "SeaFood",
+"@baharytag0": {
+  "description": "first tag of bahary"
+},
+
+"baharytag1": "Fresh",
+"@baharytag1": {
+  "description": "second tag of bahary"
+},
+
+"baharytag2": "OceanFlavors",
+"@baharytag2": {
+  "description": "third tag of bahary"
+},
+
+"koueidername": "Koueider",
+"@koueidername": {
+  "description": "name of koueider"
+},
+
+"aboutkoueider": "One of Egypt’s oldest dessert shops, famous for oriental sweets and authentic Arabic pastries.",
+"@aboutkoueider": {
+  "description": "about description of koueider"
+},
+
+"heliopolis": "Heliopolis",
+"@heliopolis": {
+  "description": "location of koueider"
+},
+
+"koueidertag0": "Desserts",
+"@koueidertag0": {
+  "description": "first tag of koueider"
+},
+
+"koueidertag1": "Ice Cream",
+"@koueidertag1": {
+  "description": "second tag of koueider"
+},
+
+"koueidertag2": "Sweets",
+"@koueidertag2": {
+  "description": "third tag of koueider"
+},
+
+"elmalkyname": "ElMalky",
+"@elmalkyname": {
+  "description": "name of elmalky"
+},
+
+"aboutelmalky": "A legendary Egyptian dessert destination known for rice pudding, ice cream, and classic sweets.",
+"@aboutelmalky": {
+  "description": "about description of elmalky"
+},
+
+"elmoattam": "ElMoattam",
+"@elmoattam": {
+  "description": "location of elmalky"
+},
+
+"elmalkytag0": "Traditional",
+"@elmalkytag0": {
+  "description": "first tag of elmalky"
+},
+
+"elmalkytag1": "Ice Cream",
+"@elmalkytag1": {
+  "description": "second tag of elmalky"
+},
+
+"elmalkytag2": "Desserts",
+"@elmalkytag2": {
+  "description": "third tag of elmalky"
 }
-
-
 
 }
