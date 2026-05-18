@@ -463,8 +463,191 @@
 "heritage": "Heritage",
 "@heritage": {
   "description": "heritage category"
+},
+
+"nature": "Nature",
+"@nature": {
+  "description": "nature category"
+},
+
+"whitedesertname": "White Desert",
+"@whitedesertname": {
+  "description": "white desert name"
+},
+
+"whitedesertnationalpark": "White Desert National Park",
+"@whitedesertnationalpark": {
+  "description": "white desert location"
+},
+
+"southwestofcairo": "South West of Cairo",
+"@southwestofcairo": {
+  "description": "city of white desert"
+},
+
+"aboutwhitedesert": "A breathtaking desert reserve famous for its unique white rock formations and camping experiences.",
+"@aboutwhitedesert": {
+  "description": "Information about white desert"
+},
+"whitedeserttag0": "DESERT",
+"@whitedeserttag0": {
+  "description": "first tag of the white desert"
+},
+
+"whitedeserttag1": "CAMPING",
+"@whitedeserttag1": {
+  "description": "second tag of the white desert"
+},
+
+"whitedeserttag2": "SAFARI",
+"@whitedeserttag2": {
+  "description": "third tag of the white desert"
+},
+
+
+
+"blueholename": "Blue Hole",
+"@blueholename": {
+  "description": "Blue Hole name"
+},
+
+"blueholeofdahab": "Blue Hole of Dahab",
+"@blueholeofdahab": {
+  "description": "Blue Hole location"
+},
+
+"dahab": "Dahab",
+"@dahab": {
+  "description": "city of Blue Hole"
+},
+
+"aboutbluehole": "A world-famous diving destination known for crystal-clear waters and vibrant coral reefs.",
+"@aboutbluehole": {
+  "description": "Information about Blue Hole"
+},
+"blueholetag0": "DIVING",
+"@blueholetag0": {
+  "description": "first tag of theBlue Hole"
+},
+
+"blueholetag1": "CORAL",
+"@blueholetag1": {
+  "description": "second tag of the Blue Hole"
+},
+
+"blueholetag2": "ADVENTURE",
+"@blueholetag2": {
+  "description": "third tag of the Blue Hole"
+},
+
+
+
+
+
+"abugaloumname": "Abu Galoum",
+"@abugaloumname": {
+  "description": "Abu Galoum name"
+},
+
+"abugaloum": "Abu Galoum",
+"@abugaloum": {
+  "description": "Abu Galoum location"
+},
+
+"neweiba": "Neweiba",
+"@neweiba": {
+  "description": "city of Abu Galoum"
+},
+
+"aboutabugaloum": "A protected coastal reserve famous for snorkeling, coral reefs, mountains, and Bedouin camps.",
+"@aboutabugaloum": {
+  "description": "Information about Abu Galoum"
+},
+"abugaloumtag0": "SNORKELING",
+"@abugaloumtag0": {
+  "description": "first tag of Abu Galoum"
+},
+
+"abugaloumtag1": "NATURE",
+"@abugaloumtag1": {
+  "description": "second tag of Abu Galoum"
+},
+
+"abugaloumtag2": "CAMPING",
+"@abugaloumtag2": {
+  "description": "third tag of Abu Galoum"
+},
+
+
+
+
+"wadielgemalname": "Wadi El Gemal",
+"@wadielgemalname": {
+  "description": "Wadi El Gemal name"
+},
+
+"wadielgemalreserve": "Wadi El Gemal Reserve",
+"@wadielgemalreserve": {
+  "description": "Wadi El Gemal location"
+},
+
+"marsaalam": "Marsa Alam",
+"@marsaalam": {
+  "description": "city of Wadi El Gemal"
+},
+
+"aboutwadielgemal": "A stunning natural reserve combining desert mountains, mangroves, coral reefs, and Red Sea wildlife.",
+"@aboutwadielgemal": {
+  "description": "Information about Wadi El Gemal"
+},
+"wadielgemaltag0": "MARINE",
+"@wadielgemaltag0": {
+  "description": "first tag of Wadi El Gemal"
+},
+
+"wadielgemaltag1": "SAFARI",
+"@wadielgemaltag1": {
+  "description": "second tag of Wadi El Gemal"
+},
+
+"wadielgemaltag2": "WILDLIFE",
+"@wadielgemaltag2": {
+  "description": "third tag of Wadi El Gemal"
+},
+
+
+"wadielrayanname": "Wadi el rayan",
+"@wadielrayanname": {
+  "description": "Wadi el rayan name"
+},
+
+"wadielrayan": "Wadi el rayan",
+"@wadielrayan": {
+  "description": "Wadi el rayan location"
+},
+
+"faiyum": "Faiyum",
+"@faiyum": {
+  "description": "city of Wadi el rayan"
+},
+
+"aboutwadielrayan": "A beautiful desert oasis known for waterfalls, lakes, sand dunes, and safari adventures.",
+"@aboutwadielrayan": {
+  "description": "Information about Wadi el rayan"
+},
+"wadielrayantag0": "WATERFALLS",
+"@wadielrayantag0": {
+  "description": "first tag of Wadi el rayan"
+},
+
+"wadielrayantag1": "DESERT",
+"@wadielrayantag1": {
+  "description": "second tag of Wadi el rayan"
+},
+
+"wadielrayantag2": "LAKES",
+"@wadielrayantag2": {
+  "description": "third tag of Wadi el rayan"
 }
-
-
 
 }
