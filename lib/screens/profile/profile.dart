@@ -104,8 +104,6 @@ class _ProfileState extends State<Profile> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            SizedBox(height: height * 0.02),
-
                             Text(
                               lang.visited,
                               style: TextStyle(
@@ -270,7 +268,7 @@ class _ProfileState extends State<Profile> {
                           ),
                         ),
 
-                        SizedBox(height: height * 0.01),
+                        SizedBox(height: height * 0.05),
 
                         Container(
                           margin: EdgeInsets.symmetric(horizontal: width * 0.1),
