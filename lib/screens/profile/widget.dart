@@ -1,41 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/default.dart';
+import 'package:flutter_application_1/models/Place.dart'; // add this
+import 'package:cached_network_image/cached_network_image.dart'; // add this if not there
 
-final List<Map<String, dynamic>> placesData = [
-  {
-    'title': 'Philae Temple',
-    'subtitle': 'HISTORIC SITE • ASWAN',
-    'img': "assets/images/Temple of Philae.png",
-  },
-  {
-    'title': 'Khan el-Khalili',
-    'subtitle': 'MARKET • OLD CAIRO',
-    'img': "assets/images/Khan el-Khalili.png",
-  },
-  {
-    'title': 'Siwa Oasis',
-    'subtitle': 'NATURE • WESTERN DESERT',
-    'img': "assets/images/Siwa Oasis.png",
-  },
-];
-
-String name = "Julian Thorne";
-
-Widget buildPlaceCard(String title, String subtitle, String img) {
+Widget buildPlaceCard(Place place) { // now takes a Place directly
   return Container(
-    padding: EdgeInsets.all(12),
+    padding: const EdgeInsets.all(12),
     decoration: BoxDecoration(
-      color: Color(0xFFF7F4EF), // Very light beige card bg
+      color: const Color(0xFFF7F4EF),
       borderRadius: BorderRadius.circular(12),
     ),
     child: Row(
       children: [
-        Container(
-          width: 56,
-          height: 56,
-          decoration: BoxDecoration(
-            image: DecorationImage(image: AssetImage(img), fit: BoxFit.cover),
-            borderRadius: BorderRadius.circular(10),
+        ClipRRect(
+          borderRadius: BorderRadius.circular(10),
+          child: CachedNetworkImage(
+            imageUrl: place.mainImage,
+            width: 56,
+            height: 56,
+            fit: BoxFit.cover,
+            placeholder: (context, url) => Container(
+              width: 56,
+              height: 56,
+              color: Colors.grey.shade200,
+              child: const Center(
+                child: CircularProgressIndicator(strokeWidth: 2),
+              ),
+            ),
           ),
         ),
         SizedBox(width: 16),
@@ -44,7 +35,7 @@ Widget buildPlaceCard(String title, String subtitle, String img) {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                title,
+                place.name,
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
@@ -53,7 +44,7 @@ Widget buildPlaceCard(String title, String subtitle, String img) {
               ),
               SizedBox(height: 4),
               Text(
-                subtitle,
+                '${place.location.toUpperCase()} • ${place.city.toUpperCase()}',
                 style: TextStyle(
                   fontSize: 9,
                   fontWeight: FontWeight.w600,

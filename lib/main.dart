@@ -22,12 +22,12 @@ void main() async {
 
   await todb();
 
-  // runApp(
-  //   MultiProvider(
-  //     providers: [ChangeNotifierProvider(create: (_) => LocaleProvider())],
-  //     child: const MainApp(),
-  //   ),
-  // );
+  runApp(
+    MultiProvider(
+      providers: [ChangeNotifierProvider(create: (_) => LocaleProvider())],
+      child: const MainApp(),
+    ),
+  );
 }
 
 class MainApp extends StatelessWidget {

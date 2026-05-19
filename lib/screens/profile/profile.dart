@@ -7,6 +7,7 @@ import 'package:flutter_application_1/screens/edit_profile/edit_profile.dart';
 import 'widget.dart';
 import 'package:flutter_application_1/l10n/app_localizations.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:flutter_application_1/models/Place.dart';
 
 class Profile extends StatefulWidget {
   Profile({super.key, required this.user});
@@ -117,23 +118,75 @@ class _ProfileState extends State<Profile> {
 
                             SizedBox(height: height * 0.02),
 
-                            ListView.separated(
-                              shrinkWrap: true,
-                              physics: NeverScrollableScrollPhysics(),
-                              itemCount: placesData.length,
-                              separatorBuilder: (context, index) =>
-                                  SizedBox(height: height * 0.013),
+                            StreamBuilder<QuerySnapshot>(
+                            stream: FirebaseFirestore.instance
+                                .collection('users')
+                                .doc(widget.user.id)
+                                .collection('visited')
+                                .snapshots(),
+                            builder: (context, visitedSnapshot) {
 
-                              itemBuilder: (context, index) {
-                                final place = placesData[index];
+                              // Loading
+                              if (visitedSnapshot.connectionState == ConnectionState.waiting) {
+                                return const Center(child: CircularProgressIndicator());
+                              }
 
-                                return buildPlaceCard(
-                                  place['title'],
-                                  place['subtitle'],
-                                  place['img'],
+                              // Error
+                              if (visitedSnapshot.hasError) {
+                                return Center(
+                                  child: Text(
+                                    'Error: ${visitedSnapshot.error}',
+                                    style: const TextStyle(color: Colors.red),
+                                  ),
                                 );
-                              },
-                            ),
+                              }
+
+                              final docs = visitedSnapshot.data?.docs ?? [];
+
+                              // Empty — user hasn't visited any place yet
+                              if (docs.isEmpty) {
+                                return Center(
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(vertical: 32),
+                                    child: Column(
+                                      children: [
+                                        Icon(
+                                          Icons.explore_outlined,
+                                          size: 48,
+                                          color: NudePalette.nudeBrown,
+                                        ),
+                                        const SizedBox(height: 12),
+                                        Text(
+                                          "You haven't visited any places yet",
+                                          style: TextStyle(
+                                            fontSize: 14,
+                                            fontFamily: 'Times New Roman',
+                                            color: NudePalette.nudeBrown,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                );
+                              }
+
+                              // Map docs → Place objects
+                              final places = docs.map((doc) {
+                                return Place.fromMap(doc.data() as Map<String, dynamic>);
+                              }).toList();
+
+                              return ListView.separated(
+                                shrinkWrap: true,
+                                physics: const NeverScrollableScrollPhysics(),
+                                itemCount: places.length,
+                                separatorBuilder: (context, index) =>
+                                    SizedBox(height: height * 0.013),
+                                itemBuilder: (context, index) {
+                                  return buildPlaceCard(places[index]);
+                                },
+                              );
+                            },
+                          ),
 
                             SizedBox(height: height * 0.07),
                           ],
