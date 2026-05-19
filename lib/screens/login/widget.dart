@@ -141,7 +141,8 @@ Widget labeledTextField({
   bool obscureText = false,
   required double width,
   required double height,
-  String? Function(String?)? validator, // Accept validator
+  String? Function(String?)? validator,// Accept validator
+  Widget? suffixIcon, 
 }) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
@@ -158,6 +159,7 @@ Widget labeledTextField({
           hintStyle: const TextStyle(color: Colors.black38),
           filled: true,
           fillColor: const Color(0xFFEDE4D8),
+          suffixIcon: suffixIcon,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(12),
             borderSide: BorderSide.none,

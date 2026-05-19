@@ -284,11 +284,17 @@ abstract class AppLocalizations {
   /// **'CURATED JOURNEYS'**
   String get curatedJourneys;
 
-  /// Main title on the home screen (Sentence)
+  /// No description provided for @exploreThe.
   ///
   /// In en, this message translates to:
-  /// **'Explore the Collections'**
-  String get exploreTheCollections;
+  /// **'Explore the'**
+  String get exploreThe;
+
+  /// No description provided for @collections.
+  ///
+  /// In en, this message translates to:
+  /// **'Collections'**
+  String get collections;
 
   /// Placeholder text in the search bar (Sentence)
   ///
@@ -1435,6 +1441,60 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Desserts'**
   String get elmalkytag2;
+
+  /// No description provided for @menu.
+  ///
+  /// In en, this message translates to:
+  /// **'Menu'**
+  String get menu;
+
+  /// No description provided for @manageProfile.
+  ///
+  /// In en, this message translates to:
+  /// **'Manage Profile'**
+  String get manageProfile;
+
+  /// No description provided for @changeLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Change Language'**
+  String get changeLanguage;
+
+  /// No description provided for @logout.
+  ///
+  /// In en, this message translates to:
+  /// **'Logout'**
+  String get logout;
+
+  /// No description provided for @logoutConfirmTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Logout'**
+  String get logoutConfirmTitle;
+
+  /// No description provided for @logoutConfirmMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to logout?'**
+  String get logoutConfirmMessage;
+
+  /// No description provided for @cancel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancel;
+
+  /// No description provided for @choosecategory.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose a category'**
+  String get choosecategory;
+
+  /// No description provided for @changecategory.
+  ///
+  /// In en, this message translates to:
+  /// **'Change category'**
+  String get changecategory;
 }
 
 class _AppLocalizationsDelegate

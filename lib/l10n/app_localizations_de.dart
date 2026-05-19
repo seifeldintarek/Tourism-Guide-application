@@ -100,7 +100,10 @@ class AppLocalizationsDe extends AppLocalizations {
   String get curatedJourneys => 'KURATIERTE REISEN';
 
   @override
-  String get exploreTheCollections => 'Entdecke die Kollektionen';
+  String get exploreThe => 'Explore the';
+
+  @override
+  String get collections => 'Collections';
 
   @override
   String get searchDestination => 'Reiseziel suchen...';
@@ -693,4 +696,31 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get elmalkytag2 => 'Desserts';
+
+  @override
+  String get menu => 'Menu';
+
+  @override
+  String get manageProfile => 'Manage Profile';
+
+  @override
+  String get changeLanguage => 'Change Language';
+
+  @override
+  String get logout => 'Logout';
+
+  @override
+  String get logoutConfirmTitle => 'Logout';
+
+  @override
+  String get logoutConfirmMessage => 'Are you sure you want to logout?';
+
+  @override
+  String get cancel => 'Cancel';
+
+  @override
+  String get choosecategory => 'Choose a category';
+
+  @override
+  String get changecategory => 'Change category';
 }

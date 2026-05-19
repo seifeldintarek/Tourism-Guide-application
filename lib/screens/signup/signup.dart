@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/controller/navigationbar.dart';
 import 'package:flutter_application_1/core/default.dart';
 import 'package:flutter_application_1/l10n/app_localizations.dart';
-import 'package:flutter_application_1/screens/home/home.dart';
+import 'package:flutter_application_1/screens/settings/hamburger.dart';
 import 'package:flutter_application_1/screens/login/login.dart';
 import 'package:flutter_application_1/screens/signup/widget.dart';
 import 'package:flutter_application_1/screens/signup/service.dart';
@@ -28,7 +29,7 @@ class _SignUpState extends State<SignUp> {
   String? _confirmPasswordError;
 
   String? _selectedLanguage;
-  String? _selectedCurrency;
+  String? _selectedGovernorate;
 
   final List<String> languages = [
     "English",
@@ -37,7 +38,35 @@ class _SignUpState extends State<SignUp> {
     "French",
     "German",
   ];
-  final List<String> currencies = ["USD", "EUR", "EGP", "SAR", "AED"];
+  final List<String> egyptGovernorates = [
+    "Cairo",
+    "Giza",
+    "Alexandria",
+    "Dakahlia",
+    "Red Sea",
+    "Beheira",
+    "Fayoum",
+    "Gharbia",
+    "Ismailia",
+    "Menofia",
+    "Minya",
+    "Qalyubia",
+    "New Valley",
+    "Suez",
+    "Aswan",
+    "Assiut",
+    "Beni Suef",
+    "Port Said",
+    "Damietta",
+    "Sharkia",
+    "South Sinai",
+    "Kafr El Sheikh",
+    "Matrouh",
+    "Luxor",
+    "Qena",
+    "North Sinai",
+    "Sohag",
+  ];
 
   bool _isAccepted = false;
 
@@ -161,7 +190,7 @@ class _SignUpState extends State<SignUp> {
         _passwordController.text.isNotEmpty &&
         _confirmPasswordController.text.isNotEmpty &&
         _selectedLanguage != null &&
-        _selectedCurrency != null;
+        _selectedGovernorate != null;
 
     bool hasNoErrors =
         _emailError == null &&
@@ -170,7 +199,42 @@ class _SignUpState extends State<SignUp> {
 
     bool isButtonEnabled = allFieldsFilled && hasNoErrors && _isAccepted;
 
-    // ── UI ────────────────────────────────────────────────────────────────────
+    // ── Reusable local builders ───────────────────────────────────────────────
+    Widget buildLabel(String text) => Text(
+      text,
+      style: TextStyle(
+        fontSize: labelFontSize,
+        fontWeight: FontWeight.w600,
+        color: Default.textColor,
+        letterSpacing: 0.5,
+      ),
+    );
+
+    InputDecoration buildInputDecoration({
+      required String hint,
+      String? errorText,
+      Widget? suffixIcon,
+    }) => InputDecoration(
+      filled: true,
+      fillColor: const Color(0xFFF2EDE6),
+      hintText: hint,
+      hintStyle: TextStyle(color: Colors.grey, fontSize: hintFontSize),
+      errorText: errorText,
+      errorStyle: TextStyle(fontSize: hintFontSize * 0.9),
+      suffixIcon: suffixIcon,
+      contentPadding: EdgeInsets.symmetric(
+        horizontal: width * 0.04,
+        vertical: height * 0.018,
+      ),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(12),
+        borderSide: BorderSide.none,
+      ),
+    );
+
+    // ── Responsive dropdown (no overflow) ────────────────────────────────────
+
+    // UI
     return Scaffold(
       backgroundColor: Default.backgroundColor,
       appBar: AppBar(
@@ -187,7 +251,7 @@ class _SignUpState extends State<SignUp> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // ── Title ──────────────────────────────────────────────────────
+              //Title
               Text(
                 lang.tellUsAboutYourself,
                 style: TextStyle(
@@ -207,7 +271,7 @@ class _SignUpState extends State<SignUp> {
               ),
               SizedBox(height: sectionGap * 2),
 
-              // ── Name row ───────────────────────────────────────────────────
+              // ── Name row
               Row(
                 children: [
                   Expanded(
@@ -278,15 +342,25 @@ class _SignUpState extends State<SignUp> {
 
               SizedBox(height: sectionGap),
 
-              // ── Confirm Password ───────────────────────────────────────────
-              buildLabel(lang.confirmPassword.toUpperCase(), labelFontSize),
+              // Confirm Password
+              buildLabel(lang.confirmPassword.toUpperCase()),
               SizedBox(height: smallGap),
-              confirmPasswordTextfield(
-                _confirmPasswordController,
-                _confirmPasswordError,
-                _obscureConfirmPassword,
-                () => setState(
-                  () => _obscureConfirmPassword = !_obscureConfirmPassword,
+              TextField(
+                controller: _confirmPasswordController,
+                obscureText: _obscureConfirmPassword,
+                decoration: buildInputDecoration(
+                  hint: lang.confirmPassword,
+                  errorText: _confirmPasswordError,
+                  suffixIcon: IconButton(
+                    icon: Icon(
+                      _obscureConfirmPassword
+                          ? Icons.visibility_off
+                          : Icons.visibility,
+                    ),
+                    onPressed: () => setState(
+                      () => _obscureConfirmPassword = !_obscureConfirmPassword,
+                    ),
+                  ),
                 ),
                 height,
                 width,
@@ -295,7 +369,7 @@ class _SignUpState extends State<SignUp> {
 
               SizedBox(height: sectionGap),
 
-              // ── Language + Currency dropdowns ──────────────────────────────
+              // Language + GOVERNORATE dropdowns
               Row(
                 children: [
                   Expanded(
@@ -305,7 +379,7 @@ class _SignUpState extends State<SignUp> {
                     ),
                   ),
                   SizedBox(width: width * 0.025),
-                  Expanded(child: buildLabel("CURRENCY", labelFontSize)),
+                  Expanded(child: buildLabel("GOVERNORATE")),
                 ],
               ),
               SizedBox(height: smallGap),
@@ -321,19 +395,24 @@ class _SignUpState extends State<SignUp> {
                       items: languages,
                       onChanged: (val) =>
                           setState(() => _selectedLanguage = val),
+                      bodyFontSize: bodyFontSize,
+                      hintFontSize: hintFontSize,
+                      width: width,
+                      color: Color(0xFFF2EDE6),
                     ),
                   ),
                   SizedBox(width: width * 0.025),
                   Expanded(
                     child: buildDropdown(
+                      value: _selectedGovernorate,
+                      hint: "Select governorate",
+                      items: egyptGovernorates,
+                      onChanged: (val) =>
+                          setState(() => _selectedGovernorate = val),
                       bodyFontSize: bodyFontSize,
                       hintFontSize: hintFontSize,
                       width: width,
-                      value: _selectedCurrency,
-                      hint: "Select Currency",
-                      items: currencies,
-                      onChanged: (val) =>
-                          setState(() => _selectedCurrency = val),
+                      color: Color(0xFFF2EDE6),
                     ),
                   ),
                 ],
@@ -382,11 +461,14 @@ class _SignUpState extends State<SignUp> {
 
               // ── Create Account button ──────────────────────────────────────
               Center(
-                child: Default.Button(
-                  onPressed: isButtonEnabled ? handleCreateAccount : null,
-                  child: lang.createAccount,
-                  width: width * 0.6,
-                  height: height * 0.07,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(60),
+                  child: Default.Button(
+                    onPressed: isButtonEnabled ? handleCreateAccount : null,
+                    child: lang.createAccount,
+                    width: width * 0.9,
+                    height: height * 0.07,
+                  ),
                 ),
               ),
 
@@ -420,7 +502,7 @@ class _SignUpState extends State<SignUp> {
                     ),
                     onPressed: () => Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(builder: (context) => const Home()),
+                      MaterialPageRoute(builder: (context) => Login()),
                     ),
                   ),
                 ],

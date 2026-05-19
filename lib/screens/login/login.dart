@@ -6,6 +6,7 @@ import 'package:flutter_application_1/screens/signup/signup.dart';
 import 'package:flutter_application_1/l10n/app_localizations.dart';
 import 'package:flutter_application_1/screens/login/widget.dart';
 import 'package:flutter_application_1/screens/login/service.dart';
+import 'package:flutter_application_1/screens/language/languages.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -23,6 +24,9 @@ class _LoginState extends State<Login> {
   // Added FormKey to manage validation state
   final _formKey = GlobalKey<FormState>();
 
+  bool _obscurePassword = true;
+  String? _passwordError;
+
   @override
   void dispose() {
     _emailController.dispose();
@@ -33,16 +37,83 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     final lang = AppLocalizations.of(context)!;
+    
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
+    final double hintFontSize = width * 0.031;
+
+    InputDecoration buildInputDecoration({
+      required String hint,
+      String? errorText,
+      Widget? suffixIcon,
+    }) => InputDecoration(
+      filled: true,
+      fillColor: const Color(0xFFF2EDE6),
+      hintText: hint,
+      hintStyle: TextStyle(color: Colors.grey, fontSize: hintFontSize),
+      errorText: errorText,
+      errorStyle: TextStyle(fontSize: hintFontSize * 0.9),
+      suffixIcon: suffixIcon,
+      contentPadding: EdgeInsets.symmetric(
+        horizontal: width * 0.04,
+        vertical: height * 0.018,
+      ),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(12),
+        borderSide: BorderSide.none,
+      ),
+    );
 
     return Scaffold(
       backgroundColor: Default.backgroundColor,
       appBar: AppBar(
         backgroundColor: Default.backgroundColor,
         elevation: 0,
-        leading: const Icon(Icons.menu, color: Colors.black),
+        iconTheme: const IconThemeData(color: Colors.black),
         centerTitle: true,
+      ),
+      drawer: Drawer(
+        backgroundColor: const Color(0xFFF8F4EF),
+        child: SafeArea(
+          child: Column(
+            children: [
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 24,
+                  vertical: 32,
+                ),
+                child: const Text(
+                  "Menu",
+                  style: TextStyle(
+                    fontSize: 26,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFF463427),
+                  ),
+                ),
+              ),
+              const Divider(height: 1, color: Color(0xFFD8CFC5)),
+              ListTile(
+                leading: const Icon(Icons.language, color: Color(0xFF463427)),
+                title: const Text(
+                  "Change Language",
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Color(0xFF463427),
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                onTap: () {
+                  Navigator.pop(context);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => const LanguageScreen()),
+                  );
+                },
+              ),
+            ],
+          ),
+        ),
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: width * 0.06),

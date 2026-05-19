@@ -122,10 +122,10 @@
   "@curatedJourneys": {
     "description": "Small overline text above the main title"
   },
-  "exploreTheCollections": "Explore the Collections",
-  "@exploreTheCollections": {
-    "description": "Main title on the home screen (Sentence)"
-  },
+  "exploreThe": "Explore the",
+  "collections" : "Collections",
+  "searchDestination": "Search a destination...",
+
   "searchDestination": "Search a destination...",
   "@searchDestination": {
     "description": "Placeholder text in the search bar (Sentence)"
@@ -387,6 +387,7 @@
   "@cancel": {
     "description": "Secondary button to discard profile edits (Word)"
   },
+
   "firstNameHint": "Edit your first name",
   "@fullNameHint": {
     "description": "Hint or placeholder text for the full name input field (Name)"
@@ -457,6 +458,7 @@
 },
 
 "heritage": "Heritage",
+
 
 "abusimblename": "Abu Simbel Temple",
 "abusimbellocation": "Abu Simbel",
@@ -822,6 +824,18 @@
 "elmalkytag2": "Desserts",
 "@elmalkytag2": {
   "description": "third tag of elmalky"
-}
+},
+
+ "menu": "Menu",
+  "manageProfile": "Manage Profile",
+  "changeLanguage": "Change Language",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Logout",
+  "logoutConfirmMessage": "Are you sure you want to logout?",
+  "cancel": "Cancel",
+
+"choosecategory" : "Choose a category",
+"changecategory" : "Change category"
+
 
 }
