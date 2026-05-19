@@ -364,6 +364,9 @@ class AppLocalizationsEs extends AppLocalizations {
   String get saveChanges => 'Save Changes';
 
   @override
+  String get cancel => 'Cancel';
+
+  @override
   String get firstNameHint => 'Edit your first name';
 
   @override

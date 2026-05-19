@@ -383,6 +383,10 @@
   "@saveChanges": {
     "description": "Primary button to submit and save profile edits (Phrase)"
   },
+  "cancel": "Cancel",
+  "@cancel": {
+    "description": "Secondary button to discard profile edits (Word)"
+  },
 
   "firstNameHint": "Edit your first name",
   "@fullNameHint": {

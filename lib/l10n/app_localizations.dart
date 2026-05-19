@@ -812,6 +812,12 @@ abstract class AppLocalizations {
   /// **'Save Changes'**
   String get saveChanges;
 
+  /// Secondary button to discard profile edits (Word)
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancel;
+
   /// No description provided for @firstNameHint.
   ///
   /// In en, this message translates to:

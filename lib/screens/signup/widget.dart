@@ -13,10 +13,65 @@ Widget labelText(String text) {
   );
 }
 
+Widget passwordTextfield(
+  TextEditingController _passwordController,
+  String? _passwordError,
+  bool _obscurePassword,
+  VoidCallback onToggle,
+  double height,
+  double width,
+  double hintFontSize,
+) {
+  return TextField(
+    controller: _passwordController,
+    obscureText: _obscurePassword,
+    decoration: buildInputDecoration(
+      height: height,
+      width: width,
+      hintFontSize: hintFontSize,
+      hint: "Enter your password",
+      errorText: _passwordError,
+      suffixIcon: IconButton(
+        icon: Icon(_obscurePassword ? Icons.visibility_off : Icons.visibility),
+        onPressed: onToggle,
+      ),
+    ),
+  );
+}
+
+Widget confirmPasswordTextfield(
+  TextEditingController _confirmPasswordController,
+  String? _confirmPasswordError,
+  bool _obscureConfirmPassword,
+  VoidCallback onToggle,
+  double height,
+  double width,
+  double hintFontSize,
+) {
+  return TextField(
+    controller: _confirmPasswordController,
+    obscureText: _obscureConfirmPassword,
+    decoration: buildInputDecoration(
+      height: height,
+      width: width,
+      hintFontSize: hintFontSize,
+      hint: "Confirm your password",
+      errorText: _confirmPasswordError,
+      suffixIcon: IconButton(
+        icon: Icon(
+          _obscureConfirmPassword ? Icons.visibility_off : Icons.visibility,
+        ),
+        onPressed: onToggle,
+      ),
+    ),
+  );
+}
+
 Widget customTextField({
   required TextEditingController controller,
   required String hint,
   bool isPassword = false,
+  String? errorText, // ← added (optional, so existing callers unaffected)
 }) {
   return TextField(
     controller: controller,
@@ -25,7 +80,7 @@ Widget customTextField({
       filled: true,
       fillColor: const Color(0xFFF2EDE6),
       hintText: hint,
-      hintStyle: const TextStyle(color: Colors.grey, fontSize: 14),
+      hintStyle: const TextStyle(color: Colors.grey, fontSize: 10),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(12),
         borderSide: BorderSide.none,

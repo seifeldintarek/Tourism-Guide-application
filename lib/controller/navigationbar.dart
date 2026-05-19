@@ -7,7 +7,9 @@ import 'package:flutter_application_1/screens/search/search.dart';
 import 'package:flutter_application_1/screens/settings/hamburger.dart';
 
 class Footer extends StatefulWidget {
-  const Footer({super.key, required AppUser user});
+  const Footer({super.key, required this.user});
+
+  final AppUser user;
 
   @override
   State<Footer> createState() => _FooterState();
@@ -20,7 +22,7 @@ class _FooterState extends State<Footer> {
     Container(),
     const Search_Screen(),
     Container(),
-    const Profile(),
+    Profile(user: widget.user),
   ];
 
   @override
