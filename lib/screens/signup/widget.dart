@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/core/default.dart';
 
 Widget labelText(String text) {
   return Text(
@@ -58,3 +59,48 @@ Widget customDropdown({
     onChanged: onChanged,
   );
 }
+
+Widget buildDropdown({
+  required String? value,
+  required String hint,
+  required List<String> items,
+  required ValueChanged<String?> onChanged,
+  required double width,
+  required hintFontSize,
+  required bodyFontSize,
+  required Color color,
+}) => DropdownButtonHideUnderline(
+  child: Container(
+    padding: EdgeInsets.symmetric(horizontal: width * 0.035),
+    decoration: BoxDecoration(
+      color: const Color(0xFFF2EDE6),
+      borderRadius: BorderRadius.circular(12),
+    ),
+    child: DropdownButton<String>(
+      value: value,
+      isExpanded: true, // ← key fix: fills width, no overflow
+      hint: Text(
+        hint,
+        style: TextStyle(color: Colors.grey, fontSize: hintFontSize),
+        overflow: TextOverflow.ellipsis,
+      ),
+      icon: const Icon(Icons.keyboard_arrow_down, color: Colors.grey),
+      style: TextStyle(color: Default.textColor, fontSize: bodyFontSize),
+      dropdownColor: color,
+      borderRadius: BorderRadius.circular(12),
+      items: items
+          .map(
+            (item) => DropdownMenuItem<String>(
+              value: item,
+              child: Text(
+                item,
+                style: TextStyle(fontSize: bodyFontSize),
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+          )
+          .toList(),
+      onChanged: onChanged,
+    ),
+  ),
+);

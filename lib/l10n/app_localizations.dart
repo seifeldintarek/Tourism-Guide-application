@@ -146,6 +146,18 @@ abstract class AppLocalizations {
   /// **'Password'**
   String get password;
 
+  /// No description provided for @currentpassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Current Password'**
+  String get currentpassword;
+
+  /// No description provided for @newpassword.
+  ///
+  /// In en, this message translates to:
+  /// **'New Password'**
+  String get newpassword;
+
   /// Action Phrase: Button text to submit the sign-in form.
   ///
   /// In en, this message translates to:
@@ -272,11 +284,17 @@ abstract class AppLocalizations {
   /// **'CURATED JOURNEYS'**
   String get curatedJourneys;
 
-  /// Main title on the home screen (Sentence)
+  /// No description provided for @exploreThe.
   ///
   /// In en, this message translates to:
-  /// **'Explore the Collections'**
-  String get exploreTheCollections;
+  /// **'Explore the'**
+  String get exploreThe;
+
+  /// No description provided for @collections.
+  ///
+  /// In en, this message translates to:
+  /// **'Collections'**
+  String get collections;
 
   /// Placeholder text in the search bar (Sentence)
   ///
@@ -311,7 +329,7 @@ abstract class AppLocalizations {
   /// Label for number of saved places (Word)
   ///
   /// In en, this message translates to:
-  /// **'SAVED'**
+  /// **'Save'**
   String get saved;
 
   /// Label for number of reviews (Word)
@@ -338,10 +356,10 @@ abstract class AppLocalizations {
   /// **'HISTORIC MUSEUM'**
   String get historicMuseum;
 
-  /// Category tag for natural places (Word)
+  /// nature category
   ///
   /// In en, this message translates to:
-  /// **'NATURE'**
+  /// **'Nature'**
   String get nature;
 
   /// No description provided for @wadiElRayan.
@@ -584,7 +602,7 @@ abstract class AppLocalizations {
   /// **'North Coast'**
   String get northCoast;
 
-  /// Category title (Word)
+  /// food category
   ///
   /// In en, this message translates to:
   /// **'Food'**
@@ -704,17 +722,773 @@ abstract class AppLocalizations {
   /// **'Failed to store user data. Please try again.'**
   String get failtostoreuser;
 
-  /// No description provided for @preferenceselection.
+  /// App bar title for the language selection screen (Word)
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get languageTitle;
+
+  /// Overline text above the main title on the language screen (Phrase)
   ///
   /// In en, this message translates to:
   /// **'PREFERENCE SELECTION'**
-  String get preferenceselection;
+  String get preferenceSelection;
 
-  /// No description provided for @curateyourexp.
+  /// Main title on the language selection screen (Sentence/Command)
   ///
   /// In en, this message translates to:
   /// **'Curate Your Experience'**
-  String get curateyourexp;
+  String get curateYourExperience;
+
+  /// No description provided for @countryEgypt.
+  ///
+  /// In en, this message translates to:
+  /// **'Egypt'**
+  String get countryEgypt;
+
+  /// No description provided for @countryUk.
+  ///
+  /// In en, this message translates to:
+  /// **'UK'**
+  String get countryUk;
+
+  /// No description provided for @countrySpain.
+  ///
+  /// In en, this message translates to:
+  /// **'Spain'**
+  String get countrySpain;
+
+  /// No description provided for @countryItaly.
+  ///
+  /// In en, this message translates to:
+  /// **'Italy'**
+  String get countryItaly;
+
+  /// No description provided for @countryGermany.
+  ///
+  /// In en, this message translates to:
+  /// **'Germany'**
+  String get countryGermany;
+
+  /// App bar title for the edit profile screen (Phrase)
+  ///
+  /// In en, this message translates to:
+  /// **'Edit Profile'**
+  String get editProfileTitle;
+
+  /// Action text under the avatar to change the profile photo (Phrase)
+  ///
+  /// In en, this message translates to:
+  /// **'CHANGE PHOTO'**
+  String get changePhoto;
+
+  /// Label for the full name input field (Phrase)
+  ///
+  /// In en, this message translates to:
+  /// **'FULL NAME'**
+  String get fullNameLabel;
+
+  /// Label for the user role/title input field (Word)
+  ///
+  /// In en, this message translates to:
+  /// **'TITLE'**
+  String get titleLabel;
+
+  /// Section header for managing saved locations (Phrase)
+  ///
+  /// In en, this message translates to:
+  /// **'Manage Saved Places'**
+  String get manageSavedPlaces;
+
+  /// Action button to enter edit mode for saved places list (Phrase)
+  ///
+  /// In en, this message translates to:
+  /// **'EDIT SAVED'**
+  String get editSaved;
+
+  /// Primary button to submit and save profile edits (Phrase)
+  ///
+  /// In en, this message translates to:
+  /// **'Save Changes'**
+  String get saveChanges;
+
+  /// No description provided for @firstNameHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit your first name'**
+  String get firstNameHint;
+
+  /// No description provided for @lastNameHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit your last name'**
+  String get lastNameHint;
+
+  /// No description provided for @passwordHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit your password'**
+  String get passwordHint;
+
+  /// No description provided for @nodatafound.
+  ///
+  /// In en, this message translates to:
+  /// **'No data found'**
+  String get nodatafound;
+
+  /// quote of heritage
+  ///
+  /// In en, this message translates to:
+  /// **'\"To know the heart of a culture, one must walk through the echoes of its stone\"'**
+  String get heritagequote;
+
+  /// quote of spiritual
+  ///
+  /// In en, this message translates to:
+  /// **'\"Where faith and silence meet, the spirit begins to heal.\"'**
+  String get spiritualquote;
+
+  /// quote of nature
+  ///
+  /// In en, this message translates to:
+  /// **'\"To understand the earth, one must listen to the stories written in its rivers, skies, and silence.\"'**
+  String get naturequote;
+
+  /// quote of food
+  ///
+  /// In en, this message translates to:
+  /// **'\"Every dish tells a story, seasoned with culture, history, and the warmth of its people.\"'**
+  String get foodquote;
+
+  /// name of pyramids
+  ///
+  /// In en, this message translates to:
+  /// **'Pyramids'**
+  String get pyramidsname;
+
+  /// about description of pyramids
+  ///
+  /// In en, this message translates to:
+  /// **'The world-famous pyramids of ancient Egypt, built as royal tombs and considered one of the Seven Wonders of the Ancient World.'**
+  String get aboutpyramids;
+
+  /// location of pyramids
+  ///
+  /// In en, this message translates to:
+  /// **'Al Haram'**
+  String get alharam;
+
+  /// first tag of pyramids
+  ///
+  /// In en, this message translates to:
+  /// **'PYRAMIDS'**
+  String get pyramidstag0;
+
+  /// second tag of pyramids
+  ///
+  /// In en, this message translates to:
+  /// **'WONDER'**
+  String get pyramidstag1;
+
+  /// third tag of pyramids
+  ///
+  /// In en, this message translates to:
+  /// **'LANDMARK'**
+  String get pyramidstag2;
+
+  /// No description provided for @abusimblename.
+  ///
+  /// In en, this message translates to:
+  /// **'Abu Simbel Temple'**
+  String get abusimblename;
+
+  /// No description provided for @abusimbellocation.
+  ///
+  /// In en, this message translates to:
+  /// **'Abu Simbel'**
+  String get abusimbellocation;
+
+  /// No description provided for @aboutabusimbel.
+  ///
+  /// In en, this message translates to:
+  /// **'Massive rock-cut temples built by Ramses II, famous for their giant statues and remarkable relocation to protect them from flooding.'**
+  String get aboutabusimbel;
+
+  /// No description provided for @abusimbletag0.
+  ///
+  /// In en, this message translates to:
+  /// **'HISTORICAL'**
+  String get abusimbletag0;
+
+  /// No description provided for @abusimbletag1.
+  ///
+  /// In en, this message translates to:
+  /// **'MONUMENT'**
+  String get abusimbletag1;
+
+  /// No description provided for @abusimbletag2.
+  ///
+  /// In en, this message translates to:
+  /// **'UNESCO'**
+  String get abusimbletag2;
+
+  /// No description provided for @hatshepsuttemplename.
+  ///
+  /// In en, this message translates to:
+  /// **'Temple of Hatshepsut'**
+  String get hatshepsuttemplename;
+
+  /// No description provided for @hatshepsuttemplelocation.
+  ///
+  /// In en, this message translates to:
+  /// **'Deir el-Bahari'**
+  String get hatshepsuttemplelocation;
+
+  /// No description provided for @luxor.
+  ///
+  /// In en, this message translates to:
+  /// **'Luxor'**
+  String get luxor;
+
+  /// No description provided for @aboutatshepsuttemple.
+  ///
+  /// In en, this message translates to:
+  /// **'A magnificent temple carved into the cliffs of Luxor, built for Queen Hatshepsut, one of ancient Egypt’s most powerful rulers.'**
+  String get aboutatshepsuttemple;
+
+  /// No description provided for @hatshepsuttempletag0.
+  ///
+  /// In en, this message translates to:
+  /// **'TEMPLE'**
+  String get hatshepsuttempletag0;
+
+  /// No description provided for @hatshepsuttempletag1.
+  ///
+  /// In en, this message translates to:
+  /// **'ARCHITECTURE'**
+  String get hatshepsuttempletag1;
+
+  /// No description provided for @hatshepsuttempletag2.
+  ///
+  /// In en, this message translates to:
+  /// **'HISTORICAL'**
+  String get hatshepsuttempletag2;
+
+  /// No description provided for @grandegyptianmuseumname.
+  ///
+  /// In en, this message translates to:
+  /// **'The Grand Egyptian Museum'**
+  String get grandegyptianmuseumname;
+
+  /// No description provided for @grandegyptianmuseumlocation.
+  ///
+  /// In en, this message translates to:
+  /// **'Cairo-Alex Road'**
+  String get grandegyptianmuseumlocation;
+
+  /// No description provided for @giza.
+  ///
+  /// In en, this message translates to:
+  /// **'Giza'**
+  String get giza;
+
+  /// No description provided for @aboutgrandegyptianmuseum.
+  ///
+  /// In en, this message translates to:
+  /// **'A modern museum near the pyramids showcasing thousands of ancient Egyptian artifacts, including King Tutankhamun’s treasures.'**
+  String get aboutgrandegyptianmuseum;
+
+  /// No description provided for @grandegyptianmuseumtag0.
+  ///
+  /// In en, this message translates to:
+  /// **'ARTIFACTS'**
+  String get grandegyptianmuseumtag0;
+
+  /// No description provided for @grandegyptianmuseumtag1.
+  ///
+  /// In en, this message translates to:
+  /// **'MUSEUM'**
+  String get grandegyptianmuseumtag1;
+
+  /// No description provided for @grandegyptianmuseumtag2.
+  ///
+  /// In en, this message translates to:
+  /// **'CULTURE'**
+  String get grandegyptianmuseumtag2;
+
+  /// No description provided for @philaetemplename.
+  ///
+  /// In en, this message translates to:
+  /// **'Philae Temple'**
+  String get philaetemplename;
+
+  /// No description provided for @philaetemplelocation.
+  ///
+  /// In en, this message translates to:
+  /// **'Agilkia Island'**
+  String get philaetemplelocation;
+
+  /// No description provided for @aboutphilaetemple.
+  ///
+  /// In en, this message translates to:
+  /// **'A beautiful island temple dedicated to the goddess Isis, known for its stunning Nile views and ancient carvings.'**
+  String get aboutphilaetemple;
+
+  /// No description provided for @philaetempletag0.
+  ///
+  /// In en, this message translates to:
+  /// **'ISLAND'**
+  String get philaetempletag0;
+
+  /// No description provided for @philaetempletag1.
+  ///
+  /// In en, this message translates to:
+  /// **'TEMPLE'**
+  String get philaetempletag1;
+
+  /// No description provided for @philaetempletag2.
+  ///
+  /// In en, this message translates to:
+  /// **'HERITAGE'**
+  String get philaetempletag2;
+
+  /// white desert name
+  ///
+  /// In en, this message translates to:
+  /// **'White Desert'**
+  String get whitedesertname;
+
+  /// white desert location
+  ///
+  /// In en, this message translates to:
+  /// **'White Desert National Park'**
+  String get whitedesertnationalpark;
+
+  /// city of white desert
+  ///
+  /// In en, this message translates to:
+  /// **'South West of Cairo'**
+  String get southwestofcairo;
+
+  /// Information about white desert
+  ///
+  /// In en, this message translates to:
+  /// **'A breathtaking desert reserve famous for its unique white rock formations and camping experiences.'**
+  String get aboutwhitedesert;
+
+  /// first tag of the white desert
+  ///
+  /// In en, this message translates to:
+  /// **'DESERT'**
+  String get whitedeserttag0;
+
+  /// second tag of the white desert
+  ///
+  /// In en, this message translates to:
+  /// **'CAMPING'**
+  String get whitedeserttag1;
+
+  /// third tag of the white desert
+  ///
+  /// In en, this message translates to:
+  /// **'SAFARI'**
+  String get whitedeserttag2;
+
+  /// Blue Hole name
+  ///
+  /// In en, this message translates to:
+  /// **'Blue Hole'**
+  String get blueholename;
+
+  /// Blue Hole location
+  ///
+  /// In en, this message translates to:
+  /// **'Blue Hole of Dahab'**
+  String get blueholeofdahab;
+
+  /// city of Blue Hole
+  ///
+  /// In en, this message translates to:
+  /// **'Dahab'**
+  String get dahab;
+
+  /// Information about Blue Hole
+  ///
+  /// In en, this message translates to:
+  /// **'A world-famous diving destination known for crystal-clear waters and vibrant coral reefs.'**
+  String get aboutbluehole;
+
+  /// first tag of theBlue Hole
+  ///
+  /// In en, this message translates to:
+  /// **'DIVING'**
+  String get blueholetag0;
+
+  /// second tag of the Blue Hole
+  ///
+  /// In en, this message translates to:
+  /// **'CORAL'**
+  String get blueholetag1;
+
+  /// third tag of the Blue Hole
+  ///
+  /// In en, this message translates to:
+  /// **'ADVENTURE'**
+  String get blueholetag2;
+
+  /// Abu Galoum name
+  ///
+  /// In en, this message translates to:
+  /// **'Abu Galoum'**
+  String get abugaloumname;
+
+  /// Abu Galoum location
+  ///
+  /// In en, this message translates to:
+  /// **'Abu Galoum'**
+  String get abugaloum;
+
+  /// city of Abu Galoum
+  ///
+  /// In en, this message translates to:
+  /// **'Neweiba'**
+  String get neweiba;
+
+  /// Information about Abu Galoum
+  ///
+  /// In en, this message translates to:
+  /// **'A protected coastal reserve famous for snorkeling, coral reefs, mountains, and Bedouin camps.'**
+  String get aboutabugaloum;
+
+  /// first tag of Abu Galoum
+  ///
+  /// In en, this message translates to:
+  /// **'SNORKELING'**
+  String get abugaloumtag0;
+
+  /// second tag of Abu Galoum
+  ///
+  /// In en, this message translates to:
+  /// **'NATURE'**
+  String get abugaloumtag1;
+
+  /// third tag of Abu Galoum
+  ///
+  /// In en, this message translates to:
+  /// **'CAMPING'**
+  String get abugaloumtag2;
+
+  /// Wadi El Gemal name
+  ///
+  /// In en, this message translates to:
+  /// **'Wadi El Gemal'**
+  String get wadielgemalname;
+
+  /// Wadi El Gemal location
+  ///
+  /// In en, this message translates to:
+  /// **'Wadi El Gemal Reserve'**
+  String get wadielgemalreserve;
+
+  /// city of Wadi El Gemal
+  ///
+  /// In en, this message translates to:
+  /// **'Marsa Alam'**
+  String get marsaalam;
+
+  /// Information about Wadi El Gemal
+  ///
+  /// In en, this message translates to:
+  /// **'A stunning natural reserve combining desert mountains, mangroves, coral reefs, and Red Sea wildlife.'**
+  String get aboutwadielgemal;
+
+  /// first tag of Wadi El Gemal
+  ///
+  /// In en, this message translates to:
+  /// **'MARINE'**
+  String get wadielgemaltag0;
+
+  /// second tag of Wadi El Gemal
+  ///
+  /// In en, this message translates to:
+  /// **'SAFARI'**
+  String get wadielgemaltag1;
+
+  /// third tag of Wadi El Gemal
+  ///
+  /// In en, this message translates to:
+  /// **'WILDLIFE'**
+  String get wadielgemaltag2;
+
+  /// Wadi el rayan name
+  ///
+  /// In en, this message translates to:
+  /// **'Wadi el rayan'**
+  String get wadielrayanname;
+
+  /// Wadi el rayan location
+  ///
+  /// In en, this message translates to:
+  /// **'Wadi el rayan'**
+  String get wadielrayan;
+
+  /// city of Wadi el rayan
+  ///
+  /// In en, this message translates to:
+  /// **'Faiyum'**
+  String get faiyum;
+
+  /// Information about Wadi el rayan
+  ///
+  /// In en, this message translates to:
+  /// **'A beautiful desert oasis known for waterfalls, lakes, sand dunes, and safari adventures.'**
+  String get aboutwadielrayan;
+
+  /// first tag of Wadi el rayan
+  ///
+  /// In en, this message translates to:
+  /// **'WATERFALLS'**
+  String get wadielrayantag0;
+
+  /// second tag of Wadi el rayan
+  ///
+  /// In en, this message translates to:
+  /// **'DESERT'**
+  String get wadielrayantag1;
+
+  /// third tag of Wadi el rayan
+  ///
+  /// In en, this message translates to:
+  /// **'LAKES'**
+  String get wadielrayantag2;
+
+  /// name of arabiata
+  ///
+  /// In en, this message translates to:
+  /// **'Pyramids'**
+  String get arabiataname;
+
+  /// about description of arabiata
+  ///
+  /// In en, this message translates to:
+  /// **'A popular Egyptian restaurant serving authentic foul, falafel, and traditional breakfast meals.'**
+  String get aboutarabiata;
+
+  /// location of arabiata
+  ///
+  /// In en, this message translates to:
+  /// **'Nasr City'**
+  String get nasrcity;
+
+  /// first tag of arabiata
+  ///
+  /// In en, this message translates to:
+  /// **'Breakfast'**
+  String get arabiatatag0;
+
+  /// second tag of arabiata
+  ///
+  /// In en, this message translates to:
+  /// **'StreetFood'**
+  String get arabiatatag1;
+
+  /// third tag of arabiata
+  ///
+  /// In en, this message translates to:
+  /// **'Oriental'**
+  String get arabiatatag2;
+
+  /// name of qasr-elkababgi
+  ///
+  /// In en, this message translates to:
+  /// **'Qasr Elkababgi'**
+  String get qasrelkababginame;
+
+  /// about description of qasr-elkababgi
+  ///
+  /// In en, this message translates to:
+  /// **'A renowned Egyptian restaurant chain celebrated for authentic oriental cuisine, traditional grills, and theatrical dining experiences'**
+  String get aboutqasrelkababgi;
+
+  /// location of qasr-elkababgi
+  ///
+  /// In en, this message translates to:
+  /// **'Fifth Settlement'**
+  String get fifthsettlement;
+
+  /// first tag of qasr-elkababgi
+  ///
+  /// In en, this message translates to:
+  /// **'Grills'**
+  String get qasrelkababgitag0;
+
+  /// second tag of qasr-elkababgi
+  ///
+  /// In en, this message translates to:
+  /// **'Dining'**
+  String get qasrelkababgitag1;
+
+  /// third tag of qasr-elkababgi
+  ///
+  /// In en, this message translates to:
+  /// **'Oriental'**
+  String get qasrelkababgitag2;
+
+  /// name of bahary
+  ///
+  /// In en, this message translates to:
+  /// **'Bahary'**
+  String get baharyname;
+
+  /// about description of bahary
+  ///
+  /// In en, this message translates to:
+  /// **'A modern seafood restaurant famous for grilled fish, seafood platters, and fresh Mediterranean flavors.'**
+  String get aboutbahary;
+
+  /// first tag of bahary
+  ///
+  /// In en, this message translates to:
+  /// **'SeaFood'**
+  String get baharytag0;
+
+  /// second tag of bahary
+  ///
+  /// In en, this message translates to:
+  /// **'Fresh'**
+  String get baharytag1;
+
+  /// third tag of bahary
+  ///
+  /// In en, this message translates to:
+  /// **'OceanFlavors'**
+  String get baharytag2;
+
+  /// name of koueider
+  ///
+  /// In en, this message translates to:
+  /// **'Koueider'**
+  String get koueidername;
+
+  /// about description of koueider
+  ///
+  /// In en, this message translates to:
+  /// **'One of Egypt’s oldest dessert shops, famous for oriental sweets and authentic Arabic pastries.'**
+  String get aboutkoueider;
+
+  /// location of koueider
+  ///
+  /// In en, this message translates to:
+  /// **'Heliopolis'**
+  String get heliopolis;
+
+  /// first tag of koueider
+  ///
+  /// In en, this message translates to:
+  /// **'Desserts'**
+  String get koueidertag0;
+
+  /// second tag of koueider
+  ///
+  /// In en, this message translates to:
+  /// **'Ice Cream'**
+  String get koueidertag1;
+
+  /// third tag of koueider
+  ///
+  /// In en, this message translates to:
+  /// **'Sweets'**
+  String get koueidertag2;
+
+  /// name of elmalky
+  ///
+  /// In en, this message translates to:
+  /// **'ElMalky'**
+  String get elmalkyname;
+
+  /// about description of elmalky
+  ///
+  /// In en, this message translates to:
+  /// **'A legendary Egyptian dessert destination known for rice pudding, ice cream, and classic sweets.'**
+  String get aboutelmalky;
+
+  /// location of elmalky
+  ///
+  /// In en, this message translates to:
+  /// **'ElMoattam'**
+  String get elmoattam;
+
+  /// first tag of elmalky
+  ///
+  /// In en, this message translates to:
+  /// **'Traditional'**
+  String get elmalkytag0;
+
+  /// second tag of elmalky
+  ///
+  /// In en, this message translates to:
+  /// **'Ice Cream'**
+  String get elmalkytag1;
+
+  /// third tag of elmalky
+  ///
+  /// In en, this message translates to:
+  /// **'Desserts'**
+  String get elmalkytag2;
+
+  /// No description provided for @menu.
+  ///
+  /// In en, this message translates to:
+  /// **'Menu'**
+  String get menu;
+
+  /// No description provided for @manageProfile.
+  ///
+  /// In en, this message translates to:
+  /// **'Manage Profile'**
+  String get manageProfile;
+
+  /// No description provided for @changeLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Change Language'**
+  String get changeLanguage;
+
+  /// No description provided for @logout.
+  ///
+  /// In en, this message translates to:
+  /// **'Logout'**
+  String get logout;
+
+  /// No description provided for @logoutConfirmTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Logout'**
+  String get logoutConfirmTitle;
+
+  /// No description provided for @logoutConfirmMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to logout?'**
+  String get logoutConfirmMessage;
+
+  /// No description provided for @cancel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancel;
+
+  /// No description provided for @choosecategory.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose a category'**
+  String get choosecategory;
+
+  /// No description provided for @changecategory.
+  ///
+  /// In en, this message translates to:
+  /// **'Change category'**
+  String get changecategory;
 }
 
 class _AppLocalizationsDelegate
