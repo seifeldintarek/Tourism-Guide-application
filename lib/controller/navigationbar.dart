@@ -3,6 +3,7 @@ import 'package:flutter_application_1/core/default.dart';
 import 'package:flutter_application_1/models/User.dart';
 import 'package:flutter_application_1/screens/info/info.dart';
 import 'package:flutter_application_1/screens/profile/profile.dart';
+import 'package:flutter_application_1/screens/search/search.dart';
 import 'package:flutter_application_1/screens/settings/hamburger.dart';
 
 class Footer extends StatefulWidget {
@@ -17,7 +18,7 @@ class _FooterState extends State<Footer> {
 
   final List<Widget> screens = [
     Container(),
-    const Infoscreen(),
+    const Search_Screen(),
     Container(),
     const Profile(),
   ];

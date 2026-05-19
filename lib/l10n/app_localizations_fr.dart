@@ -99,7 +99,10 @@ class AppLocalizationsFr extends AppLocalizations {
   String get curatedJourneys => 'VOYAGES SÉLECTIONNÉS';
 
   @override
-  String get exploreTheCollections => 'Explorez les collections';
+  String get exploreThe => 'Explore the';
+
+  @override
+  String get collections => 'Collections';
 
   @override
   String get searchDestination => 'Rechercher une destination...';
@@ -358,9 +361,6 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get saveChanges => 'Save Changes';
-
-  @override
-  String get cancel => 'Cancel';
 
   @override
   String get firstNameHint => 'Edit your first name';
@@ -710,4 +710,13 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get logoutConfirmMessage => 'Are you sure you want to logout?';
+
+  @override
+  String get cancel => 'Cancel';
+
+  @override
+  String get choosecategory => 'Choose a category';
+
+  @override
+  String get changecategory => 'Change category';
 }

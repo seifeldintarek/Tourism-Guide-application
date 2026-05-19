@@ -233,46 +233,6 @@ class _SignUpState extends State<SignUp> {
     );
 
     // ── Responsive dropdown (no overflow) ────────────────────────────────────
-    Widget buildDropdown({
-      required String? value,
-      required String hint,
-      required List<String> items,
-      required ValueChanged<String?> onChanged,
-    }) => DropdownButtonHideUnderline(
-      child: Container(
-        padding: EdgeInsets.symmetric(horizontal: width * 0.035),
-        decoration: BoxDecoration(
-          color: const Color(0xFFF2EDE6),
-          borderRadius: BorderRadius.circular(12),
-        ),
-        child: DropdownButton<String>(
-          value: value,
-          isExpanded: true, // ← key fix: fills width, no overflow
-          hint: Text(
-            hint,
-            style: TextStyle(color: Colors.grey, fontSize: hintFontSize),
-            overflow: TextOverflow.ellipsis,
-          ),
-          icon: const Icon(Icons.keyboard_arrow_down, color: Colors.grey),
-          style: TextStyle(color: Default.textColor, fontSize: bodyFontSize),
-          dropdownColor: const Color(0xFFF2EDE6),
-          borderRadius: BorderRadius.circular(12),
-          items: items
-              .map(
-                (item) => DropdownMenuItem<String>(
-                  value: item,
-                  child: Text(
-                    item,
-                    style: TextStyle(fontSize: bodyFontSize),
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ),
-              )
-              .toList(),
-          onChanged: onChanged,
-        ),
-      ),
-    );
 
     // UI
     return Scaffold(
@@ -419,6 +379,10 @@ class _SignUpState extends State<SignUp> {
                       items: languages,
                       onChanged: (val) =>
                           setState(() => _selectedLanguage = val),
+                      bodyFontSize: bodyFontSize,
+                      hintFontSize: hintFontSize,
+                      width: width,
+                      color: Color(0xFFF2EDE6),
                     ),
                   ),
                   SizedBox(width: width * 0.025),
@@ -429,6 +393,10 @@ class _SignUpState extends State<SignUp> {
                       items: egyptGovernorates,
                       onChanged: (val) =>
                           setState(() => _selectedGovernorate = val),
+                      bodyFontSize: bodyFontSize,
+                      hintFontSize: hintFontSize,
+                      width: width,
+                      color: Color(0xFFF2EDE6),
                     ),
                   ),
                 ],

@@ -284,11 +284,17 @@ abstract class AppLocalizations {
   /// **'CURATED JOURNEYS'**
   String get curatedJourneys;
 
-  /// Main title on the home screen (Sentence)
+  /// No description provided for @exploreThe.
   ///
   /// In en, this message translates to:
-  /// **'Explore the Collections'**
-  String get exploreTheCollections;
+  /// **'Explore the'**
+  String get exploreThe;
+
+  /// No description provided for @collections.
+  ///
+  /// In en, this message translates to:
+  /// **'Collections'**
+  String get collections;
 
   /// Placeholder text in the search bar (Sentence)
   ///
@@ -805,12 +811,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Save Changes'**
   String get saveChanges;
-
-  /// Secondary button to discard profile edits (Word)
-  ///
-  /// In en, this message translates to:
-  /// **'Cancel'**
-  String get cancel;
 
   /// No description provided for @firstNameHint.
   ///
@@ -1471,6 +1471,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Are you sure you want to logout?'**
   String get logoutConfirmMessage;
+
+  /// No description provided for @cancel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancel;
+
+  /// No description provided for @choosecategory.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose a category'**
+  String get choosecategory;
+
+  /// No description provided for @changecategory.
+  ///
+  /// In en, this message translates to:
+  /// **'Change category'**
+  String get changecategory;
 }
 
 class _AppLocalizationsDelegate

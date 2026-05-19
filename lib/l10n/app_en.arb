@@ -122,10 +122,10 @@
   "@curatedJourneys": {
     "description": "Small overline text above the main title"
   },
-  "exploreTheCollections": "Explore the Collections",
-  "@exploreTheCollections": {
-    "description": "Main title on the home screen (Sentence)"
-  },
+  "exploreThe": "Explore the",
+  "collections" : "Collections",
+  "searchDestination": "Search a destination...",
+
   "searchDestination": "Search a destination...",
   "@searchDestination": {
     "description": "Placeholder text in the search bar (Sentence)"
@@ -383,10 +383,7 @@
   "@saveChanges": {
     "description": "Primary button to submit and save profile edits (Phrase)"
   },
-  "cancel": "Cancel",
-  "@cancel": {
-    "description": "Secondary button to discard profile edits (Word)"
-  },
+
   "firstNameHint": "Edit your first name",
   "@fullNameHint": {
     "description": "Hint or placeholder text for the full name input field (Name)"
@@ -831,6 +828,10 @@
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout?",
-  "cancel": "Cancel"
+  "cancel": "Cancel",
+
+"choosecategory" : "Choose a category",
+"changecategory" : "Change category"
+
 
 }
