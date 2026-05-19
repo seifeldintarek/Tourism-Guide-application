@@ -3,6 +3,7 @@ import 'package:flutter_application_1/core/default.dart';
 import 'package:flutter_application_1/models/User.dart';
 import 'package:flutter_application_1/screens/info/info.dart';
 import 'package:flutter_application_1/screens/profile/profile.dart';
+import 'package:flutter_application_1/screens/settings/hamburger.dart';
 
 class Footer extends StatefulWidget {
   const Footer({super.key, required AppUser user});
@@ -25,6 +26,9 @@ class _FooterState extends State<Footer> {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     return Scaffold(
+      appBar: AppBar(iconTheme: const IconThemeData(color: Color(0xFF463427))),
+      drawer: Hamburger(),
+
       body: screens[index],
 
       bottomNavigationBar: NavigationBarTheme(
