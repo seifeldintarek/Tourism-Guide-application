@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/core/default.dart';
 import 'package:flutter_application_1/l10n/app_localizations.dart';
 import 'package:flutter_application_1/root/themes.dart';
 import 'package:provider/provider.dart';
@@ -37,7 +38,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
     final double labelFontSize = width * 0.028; // ~11 dp
     final double bodyFontSize = width * 0.032; // ~13 dp
     return Scaffold(
-      backgroundColor: const Color(0xFFF8F4EF),
+      backgroundColor: Default.backgroundColor,
 
       body: SafeArea(
         child: Padding(
@@ -63,7 +64,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
                   Expanded(
                     child: Center(
                       child: Text(
-                        "Language",
+                        lang.language,
                         style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
@@ -82,7 +83,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
               // Small Title
               Center(
                 child: Text(
-                  "PREFERENCE SELECTION",
+                  lang.preferenceselection,
                   style: TextStyle(
                     letterSpacing: 4,
                     fontSize: labelFontSize,
@@ -96,7 +97,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
               // Main Title
               Center(
                 child: Text(
-                  "Curate Your Experience",
+                  lang.curateyourexp,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: titleFontSize,
