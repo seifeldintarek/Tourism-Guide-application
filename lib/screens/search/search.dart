@@ -16,11 +16,13 @@ class _Search_ScreenState extends State<Search_Screen> {
   TextEditingController searchController = TextEditingController();
   double fontSize = 14;
   ValueNotifier<String?> category = ValueNotifier(null);
+  ValueNotifier<String> query = ValueNotifier("");
 
   @override
   void dispose() {
-    category.dispose(); // ✅ always dispose
+    category.dispose();
     searchController.dispose();
+    query.dispose();
     super.dispose();
   }
 
@@ -30,22 +32,24 @@ class _Search_ScreenState extends State<Search_Screen> {
         height = MediaQuery.of(context).size.height;
     final lang = AppLocalizations.of(context)!;
 
-    List<String> items = [
-      lang.heritage,
-      lang.spiritual,
-      lang.nature,
-      lang.food,
-    ];
+    final Map<String, String> categoryMap = {
+      lang.heritage: "heritage",
+      lang.spiritual: "spiritual",
+      lang.nature: "nature",
+      lang.food: "food",
+    };
+
+    List<String> items = categoryMap.keys.toList();
 
     return Scaffold(
       backgroundColor: Default.backgroundColor,
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(
-          horizontal: width * .1,
+          horizontal: width * .08,
           vertical: height * .03,
         ),
         child: Column(
-          crossAxisAlignment: .start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               lang.curatedJourneys,
@@ -56,6 +60,8 @@ class _Search_ScreenState extends State<Search_Screen> {
                 fontWeight: FontWeight.w400,
               ),
             ),
+
+            SizedBox(height: height * .005),
 
             Text(
               lang.exploreThe,
@@ -69,7 +75,7 @@ class _Search_ScreenState extends State<Search_Screen> {
             Text(
               lang.collections,
               style: GoogleFonts.cormorantGaramond(
-                fontWeight: FontWeight.normal, // Light
+                fontWeight: FontWeight.normal,
                 fontSize: 22,
                 color: Default.textColor,
               ),
@@ -85,7 +91,11 @@ class _Search_ScreenState extends State<Search_Screen> {
                     if (selectedCategory != null)
                       Center(
                         child: TextButton(
-                          onPressed: () => category.value = null,
+                          onPressed: () {
+                            category.value = null;
+                            query.value = "";
+                            searchController.clear();
+                          },
                           child: Text(
                             lang.changecategory,
                             style: TextStyle(
@@ -103,7 +113,11 @@ class _Search_ScreenState extends State<Search_Screen> {
                             value: null,
                             hint: lang.choosecategory,
                             items: items,
-                            onChanged: (val) => category.value = val,
+                            onChanged: (val) {
+                              category.value = val;
+                              query.value = "";
+                              searchController.clear();
+                            },
                             width: width,
                             hintFontSize: fontSize,
                             bodyFontSize: fontSize,
@@ -115,10 +129,10 @@ class _Search_ScreenState extends State<Search_Screen> {
                             width,
                             searchController,
                             lang,
-                            selectedCategory.toLowerCase(),
+                            categoryMap[selectedCategory]!,
+                            query,
+                            buildPlaceCard,
                           ),
-
-                    //here
                   ],
                 );
               },

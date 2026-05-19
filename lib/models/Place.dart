@@ -8,12 +8,13 @@ class Place {
   final double rating;
   final String about; // desc
   final List<String> tags;
-  final String status; // calculated
-  final String hours;
-  final String ticketPrice;
+  final int startHr;
+  final int endHr;
+  final int? ticketPrice;
   final List<String> galleryImages; //detailed pics
   final String mapUrl;
   final String bookingUrl;
+  final int? ticketPriceEgyptian;
 
   Place({
     required this.id,
@@ -25,12 +26,13 @@ class Place {
     required this.rating,
     required this.about,
     required this.tags,
-    required this.status,
-    required this.hours,
+    required this.startHr,
+    required this.endHr,
     required this.ticketPrice,
     required this.galleryImages,
     required this.mapUrl,
     required this.bookingUrl,
+    required this.ticketPriceEgyptian,
   });
 
   //from db
@@ -47,12 +49,13 @@ class Place {
           : 0.0,
       about: map['about'] ?? '',
       tags: List<String>.from(map['tags'] ?? []),
-      status: map['status'] ?? '',
-      hours: map['hours'] ?? '',
-      ticketPrice: map['ticketPrice'] ?? '',
+      ticketPriceEgyptian: map['ticketPriceEgyptian'] ?? null,
+      ticketPrice: map['ticketPrice'] ?? null,
       galleryImages: List<String>.from(map['galleryImages'] ?? []),
       mapUrl: map['mapUrl'] ?? '',
       bookingUrl: map['bookingUrl'] ?? '',
+      startHr: map['starthr'],
+      endHr: map['endHr'],
     );
   }
 
@@ -68,9 +71,10 @@ class Place {
       'rating': place.rating.toString(),
       'about': place.about,
       'tags': place.tags,
-      'status': place.status,
-      'hours': place.hours,
-      'ticketPrice': place.ticketPrice,
+      'starthr': place.startHr,
+      'endHr': place.endHr,
+      'ticketPrice': place.ticketPrice ?? null,
+      'ticketPriceEgyptian': place.ticketPriceEgyptian ?? null,
       'galleryImages': place.galleryImages,
       'mapUrl': place.mapUrl,
       'bookingUrl': place.bookingUrl,
