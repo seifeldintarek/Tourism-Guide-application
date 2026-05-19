@@ -350,10 +350,10 @@ abstract class AppLocalizations {
   /// **'HISTORIC MUSEUM'**
   String get historicMuseum;
 
-  /// Category tag for natural places (Word)
+  /// nature category
   ///
   /// In en, this message translates to:
-  /// **'NATURE'**
+  /// **'Nature'**
   String get nature;
 
   /// No description provided for @wadiElRayan.
@@ -542,7 +542,7 @@ abstract class AppLocalizations {
   /// **'PLAN MY VISIT'**
   String get planMyVisit;
 
-  /// heritage category
+  /// Category title for historical sites
   ///
   /// In en, this message translates to:
   /// **'Heritage'**
@@ -596,7 +596,7 @@ abstract class AppLocalizations {
   /// **'North Coast'**
   String get northCoast;
 
-  /// Category title (Word)
+  /// food category
   ///
   /// In en, this message translates to:
   /// **'Food'**
@@ -1051,6 +1051,390 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'HERITAGE'**
   String get philaetempletag2;
+
+  /// white desert name
+  ///
+  /// In en, this message translates to:
+  /// **'White Desert'**
+  String get whitedesertname;
+
+  /// white desert location
+  ///
+  /// In en, this message translates to:
+  /// **'White Desert National Park'**
+  String get whitedesertnationalpark;
+
+  /// city of white desert
+  ///
+  /// In en, this message translates to:
+  /// **'South West of Cairo'**
+  String get southwestofcairo;
+
+  /// Information about white desert
+  ///
+  /// In en, this message translates to:
+  /// **'A breathtaking desert reserve famous for its unique white rock formations and camping experiences.'**
+  String get aboutwhitedesert;
+
+  /// first tag of the white desert
+  ///
+  /// In en, this message translates to:
+  /// **'DESERT'**
+  String get whitedeserttag0;
+
+  /// second tag of the white desert
+  ///
+  /// In en, this message translates to:
+  /// **'CAMPING'**
+  String get whitedeserttag1;
+
+  /// third tag of the white desert
+  ///
+  /// In en, this message translates to:
+  /// **'SAFARI'**
+  String get whitedeserttag2;
+
+  /// Blue Hole name
+  ///
+  /// In en, this message translates to:
+  /// **'Blue Hole'**
+  String get blueholename;
+
+  /// Blue Hole location
+  ///
+  /// In en, this message translates to:
+  /// **'Blue Hole of Dahab'**
+  String get blueholeofdahab;
+
+  /// city of Blue Hole
+  ///
+  /// In en, this message translates to:
+  /// **'Dahab'**
+  String get dahab;
+
+  /// Information about Blue Hole
+  ///
+  /// In en, this message translates to:
+  /// **'A world-famous diving destination known for crystal-clear waters and vibrant coral reefs.'**
+  String get aboutbluehole;
+
+  /// first tag of theBlue Hole
+  ///
+  /// In en, this message translates to:
+  /// **'DIVING'**
+  String get blueholetag0;
+
+  /// second tag of the Blue Hole
+  ///
+  /// In en, this message translates to:
+  /// **'CORAL'**
+  String get blueholetag1;
+
+  /// third tag of the Blue Hole
+  ///
+  /// In en, this message translates to:
+  /// **'ADVENTURE'**
+  String get blueholetag2;
+
+  /// Abu Galoum name
+  ///
+  /// In en, this message translates to:
+  /// **'Abu Galoum'**
+  String get abugaloumname;
+
+  /// Abu Galoum location
+  ///
+  /// In en, this message translates to:
+  /// **'Abu Galoum'**
+  String get abugaloum;
+
+  /// city of Abu Galoum
+  ///
+  /// In en, this message translates to:
+  /// **'Neweiba'**
+  String get neweiba;
+
+  /// Information about Abu Galoum
+  ///
+  /// In en, this message translates to:
+  /// **'A protected coastal reserve famous for snorkeling, coral reefs, mountains, and Bedouin camps.'**
+  String get aboutabugaloum;
+
+  /// first tag of Abu Galoum
+  ///
+  /// In en, this message translates to:
+  /// **'SNORKELING'**
+  String get abugaloumtag0;
+
+  /// second tag of Abu Galoum
+  ///
+  /// In en, this message translates to:
+  /// **'NATURE'**
+  String get abugaloumtag1;
+
+  /// third tag of Abu Galoum
+  ///
+  /// In en, this message translates to:
+  /// **'CAMPING'**
+  String get abugaloumtag2;
+
+  /// Wadi El Gemal name
+  ///
+  /// In en, this message translates to:
+  /// **'Wadi El Gemal'**
+  String get wadielgemalname;
+
+  /// Wadi El Gemal location
+  ///
+  /// In en, this message translates to:
+  /// **'Wadi El Gemal Reserve'**
+  String get wadielgemalreserve;
+
+  /// city of Wadi El Gemal
+  ///
+  /// In en, this message translates to:
+  /// **'Marsa Alam'**
+  String get marsaalam;
+
+  /// Information about Wadi El Gemal
+  ///
+  /// In en, this message translates to:
+  /// **'A stunning natural reserve combining desert mountains, mangroves, coral reefs, and Red Sea wildlife.'**
+  String get aboutwadielgemal;
+
+  /// first tag of Wadi El Gemal
+  ///
+  /// In en, this message translates to:
+  /// **'MARINE'**
+  String get wadielgemaltag0;
+
+  /// second tag of Wadi El Gemal
+  ///
+  /// In en, this message translates to:
+  /// **'SAFARI'**
+  String get wadielgemaltag1;
+
+  /// third tag of Wadi El Gemal
+  ///
+  /// In en, this message translates to:
+  /// **'WILDLIFE'**
+  String get wadielgemaltag2;
+
+  /// Wadi el rayan name
+  ///
+  /// In en, this message translates to:
+  /// **'Wadi el rayan'**
+  String get wadielrayanname;
+
+  /// Wadi el rayan location
+  ///
+  /// In en, this message translates to:
+  /// **'Wadi el rayan'**
+  String get wadielrayan;
+
+  /// city of Wadi el rayan
+  ///
+  /// In en, this message translates to:
+  /// **'Faiyum'**
+  String get faiyum;
+
+  /// Information about Wadi el rayan
+  ///
+  /// In en, this message translates to:
+  /// **'A beautiful desert oasis known for waterfalls, lakes, sand dunes, and safari adventures.'**
+  String get aboutwadielrayan;
+
+  /// first tag of Wadi el rayan
+  ///
+  /// In en, this message translates to:
+  /// **'WATERFALLS'**
+  String get wadielrayantag0;
+
+  /// second tag of Wadi el rayan
+  ///
+  /// In en, this message translates to:
+  /// **'DESERT'**
+  String get wadielrayantag1;
+
+  /// third tag of Wadi el rayan
+  ///
+  /// In en, this message translates to:
+  /// **'LAKES'**
+  String get wadielrayantag2;
+
+  /// name of arabiata
+  ///
+  /// In en, this message translates to:
+  /// **'Pyramids'**
+  String get arabiataname;
+
+  /// about description of arabiata
+  ///
+  /// In en, this message translates to:
+  /// **'A popular Egyptian restaurant serving authentic foul, falafel, and traditional breakfast meals.'**
+  String get aboutarabiata;
+
+  /// location of arabiata
+  ///
+  /// In en, this message translates to:
+  /// **'Nasr City'**
+  String get nasrcity;
+
+  /// first tag of arabiata
+  ///
+  /// In en, this message translates to:
+  /// **'Breakfast'**
+  String get arabiatatag0;
+
+  /// second tag of arabiata
+  ///
+  /// In en, this message translates to:
+  /// **'StreetFood'**
+  String get arabiatatag1;
+
+  /// third tag of arabiata
+  ///
+  /// In en, this message translates to:
+  /// **'Oriental'**
+  String get arabiatatag2;
+
+  /// name of qasr-elkababgi
+  ///
+  /// In en, this message translates to:
+  /// **'Qasr Elkababgi'**
+  String get qasrelkababginame;
+
+  /// about description of qasr-elkababgi
+  ///
+  /// In en, this message translates to:
+  /// **'A renowned Egyptian restaurant chain celebrated for authentic oriental cuisine, traditional grills, and theatrical dining experiences'**
+  String get aboutqasrelkababgi;
+
+  /// location of qasr-elkababgi
+  ///
+  /// In en, this message translates to:
+  /// **'Fifth Settlement'**
+  String get fifthsettlement;
+
+  /// first tag of qasr-elkababgi
+  ///
+  /// In en, this message translates to:
+  /// **'Grills'**
+  String get qasrelkababgitag0;
+
+  /// second tag of qasr-elkababgi
+  ///
+  /// In en, this message translates to:
+  /// **'Dining'**
+  String get qasrelkababgitag1;
+
+  /// third tag of qasr-elkababgi
+  ///
+  /// In en, this message translates to:
+  /// **'Oriental'**
+  String get qasrelkababgitag2;
+
+  /// name of bahary
+  ///
+  /// In en, this message translates to:
+  /// **'Bahary'**
+  String get baharyname;
+
+  /// about description of bahary
+  ///
+  /// In en, this message translates to:
+  /// **'A modern seafood restaurant famous for grilled fish, seafood platters, and fresh Mediterranean flavors.'**
+  String get aboutbahary;
+
+  /// first tag of bahary
+  ///
+  /// In en, this message translates to:
+  /// **'SeaFood'**
+  String get baharytag0;
+
+  /// second tag of bahary
+  ///
+  /// In en, this message translates to:
+  /// **'Fresh'**
+  String get baharytag1;
+
+  /// third tag of bahary
+  ///
+  /// In en, this message translates to:
+  /// **'OceanFlavors'**
+  String get baharytag2;
+
+  /// name of koueider
+  ///
+  /// In en, this message translates to:
+  /// **'Koueider'**
+  String get koueidername;
+
+  /// about description of koueider
+  ///
+  /// In en, this message translates to:
+  /// **'One of Egypt’s oldest dessert shops, famous for oriental sweets and authentic Arabic pastries.'**
+  String get aboutkoueider;
+
+  /// location of koueider
+  ///
+  /// In en, this message translates to:
+  /// **'Heliopolis'**
+  String get heliopolis;
+
+  /// first tag of koueider
+  ///
+  /// In en, this message translates to:
+  /// **'Desserts'**
+  String get koueidertag0;
+
+  /// second tag of koueider
+  ///
+  /// In en, this message translates to:
+  /// **'Ice Cream'**
+  String get koueidertag1;
+
+  /// third tag of koueider
+  ///
+  /// In en, this message translates to:
+  /// **'Sweets'**
+  String get koueidertag2;
+
+  /// name of elmalky
+  ///
+  /// In en, this message translates to:
+  /// **'ElMalky'**
+  String get elmalkyname;
+
+  /// about description of elmalky
+  ///
+  /// In en, this message translates to:
+  /// **'A legendary Egyptian dessert destination known for rice pudding, ice cream, and classic sweets.'**
+  String get aboutelmalky;
+
+  /// location of elmalky
+  ///
+  /// In en, this message translates to:
+  /// **'ElMoattam'**
+  String get elmoattam;
+
+  /// first tag of elmalky
+  ///
+  /// In en, this message translates to:
+  /// **'Traditional'**
+  String get elmalkytag0;
+
+  /// second tag of elmalky
+  ///
+  /// In en, this message translates to:
+  /// **'Ice Cream'**
+  String get elmalkytag1;
+
+  /// third tag of elmalky
+  ///
+  /// In en, this message translates to:
+  /// **'Desserts'**
+  String get elmalkytag2;
 }
 
 class _AppLocalizationsDelegate
