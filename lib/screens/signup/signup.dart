@@ -28,7 +28,7 @@ class _SignUpState extends State<SignUp> {
   String? _confirmPasswordError;
 
   String? _selectedLanguage;
-  String? _selectedCurrency;
+  String? _selectedGovernorate;
 
   final List<String> languages = [
     "English",
@@ -37,7 +37,35 @@ class _SignUpState extends State<SignUp> {
     "French",
     "German",
   ];
-  final List<String> currencies = ["USD", "EUR", "EGP", "SAR", "AED"];
+  final List<String> egyptGovernorates = [
+    "Cairo",
+    "Giza",
+    "Alexandria",
+    "Dakahlia",
+    "Red Sea",
+    "Beheira",
+    "Fayoum",
+    "Gharbia",
+    "Ismailia",
+    "Menofia",
+    "Minya",
+    "Qalyubia",
+    "New Valley",
+    "Suez",
+    "Aswan",
+    "Assiut",
+    "Beni Suef",
+    "Port Said",
+    "Damietta",
+    "Sharkia",
+    "South Sinai",
+    "Kafr El Sheikh",
+    "Matrouh",
+    "Luxor",
+    "Qena",
+    "North Sinai",
+    "Sohag",
+  ];
 
   bool _isAccepted = false;
 
@@ -161,7 +189,7 @@ class _SignUpState extends State<SignUp> {
         _passwordController.text.isNotEmpty &&
         _confirmPasswordController.text.isNotEmpty &&
         _selectedLanguage != null &&
-        _selectedCurrency != null;
+        _selectedGovernorate != null;
 
     bool hasNoErrors =
         _emailError == null &&
@@ -245,7 +273,7 @@ class _SignUpState extends State<SignUp> {
       ),
     );
 
-    // ── UI ────────────────────────────────────────────────────────────────────
+    // UI 
     return Scaffold(
       backgroundColor: Default.backgroundColor,
       appBar: AppBar(
@@ -262,7 +290,7 @@ class _SignUpState extends State<SignUp> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // ── Title ──────────────────────────────────────────────────────
+              //Title
               Text(
                 "Tell us about \nyourself",
                 style: TextStyle(
@@ -282,7 +310,7 @@ class _SignUpState extends State<SignUp> {
               ),
               SizedBox(height: sectionGap * 2),
 
-              // ── Name row ───────────────────────────────────────────────────
+              // ── Name row 
               Row(
                 children: [
                   Expanded(child: buildLabel(lang.firstName.toUpperCase())),
@@ -348,14 +376,14 @@ class _SignUpState extends State<SignUp> {
 
               SizedBox(height: sectionGap),
 
-              // ── Confirm Password ───────────────────────────────────────────
+              // Confirm Password 
               buildLabel(lang.confirmPassword.toUpperCase()),
               SizedBox(height: smallGap),
               TextField(
                 controller: _confirmPasswordController,
                 obscureText: _obscureConfirmPassword,
                 decoration: buildInputDecoration(
-                  hint: lang.confirmPassword.toUpperCase(),
+                  hint: lang.confirmPassword,
                   errorText: _confirmPasswordError,
                   suffixIcon: IconButton(
                     icon: Icon(
@@ -372,12 +400,12 @@ class _SignUpState extends State<SignUp> {
 
               SizedBox(height: sectionGap),
 
-              // ── Language + Currency dropdowns ──────────────────────────────
+              // Language + GOVERNORATE dropdowns 
               Row(
                 children: [
                   Expanded(child: buildLabel(lang.language.toUpperCase())),
                   SizedBox(width: width * 0.025),
-                  Expanded(child: buildLabel("CURRENCY")),
+                  Expanded(child: buildLabel("GOVERNORATE")),
                 ],
               ),
               SizedBox(height: smallGap),
@@ -395,11 +423,11 @@ class _SignUpState extends State<SignUp> {
                   SizedBox(width: width * 0.025),
                   Expanded(
                     child: buildDropdown(
-                      value: _selectedCurrency,
-                      hint: "Select Currency",
-                      items: currencies,
+                      value: _selectedGovernorate,
+                      hint: "Select governorate",
+                      items: egyptGovernorates,
                       onChanged: (val) =>
-                          setState(() => _selectedCurrency = val),
+                          setState(() => _selectedGovernorate = val),
                     ),
                   ),
                 ],
@@ -448,11 +476,14 @@ class _SignUpState extends State<SignUp> {
 
               // ── Create Account button ──────────────────────────────────────
               Center(
-                child: Default.Button(
-                  onPressed: isButtonEnabled ? handleCreateAccount : null,
-                  child: lang.createAccount,
-                  width: width * 0.6,
-                  height: height * 0.07,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(60),
+                  child: Default.Button(
+                    onPressed: isButtonEnabled ? handleCreateAccount : null,
+                    child: lang.createAccount,
+                    width: width * 0.9,
+                    height: height * 0.07,
+                  ),
                 ),
               ),
 

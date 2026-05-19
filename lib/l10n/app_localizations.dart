@@ -703,6 +703,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Failed to store user data. Please try again.'**
   String get failtostoreuser;
+
+  /// No description provided for @preferenceselection.
+  ///
+  /// In en, this message translates to:
+  /// **'PREFERENCE SELECTION'**
+  String get preferenceselection;
+
+  /// No description provided for @curateyourexp.
+  ///
+  /// In en, this message translates to:
+  /// **'Curate Your Experience'**
+  String get curateyourexp;
 }
 
 class _AppLocalizationsDelegate

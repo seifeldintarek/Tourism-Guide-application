@@ -308,4 +308,10 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get failtostoreuser => 'Failed to store user data. Please try again.';
+
+  @override
+  String get preferenceselection => 'PREFERENCE SELECTION';
+
+  @override
+  String get curateyourexp => 'Curate Your Experience';
 }
