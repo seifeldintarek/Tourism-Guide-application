@@ -15,26 +15,26 @@ import 'package:flutter_application_1/models/Place.dart';
 Future<void> todb() async {
   //edit the place data
   Place place = Place(
-    id: "pyramids", //nfs esm el place lowercase //XX
-    name: "pyramidsname", //XX
-    location: "alharam", //XX
-    city: "giza", //XX
+    id: "philae_temple", //nfs esm el place lowercase //XX
+    name: "philaetemplename", //XX
+    location: "philaetemplelocation", //XX
+    city: "aswan", //XX
     mainImage:
-        "https://prfwmjmedmfqauccmqgv.supabase.co/storage/v1/object/public/pictures/places/heirtage/pyramids/main%20image/giza-pyramids-cairo-egypt-with-palm.webp",
+        "https://prfwmjmedmfqauccmqgv.supabase.co/storage/v1/object/public/pictures/places/heirtage/Philae%20Temple/main%20image/templo-fachada-philae.jpg",
     category: "heritage", //XX
     rating: 4.7,
-    about: "aboutpyramids", //XX
-    tags: ["pyramidstag0", "pyramidstag1", "pyramidstag2"], //XX
-    ticketPriceEgyptian: 30,
-    ticketPrice: 350,
+    about: "aboutphilaetemple", //XX
+    tags: ["philaetempletag0", "philaetempletag1", "philaetempletag2"], //XX
+    ticketPriceEgyptian: 20,
+    ticketPrice: 275,
     galleryImages: [
-      "https://prfwmjmedmfqauccmqgv.supabase.co/storage/v1/object/public/pictures/places/heirtage/pyramids/gallery%20images/travel-wiser-giza-pyramids-cairo.jpg",
-      "https://prfwmjmedmfqauccmqgv.supabase.co/storage/v1/object/public/pictures/places/heirtage/pyramids/gallery%20images/download.jpg",
-      "https://prfwmjmedmfqauccmqgv.supabase.co/storage/v1/object/public/pictures/places/heirtage/pyramids/gallery%20images/download%20(1).jpg",
+      "https://prfwmjmedmfqauccmqgv.supabase.co/storage/v1/object/public/pictures/places/heirtage/Philae%20Temple/gallery%20images/hathor-capitals-philae-island-egypt.jpg",
+      "https://prfwmjmedmfqauccmqgv.supabase.co/storage/v1/object/public/pictures/places/heirtage/Philae%20Temple/gallery%20images/images.jpg",
+      "https://prfwmjmedmfqauccmqgv.supabase.co/storage/v1/object/public/pictures/places/heirtage/Philae%20Temple/gallery%20images/island-of-philae.jpg",
     ],
-    mapUrl: "https://maps.app.goo.gl/SGnfQorTBNLPjXK47?g_st=ic",
-    bookingUrl: "https://egymonuments.com/book-date/2",
-    startHr: 8,
+    mapUrl: "https://maps.app.goo.gl/A3T1D3y7TvswTqZT8?g_st=ic",
+    bookingUrl: "https://egymonuments.com/book-date/18",
+    startHr: 7,
     endHr: 4,
   );
 

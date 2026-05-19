@@ -402,9 +402,6 @@ class AppLocalizationsEs extends AppLocalizations {
   String get alharam => 'Al Haram';
 
   @override
-  String get giza => 'Giza';
-
-  @override
   String get pyramidstag0 => 'PYRAMIDS';
 
   @override
@@ -412,4 +409,86 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get pyramidstag2 => 'LANDMARK';
+
+  @override
+  String get abusimblename => 'Abu Simbel Temple';
+
+  @override
+  String get abusimbellocation => 'Abu Simbel';
+
+  @override
+  String get aboutabusimbel =>
+      'Massive rock-cut temples built by Ramses II, famous for their giant statues and remarkable relocation to protect them from flooding.';
+
+  @override
+  String get abusimbletag0 => 'HISTORICAL';
+
+  @override
+  String get abusimbletag1 => 'MONUMENT';
+
+  @override
+  String get abusimbletag2 => 'UNESCO';
+
+  @override
+  String get hatshepsuttemplename => 'Temple of Hatshepsut';
+
+  @override
+  String get hatshepsuttemplelocation => 'Deir el-Bahari';
+
+  @override
+  String get luxor => 'Luxor';
+
+  @override
+  String get aboutatshepsuttemple =>
+      'A magnificent temple carved into the cliffs of Luxor, built for Queen Hatshepsut, one of ancient Egypt’s most powerful rulers.';
+
+  @override
+  String get hatshepsuttempletag0 => 'TEMPLE';
+
+  @override
+  String get hatshepsuttempletag1 => 'ARCHITECTURE';
+
+  @override
+  String get hatshepsuttempletag2 => 'HISTORICAL';
+
+  @override
+  String get grandegyptianmuseumname => 'The Grand Egyptian Museum';
+
+  @override
+  String get grandegyptianmuseumlocation => 'Cairo-Alex Road';
+
+  @override
+  String get giza => 'Giza';
+
+  @override
+  String get aboutgrandegyptianmuseum =>
+      'A modern museum near the pyramids showcasing thousands of ancient Egyptian artifacts, including King Tutankhamun’s treasures.';
+
+  @override
+  String get grandegyptianmuseumtag0 => 'ARTIFACTS';
+
+  @override
+  String get grandegyptianmuseumtag1 => 'MUSEUM';
+
+  @override
+  String get grandegyptianmuseumtag2 => 'CULTURE';
+
+  @override
+  String get philaetemplename => 'Philae Temple';
+
+  @override
+  String get philaetemplelocation => 'Agilkia Island';
+
+  @override
+  String get aboutphilaetemple =>
+      'A beautiful island temple dedicated to the goddess Isis, known for its stunning Nile views and ancient carvings.';
+
+  @override
+  String get philaetempletag0 => 'ISLAND';
+
+  @override
+  String get philaetempletag1 => 'TEMPLE';
+
+  @override
+  String get philaetempletag2 => 'HERITAGE';
 }

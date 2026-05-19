@@ -878,12 +878,6 @@ abstract class AppLocalizations {
   /// **'Al Haram'**
   String get alharam;
 
-  /// city of pyramids
-  ///
-  /// In en, this message translates to:
-  /// **'Giza'**
-  String get giza;
-
   /// first tag of pyramids
   ///
   /// In en, this message translates to:
@@ -901,6 +895,162 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'LANDMARK'**
   String get pyramidstag2;
+
+  /// No description provided for @abusimblename.
+  ///
+  /// In en, this message translates to:
+  /// **'Abu Simbel Temple'**
+  String get abusimblename;
+
+  /// No description provided for @abusimbellocation.
+  ///
+  /// In en, this message translates to:
+  /// **'Abu Simbel'**
+  String get abusimbellocation;
+
+  /// No description provided for @aboutabusimbel.
+  ///
+  /// In en, this message translates to:
+  /// **'Massive rock-cut temples built by Ramses II, famous for their giant statues and remarkable relocation to protect them from flooding.'**
+  String get aboutabusimbel;
+
+  /// No description provided for @abusimbletag0.
+  ///
+  /// In en, this message translates to:
+  /// **'HISTORICAL'**
+  String get abusimbletag0;
+
+  /// No description provided for @abusimbletag1.
+  ///
+  /// In en, this message translates to:
+  /// **'MONUMENT'**
+  String get abusimbletag1;
+
+  /// No description provided for @abusimbletag2.
+  ///
+  /// In en, this message translates to:
+  /// **'UNESCO'**
+  String get abusimbletag2;
+
+  /// No description provided for @hatshepsuttemplename.
+  ///
+  /// In en, this message translates to:
+  /// **'Temple of Hatshepsut'**
+  String get hatshepsuttemplename;
+
+  /// No description provided for @hatshepsuttemplelocation.
+  ///
+  /// In en, this message translates to:
+  /// **'Deir el-Bahari'**
+  String get hatshepsuttemplelocation;
+
+  /// No description provided for @luxor.
+  ///
+  /// In en, this message translates to:
+  /// **'Luxor'**
+  String get luxor;
+
+  /// No description provided for @aboutatshepsuttemple.
+  ///
+  /// In en, this message translates to:
+  /// **'A magnificent temple carved into the cliffs of Luxor, built for Queen Hatshepsut, one of ancient Egypt’s most powerful rulers.'**
+  String get aboutatshepsuttemple;
+
+  /// No description provided for @hatshepsuttempletag0.
+  ///
+  /// In en, this message translates to:
+  /// **'TEMPLE'**
+  String get hatshepsuttempletag0;
+
+  /// No description provided for @hatshepsuttempletag1.
+  ///
+  /// In en, this message translates to:
+  /// **'ARCHITECTURE'**
+  String get hatshepsuttempletag1;
+
+  /// No description provided for @hatshepsuttempletag2.
+  ///
+  /// In en, this message translates to:
+  /// **'HISTORICAL'**
+  String get hatshepsuttempletag2;
+
+  /// No description provided for @grandegyptianmuseumname.
+  ///
+  /// In en, this message translates to:
+  /// **'The Grand Egyptian Museum'**
+  String get grandegyptianmuseumname;
+
+  /// No description provided for @grandegyptianmuseumlocation.
+  ///
+  /// In en, this message translates to:
+  /// **'Cairo-Alex Road'**
+  String get grandegyptianmuseumlocation;
+
+  /// No description provided for @giza.
+  ///
+  /// In en, this message translates to:
+  /// **'Giza'**
+  String get giza;
+
+  /// No description provided for @aboutgrandegyptianmuseum.
+  ///
+  /// In en, this message translates to:
+  /// **'A modern museum near the pyramids showcasing thousands of ancient Egyptian artifacts, including King Tutankhamun’s treasures.'**
+  String get aboutgrandegyptianmuseum;
+
+  /// No description provided for @grandegyptianmuseumtag0.
+  ///
+  /// In en, this message translates to:
+  /// **'ARTIFACTS'**
+  String get grandegyptianmuseumtag0;
+
+  /// No description provided for @grandegyptianmuseumtag1.
+  ///
+  /// In en, this message translates to:
+  /// **'MUSEUM'**
+  String get grandegyptianmuseumtag1;
+
+  /// No description provided for @grandegyptianmuseumtag2.
+  ///
+  /// In en, this message translates to:
+  /// **'CULTURE'**
+  String get grandegyptianmuseumtag2;
+
+  /// No description provided for @philaetemplename.
+  ///
+  /// In en, this message translates to:
+  /// **'Philae Temple'**
+  String get philaetemplename;
+
+  /// No description provided for @philaetemplelocation.
+  ///
+  /// In en, this message translates to:
+  /// **'Agilkia Island'**
+  String get philaetemplelocation;
+
+  /// No description provided for @aboutphilaetemple.
+  ///
+  /// In en, this message translates to:
+  /// **'A beautiful island temple dedicated to the goddess Isis, known for its stunning Nile views and ancient carvings.'**
+  String get aboutphilaetemple;
+
+  /// No description provided for @philaetempletag0.
+  ///
+  /// In en, this message translates to:
+  /// **'ISLAND'**
+  String get philaetempletag0;
+
+  /// No description provided for @philaetempletag1.
+  ///
+  /// In en, this message translates to:
+  /// **'TEMPLE'**
+  String get philaetempletag1;
+
+  /// No description provided for @philaetempletag2.
+  ///
+  /// In en, this message translates to:
+  /// **'HERITAGE'**
+  String get philaetempletag2;
 }
 
 class _AppLocalizationsDelegate

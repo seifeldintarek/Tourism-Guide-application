@@ -440,10 +440,6 @@
   "description": "location of pyramids"
 },
 
-"giza": "Giza",
-"@giza": {
-  "description": "city of pyramids"
-},
 
 "pyramidstag0": "PYRAMIDS",
 "@pyramidstag0": {
@@ -463,7 +459,39 @@
 "heritage": "Heritage",
 "@heritage": {
   "description": "heritage category"
-}
+},
+
+"abusimblename": "Abu Simbel Temple",
+"abusimbellocation": "Abu Simbel",
+"aswan": "Aswan",
+"aboutabusimbel": "Massive rock-cut temples built by Ramses II, famous for their giant statues and remarkable relocation to protect them from flooding.",
+"abusimbletag0": "HISTORICAL",
+"abusimbletag1": "MONUMENT",
+"abusimbletag2": "UNESCO",
+
+"hatshepsuttemplename": "Temple of Hatshepsut",
+"hatshepsuttemplelocation": "Deir el-Bahari",
+"luxor": "Luxor",
+"aboutatshepsuttemple": "A magnificent temple carved into the cliffs of Luxor, built for Queen Hatshepsut, one of ancient Egypt’s most powerful rulers.",
+"hatshepsuttempletag0" : "TEMPLE",
+"hatshepsuttempletag1" : "ARCHITECTURE",
+"hatshepsuttempletag2" : "HISTORICAL",
+
+"grandegyptianmuseumname" : "The Grand Egyptian Museum",
+"grandegyptianmuseumlocation" : "Cairo-Alex Road",
+"giza" : "Giza",
+"aboutgrandegyptianmuseum" : "A modern museum near the pyramids showcasing thousands of ancient Egyptian artifacts, including King Tutankhamun’s treasures.",
+"grandegyptianmuseumtag0" : "ARTIFACTS",
+"grandegyptianmuseumtag1" : "MUSEUM",
+"grandegyptianmuseumtag2" : "CULTURE",
+
+"philaetemplename" : "Philae Temple",
+"philaetemplelocation" : "Agilkia Island",
+"aboutphilaetemple" : "A beautiful island temple dedicated to the goddess Isis, known for its stunning Nile views and ancient carvings.",
+"philaetempletag0" : "ISLAND",
+"philaetempletag1" : "TEMPLE",
+"philaetempletag2" : "HERITAGE",
+
 
 
 
