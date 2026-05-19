@@ -326,5 +326,8 @@
 "failtostoreuser": "Failed to store user data. Please try again.",
 "@failtostoreuser": {
   "description": "Action Phrase: error uploading user"
-}
+},
+
+ "preferenceselection" : "PREFERENCE SELECTION",
+ "curateyourexp" : "Curate Your Experience"
 }
