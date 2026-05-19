@@ -460,7 +460,6 @@
 "@heritage": {
   "description": "heritage category"
 },
-},
 
 "abusimblename": "Abu Simbel Temple",
 "abusimbellocation": "Abu Simbel",
@@ -826,6 +825,175 @@
 "elmalkytag2": "Desserts",
 "@elmalkytag2": {
   "description": "third tag of elmalky"
+},
+
+
+
+"mosquehassanname": "Mosque- Madrassa Sultan Hassan",
+"@mosquehassanname": {
+  "description": "name of Mosque- Madrassa Sultan Hassan"
+},
+
+"aboutmosquehassan": "A magnificent Mamluk mosque famous for its grand Islamic architecture and historic spiritual atmosphere.",
+"@aboutmosquehassan": {
+  "description": "about description of Mosque- Madrassa Sultan Hassan"
+},
+
+"salaheldinlocation": "Salah El-Din Square, Islamic Cairo",
+"@salaheldinlocation": {
+  "description": "location of Mosque- Madrassa Sultan Hassan"
+},
+
+"mosquehassantag0": "ISLAMIC",
+"@mosquehassantag0": {
+  "description": "first tag of Mosque- Madrassa Sultan Hassan"
+},
+
+"mosquehassantag1": "MAMLUK",
+"@mosquehassantag1": {
+  "description": "second tag of Mosque- Madrassa Sultan Hassan"
+},
+
+"mosquehassantag2": "ARCHITECTURE",
+"@mosquehassantag2": {
+  "description": "third tag of Mosque- Madrassa Sultan Hassan"
+},
+
+"spiritual": "Spiritual",
+"@spiritual": {
+  "description": "spiritual category"
+},
+
+"saintcatherinemonasteryname": "Saint Catherine's Monastery",
+"@saintcatherinemonasteryname": {
+  "description": "name of Saint Catherine's Monastery"
+},
+
+"aboutsaintcatherinemonastery": "One of the oldest Christian monasteries in the world, located at the foot of Mount Sinai.",
+"@aboutsaintcatherinemonastery": {
+  "description": "about description of Saint Catherine's Monastery"
+},
+
+"mountsinailocation": "Mount Sinai, Saint Catherine",
+"@mountsinailocation": {
+  "description": "location of Saint Catherine's Monastery"
+},
+
+"southsinai": "South Sinai",
+"@southsinai": {
+  "description": "city of Saint Catherine's Monastery"
+},
+
+"saintcatherinemonasterytag0": "Christian",
+"@saintcatherinemonasterytag0": {
+  "description": "first tag of Saint Catherine's Monastery"
+},
+
+"saintcatherinemonasterytag1": "Monastery",
+"@saintcatherinemonasterytag1": {
+  "description": "second tag of Saint Catherine's Monastery"
+},
+
+"saintcatherinemonasterytag2": "PILGRIMAGE",
+"@saintcatherinemonasterytag2": {
+  "description": "third tag of Saint Catherine's Monastery"
+},
+
+
+
+"mosqueofalhakimbiamrallahname": "Mosque of al-Hakim bi-Amr Allah",
+"@mosqueofalhakimbiamrallahname": {
+  "description": "name of Mosque of al-Hakim bi-Amr Allah"
+},
+
+"aboutmosqueofalhakimbiamrallah": "A historic Fatimid mosque known for its impressive architecture and spiritual importance in Islamic Cairo.",
+"@aboutmosqueofalhakimbiamrallah": {
+  "description": "about description of Mosque of al-Hakim bi-Amr Allah"
+},
+
+"almuizzstreetlocation": "Al-Muizz Street, Cairo",
+"@almuizzstreetlocation": {
+  "description": "location of Mosque of al-Hakim bi-Amr Allah"
+},
+
+"mosqueofalhakimbiamrallahtag0": "FATIMID",
+"@mosqueofalhakimbiamrallahtag0": {
+  "description": "first tag of Mosque of al-Hakim bi-Amr Allah"
+},
+
+"mosqueofalhakimbiamrallahtag1": "MOSQUE",
+"@mosqueofalhakimbiamrallahtag1": {
+  "description": "second tag of Mosque of al-Hakim bi-Amr Allah"
+},
+
+"mosqueofalhakimbiamrallahtag2": "HERITAGE",
+"@mosqueofalhakimbiamrallahtag2": {
+  "description": "third tag of Mosque of al-Hakim bi-Amr Allah"
+},
+
+
+
+"alhusseinmosquename": "Al-Hussein Mosque",
+"@alhusseinmosquename": {
+  "description": "name of Al-Hussein Mosque"
+},
+
+"aboutalhusseinmosque": " One of Egypt’s most sacred mosques, located in the heart of historic Islamic Cairo near Khan El Khalili.",
+"@aboutalhusseinmosque": {
+  "description": "about description of Al-Hussein Mosque"
+},
+
+"almuizzstreetlocation": "Khan El Khalili, Islamic Cairo",
+"@almuizzstreetlocation": {
+  "description": "location of Al-Hussein Mosque"
+},
+
+"alhusseinmosquetag0": "ISLAMIC",
+"@alhusseinmosquetag0": {
+  "description": "first tag of Al-Hussein Mosque"
+},
+
+"alhusseinmosquetag1": "LANDMARK",
+"@alhusseinmosquetag1": {
+  "description": "second tag of Al-Hussein Mosque"
+},
+
+"alhusseinmosquetag2": "HERITAGE",
+"@alhusseinmosquetag2": {
+  "description": "third tag of Al-Hussein Mosque"
+},
+
+
+
+
+"alrifaimosquename": "Al-Rifa'i Mosque",
+"@alrifaimosquename": {
+  "description": "name of Al-Rifa'i Mosque"
+},
+
+"aboutalrifaimosque": "A royal mosque famous for its Ottoman-inspired architecture and the tombs of Egyptian royals.",
+"@aboutalrifaimosque": {
+  "description": "about description of Al-Rifa'i Mosque"
+},
+
+"salaheldinlocation": "Salah El-Din Square, Islamic Cairo",
+"@salaheldinlocation": {
+  "description": "location of Al-Rifa'i Mosque"
+},
+
+"alrifaimosquetag0": "OTHOMAN",
+"@alrifaimosquetag0": {
+  "description": "first tag of Al-Rifa'i Mosque"
+},
+
+"alrifaimosquetag1": "MONSQUE",
+"@alhusseinmosquetag1": {
+  "description": "second tag of Al-Rifa'i Mosque"
+},
+
+"alhusseinmosquetag2": "ARCHITECTURE",
+"@alrifaimosquetag2": {
+  "description": "third tag of Al-Rifa'i Mosque"
 }
 
 }
