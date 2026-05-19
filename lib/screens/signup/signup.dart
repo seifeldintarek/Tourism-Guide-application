@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/controller/navigationbar.dart';
 import 'package:flutter_application_1/core/default.dart';
 import 'package:flutter_application_1/l10n/app_localizations.dart';
-import 'package:flutter_application_1/screens/home/home.dart';
+import 'package:flutter_application_1/screens/settings/hamburger.dart';
 import 'package:flutter_application_1/screens/login/login.dart';
 import 'package:flutter_application_1/screens/signup/widget.dart';
 import 'package:flutter_application_1/screens/signup/service.dart';
@@ -273,7 +274,7 @@ class _SignUpState extends State<SignUp> {
       ),
     );
 
-    // UI 
+    // UI
     return Scaffold(
       backgroundColor: Default.backgroundColor,
       appBar: AppBar(
@@ -310,7 +311,7 @@ class _SignUpState extends State<SignUp> {
               ),
               SizedBox(height: sectionGap * 2),
 
-              // ── Name row 
+              // ── Name row
               Row(
                 children: [
                   Expanded(child: buildLabel(lang.firstName.toUpperCase())),
@@ -376,7 +377,7 @@ class _SignUpState extends State<SignUp> {
 
               SizedBox(height: sectionGap),
 
-              // Confirm Password 
+              // Confirm Password
               buildLabel(lang.confirmPassword.toUpperCase()),
               SizedBox(height: smallGap),
               TextField(
@@ -400,7 +401,7 @@ class _SignUpState extends State<SignUp> {
 
               SizedBox(height: sectionGap),
 
-              // Language + GOVERNORATE dropdowns 
+              // Language + GOVERNORATE dropdowns
               Row(
                 children: [
                   Expanded(child: buildLabel(lang.language.toUpperCase())),
@@ -517,7 +518,7 @@ class _SignUpState extends State<SignUp> {
                     ),
                     onPressed: () => Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(builder: (context) => const Home()),
+                      MaterialPageRoute(builder: (context) => Login()),
                     ),
                   ),
                 ],

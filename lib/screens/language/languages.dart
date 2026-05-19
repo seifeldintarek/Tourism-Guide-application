@@ -83,7 +83,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
               // Small Title
               Center(
                 child: Text(
-                  lang.preferenceselection,
+                  "lang.preferenceselection",
                   style: TextStyle(
                     letterSpacing: 4,
                     fontSize: labelFontSize,
@@ -97,7 +97,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
               // Main Title
               Center(
                 child: Text(
-                  lang.curateyourexp,
+                  "curateyourexplang.",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: titleFontSize,

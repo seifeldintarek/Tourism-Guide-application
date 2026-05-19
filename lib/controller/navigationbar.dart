@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/default.dart';
 import 'package:flutter_application_1/models/User.dart';
-import 'package:flutter_application_1/screens/home/home.dart';
 import 'package:flutter_application_1/screens/info/info.dart';
 import 'package:flutter_application_1/screens/profile/profile.dart';
 
@@ -16,7 +15,7 @@ class _FooterState extends State<Footer> {
   int index = 0;
 
   final List<Widget> screens = [
-    const Home(),
+    Container(),
     const Infoscreen(),
     Container(),
     const Profile(),

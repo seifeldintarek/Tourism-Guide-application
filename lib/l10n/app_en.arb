@@ -30,6 +30,14 @@
   "@password": {
     "description": "Noun/Word: Used as a label for the password input field."
   },
+  "currentpassword": "Current Password",
+  "@password": {
+    "description": "Noun/Word: Used as a label for the password input field."
+  },
+  "newpassword": "New Password",
+  "@password": {
+    "description": "Noun/Word: Used as a label for the password input field."
+  },
   "continueJourney": "Continue Journey",
   "@continueJourney": {
     "description": "Action Phrase: Button text to submit the sign-in form."
@@ -138,7 +146,7 @@
   "@visited": {
     "description": "Label for number of visited places (Word)"
   },
-  "saved": "SAVED",
+  "saved": "Save",
   "@saved": {
     "description": "Label for number of saved places (Word)"
   },
@@ -328,6 +336,501 @@
   "description": "Action Phrase: error uploading user"
 },
 
- "preferenceselection" : "PREFERENCE SELECTION",
- "curateyourexp" : "Curate Your Experience"
+  "languageTitle": "Language",
+  "@languageTitle": {
+    "description": "App bar title for the language selection screen (Word)"
+  },
+  "preferenceSelection": "PREFERENCE SELECTION",
+  "@preferenceSelection": {
+    "description": "Overline text above the main title on the language screen (Phrase)"
+  },
+  "curateYourExperience": "Curate Your Experience",
+  "@curateYourExperience": {
+    "description": "Main title on the language selection screen (Sentence/Command)"
+  },
+  
+  "countryEgypt": "Egypt",
+  "countryUk": "UK",
+  "countrySpain": "Spain",
+  "countryItaly": "Italy",
+  "countryGermany": "Germany",
+
+  "editProfileTitle": "Edit Profile",
+  "@editProfileTitle": {
+    "description": "App bar title for the edit profile screen (Phrase)"
+  },
+  "changePhoto": "CHANGE PHOTO",
+  "@changePhoto": {
+    "description": "Action text under the avatar to change the profile photo (Phrase)"
+  },
+  "fullNameLabel": "FULL NAME",
+  "@fullNameLabel": {
+    "description": "Label for the full name input field (Phrase)"
+  },
+  "titleLabel": "TITLE",
+  "@titleLabel": {
+    "description": "Label for the user role/title input field (Word)"
+  },
+  "manageSavedPlaces": "Manage Saved Places",
+  "@manageSavedPlaces": {
+    "description": "Section header for managing saved locations (Phrase)"
+  },
+  "editSaved": "EDIT SAVED",
+  "@editSaved": {
+    "description": "Action button to enter edit mode for saved places list (Phrase)"
+  },
+  "saveChanges": "Save Changes",
+  "@saveChanges": {
+    "description": "Primary button to submit and save profile edits (Phrase)"
+  },
+  "cancel": "Cancel",
+  "@cancel": {
+    "description": "Secondary button to discard profile edits (Word)"
+  },
+  "firstNameHint": "Edit your first name",
+  "@fullNameHint": {
+    "description": "Hint or placeholder text for the full name input field (Name)"
+  },
+  "lastNameHint": "Edit your last name",
+  "@fullNameHint": {
+    "description": "Hint or placeholder text for the full name input field (Name)"
+  },
+  "passwordHint": "Edit your password",
+  "@fullNameHint": {
+    "description": "Hint or placeholder text for the full name input field (Name)"
+  },
+
+  "nodatafound": "No data found",
+  "@fullNameHint": {
+    "description": "404"
+  },
+
+"heritagequote": "\"To know the heart of a culture, one must walk through the echoes of its stone\"",
+"@heritagequote": {
+  "description": "quote of heritage"
+},
+
+"spiritualquote": "\"Where faith and silence meet, the spirit begins to heal.\"",
+"@spiritualquote": {
+  "description": "quote of spiritual"
+},
+
+"naturequote": "\"To understand the earth, one must listen to the stories written in its rivers, skies, and silence.\"",
+"@naturequote": {
+  "description": "quote of nature"
+},
+
+"foodquote": "\"Every dish tells a story, seasoned with culture, history, and the warmth of its people.\"",
+"@foodquote": {
+  "description": "quote of food"
+},
+
+"pyramidsname": "Pyramids",
+"@pyramidsname": {
+  "description": "name of pyramids"
+},
+
+"aboutpyramids": "The world-famous pyramids of ancient Egypt, built as royal tombs and considered one of the Seven Wonders of the Ancient World.",
+"@aboutpyramids": {
+  "description": "about description of pyramids"
+},
+
+"alharam": "Al Haram",
+"@alharam": {
+  "description": "location of pyramids"
+},
+
+
+"pyramidstag0": "PYRAMIDS",
+"@pyramidstag0": {
+  "description": "first tag of pyramids"
+},
+
+"pyramidstag1": "WONDER",
+"@pyramidstag1": {
+  "description": "second tag of pyramids"
+},
+
+"pyramidstag2": "LANDMARK",
+"@pyramidstag2": {
+  "description": "third tag of pyramids"
+},
+
+"heritage": "Heritage",
+
+
+"abusimblename": "Abu Simbel Temple",
+"abusimbellocation": "Abu Simbel",
+"aswan": "Aswan",
+"aboutabusimbel": "Massive rock-cut temples built by Ramses II, famous for their giant statues and remarkable relocation to protect them from flooding.",
+"abusimbletag0": "HISTORICAL",
+"abusimbletag1": "MONUMENT",
+"abusimbletag2": "UNESCO",
+
+"hatshepsuttemplename": "Temple of Hatshepsut",
+"hatshepsuttemplelocation": "Deir el-Bahari",
+"luxor": "Luxor",
+"aboutatshepsuttemple": "A magnificent temple carved into the cliffs of Luxor, built for Queen Hatshepsut, one of ancient Egypt’s most powerful rulers.",
+"hatshepsuttempletag0" : "TEMPLE",
+"hatshepsuttempletag1" : "ARCHITECTURE",
+"hatshepsuttempletag2" : "HISTORICAL",
+
+"grandegyptianmuseumname" : "The Grand Egyptian Museum",
+"grandegyptianmuseumlocation" : "Cairo-Alex Road",
+"giza" : "Giza",
+"aboutgrandegyptianmuseum" : "A modern museum near the pyramids showcasing thousands of ancient Egyptian artifacts, including King Tutankhamun’s treasures.",
+"grandegyptianmuseumtag0" : "ARTIFACTS",
+"grandegyptianmuseumtag1" : "MUSEUM",
+"grandegyptianmuseumtag2" : "CULTURE",
+
+"philaetemplename" : "Philae Temple",
+"philaetemplelocation" : "Agilkia Island",
+"aboutphilaetemple" : "A beautiful island temple dedicated to the goddess Isis, known for its stunning Nile views and ancient carvings.",
+"philaetempletag0" : "ISLAND",
+"philaetempletag1" : "TEMPLE",
+"philaetempletag2" : "HERITAGE",
+
+
+
+"nature": "Nature",
+"@nature": {
+  "description": "nature category"
+},
+
+"whitedesertname": "White Desert",
+"@whitedesertname": {
+  "description": "white desert name"
+},
+
+"whitedesertnationalpark": "White Desert National Park",
+"@whitedesertnationalpark": {
+  "description": "white desert location"
+},
+
+"southwestofcairo": "South West of Cairo",
+"@southwestofcairo": {
+  "description": "city of white desert"
+},
+
+"aboutwhitedesert": "A breathtaking desert reserve famous for its unique white rock formations and camping experiences.",
+"@aboutwhitedesert": {
+  "description": "Information about white desert"
+},
+"whitedeserttag0": "DESERT",
+"@whitedeserttag0": {
+  "description": "first tag of the white desert"
+},
+
+"whitedeserttag1": "CAMPING",
+"@whitedeserttag1": {
+  "description": "second tag of the white desert"
+},
+
+"whitedeserttag2": "SAFARI",
+"@whitedeserttag2": {
+  "description": "third tag of the white desert"
+},
+
+
+
+"blueholename": "Blue Hole",
+"@blueholename": {
+  "description": "Blue Hole name"
+},
+
+"blueholeofdahab": "Blue Hole of Dahab",
+"@blueholeofdahab": {
+  "description": "Blue Hole location"
+},
+
+"dahab": "Dahab",
+"@dahab": {
+  "description": "city of Blue Hole"
+},
+
+"aboutbluehole": "A world-famous diving destination known for crystal-clear waters and vibrant coral reefs.",
+"@aboutbluehole": {
+  "description": "Information about Blue Hole"
+},
+"blueholetag0": "DIVING",
+"@blueholetag0": {
+  "description": "first tag of theBlue Hole"
+},
+
+"blueholetag1": "CORAL",
+"@blueholetag1": {
+  "description": "second tag of the Blue Hole"
+},
+
+"blueholetag2": "ADVENTURE",
+"@blueholetag2": {
+  "description": "third tag of the Blue Hole"
+},
+
+"abugaloumname": "Abu Galoum",
+"@abugaloumname": {
+  "description": "Abu Galoum name"
+},
+
+"abugaloum": "Abu Galoum",
+"@abugaloum": {
+  "description": "Abu Galoum location"
+},
+
+"neweiba": "Neweiba",
+"@neweiba": {
+  "description": "city of Abu Galoum"
+},
+
+"aboutabugaloum": "A protected coastal reserve famous for snorkeling, coral reefs, mountains, and Bedouin camps.",
+"@aboutabugaloum": {
+  "description": "Information about Abu Galoum"
+},
+"abugaloumtag0": "SNORKELING",
+"@abugaloumtag0": {
+  "description": "first tag of Abu Galoum"
+},
+
+"abugaloumtag1": "NATURE",
+"@abugaloumtag1": {
+  "description": "second tag of Abu Galoum"
+},
+
+"abugaloumtag2": "CAMPING",
+"@abugaloumtag2": {
+  "description": "third tag of Abu Galoum"
+},
+
+
+
+
+"wadielgemalname": "Wadi El Gemal",
+"@wadielgemalname": {
+  "description": "Wadi El Gemal name"
+},
+
+"wadielgemalreserve": "Wadi El Gemal Reserve",
+"@wadielgemalreserve": {
+  "description": "Wadi El Gemal location"
+},
+
+"marsaalam": "Marsa Alam",
+"@marsaalam": {
+  "description": "city of Wadi El Gemal"
+},
+
+"aboutwadielgemal": "A stunning natural reserve combining desert mountains, mangroves, coral reefs, and Red Sea wildlife.",
+"@aboutwadielgemal": {
+  "description": "Information about Wadi El Gemal"
+},
+"wadielgemaltag0": "MARINE",
+"@wadielgemaltag0": {
+  "description": "first tag of Wadi El Gemal"
+},
+
+"wadielgemaltag1": "SAFARI",
+"@wadielgemaltag1": {
+  "description": "second tag of Wadi El Gemal"
+},
+
+"wadielgemaltag2": "WILDLIFE",
+"@wadielgemaltag2": {
+  "description": "third tag of Wadi El Gemal"
+},
+
+
+"wadielrayanname": "Wadi el rayan",
+"@wadielrayanname": {
+  "description": "Wadi el rayan name"
+},
+
+"wadielrayan": "Wadi el rayan",
+"@wadielrayan": {
+  "description": "Wadi el rayan location"
+},
+
+"faiyum": "Faiyum",
+"@faiyum": {
+  "description": "city of Wadi el rayan"
+},
+
+"aboutwadielrayan": "A beautiful desert oasis known for waterfalls, lakes, sand dunes, and safari adventures.",
+"@aboutwadielrayan": {
+  "description": "Information about Wadi el rayan"
+},
+"wadielrayantag0": "WATERFALLS",
+"@wadielrayantag0": {
+  "description": "first tag of Wadi el rayan"
+},
+
+"wadielrayantag1": "DESERT",
+"@wadielrayantag1": {
+  "description": "second tag of Wadi el rayan"
+},
+
+"wadielrayantag2": "LAKES",
+"@wadielrayantag2": {
+  "description": "third tag of Wadi el rayan"
+},
+
+
+"arabiataname": "Pyramids",
+"@arabiataname": {
+  "description": "name of arabiata"
+},
+
+"aboutarabiata": "A popular Egyptian restaurant serving authentic foul, falafel, and traditional breakfast meals.",
+"@aboutarabiata": {
+  "description": "about description of arabiata"
+},
+
+"nasrcity": "Nasr City",
+"@nasrcity": {
+  "description": "location of arabiata"
+},
+
+"arabiatatag0": "Breakfast",
+"@arabiatatag0": {
+  "description": "first tag of arabiata"
+},
+
+"arabiatatag1": "StreetFood",
+"@arabiatatag1": {
+  "description": "second tag of arabiata"
+},
+
+"arabiatatag2": "Oriental",
+"@arabiatatag2": {
+  "description": "third tag of arabiata"
+},
+
+"food": "Food",
+"@food": {
+  "description": "food category"
+},
+
+"qasrelkababginame": "Qasr Elkababgi",
+"@qasrelkababginame": {
+  "description": "name of qasr-elkababgi"
+},
+
+"aboutqasrelkababgi": "A renowned Egyptian restaurant chain celebrated for authentic oriental cuisine, traditional grills, and theatrical dining experiences",
+"@aboutqasrelkababgi": {
+  "description": "about description of qasr-elkababgi"
+},
+
+"fifthsettlement": "Fifth Settlement",
+"@fifthsettlement": {
+  "description": "location of qasr-elkababgi"
+},
+
+"qasrelkababgitag0": "Grills",
+"@qasrelkababgitag0": {
+  "description": "first tag of qasr-elkababgi"
+},
+
+"qasrelkababgitag1": "Dining",
+"@qasrelkababgitag1": {
+  "description": "second tag of qasr-elkababgi"
+},
+
+"qasrelkababgitag2": "Oriental",
+"@qasrelkababgitag2": {
+  "description": "third tag of qasr-elkababgi"
+},
+
+
+"baharyname": "Bahary",
+"@baharyname": {
+  "description": "name of bahary"
+},
+
+"aboutbahary": "A modern seafood restaurant famous for grilled fish, seafood platters, and fresh Mediterranean flavors.",
+"@aboutbahary": {
+  "description": "about description of bahary"
+},
+
+"baharytag0": "SeaFood",
+"@baharytag0": {
+  "description": "first tag of bahary"
+},
+
+"baharytag1": "Fresh",
+"@baharytag1": {
+  "description": "second tag of bahary"
+},
+
+"baharytag2": "OceanFlavors",
+"@baharytag2": {
+  "description": "third tag of bahary"
+},
+
+"koueidername": "Koueider",
+"@koueidername": {
+  "description": "name of koueider"
+},
+
+"aboutkoueider": "One of Egypt’s oldest dessert shops, famous for oriental sweets and authentic Arabic pastries.",
+"@aboutkoueider": {
+  "description": "about description of koueider"
+},
+
+"heliopolis": "Heliopolis",
+"@heliopolis": {
+  "description": "location of koueider"
+},
+
+"koueidertag0": "Desserts",
+"@koueidertag0": {
+  "description": "first tag of koueider"
+},
+
+"koueidertag1": "Ice Cream",
+"@koueidertag1": {
+  "description": "second tag of koueider"
+},
+
+"koueidertag2": "Sweets",
+"@koueidertag2": {
+  "description": "third tag of koueider"
+},
+
+"elmalkyname": "ElMalky",
+"@elmalkyname": {
+  "description": "name of elmalky"
+},
+
+"aboutelmalky": "A legendary Egyptian dessert destination known for rice pudding, ice cream, and classic sweets.",
+"@aboutelmalky": {
+  "description": "about description of elmalky"
+},
+
+"elmoattam": "ElMoattam",
+"@elmoattam": {
+  "description": "location of elmalky"
+},
+
+"elmalkytag0": "Traditional",
+"@elmalkytag0": {
+  "description": "first tag of elmalky"
+},
+
+"elmalkytag1": "Ice Cream",
+"@elmalkytag1": {
+  "description": "second tag of elmalky"
+},
+
+"elmalkytag2": "Desserts",
+"@elmalkytag2": {
+  "description": "third tag of elmalky"
+},
+
+ "menu": "Menu",
+  "manageProfile": "Manage Profile",
+  "changeLanguage": "Change Language",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Logout",
+  "logoutConfirmMessage": "Are you sure you want to logout?",
+  "cancel": "Cancel"
+
 }
