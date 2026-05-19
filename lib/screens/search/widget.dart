@@ -54,7 +54,9 @@ Widget searchTextfield(
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return Padding(
                   padding: EdgeInsets.only(top: height * .03),
-                  child: const Center(child: CircularProgressIndicator()),
+                  child: const Center(
+                    child: CircularProgressIndicator(color: Colors.black),
+                  ),
                 );
               }
 

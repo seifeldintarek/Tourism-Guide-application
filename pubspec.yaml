@@ -7,6 +7,7 @@ environment:
   sdk: ^3.11.0
 
 dependencies:
+  cached_network_image: ^3.4.1
   cloud_firestore: ^6.3.0
   crypto: ^3.0.7
   firebase_auth: ^6.4.0
@@ -14,6 +15,7 @@ dependencies:
   firebase_storage: ^13.3.0
   flutter:
     sdk: flutter
+  flutter_auto_size_text: ^5.0.0
   flutter_gen: ^5.14.1
   flutter_localizations:      # ← ADD THIS
     sdk: flutter
@@ -35,6 +37,7 @@ flutter:
 
   assets:
     - assets/images/splash/splash_logo.png
+    - assets/images/placeholder/placeholder.jpg
 
   fonts:
     - family: Test
