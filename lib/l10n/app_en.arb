@@ -831,7 +831,20 @@
   "cancel": "Cancel",
 
 "choosecategory" : "Choose a category",
-"changecategory" : "Change category"
+"changecategory" : "Change category",
 
+"egyptian": "Egyptian",
+"@egyptian": {
+  "description": "Ticket price label for Egyptian visitors"
+},
 
+"other": "Other",
+"@other": {
+  "description": "Ticket price label for non-Egyptian visitors"
+},
+
+"closed": "Closed",
+"@closed": {
+  "description": "State indicating the place is not currently operating"
+}
 }
