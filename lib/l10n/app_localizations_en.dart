@@ -719,4 +719,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get changecategory => 'Change category';
+
+  @override
+  String get egyptian => 'Egyptian';
+
+  @override
+  String get other => 'Other';
+
+  @override
+  String get closed => 'Closed';
 }

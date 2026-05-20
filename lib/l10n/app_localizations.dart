@@ -1489,6 +1489,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Change category'**
   String get changecategory;
+
+  /// Ticket price label for Egyptian visitors
+  ///
+  /// In en, this message translates to:
+  /// **'Egyptian'**
+  String get egyptian;
+
+  /// Ticket price label for non-Egyptian visitors
+  ///
+  /// In en, this message translates to:
+  /// **'Other'**
+  String get other;
+
+  /// State indicating the place is not currently operating
+  ///
+  /// In en, this message translates to:
+  /// **'Closed'**
+  String get closed;
 }
 
 class _AppLocalizationsDelegate
