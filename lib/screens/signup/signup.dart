@@ -253,7 +253,7 @@ class _SignUpState extends State<SignUp> {
             children: [
               //Title
               Text(
-                lang.tellUsAboutYourself,
+                "Tell us about \nyourself",
                 style: TextStyle(
                   fontSize: titleFontSize,
                   fontWeight: FontWeight.bold,
@@ -274,19 +274,9 @@ class _SignUpState extends State<SignUp> {
               // ── Name row
               Row(
                 children: [
-                  Expanded(
-                    child: buildLabel(
-                      lang.firstName.toUpperCase(),
-                      labelFontSize,
-                    ),
-                  ),
+                  Expanded(child: buildLabel(lang.firstName.toUpperCase())),
                   SizedBox(width: width * 0.025),
-                  Expanded(
-                    child: buildLabel(
-                      lang.lastName.toUpperCase(),
-                      labelFontSize,
-                    ),
-                  ),
+                  Expanded(child: buildLabel(lang.lastName.toUpperCase())),
                 ],
               ),
               SizedBox(height: smallGap),
@@ -311,33 +301,38 @@ class _SignUpState extends State<SignUp> {
               SizedBox(height: sectionGap),
 
               // ── Email ──────────────────────────────────────────────────────
-              buildLabel(lang.emailAddress.toUpperCase(), labelFontSize),
+              buildLabel(lang.emailAddress.toUpperCase()),
               SizedBox(height: smallGap),
               TextField(
                 controller: _emailController,
                 decoration: buildInputDecoration(
                   hint: lang.emailHint,
                   errorText: _emailError,
-                  height: height,
-                  width: width,
-                  hintFontSize: hintFontSize,
-                  suffixIcon: Icon(Icons.email),
                 ),
               ),
 
               SizedBox(height: sectionGap),
 
               // ── Password ───────────────────────────────────────────────────
-              buildLabel(lang.createPassword.toUpperCase(), labelFontSize),
+              buildLabel(lang.createPassword.toUpperCase()),
               SizedBox(height: smallGap),
-              passwordTextfield(
-                _passwordController,
-                _passwordError,
-                _obscurePassword,
-                () => setState(() => _obscurePassword = !_obscurePassword),
-                height,
-                width,
-                hintFontSize,
+              TextField(
+                controller: _passwordController,
+                onChanged: (val) => setState(() {}),
+                obscureText: _obscurePassword,
+                decoration: buildInputDecoration(
+                  hint: "Enter your password",
+                  errorText: _passwordError,
+                  suffixIcon: IconButton(
+                    icon: Icon(
+                      _obscurePassword
+                          ? Icons.visibility_off
+                          : Icons.visibility,
+                    ),
+                    onPressed: () =>
+                        setState(() => _obscurePassword = !_obscurePassword),
+                  ),
+                ),
               ),
 
               SizedBox(height: sectionGap),
@@ -362,9 +357,6 @@ class _SignUpState extends State<SignUp> {
                     ),
                   ),
                 ),
-                height,
-                width,
-                hintFontSize,
               ),
 
               SizedBox(height: sectionGap),
@@ -372,12 +364,7 @@ class _SignUpState extends State<SignUp> {
               // Language + GOVERNORATE dropdowns
               Row(
                 children: [
-                  Expanded(
-                    child: buildLabel(
-                      lang.language.toUpperCase(),
-                      labelFontSize,
-                    ),
-                  ),
+                  Expanded(child: buildLabel(lang.language.toUpperCase())),
                   SizedBox(width: width * 0.025),
                   Expanded(child: buildLabel("GOVERNORATE")),
                 ],
@@ -387,9 +374,6 @@ class _SignUpState extends State<SignUp> {
                 children: [
                   Expanded(
                     child: buildDropdown(
-                      bodyFontSize: bodyFontSize,
-                      hintFontSize: hintFontSize,
-                      width: width,
                       value: _selectedLanguage,
                       hint: "Select Language",
                       items: languages,

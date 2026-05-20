@@ -24,7 +24,6 @@ class _LoginState extends State<Login> {
   // Added FormKey to manage validation state
   final _formKey = GlobalKey<FormState>();
 
-  bool _obscurePassword = true;
   String? _passwordError;
 
   @override
@@ -37,7 +36,7 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     final lang = AppLocalizations.of(context)!;
-    
+
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
     final double hintFontSize = width * 0.031;

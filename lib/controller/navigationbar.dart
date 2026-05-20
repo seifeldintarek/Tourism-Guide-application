@@ -18,16 +18,17 @@ class Footer extends StatefulWidget {
 class _FooterState extends State<Footer> {
   int index = 0;
 
-  final List<Widget> screens = [
-    Container(),
-    const Search_Screen(),
-    Container(),
-    Profile(user: widget.user),
-  ];
-
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
+
+    final List<Widget> screens = [
+      Container(),
+      const Search_Screen(),
+      Container(),
+      Profile(user: widget.user),
+    ];
+
     return Scaffold(
       appBar: AppBar(iconTheme: const IconThemeData(color: Color(0xFF463427))),
       drawer: Hamburger(),

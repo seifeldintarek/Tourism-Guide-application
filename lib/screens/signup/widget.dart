@@ -115,6 +115,43 @@ Widget customDropdown({
   );
 }
 
+// ── Reusable local builders ───────────────────────────────────────────────
+Widget buildLabel(String text, double labelFontSize) => Text(
+  text,
+  style: TextStyle(
+    fontSize: labelFontSize,
+    fontWeight: FontWeight.w600,
+    color: Default.textColor,
+    letterSpacing: 0.5,
+  ),
+);
+
+InputDecoration buildInputDecoration({
+  required String hint,
+  String? errorText,
+  Widget? suffixIcon,
+  required double width,
+  required double height,
+  required double hintFontSize,
+}) => InputDecoration(
+  filled: true,
+  fillColor: const Color(0xFFF2EDE6),
+  hintText: hint,
+  hintStyle: TextStyle(color: Colors.grey, fontSize: hintFontSize),
+  errorText: errorText,
+  errorStyle: TextStyle(fontSize: hintFontSize * 0.9),
+  suffixIcon: suffixIcon,
+  contentPadding: EdgeInsets.symmetric(
+    horizontal: width * 0.04,
+    vertical: height * 0.018,
+  ),
+  border: OutlineInputBorder(
+    borderRadius: BorderRadius.circular(12),
+    borderSide: BorderSide.none,
+  ),
+);
+
+// ── Responsive dropdown (no overflow) ────────────────────────────────────
 Widget buildDropdown({
   required String? value,
   required String hint,
