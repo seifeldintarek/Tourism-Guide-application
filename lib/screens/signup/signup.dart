@@ -38,35 +38,6 @@ class _SignUpState extends State<SignUp> {
     "French",
     "German",
   ];
-  final List<String> egyptGovernorates = [
-    "Cairo",
-    "Giza",
-    "Alexandria",
-    "Dakahlia",
-    "Red Sea",
-    "Beheira",
-    "Fayoum",
-    "Gharbia",
-    "Ismailia",
-    "Menofia",
-    "Minya",
-    "Qalyubia",
-    "New Valley",
-    "Suez",
-    "Aswan",
-    "Assiut",
-    "Beni Suef",
-    "Port Said",
-    "Damietta",
-    "Sharkia",
-    "South Sinai",
-    "Kafr El Sheikh",
-    "Matrouh",
-    "Luxor",
-    "Qena",
-    "North Sinai",
-    "Sohag",
-  ];
 
   bool _isAccepted = false;
 
@@ -103,6 +74,36 @@ class _SignUpState extends State<SignUp> {
   Widget build(BuildContext context) {
     final lang = AppLocalizations.of(context)!;
 
+    final List<String> egyptGovernorates = [
+      lang.cairo,
+      lang.giza,
+      lang.alexandria,
+      lang.dakahlia,
+      lang.redSea,
+      lang.beheira,
+      lang.fayoum,
+      lang.gharbia,
+      lang.ismailia,
+      lang.menofia,
+      lang.minya,
+      lang.qalyubia,
+      lang.newValley,
+      lang.suez,
+      lang.aswan,
+      lang.assiut,
+      lang.beniSuef,
+      lang.portSaid,
+      lang.damietta,
+      lang.sharkia,
+      lang.southSinai,
+      lang.kafrElSheikh,
+      lang.matrouh,
+      lang.luxor,
+      lang.qena,
+      lang.northSinai,
+      lang.sohag,
+    ];
+
     void handleCreateAccount() async {
       final password = _passwordController.text;
       final confirmPassword = _confirmPasswordController.text;
@@ -120,15 +121,15 @@ class _SignUpState extends State<SignUp> {
             : "Invalid email format";
 
         if (password.length < 8) {
-          _passwordError = "Password must be at least 8 characters";
+          _passwordError = lang.password8charserror;
         } else if (!hasUpper) {
-          _passwordError = "Add at least one capital letter";
+          _passwordError = lang.passwordcapitalerror;
         } else if (!hasLower) {
-          _passwordError = "Add at least one small letter";
+          _passwordError = lang.passwordsmallerror;
         } else if (!hasDigit) {
-          _passwordError = "Add at least one number";
+          _passwordError = lang.passwordnumbererror;
         } else if (!hasSpecial) {
-          _passwordError = "Add at least one special character";
+          _passwordError = lang.passwordspecialcharerror;
         } else {
           _passwordError = null;
         }
@@ -253,7 +254,7 @@ class _SignUpState extends State<SignUp> {
             children: [
               //Title
               Text(
-                "Tell us about \nyourself",
+                lang.tellUsAboutYourself,
                 style: TextStyle(
                   fontSize: titleFontSize,
                   fontWeight: FontWeight.bold,
@@ -285,14 +286,14 @@ class _SignUpState extends State<SignUp> {
                   Expanded(
                     child: customTextField(
                       controller: _firstNameController,
-                      hint: "Enter first name",
+                      hint: lang.firstNameHint,
                     ),
                   ),
                   SizedBox(width: width * 0.025),
                   Expanded(
                     child: customTextField(
                       controller: _lastNameController,
-                      hint: "Enter last name",
+                      hint: lang.lastNameHint,
                     ),
                   ),
                 ],
@@ -321,7 +322,7 @@ class _SignUpState extends State<SignUp> {
                 onChanged: (val) => setState(() {}),
                 obscureText: _obscurePassword,
                 decoration: buildInputDecoration(
-                  hint: "Enter your password",
+                  hint: lang.passwordHint,
                   errorText: _passwordError,
                   suffixIcon: IconButton(
                     icon: Icon(
@@ -366,7 +367,7 @@ class _SignUpState extends State<SignUp> {
                 children: [
                   Expanded(child: buildLabel(lang.language.toUpperCase())),
                   SizedBox(width: width * 0.025),
-                  Expanded(child: buildLabel("GOVERNORATE")),
+                  Expanded(child: buildLabel(lang.government)),
                 ],
               ),
               SizedBox(height: smallGap),
@@ -375,7 +376,7 @@ class _SignUpState extends State<SignUp> {
                   Expanded(
                     child: buildDropdown(
                       value: _selectedLanguage,
-                      hint: "Select Language",
+                      hint: lang.selectlang,
                       items: languages,
                       onChanged: (val) =>
                           setState(() => _selectedLanguage = val),
@@ -389,7 +390,7 @@ class _SignUpState extends State<SignUp> {
                   Expanded(
                     child: buildDropdown(
                       value: _selectedGovernorate,
-                      hint: "Select governorate",
+                      hint: lang.selectgov,
                       items: egyptGovernorates,
                       onChanged: (val) =>
                           setState(() => _selectedGovernorate = val),

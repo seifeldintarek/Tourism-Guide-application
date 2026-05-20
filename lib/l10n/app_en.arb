@@ -66,7 +66,7 @@
   "@createAnAccount": {
     "description": "Action Phrase: Link to navigate to the registration page."
   },
-  "tellUsAboutYourself": "Tell us about yourself",
+  "tellUsAboutYourself": "Tell us about \nyourself",
   "@tellUsAboutYourself": {
     "description": "Sentence: Header for the sign-up form."
   },
@@ -396,6 +396,12 @@
   "@fullNameHint": {
     "description": "Hint or placeholder text for the full name input field (Name)"
   },
+
+  "password8charserror" : "Password must be at least 8 characters",
+  "passwordcapitalerror" : "Add at least one capital letter",
+  "passwordsmallerror" : "Add at least one small letter",
+  "passwordnumbererror" : "Add at least one number",
+  "passwordspecialcharerror" : "Add at least one special character",
 
   "nodatafound": "No data found",
   "@fullNameHint": {
@@ -846,5 +852,135 @@
 "closed": "Closed",
 "@closed": {
   "description": "State indicating the place is not currently operating"
-}
+},
+
+"government" : "GOVERNORATE",
+
+"selectlang" : "Select Language",
+"selectgov" : "Select Governorate",
+
+ "alexandria": "Alexandria",
+  "@alexandria": {
+    "description": "Governorate name"
+  },
+
+  "dakahlia": "Dakahlia",
+  "@dakahlia": {
+    "description": "Governorate name"
+  },
+
+  "redSea": "Red Sea",
+  "@redSea": {
+    "description": "Governorate name"
+  },
+
+  "beheira": "Beheira",
+  "@beheira": {
+    "description": "Governorate name"
+  },
+
+  "fayoum": "Fayoum",
+  "@fayoum": {
+    "description": "Governorate name"
+  },
+
+  "gharbia": "Gharbia",
+  "@gharbia": {
+    "description": "Governorate name"
+  },
+
+  "ismailia": "Ismailia",
+  "@ismailia": {
+    "description": "Governorate name"
+  },
+
+  "menofia": "Menofia",
+  "@menofia": {
+    "description": "Governorate name"
+  },
+
+  "minya": "Minya",
+  "@minya": {
+    "description": "Governorate name"
+  },
+
+  "qalyubia": "Qalyubia",
+  "@qalyubia": {
+    "description": "Governorate name"
+  },
+
+  "newValley": "New Valley",
+  "@newValley": {
+    "description": "Governorate name"
+  },
+
+  "suez": "Suez",
+  "@suez": {
+    "description": "Governorate name"
+  },
+
+  "aswan": "Aswan",
+  "@aswan": {
+    "description": "Governorate name"
+  },
+
+  "assiut": "Assiut",
+  "@assiut": {
+    "description": "Governorate name"
+  },
+
+  "beniSuef": "Beni Suef",
+  "@beniSuef": {
+    "description": "Governorate name"
+  },
+
+  "portSaid": "Port Said",
+  "@portSaid": {
+    "description": "Governorate name"
+  },
+
+  "damietta": "Damietta",
+  "@damietta": {
+    "description": "Governorate name"
+  },
+
+  "sharkia": "Sharkia",
+  "@sharkia": {
+    "description": "Governorate name"
+  },
+
+  "southSinai": "South Sinai",
+  "@southSinai": {
+    "description": "Governorate name"
+  },
+
+  "kafrElSheikh": "Kafr El Sheikh",
+  "@kafrElSheikh": {
+    "description": "Governorate name"
+  },
+
+  "matrouh": "Matrouh",
+  "@matrouh": {
+    "description": "Governorate name"
+  },
+
+  "luxor": "Luxor",
+  "@luxor": {
+    "description": "Governorate name"
+  },
+
+  "qena": "Qena",
+  "@qena": {
+    "description": "Governorate name"
+  },
+
+  "northSinai": "North Sinai",
+  "@northSinai": {
+    "description": "Governorate name"
+  },
+
+  "sohag": "Sohag",
+  "@sohag": {
+    "description": "Governorate name"
+  }
 }

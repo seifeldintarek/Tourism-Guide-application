@@ -39,6 +39,7 @@ Future<bool> storeUser(final userData, BuildContext context) async {
       "language": locale.toString().trim(),
       "joinedAt": now,
       "profilePictureUrl": "",
+      "city": userData["city"],
     });
 
     final appUser = AppUser(
@@ -51,6 +52,7 @@ Future<bool> storeUser(final userData, BuildContext context) async {
       fullName: "${userData["firstName"]} ${userData["lastName"]}",
       joinedAt: now,
       profilePictureUrl: "",
+      city: userData["city"],
     );
     await appUser.saveToCache();
 

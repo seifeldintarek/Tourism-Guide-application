@@ -372,6 +372,21 @@ class AppLocalizationsFr extends AppLocalizations {
   String get passwordHint => 'Edit your password';
 
   @override
+  String get password8charserror => 'Password must be at least 8 characters';
+
+  @override
+  String get passwordcapitalerror => 'Add at least one capital letter';
+
+  @override
+  String get passwordsmallerror => 'Add at least one small letter';
+
+  @override
+  String get passwordnumbererror => 'Add at least one number';
+
+  @override
+  String get passwordspecialcharerror => 'Add at least one special character';
+
+  @override
   String get nodatafound => 'No data found';
 
   @override
@@ -728,4 +743,79 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get closed => 'Closed';
+
+  @override
+  String get government => 'GOVERNORATE';
+
+  @override
+  String get selectlang => 'Select Language';
+
+  @override
+  String get selectgov => 'Select Governorate';
+
+  @override
+  String get alexandria => 'Alexandria';
+
+  @override
+  String get dakahlia => 'Dakahlia';
+
+  @override
+  String get beheira => 'Beheira';
+
+  @override
+  String get fayoum => 'Fayoum';
+
+  @override
+  String get gharbia => 'Gharbia';
+
+  @override
+  String get ismailia => 'Ismailia';
+
+  @override
+  String get menofia => 'Menofia';
+
+  @override
+  String get minya => 'Minya';
+
+  @override
+  String get qalyubia => 'Qalyubia';
+
+  @override
+  String get newValley => 'New Valley';
+
+  @override
+  String get suez => 'Suez';
+
+  @override
+  String get assiut => 'Assiut';
+
+  @override
+  String get beniSuef => 'Beni Suef';
+
+  @override
+  String get portSaid => 'Port Said';
+
+  @override
+  String get damietta => 'Damietta';
+
+  @override
+  String get sharkia => 'Sharkia';
+
+  @override
+  String get southSinai => 'South Sinai';
+
+  @override
+  String get kafrElSheikh => 'Kafr El Sheikh';
+
+  @override
+  String get matrouh => 'Matrouh';
+
+  @override
+  String get qena => 'Qena';
+
+  @override
+  String get northSinai => 'North Sinai';
+
+  @override
+  String get sohag => 'Sohag';
 }

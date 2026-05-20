@@ -203,7 +203,7 @@ abstract class AppLocalizations {
   /// Sentence: Header for the sign-up form.
   ///
   /// In en, this message translates to:
-  /// **'Tell us about yourself'**
+  /// **'Tell us about \nyourself'**
   String get tellUsAboutYourself;
 
   /// Noun Phrase: Label for the first name input field.
@@ -398,7 +398,7 @@ abstract class AppLocalizations {
   /// **'Aswan, Egypt'**
   String get aswanEgypt;
 
-  /// No description provided for @redSea.
+  /// Governorate name
   ///
   /// In en, this message translates to:
   /// **'Red Sea'**
@@ -452,7 +452,7 @@ abstract class AppLocalizations {
   /// **'Philae Temple'**
   String get philaeTemple;
 
-  /// No description provided for @aswan.
+  /// Governorate name
   ///
   /// In en, this message translates to:
   /// **'Aswan'**
@@ -830,6 +830,36 @@ abstract class AppLocalizations {
   /// **'Edit your password'**
   String get passwordHint;
 
+  /// No description provided for @password8charserror.
+  ///
+  /// In en, this message translates to:
+  /// **'Password must be at least 8 characters'**
+  String get password8charserror;
+
+  /// No description provided for @passwordcapitalerror.
+  ///
+  /// In en, this message translates to:
+  /// **'Add at least one capital letter'**
+  String get passwordcapitalerror;
+
+  /// No description provided for @passwordsmallerror.
+  ///
+  /// In en, this message translates to:
+  /// **'Add at least one small letter'**
+  String get passwordsmallerror;
+
+  /// No description provided for @passwordnumbererror.
+  ///
+  /// In en, this message translates to:
+  /// **'Add at least one number'**
+  String get passwordnumbererror;
+
+  /// No description provided for @passwordspecialcharerror.
+  ///
+  /// In en, this message translates to:
+  /// **'Add at least one special character'**
+  String get passwordspecialcharerror;
+
   /// No description provided for @nodatafound.
   ///
   /// In en, this message translates to:
@@ -944,7 +974,7 @@ abstract class AppLocalizations {
   /// **'Deir el-Bahari'**
   String get hatshepsuttemplelocation;
 
-  /// No description provided for @luxor.
+  /// Governorate name
   ///
   /// In en, this message translates to:
   /// **'Luxor'**
@@ -1507,6 +1537,156 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Closed'**
   String get closed;
+
+  /// No description provided for @government.
+  ///
+  /// In en, this message translates to:
+  /// **'GOVERNORATE'**
+  String get government;
+
+  /// No description provided for @selectlang.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Language'**
+  String get selectlang;
+
+  /// No description provided for @selectgov.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Governorate'**
+  String get selectgov;
+
+  /// Governorate name
+  ///
+  /// In en, this message translates to:
+  /// **'Alexandria'**
+  String get alexandria;
+
+  /// Governorate name
+  ///
+  /// In en, this message translates to:
+  /// **'Dakahlia'**
+  String get dakahlia;
+
+  /// Governorate name
+  ///
+  /// In en, this message translates to:
+  /// **'Beheira'**
+  String get beheira;
+
+  /// Governorate name
+  ///
+  /// In en, this message translates to:
+  /// **'Fayoum'**
+  String get fayoum;
+
+  /// Governorate name
+  ///
+  /// In en, this message translates to:
+  /// **'Gharbia'**
+  String get gharbia;
+
+  /// Governorate name
+  ///
+  /// In en, this message translates to:
+  /// **'Ismailia'**
+  String get ismailia;
+
+  /// Governorate name
+  ///
+  /// In en, this message translates to:
+  /// **'Menofia'**
+  String get menofia;
+
+  /// Governorate name
+  ///
+  /// In en, this message translates to:
+  /// **'Minya'**
+  String get minya;
+
+  /// Governorate name
+  ///
+  /// In en, this message translates to:
+  /// **'Qalyubia'**
+  String get qalyubia;
+
+  /// Governorate name
+  ///
+  /// In en, this message translates to:
+  /// **'New Valley'**
+  String get newValley;
+
+  /// Governorate name
+  ///
+  /// In en, this message translates to:
+  /// **'Suez'**
+  String get suez;
+
+  /// Governorate name
+  ///
+  /// In en, this message translates to:
+  /// **'Assiut'**
+  String get assiut;
+
+  /// Governorate name
+  ///
+  /// In en, this message translates to:
+  /// **'Beni Suef'**
+  String get beniSuef;
+
+  /// Governorate name
+  ///
+  /// In en, this message translates to:
+  /// **'Port Said'**
+  String get portSaid;
+
+  /// Governorate name
+  ///
+  /// In en, this message translates to:
+  /// **'Damietta'**
+  String get damietta;
+
+  /// Governorate name
+  ///
+  /// In en, this message translates to:
+  /// **'Sharkia'**
+  String get sharkia;
+
+  /// Governorate name
+  ///
+  /// In en, this message translates to:
+  /// **'South Sinai'**
+  String get southSinai;
+
+  /// Governorate name
+  ///
+  /// In en, this message translates to:
+  /// **'Kafr El Sheikh'**
+  String get kafrElSheikh;
+
+  /// Governorate name
+  ///
+  /// In en, this message translates to:
+  /// **'Matrouh'**
+  String get matrouh;
+
+  /// Governorate name
+  ///
+  /// In en, this message translates to:
+  /// **'Qena'**
+  String get qena;
+
+  /// Governorate name
+  ///
+  /// In en, this message translates to:
+  /// **'North Sinai'**
+  String get northSinai;
+
+  /// Governorate name
+  ///
+  /// In en, this message translates to:
+  /// **'Sohag'**
+  String get sohag;
 }
 
 class _AppLocalizationsDelegate

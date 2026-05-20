@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/core/default.dart';
 import 'package:flutter_application_1/l10n/app_localizations.dart';
+import 'package:flutter_application_1/models/User.dart';
+import 'package:flutter_application_1/screens/edit_profile/edit_profile.dart';
 import 'package:flutter_application_1/screens/language/languages.dart';
-import 'package:flutter_application_1/screens/info/info.dart';
 import 'package:flutter_application_1/screens/settings/widget.dart'; //till manage profile is added
 
 class Hamburger extends StatefulWidget {
-  const Hamburger({super.key});
-
+  Hamburger({super.key, required this.user});
+  AppUser user;
   @override
   State<Hamburger> createState() => _HamburgerState();
 }
@@ -60,7 +60,9 @@ class _HamburgerState extends State<Hamburger> {
                 Navigator.pop(context); // close drawer first
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (_) => Infoscreen()),
+                  MaterialPageRoute(
+                    builder: (_) => EditProfile(user: widget.user),
+                  ),
                 );
               },
             ),
