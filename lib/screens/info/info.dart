@@ -7,31 +7,9 @@ import 'package:flutter_application_1/screens/info/service.dart';
 import 'widget.dart';
 
 class Infoscreen extends StatefulWidget {
-  final Place place = Place(
-    id: "philae_temple",
-    name: "philaetemplename",
-    location: "philaetemplelocation",
-    city: "aswan",
-    mainImage:
-        "https://prfwmjmedmfqauccmqgv.supabase.co/storage/v1/object/public/pictures/places/heirtage/Philae%20Temple/main%20image/templo-fachada-philae.jpg",
-    category: "heritage",
-    rating: 4.7,
-    about: "aboutphilaetemple",
-    tags: ["philaetempletag0", "philaetempletag1", "philaetempletag2"],
-    ticketPriceEgyptian: 20,
-    ticketPrice: 275,
-    galleryImages: [
-      "https://prfwmjmedmfqauccmqgv.supabase.co/storage/v1/object/public/pictures/places/heirtage/Philae%20Temple/gallery%20images/hathor-capitals-philae-island-egypt.jpg",
-      "https://prfwmjmedmfqauccmqgv.supabase.co/storage/v1/object/public/pictures/places/heirtage/Philae%20Temple/gallery%20images/images.jpg",
-      "https://prfwmjmedmfqauccmqgv.supabase.co/storage/v1/object/public/pictures/places/heirtage/Philae%20Temple/gallery%20images/island-of-philae.jpg",
-    ],
-    mapUrl: "https://maps.app.goo.gl/A3T1D3y7TvswTqZT8?g_st=ic",
-    bookingUrl: "https://egymonuments.com/book-date/18",
-    startHr: 7,
-    endHr: 4,
-  );
+  final Place place;
 
-  Infoscreen({super.key});
+  const Infoscreen({super.key, required this.place});
 
   @override
   State<Infoscreen> createState() => _InfoscreenState();
