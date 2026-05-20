@@ -2,11 +2,13 @@ class Category {
   // final String id;
   final String name;
   final String quote;
+  final String img;
 
   Category({
     // required this.id,
     required this.name,
     required this.quote,
+    required this.img,
   });
 
   static Category fromMap(Map<String, dynamic> map) {
@@ -14,6 +16,7 @@ class Category {
       // id: map['id'] ?? '',
       name: map['name'] ?? '',
       quote: map['quote'] ?? '',
+      img: map['img'] ?? '',
     );
   }
 
@@ -22,6 +25,7 @@ class Category {
       // 'id': category.id,
       'name': category.name,
       'quote': category.quote,
+      'img': category.img,
     };
   }
 }

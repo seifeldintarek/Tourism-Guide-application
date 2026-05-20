@@ -6,8 +6,6 @@ import 'package:flutter_application_1/screens/splash/service.dart';
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
-  static const String routeName = '/splash';
-
   @override
   State<SplashScreen> createState() => _SplashScreenState();
 }
@@ -16,7 +14,14 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) {
+    startApp();
+  }
+
+  void startApp() async {
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      await Future.delayed(const Duration(seconds: 1));
+
+      if (!mounted) return;
       initializeApp(context);
     });
   }
