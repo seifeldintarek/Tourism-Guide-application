@@ -27,6 +27,12 @@ Widget buildPlaceCard(Place place) { // now takes a Place directly
                 child: CircularProgressIndicator(strokeWidth: 2),
               ),
             ),
+            errorWidget: (context, url, error) => Container(
+              width: 56,
+              height: 56,
+              color: Colors.grey.shade200,
+              child: const Icon(Icons.image_not_supported, size: 24),
+            ),
           ),
         ),
         SizedBox(width: 16),

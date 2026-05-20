@@ -68,10 +68,6 @@ class _ProfileState extends State<Profile> {
                 },
               ),
             ],
-            leading: IconButton(
-              icon: Icon(Icons.menu, color: Default.buttonColor),
-              onPressed: () {},
-            ),
             centerTitle: true,
           ),
 
