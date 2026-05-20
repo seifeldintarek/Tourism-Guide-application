@@ -13,10 +13,65 @@ Widget labelText(String text) {
   );
 }
 
+Widget passwordTextfield(
+  TextEditingController _passwordController,
+  String? _passwordError,
+  bool _obscurePassword,
+  VoidCallback onToggle,
+  double height,
+  double width,
+  double hintFontSize,
+) {
+  return TextField(
+    controller: _passwordController,
+    obscureText: _obscurePassword,
+    decoration: buildInputDecoration(
+      height: height,
+      width: width,
+      hintFontSize: hintFontSize,
+      hint: "Enter your password",
+      errorText: _passwordError,
+      suffixIcon: IconButton(
+        icon: Icon(_obscurePassword ? Icons.visibility_off : Icons.visibility),
+        onPressed: onToggle,
+      ),
+    ),
+  );
+}
+
+Widget confirmPasswordTextfield(
+  TextEditingController _confirmPasswordController,
+  String? _confirmPasswordError,
+  bool _obscureConfirmPassword,
+  VoidCallback onToggle,
+  double height,
+  double width,
+  double hintFontSize,
+) {
+  return TextField(
+    controller: _confirmPasswordController,
+    obscureText: _obscureConfirmPassword,
+    decoration: buildInputDecoration(
+      height: height,
+      width: width,
+      hintFontSize: hintFontSize,
+      hint: "Confirm your password",
+      errorText: _confirmPasswordError,
+      suffixIcon: IconButton(
+        icon: Icon(
+          _obscureConfirmPassword ? Icons.visibility_off : Icons.visibility,
+        ),
+        onPressed: onToggle,
+      ),
+    ),
+  );
+}
+
 Widget customTextField({
   required TextEditingController controller,
   required String hint,
   bool isPassword = false,
+  String? errorText, // ← added (optional, so existing callers unaffected)
 }) {
   return TextField(
     controller: controller,
@@ -25,7 +80,7 @@ Widget customTextField({
       filled: true,
       fillColor: const Color(0xFFF2EDE6),
       hintText: hint,
-      hintStyle: const TextStyle(color: Colors.grey, fontSize: 14),
+      hintStyle: const TextStyle(color: Colors.grey, fontSize: 10),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(12),
         borderSide: BorderSide.none,
@@ -60,6 +115,43 @@ Widget customDropdown({
   );
 }
 
+// ── Reusable local builders ───────────────────────────────────────────────
+Widget buildLabel(String text, double labelFontSize) => Text(
+  text,
+  style: TextStyle(
+    fontSize: labelFontSize,
+    fontWeight: FontWeight.w600,
+    color: Default.textColor,
+    letterSpacing: 0.5,
+  ),
+);
+
+InputDecoration buildInputDecoration({
+  required String hint,
+  String? errorText,
+  Widget? suffixIcon,
+  required double width,
+  required double height,
+  required double hintFontSize,
+}) => InputDecoration(
+  filled: true,
+  fillColor: const Color(0xFFF2EDE6),
+  hintText: hint,
+  hintStyle: TextStyle(color: Colors.grey, fontSize: hintFontSize),
+  errorText: errorText,
+  errorStyle: TextStyle(fontSize: hintFontSize * 0.9),
+  suffixIcon: suffixIcon,
+  contentPadding: EdgeInsets.symmetric(
+    horizontal: width * 0.04,
+    vertical: height * 0.018,
+  ),
+  border: OutlineInputBorder(
+    borderRadius: BorderRadius.circular(12),
+    borderSide: BorderSide.none,
+  ),
+);
+
+// ── Responsive dropdown (no overflow) ────────────────────────────────────
 Widget buildDropdown({
   required String? value,
   required String hint,

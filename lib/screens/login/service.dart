@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/core/default.dart';
 import 'package:flutter_application_1/l10n/app_localizations.dart';
 import 'package:flutter_application_1/models/User.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -14,9 +15,9 @@ Future<AppUser?> loginUser({
   required String password,
 }) async {
   try {
-    final hashedPass = hashPassword(password);
+    final hashedPass = hashPassword(password.trim());
     await FirebaseAuth.instance.signInWithEmailAndPassword(
-      email: email,
+      email: email.trim(),
       password: hashedPass,
     );
 
@@ -47,7 +48,7 @@ Future<AppUser?> loginUser({
     return null;
   } catch (e) {
     print("Login Error: $e");
-
+    Default.appMsg(context, lang.invalidcreds.toString());
     return null;
   }
 }

@@ -19,10 +19,11 @@ class _LoginState extends State<Login> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
 
+  bool _obscurePassword = true;
+
   // Added FormKey to manage validation state
   final _formKey = GlobalKey<FormState>();
 
-  bool _obscurePassword = true;
   String? _passwordError;
 
   @override
@@ -35,7 +36,7 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     final lang = AppLocalizations.of(context)!;
-    
+
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
     final double hintFontSize = width * 0.031;
@@ -133,22 +134,14 @@ class _LoginState extends State<Login> {
                 validator: validateEmail, // Calling the extracted function
               ),
               SizedBox(height: height * 0.025),
-              labeledTextField(
-                label: lang.password,
-                hintText: '••••••••',
-                controller: _passwordController,
-                obscureText: _obscurePassword,
-                width: width,
-                height: height,
-                validator: validatePassword,
-                suffixIcon: IconButton(
-                  icon: Icon(
-                    _obscurePassword ? Icons.visibility_off : Icons.visibility,
-                    color: Colors.grey,
-                  ),
-                  onPressed: () =>
-                      setState(() => _obscurePassword = !_obscurePassword),
-                ),
+              passwordTextfield(
+                _passwordController,
+                _obscurePassword,
+                () => setState(() => _obscurePassword = !_obscurePassword),
+                height,
+                width,
+                width * 0.031,
+                lang.password,
               ),
               SizedBox(height: height * 0.04),
               continueJourneyButton(
@@ -171,7 +164,7 @@ class _LoginState extends State<Login> {
                         : Navigator.pushAndRemoveUntil(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Footer(user: user!),
+                              builder: (context) => Footer(user: user),
                             ),
                             (route) => false,
                           );

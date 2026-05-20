@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/root/themes.dart';
+import 'package:flutter_application_1/todb.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_application_1/firebase_options.dart';
 import 'package:flutter_application_1/root/app_root.dart';
@@ -13,11 +14,13 @@ void main() async {
   print("firebase initialized successfully");
 
   await Supabase.initialize(
-    url: "https://prfwmjmedmfqauccmqgv.supabase.co/rest/v1/",
+    url: "https://prfwmjmedmfqauccmqgv.supabase.co",
     anonKey:
         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InByZndtam1lZG1mcWF1Y2NtcWd2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg1MTMzMzYsImV4cCI6MjA5NDA4OTMzNn0.jsjwvtfHm1lJTmCzfU5veQIowdNSqy7jufdxmwcdIxU",
   );
   print("supabase initialized successfully");
+
+  await todb();
 
   runApp(
     MultiProvider(

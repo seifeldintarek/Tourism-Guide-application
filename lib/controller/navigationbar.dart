@@ -7,7 +7,9 @@ import 'package:flutter_application_1/screens/search/search.dart';
 import 'package:flutter_application_1/screens/settings/hamburger.dart';
 
 class Footer extends StatefulWidget {
-  const Footer({super.key, required AppUser user});
+  const Footer({super.key, required this.user});
+
+  final AppUser user;
 
   @override
   State<Footer> createState() => _FooterState();
@@ -16,16 +18,17 @@ class Footer extends StatefulWidget {
 class _FooterState extends State<Footer> {
   int index = 0;
 
-  final List<Widget> screens = [
-    Container(),
-    const Search_Screen(),
-    Container(),
-    const Profile(),
-  ];
-
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
+
+    final List<Widget> screens = [
+      Container(),
+      const Search_Screen(),
+      Container(),
+      Profile(user: widget.user),
+    ];
+
     return Scaffold(
       appBar: AppBar(iconTheme: const IconThemeData(color: Color(0xFF463427))),
       drawer: Hamburger(),
