@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/default.dart';
 import 'package:flutter_application_1/models/User.dart';
+import 'package:flutter_application_1/screens/home/home.dart';
 import 'package:flutter_application_1/screens/profile/profile.dart';
 import 'package:flutter_application_1/screens/search/search.dart';
 import 'package:flutter_application_1/screens/settings/hamburger.dart';
@@ -22,7 +23,7 @@ class _FooterState extends State<Footer> {
     double height = MediaQuery.of(context).size.height;
 
     final List<Widget> screens = [
-      Container(),
+      Home_Screen(user: widget.user),
       const Search_Screen(),
       Container(),
       Profile(user: widget.user),
