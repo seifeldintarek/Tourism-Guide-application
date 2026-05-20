@@ -9,9 +9,9 @@ import 'package:flutter_auto_size_text/flutter_auto_size_text.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Category_Screen extends StatefulWidget {
-  Category_Screen({super.key});
+  Category_Screen({super.key, required this.category});
 
-  // Category category = Category(name: , quote: quote, img: img);
+  Category category;
 
   @override
   State<Category_Screen> createState() => _Category_ScreenState();
@@ -41,12 +41,8 @@ class _Category_ScreenState extends State<Category_Screen> {
           children: [
             Stack(
               children: [
-                // mainImage(context, widget.category.img, height),
-                mainImage(
-                  context,
-                  "https://prfwmjmedmfqauccmqgv.supabase.co/storage/v1/object/public/pictures/places/heirtage/Philae%20Temple/gallery%20images/island-of-philae.jpg",
-                  height,
-                ),
+                mainImage(context, widget.category.img, height),
+
                 Positioned(
                   bottom: height * .02,
                   left: width * .02,
@@ -70,8 +66,7 @@ class _Category_ScreenState extends State<Category_Screen> {
               margin: EdgeInsets.only(bottom: height * .03),
               padding: EdgeInsets.symmetric(horizontal: width * .1),
               child: AutoSizeText(
-                // widget.category.quote,
-                lang.heritagequote,
+                widget.category.quote,
                 style: GoogleFonts.ebGaramond(
                   color: Color(0xFF4A4A46),
                   fontSize: 18,
@@ -96,9 +91,8 @@ class _Category_ScreenState extends State<Category_Screen> {
             ),
             SizedBox(height: height * .02),
 
-            // ListView.builder(itemBuilder: ())
             FutureBuilder<List<Place>>(
-              future: fetchCategoryPlaces("heritage"),
+              future: fetchCategoryPlaces(widget.category.name),
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
                   return const Center(
