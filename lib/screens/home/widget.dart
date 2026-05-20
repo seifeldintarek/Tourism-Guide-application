@@ -6,6 +6,7 @@ import 'package:flutter_application_1/models/Category.dart';
 import 'package:flutter_application_1/models/Place.dart';
 import 'package:flutter_application_1/screens/category/category.dart';
 import 'package:flutter_application_1/screens/home/service.dart';
+import 'package:flutter_application_1/screens/info/info.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 Widget header({
@@ -120,7 +121,12 @@ Widget featuredPlaces({
     scrollDirection: .horizontal,
     itemCount: places.length,
     itemBuilder: (context, i) {
-      return placeHomeCard(place: places[i], height: height, width: width);
+      return placeHomeCard(
+        place: places[i],
+        height: height,
+        width: width,
+        context: context,
+      );
     },
     separatorBuilder: (context, index) => SizedBox(width: width * .03),
   );
@@ -130,125 +136,135 @@ Widget placeHomeCard({
   required Place place,
   required double height,
   required double width,
+  required BuildContext context,
 }) {
-  return Container(
-    width: width * .6,
-    decoration: BoxDecoration(
-      color: Default.backgroundColor,
-      borderRadius: BorderRadius.circular(14),
+  return InkWell(
+    onTap: () => Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => Infoscreen(place: place)),
     ),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Stack(
-          children: [
-            ClipRRect(
-              borderRadius: const BorderRadius.vertical(
-                top: Radius.circular(14),
-              ),
-              child: CachedNetworkImage(
-                imageUrl: place.mainImage,
-                height: height * .28,
-                width: double.infinity,
-                fit: BoxFit.cover,
-              ),
-            ),
-
-            Positioned(
-              top: 10,
-              right: 10,
-              child: Container(
-                padding: const EdgeInsets.all(6),
-                decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(.35),
-                  shape: BoxShape.circle,
-                ),
-                child: const Icon(
-                  Icons.bookmark_border,
-                  size: 18,
-                  color: Colors.white,
-                ),
-              ),
-            ),
-          ],
-        ),
-
-        Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: width * .03,
-            vertical: height * .01,
-          ),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+    child: Container(
+      width: width * .6,
+      decoration: BoxDecoration(
+        color: Default.backgroundColor,
+        borderRadius: BorderRadius.circular(14),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Stack(
             children: [
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      place.name,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(
-                        fontFamily: "Serif",
-                        fontSize: 13,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black87,
-                      ),
-                    ),
-
-                    const SizedBox(height: 4),
-
-                    Row(
-                      children: [
-                        const Icon(
-                          Icons.location_on_outlined,
-                          size: 12,
-                          color: Colors.black54,
-                        ),
-                        const SizedBox(width: 3),
-                        Expanded(
-                          child: Text(
-                            "${place.location}, ${place.city}",
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                            style: const TextStyle(
-                              fontSize: 11,
-                              color: Colors.black54,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
+              ClipRRect(
+                borderRadius: const BorderRadius.vertical(
+                  top: Radius.circular(14),
+                ),
+                child: CachedNetworkImage(
+                  imageUrl: place.mainImage,
+                  height: height * .28,
+                  width: double.infinity,
+                  fit: BoxFit.cover,
                 ),
               ),
 
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                decoration: BoxDecoration(
-                  color: const Color(0xFFF4DDC8),
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Row(
-                  children: [
-                    const Icon(Icons.star, size: 11, color: Colors.brown),
-                    const SizedBox(width: 3),
-                    Text(
-                      place.rating.toString(),
-                      style: const TextStyle(
-                        fontSize: 10,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.brown,
-                      ),
-                    ),
-                  ],
+              Positioned(
+                top: 10,
+                right: 10,
+                child: Container(
+                  padding: const EdgeInsets.all(6),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(.35),
+                    shape: BoxShape.circle,
+                  ),
+                  child: const Icon(
+                    Icons.bookmark_border,
+                    size: 18,
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ],
           ),
-        ),
-      ],
+
+          Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: width * .03,
+              vertical: height * .01,
+            ),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        place.name,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(
+                          fontFamily: "Serif",
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black87,
+                        ),
+                      ),
+
+                      const SizedBox(height: 4),
+
+                      Row(
+                        children: [
+                          const Icon(
+                            Icons.location_on_outlined,
+                            size: 12,
+                            color: Colors.black54,
+                          ),
+                          const SizedBox(width: 3),
+                          Expanded(
+                            child: Text(
+                              "${place.location}, ${place.city}",
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: const TextStyle(
+                                fontSize: 11,
+                                color: Colors.black54,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 8,
+                    vertical: 4,
+                  ),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFF4DDC8),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Row(
+                    children: [
+                      const Icon(Icons.star, size: 11, color: Colors.brown),
+                      const SizedBox(width: 3),
+                      Text(
+                        place.rating.toString(),
+                        style: const TextStyle(
+                          fontSize: 10,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.brown,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     ),
   );
 }

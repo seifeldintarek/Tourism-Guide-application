@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/default.dart';
 import 'package:flutter_application_1/l10n/app_localizations.dart';
 import 'package:flutter_application_1/models/Place.dart';
+import 'package:flutter_application_1/screens/info/info.dart';
 import 'package:flutter_application_1/screens/search/service.dart';
 
 Widget searchTextfield(
@@ -147,7 +148,12 @@ Widget buildPlaceCard(Place place) {
             color: Colors.grey,
             size: width * .06,
           ),
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Infoscreen(place: place)),
+            );
+          },
         ),
       );
     },
