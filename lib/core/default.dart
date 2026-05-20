@@ -88,7 +88,7 @@ class Default {
           title,
           style: const TextStyle(
             fontFamily: 'NotoSerif',
-            fontSize: 18,
+            fontSize: 17,
             fontWeight: FontWeight.bold,
             fontStyle: FontStyle.italic,
             color: NudePalette.textDark,

@@ -60,7 +60,7 @@ class _HamburgerState extends State<Hamburger> {
                 Navigator.pop(context); // close drawer first
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (_) => const Infoscreen()),
+                  MaterialPageRoute(builder: (_) => Infoscreen()),
                 );
               },
             ),
