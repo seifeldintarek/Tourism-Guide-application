@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/core/default.dart';
 import 'package:flutter_application_1/l10n/app_localizations.dart';
 import 'package:flutter_application_1/models/Place.dart';
 import 'package:flutter_application_1/screens/search/service.dart';
@@ -103,7 +104,7 @@ Widget buildPlaceCard(Place place) {
       return Container(
         margin: EdgeInsets.only(bottom: height * .015),
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: Color(0xFFE6DED4),
           borderRadius: BorderRadius.circular(width * .04),
         ),
         child: ListTile(
@@ -131,7 +132,11 @@ Widget buildPlaceCard(Place place) {
           ),
           title: Text(
             place.name,
-            style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
+            style: TextStyle(
+              fontSize: 15,
+              fontWeight: FontWeight.w600,
+              color: Default.textColor,
+            ),
           ),
           subtitle: Text(
             "${place.city} • ${place.startHr}:00–${place.endHr}:00",

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screens/category/category.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -10,6 +11,16 @@ class Profile extends StatefulWidget {
 class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Center(
+        child: TextButton(
+          onPressed: () => Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Category_Screen()),
+          ),
+          child: Text("go"),
+        ),
+      ),
+    );
   }
 }
