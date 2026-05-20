@@ -984,5 +984,15 @@
   "sohag": "Sohag",
   "@sohag": {
     "description": "Governorate name"
-  }
+  },
+
+  "goodmorning" : "Good Morning",
+  "discover" : "Discover",
+  "hidden": "hidden",
+  "treasures" : "treasures",
+
+  "errorgetingdata" : "Error fetching data",
+  "featuredplaces" : "Featured places",
+  "handpickedplaces" : "Hand-picked curation for your \njourney based on your city"
+
 }

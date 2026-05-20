@@ -828,4 +828,26 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get sohag => 'Sohag';
+
+  @override
+  String get goodmorning => 'Good Morning';
+
+  @override
+  String get discover => 'Discover';
+
+  @override
+  String get hidden => 'hidden';
+
+  @override
+  String get treasures => 'treasures';
+
+  @override
+  String get errorgetingdata => 'Error fetching data';
+
+  @override
+  String get featuredplaces => 'Featured places';
+
+  @override
+  String get handpickedplaces =>
+      'Hand-picked curation for your \njourney based on your city';
 }

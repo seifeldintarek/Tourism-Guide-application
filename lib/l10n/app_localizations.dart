@@ -1705,6 +1705,48 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Sohag'**
   String get sohag;
+
+  /// No description provided for @goodmorning.
+  ///
+  /// In en, this message translates to:
+  /// **'Good Morning'**
+  String get goodmorning;
+
+  /// No description provided for @discover.
+  ///
+  /// In en, this message translates to:
+  /// **'Discover'**
+  String get discover;
+
+  /// No description provided for @hidden.
+  ///
+  /// In en, this message translates to:
+  /// **'hidden'**
+  String get hidden;
+
+  /// No description provided for @treasures.
+  ///
+  /// In en, this message translates to:
+  /// **'treasures'**
+  String get treasures;
+
+  /// No description provided for @errorgetingdata.
+  ///
+  /// In en, this message translates to:
+  /// **'Error fetching data'**
+  String get errorgetingdata;
+
+  /// No description provided for @featuredplaces.
+  ///
+  /// In en, this message translates to:
+  /// **'Featured places'**
+  String get featuredplaces;
+
+  /// No description provided for @handpickedplaces.
+  ///
+  /// In en, this message translates to:
+  /// **'Hand-picked curation for your \njourney based on your city'**
+  String get handpickedplaces;
 }
 
 class _AppLocalizationsDelegate
