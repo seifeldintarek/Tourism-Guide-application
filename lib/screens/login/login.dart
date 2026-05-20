@@ -21,10 +21,7 @@ class _LoginState extends State<Login> {
 
   bool _obscurePassword = true;
 
-  // Added FormKey to manage validation state
   final _formKey = GlobalKey<FormState>();
-
-  String? _passwordError;
 
   @override
   void dispose() {
@@ -41,28 +38,6 @@ class _LoginState extends State<Login> {
     final width = MediaQuery.of(context).size.width;
     final double hintFontSize = width * 0.031;
 
-    InputDecoration buildInputDecoration({
-      required String hint,
-      String? errorText,
-      Widget? suffixIcon,
-    }) => InputDecoration(
-      filled: true,
-      fillColor: const Color(0xFFF2EDE6),
-      hintText: hint,
-      hintStyle: TextStyle(color: Colors.grey, fontSize: hintFontSize),
-      errorText: errorText,
-      errorStyle: TextStyle(fontSize: hintFontSize * 0.9),
-      suffixIcon: suffixIcon,
-      contentPadding: EdgeInsets.symmetric(
-        horizontal: width * 0.04,
-        vertical: height * 0.018,
-      ),
-      border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(12),
-        borderSide: BorderSide.none,
-      ),
-    );
-
     return Scaffold(
       backgroundColor: Default.backgroundColor,
       appBar: AppBar(
@@ -78,27 +53,28 @@ class _LoginState extends State<Login> {
             children: [
               Container(
                 width: double.infinity,
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 24,
-                  vertical: 32,
+                padding: EdgeInsets.symmetric(
+                  horizontal: width * 0.06,
+                  vertical: height * 0.04,
                 ),
-                child: const Text(
-                  "Menu",
+                child: Text(
+                  lang.menu,
                   style: TextStyle(
-                    fontSize: 26,
+                    fontSize: width * 0.065,
                     fontWeight: FontWeight.bold,
-                    color: Color(0xFF463427),
+                    color: const Color(0xFF463427),
                   ),
                 ),
               ),
               const Divider(height: 1, color: Color(0xFFD8CFC5)),
               ListTile(
+                contentPadding: EdgeInsets.symmetric(horizontal: width * 0.06),
                 leading: const Icon(Icons.language, color: Color(0xFF463427)),
-                title: const Text(
-                  "Change Language",
+                title: Text(
+                  lang.changeLanguage,
                   style: TextStyle(
-                    fontSize: 16,
-                    color: Color(0xFF463427),
+                    fontSize: width * 0.04,
+                    color: const Color(0xFF463427),
                     fontWeight: FontWeight.w500,
                   ),
                 ),
@@ -116,7 +92,6 @@ class _LoginState extends State<Login> {
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: width * 0.06),
-        // Wrapped the Column in a Form widget
         child: Form(
           key: _formKey,
           child: Column(
@@ -131,7 +106,7 @@ class _LoginState extends State<Login> {
                 controller: _emailController,
                 width: width,
                 height: height,
-                validator: validateEmail, // Calling the extracted function
+                validator: (value) => validateEmail(value, lang),
               ),
               SizedBox(height: height * 0.025),
               passwordTextfield(
@@ -140,8 +115,9 @@ class _LoginState extends State<Login> {
                 () => setState(() => _obscurePassword = !_obscurePassword),
                 height,
                 width,
-                width * 0.031,
+                hintFontSize,
                 lang.password,
+                lang,
               ),
               SizedBox(height: height * 0.04),
               continueJourneyButton(
@@ -149,7 +125,6 @@ class _LoginState extends State<Login> {
                 width,
                 height,
                 onPressed: () async {
-                  // Trigger form validation
                   if (_formKey.currentState!.validate()) {
                     AppUser? user = await loginUser(
                       context: context,
@@ -179,7 +154,7 @@ class _LoginState extends State<Login> {
                 ),
               ),
               SizedBox(height: height * 0.04),
-              orDivider(width, height),
+              orDivider(width, height, lang),
               SizedBox(height: height * 0.03),
               socialLoginButtons(context, width, height),
               SizedBox(height: height * 0.04),

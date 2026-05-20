@@ -24,7 +24,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get emailAddress => 'Email Address';
 
   @override
-  String get emailHint => 'e.g., journal@archive.com';
+  String get emailHint => 'Please enter your email';
+
+  @override
+  String get invalidEmailFormat => 'Invalid email format';
 
   @override
   String get password => 'Password';
@@ -370,6 +373,12 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get passwordHint => 'Edit your password';
+
+  @override
+  String get orContinueWith => 'OR CONTINUE WITH';
+
+  @override
+  String get enterPassword => 'Please enter your password';
 
   @override
   String get password8charserror => 'Password must be at least 8 characters';

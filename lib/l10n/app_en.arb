@@ -22,10 +22,11 @@
   "@emailAddress": {
     "description": "Noun/Word: Used as a label for the email input field."
   },
-  "emailHint": "e.g., journal@archive.com",
+  "emailHint": "Please enter your email",
   "@emailHint": {
     "description": "Sentence: Placeholder hint inside the email input field."
   },
+  "invalidEmailFormat": "Invalid email format",
   "password": "Password",
   "@password": {
     "description": "Noun/Word: Used as a label for the password input field."
@@ -396,7 +397,8 @@
   "@fullNameHint": {
     "description": "Hint or placeholder text for the full name input field (Name)"
   },
-
+  "orContinueWith": "OR CONTINUE WITH",
+"enterPassword": "Please enter your password",
   "password8charserror" : "Password must be at least 8 characters",
   "passwordcapitalerror" : "Add at least one capital letter",
   "passwordsmallerror" : "Add at least one small letter",

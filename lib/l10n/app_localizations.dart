@@ -137,8 +137,14 @@ abstract class AppLocalizations {
   /// Sentence: Placeholder hint inside the email input field.
   ///
   /// In en, this message translates to:
-  /// **'e.g., journal@archive.com'**
+  /// **'Please enter your email'**
   String get emailHint;
+
+  /// No description provided for @invalidEmailFormat.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid email format'**
+  String get invalidEmailFormat;
 
   /// Noun/Word: Used as a label for the password input field.
   ///
@@ -829,6 +835,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Edit your password'**
   String get passwordHint;
+
+  /// No description provided for @orContinueWith.
+  ///
+  /// In en, this message translates to:
+  /// **'OR CONTINUE WITH'**
+  String get orContinueWith;
+
+  /// No description provided for @enterPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter your password'**
+  String get enterPassword;
 
   /// No description provided for @password8charserror.
   ///

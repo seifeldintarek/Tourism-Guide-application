@@ -2,21 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/l10n/app_localizations.dart';
 import 'package:flutter_application_1/core/default.dart';
 
-String? validateEmail(String? value) {
+String? validateEmail(String? value, AppLocalizations lang) {
   if (value == null || value.isEmpty) {
-    return 'Please enter your email';
+    return lang.emailHint;
   }
   if (!RegExp(
     r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+",
   ).hasMatch(value)) {
-    return "Invalid email format";
+    return lang.invalidEmailFormat;
   }
   return null;
 }
 
-String? validatePassword(String? value) {
+String? validatePassword(String? value, AppLocalizations lang) {
   if (value == null || value.isEmpty) {
-    return 'Please enter your password';
+    return lang.enterPassword;
   }
 
   final hasUpper = RegExp(r'[A-Z]').hasMatch(value);
@@ -25,15 +25,15 @@ String? validatePassword(String? value) {
   final hasSpecial = RegExp(r'[^a-zA-Z0-9]').hasMatch(value);
 
   if (value.length < 8) {
-    return "Password must be at least 8 characters";
+    return lang.password8charserror;
   } else if (!hasUpper) {
-    return "Add at least one capital letter";
+    return lang.passwordcapitalerror;
   } else if (!hasLower) {
-    return "Add at least one small letter";
+    return lang.passwordsmallerror;
   } else if (!hasDigit) {
-    return "Add at least one number";
+    return lang.passwordnumbererror;
   } else if (!hasSpecial) {
-    return "Add at least one special character";
+    return lang.passwordspecialcharerror;
   }
 
   return null;
@@ -71,13 +71,14 @@ Widget loginHeader(BuildContext context, double width, double height) {
 }
 
 Widget passwordTextfield(
-  TextEditingController _passwordController,
-  bool _obscurePassword,
+  TextEditingController passwordController,
+  bool obscurePassword,
   VoidCallback onToggle,
   double height,
   double width,
   double hintFontSize,
   String label,
+  AppLocalizations lang,
 ) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
@@ -85,12 +86,12 @@ Widget passwordTextfield(
       Text(label, style: const TextStyle(fontSize: 14, color: Colors.black87)),
       SizedBox(height: height * 0.01),
       TextFormField(
-        controller: _passwordController,
-        obscureText: _obscurePassword,
-        validator: validatePassword,
+        controller: passwordController,
+        obscureText: obscurePassword,
+        validator: (value) => validatePassword(value, lang),
         autovalidateMode: AutovalidateMode.onUserInteraction,
         decoration: InputDecoration(
-          hintText: '••••••••',
+          hintText: lang.passwordHint,
           hintStyle: const TextStyle(color: Colors.black38),
           filled: true,
           fillColor: const Color(0xFFEDE4D8),
@@ -100,7 +101,7 @@ Widget passwordTextfield(
           ),
           suffixIcon: IconButton(
             icon: Icon(
-              _obscurePassword ? Icons.visibility_off : Icons.visibility,
+              obscurePassword ? Icons.visibility_off : Icons.visibility,
               color: Colors.black54,
             ),
             onPressed: onToggle,
@@ -141,8 +142,8 @@ Widget labeledTextField({
   bool obscureText = false,
   required double width,
   required double height,
-  String? Function(String?)? validator,// Accept validator
-  Widget? suffixIcon, 
+  String? Function(String?)? validator,
+  Widget? suffixIcon,
 }) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
@@ -150,10 +151,9 @@ Widget labeledTextField({
       Text(label, style: const TextStyle(fontSize: 14, color: Colors.black87)),
       SizedBox(height: height * 0.01),
       TextFormField(
-        // Changed to TextFormField for validation support
         controller: controller,
         obscureText: obscureText,
-        validator: validator, // Apply validator
+        validator: validator,
         decoration: InputDecoration(
           hintText: hintText,
           hintStyle: const TextStyle(color: Colors.black38),
@@ -198,15 +198,15 @@ Widget continueJourneyButton(
   );
 }
 
-Widget orDivider(double width, double height) {
+Widget orDivider(double width, double height, AppLocalizations lang) {
   return Row(
     children: [
       const Expanded(child: Divider(color: Colors.black26)),
       Padding(
         padding: EdgeInsets.symmetric(horizontal: width * 0.03),
-        child: const Text(
-          'OR CONTINUE WITH',
-          style: TextStyle(
+        child: Text(
+          lang.orContinueWith,
+          style: const TextStyle(
             fontSize: 11,
             letterSpacing: 1.5,
             color: Colors.black45,
