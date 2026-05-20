@@ -31,8 +31,15 @@ class TagChip extends StatelessWidget {
 
 class MainImageHeader extends StatelessWidget {
   final Place place;
+  final double height;
+  final double width;
 
-  const MainImageHeader({super.key, required this.place});
+  const MainImageHeader({
+    super.key,
+    required this.place,
+    required this.height,
+    required this.width,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -43,13 +50,13 @@ class MainImageHeader extends StatelessWidget {
           child: Image.network(
             place.mainImage,
             width: double.infinity,
-            height: 185,
+            height: height * .23,
             fit: BoxFit.cover,
           ),
         ),
         Positioned(
-          bottom: 12,
-          left: 12,
+          bottom: height * .015,
+          left: width * .03,
           child: Default.locationBadge(
             label: place.location,
             mapUrl: place.mapUrl,
@@ -68,9 +75,10 @@ class InfoBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.sizeOf(context).width;
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.all(14),
+      padding: EdgeInsets.all(width * .035),
       decoration: BoxDecoration(
         color: backgroundColor ?? const Color(0xFFE9E4DD),
         borderRadius: BorderRadius.circular(14),
@@ -82,15 +90,22 @@ class InfoBox extends StatelessWidget {
 
 class GalleryImage extends StatelessWidget {
   final String imagePath;
+  final double height;
+  final double width;
 
-  const GalleryImage({super.key, required this.imagePath});
+  const GalleryImage({
+    super.key,
+    required this.imagePath,
+    required this.height,
+    required this.width,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(right: 10),
-      width: 75,
-      height: 90,
+      margin: EdgeInsets.only(right: width * .025),
+      width: width * .19,
+      height: height * .11,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
         image: DecorationImage(

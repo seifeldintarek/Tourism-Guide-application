@@ -4,6 +4,7 @@ import 'package:flutter_application_1/core/default.dart';
 import 'package:flutter_application_1/l10n/app_localizations.dart';
 import 'package:flutter_application_1/models/Place.dart';
 import 'package:flutter_application_1/screens/info/service.dart';
+import 'package:intl/intl.dart';
 import 'widget.dart';
 
 class Infoscreen extends StatefulWidget {
@@ -57,45 +58,48 @@ class _InfoscreenState extends State<Infoscreen> {
   @override
   Widget build(BuildContext context) {
     final lang = AppLocalizations.of(context)!;
+    final locale = Localizations.localeOf(context).languageCode;
+    double height = MediaQuery.sizeOf(context).height,
+        width = MediaQuery.sizeOf(context).width;
 
     return Scaffold(
       backgroundColor: Default.backgroundColor,
       appBar: Default.archiveAppBar(context: context, title: ""),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        padding: EdgeInsets.symmetric(horizontal: width * .05),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            MainImageHeader(place: widget.place),
-            const SizedBox(height: 14),
+            MainImageHeader(place: widget.place, height: height, width: width),
+            SizedBox(height: height * .02),
 
             Text(
               widget.place.name,
-              style: const TextStyle(
-                fontFamily: 'NotoSerif',
+              style: TextStyle(
+                fontFamily: 'Serif',
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
                 color: Color(0xFF1D1C18),
                 height: 1.1,
               ),
             ),
-            const SizedBox(height: 6),
+            SizedBox(height: height * .01),
 
             Row(
               children: [
-                const Icon(Icons.star, color: Colors.amber, size: 15),
-                const SizedBox(width: 4),
+                Icon(Icons.star, color: Colors.amber, size: 15),
+                SizedBox(width: width * .005),
                 Text(
                   '${widget.place.rating}',
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 14,
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.normal,
                     fontFamily: 'WorkSans',
                   ),
                 ),
               ],
             ),
-            const SizedBox(height: 12),
+            SizedBox(height: height * .01),
 
             Wrap(
               spacing: 4,
@@ -104,17 +108,17 @@ class _InfoscreenState extends State<Infoscreen> {
                   .map((tag) => TagChip(label: tag))
                   .toList(),
             ),
-            const SizedBox(height: 14),
+            SizedBox(height: height * .02),
 
             InfoBox(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Default.sectionTitle(lang.about),
-                  const SizedBox(height: 8),
+                  SizedBox(height: height * .01),
                   Text(
                     widget.place.about,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontFamily: 'WorkSans',
                       height: 1.4,
                       color: Colors.black87,
@@ -124,16 +128,16 @@ class _InfoscreenState extends State<Infoscreen> {
                 ],
               ),
             ),
-            const SizedBox(height: 12),
+            SizedBox(height: height * .02),
 
             InfoBox(
-              backgroundColor: const Color(0xFF765943),
+              backgroundColor: Color(0xFF765943),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
                     lang.open,
-                    style: const TextStyle(
+                    style: TextStyle(
                       color: Colors.white70,
                       fontSize: 14,
                       fontFamily: 'WorkSans',
@@ -142,7 +146,7 @@ class _InfoscreenState extends State<Infoscreen> {
                   ),
                   Text(
                     "${widget.place.startHr} AM - ${widget.place.endHr} PM",
-                    style: const TextStyle(
+                    style: TextStyle(
                       color: Colors.white70,
                       fontSize: 14,
                       fontFamily: 'WorkSans',
@@ -152,7 +156,7 @@ class _InfoscreenState extends State<Infoscreen> {
                 ],
               ),
             ),
-            const SizedBox(height: 12),
+            SizedBox(height: height * .02),
 
             if (widget.place.ticketPriceEgyptian != null ||
                 widget.place.ticketPrice != null) ...[
@@ -161,25 +165,25 @@ class _InfoscreenState extends State<Infoscreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
-                      padding: const EdgeInsets.all(6),
+                      padding: EdgeInsets.all(width * .02),
                       decoration: BoxDecoration(
                         color: Colors.red.shade100,
                         borderRadius: BorderRadius.circular(8),
                       ),
-                      child: const Icon(
+                      child: Icon(
                         Icons.confirmation_number,
                         color: Colors.red,
                         size: 14,
                       ),
                     ),
-                    const SizedBox(width: 10),
+                    SizedBox(width: width * .03),
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
                             lang.starting,
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontSize: 14,
                               color: Colors.black54,
                               fontFamily: 'WorkSans',
@@ -187,21 +191,51 @@ class _InfoscreenState extends State<Infoscreen> {
                             ),
                           ),
                           if (widget.place.ticketPriceEgyptian != null)
-                            Text(
-                              '${lang.egyptian}: ${lang.egp} ${widget.place.ticketPriceEgyptian}',
-                              style: const TextStyle(
-                                fontSize: 14,
-                                fontFamily: 'WorkSans',
-                                fontWeight: FontWeight.bold,
+                            Text.rich(
+                              TextSpan(
+                                children: [
+                                  TextSpan(
+                                    text: '${lang.egyptian}: ',
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontFamily: 'WorkSans',
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  TextSpan(
+                                    text:
+                                        '${lang.egp} ${widget.place.ticketPriceEgyptian}',
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontFamily: 'WorkSans',
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
                           if (widget.place.ticketPrice != null)
-                            Text(
-                              '${lang.other}: ${lang.egp} ${widget.place.ticketPrice}',
-                              style: const TextStyle(
-                                fontSize: 14,
-                                fontFamily: 'WorkSans',
-                                fontWeight: FontWeight.bold,
+                            Text.rich(
+                              TextSpan(
+                                children: [
+                                  TextSpan(
+                                    text: '${lang.other}: ',
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontFamily: 'WorkSans',
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  TextSpan(
+                                    text:
+                                        '${lang.egp} ${widget.place.ticketPrice}',
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontFamily: 'WorkSans',
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
                         ],
@@ -210,14 +244,14 @@ class _InfoscreenState extends State<Infoscreen> {
                   ],
                 ),
               ),
-              const SizedBox(height: 16),
+              SizedBox(height: height * .02),
             ],
 
             Default.sectionTitle(
               lang.gallery,
               trailing: Text(
-                '${widget.place.galleryImages.length} ${lang.photos}',
-                style: const TextStyle(
+                '${NumberFormat('#', locale).format(widget.place.galleryImages.length)} ${lang.photos}',
+                style: TextStyle(
                   fontSize: 9,
                   fontFamily: 'WorkSans',
                   fontWeight: FontWeight.bold,
@@ -225,26 +259,32 @@ class _InfoscreenState extends State<Infoscreen> {
                 ),
               ),
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: height * .02),
 
             SizedBox(
-              height: 90,
+              height: height * .25,
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: widget.place.galleryImages
-                    .map((image) => GalleryImage(imagePath: image))
+                    .map(
+                      (image) => GalleryImage(
+                        imagePath: image,
+                        height: height,
+                        width: width,
+                      ),
+                    )
                     .toList(),
               ),
             ),
-            const SizedBox(height: 34),
+            SizedBox(height: height * .05),
 
             Default.Button(
               onPressed: _planMyVisit,
               child: lang.planMyVisit,
               width: double.infinity,
-              height: 44,
+              height: height * .06,
             ),
-            const SizedBox(height: 18),
+            SizedBox(height: height * .04),
           ],
         ),
       ),
