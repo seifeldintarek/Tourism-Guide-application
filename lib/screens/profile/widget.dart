@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/default.dart';
 import 'package:flutter_application_1/models/Place.dart';
 import 'package:flutter_application_1/screens/edit_profile/service.dart';
+import 'package:flutter_application_1/screens/info/info.dart';
 
 // ── Tab button ────────────────────────────────────────────────────────────────
 Widget buildTabButton({
@@ -138,13 +139,36 @@ Widget buildPlaceCard({required Place place, bool isBookmarked = false,required 
 }
 
 // ── Places list ───────────────────────────────────────────────────────────────
-Widget buildPlacesList({required List<Place> places, required double height, bool isBookmarked = false, required String id, required double width}) {
+Widget buildPlacesList({
+  required BuildContext context,
+  required List<Place> places,
+  required double height,
+  bool isBookmarked = false,
+  required String id,
+  required double width,
+}) {
   return ListView.separated(
     shrinkWrap: true,
     physics: const NeverScrollableScrollPhysics(),
     itemCount: places.length,
     separatorBuilder: (_, __) => SizedBox(height: height * 0.013),
-    itemBuilder: (_, index) => buildPlaceCard(place: places[index], isBookmarked: isBookmarked, id: id, width: width, height: height),
+    itemBuilder: (_, index) => GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (_) => Infoscreen(place: places[index]),
+          ),
+        );
+      },
+      child: buildPlaceCard(
+        place: places[index],
+        isBookmarked: isBookmarked,
+        id: id,
+        width: width,
+        height: height,
+      ),
+    ),
   );
 }
 

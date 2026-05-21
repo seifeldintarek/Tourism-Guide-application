@@ -57,6 +57,7 @@ class _ProfileState extends State<Profile> {
           return buildEmptyState(icon: emptyIcon, message: emptyMessage);
         }
         return buildPlacesList(
+          context: context,
           places: places,
           height: height,
           isBookmarked: isBookmarked,
