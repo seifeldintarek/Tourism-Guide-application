@@ -1,9 +1,69 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/default.dart';
-import 'package:flutter_application_1/models/Place.dart'; // add this
-import 'package:cached_network_image/cached_network_image.dart'; // add this if not there
+import 'package:flutter_application_1/models/Place.dart';
 
-Widget buildPlaceCard(Place place) { // now takes a Place directly
+// ── Tab button ────────────────────────────────────────────────────────────────
+Widget buildTabButton({
+  required String label,
+  required bool isSelected,
+  required double width,
+  required VoidCallback onTap,
+}) {
+  return GestureDetector(
+    onTap: onTap,
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          label,
+          style: TextStyle(
+            fontSize: 16,
+            fontWeight: isSelected ? FontWeight.bold : FontWeight.w400,
+            fontFamily: 'Times New Roman',
+            color: isSelected ? Colors.black87 : NudePalette.nudeBrown,
+          ),
+        ),
+        const SizedBox(height: 4),
+        AnimatedContainer(
+          duration: const Duration(milliseconds: 200),
+          height: 2,
+          width: isSelected ? width * 0.12 : 0,
+          decoration: BoxDecoration(
+            color: Default.buttonColor,
+            borderRadius: BorderRadius.circular(2),
+          ),
+        ),
+      ],
+    ),
+  );
+}
+
+// ── Empty state ───────────────────────────────────────────────────────────────
+Widget buildEmptyState({required IconData icon, required String message}) {
+  return Padding(
+    padding: const EdgeInsets.symmetric(vertical: 32),
+    child: Center(
+      child: Column(
+        children: [
+          Icon(icon, size: 48, color: NudePalette.nudeBrown),
+          const SizedBox(height: 12),
+          Text(
+            message,
+            style: TextStyle(
+              fontSize: 14,
+              fontFamily: 'Times New Roman',
+              color: NudePalette.nudeBrown,
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+// ── Place card ────────────────────────────────────────────────────────────────
+Widget buildPlaceCard(Place place, {bool isBookmarked = false}) {
   return Container(
     padding: const EdgeInsets.all(12),
     decoration: BoxDecoration(
@@ -35,7 +95,7 @@ Widget buildPlaceCard(Place place) { // now takes a Place directly
             ),
           ),
         ),
-        SizedBox(width: 16),
+        const SizedBox(width: 16),
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -48,7 +108,7 @@ Widget buildPlaceCard(Place place) { // now takes a Place directly
                   color: NudePalette.nudeDark,
                 ),
               ),
-              SizedBox(height: 4),
+              const SizedBox(height: 4),
               Text(
                 '${place.location.toUpperCase()} • ${place.city.toUpperCase()}',
                 style: TextStyle(
@@ -62,7 +122,10 @@ Widget buildPlaceCard(Place place) { // now takes a Place directly
           ),
         ),
         IconButton(
-          icon: Icon(Icons.bookmark_border, color: NudePalette.nudeDark),
+          icon: Icon(
+            isBookmarked ? Icons.bookmark : Icons.bookmark_border,
+            color: isBookmarked ? Default.buttonColor : NudePalette.nudeDark,
+          ),
           onPressed: () {},
         ),
       ],
@@ -70,7 +133,18 @@ Widget buildPlaceCard(Place place) { // now takes a Place directly
   );
 }
 
-// Helper widget to build the individual numbers and labels
+// ── Places list ───────────────────────────────────────────────────────────────
+Widget buildPlacesList({required List<Place> places, required double height, bool isBookmarked = false,}) {
+  return ListView.separated(
+    shrinkWrap: true,
+    physics: const NeverScrollableScrollPhysics(),
+    itemCount: places.length,
+    separatorBuilder: (_, __) => SizedBox(height: height * 0.013),
+    itemBuilder: (_, index) => buildPlaceCard(places[index], isBookmarked: isBookmarked),
+  );
+}
+
+// ── Stat column ───────────────────────────────────────────────────────────────
 Widget buildStatColumn(String number, String label, double height) {
   return Column(
     children: [
