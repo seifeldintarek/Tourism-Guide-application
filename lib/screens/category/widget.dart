@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_application_1/l10n/app_localizations.dart';
 import 'package:flutter_application_1/models/Place.dart';
+import 'package:flutter_application_1/screens/info/info.dart';
 import 'package:flutter_application_1/screens/search/widget.dart';
 
 Widget mainImage(BuildContext context, String? url, double height) {
@@ -36,7 +37,17 @@ Widget getCategoryPlaces(
       physics: const NeverScrollableScrollPhysics(),
       itemCount: places.length,
       itemBuilder: (context, i) {
-        return buildPlaceCard(places[i]);
+        final place = places[i];
+
+        return InkWell(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Infoscreen(place: place)),
+            );
+          },
+          child: buildPlaceCard(place),
+        );
       },
     ),
   );

@@ -54,8 +54,8 @@ class Place {
       galleryImages: List<String>.from(map['galleryImages'] ?? []),
       mapUrl: map['mapUrl'] ?? '',
       bookingUrl: map['bookingUrl'] ?? '',
-      startHr: map['starthr'],
-      endHr: map['endHr'],
+      startHr: map['starthr'] ?? 0,
+      endHr: map['endHr'] ?? 0,
     );
   }
 

@@ -31,15 +31,19 @@ void showLogoutDialog(BuildContext context) {
         ),
         ElevatedButton(
           onPressed: () {
-            Navigator.pop(ctx);
-            // TODO: clear session / tokens, then navigate to Login
+            // 1. Clear session / tokens here
+
+            // 2. Navigate using the dialog's own context ('ctx').
+            // The predicate (route) => false removes ALL previous routes, 
+            // which automatically closes this dialog for you.
             Navigator.pushAndRemoveUntil(
-              context,
-              MaterialPageRoute(builder: (_) => const Login()),
+              ctx, 
+              MaterialPageRoute(builder: (_) => Login()),
               (route) => false,
             );
           },
           style: ElevatedButton.styleFrom(
+        // ... rest of your styling
             backgroundColor: Colors.redAccent,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(width * 0.03),

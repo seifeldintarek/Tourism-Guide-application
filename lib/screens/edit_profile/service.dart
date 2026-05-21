@@ -6,6 +6,27 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/default.dart';
 import 'package:flutter_application_1/models/User.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:flutter_application_1/models/Place.dart';
+
+
+Stream<List<Place>> savedPlacesStream(String userId) {
+  return FirebaseFirestore.instance
+      .collection('users')
+      .doc(userId)
+      .collection('saved')
+      .snapshots()
+      .map((snapshot) =>
+          snapshot.docs.map((doc) => Place.fromMap(doc.data())).toList());
+}
+
+Future<void> deleteSavedPlace(String userId, String placeId) async {
+  await FirebaseFirestore.instance
+      .collection('users')
+      .doc(userId)
+      .collection('saved')
+      .doc(placeId)
+      .delete();
+}
 
 Future<String?> _getAuthUid(BuildContext context) async {
   final currentUser = FirebaseAuth.instance.currentUser;
