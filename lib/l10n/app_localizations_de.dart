@@ -18,6 +18,14 @@ class AppLocalizationsDe extends AppLocalizations {
   String get invalidcreds => 'Invalid email or password';
 
   @override
+  String get passresetemailsent =>
+      'Password reset email sent. Check your inbox.';
+
+  @override
+  String get forgetpassemailhint =>
+      'Enter your email address and we will send you a link to reset your password.';
+
+  @override
   String get welcomeBackExplorer => 'Willkommen zurück, Entdecker';
 
   @override
@@ -43,6 +51,9 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get forgotPassword => 'Passwort vergessen?';
+
+  @override
+  String get resetpassword => 'Reset password';
 
   @override
   String get or => 'oder';
@@ -948,4 +959,10 @@ class AppLocalizationsDe extends AppLocalizations {
   @override
   String get handpickedplaces =>
       'Hand-picked curation for your \njourney based on your city';
+
+  @override
+  String get nosavedplaces => 'You haven\'t saved any places yet';
+
+  @override
+  String get novisitedplaces => 'You haven\'t visited any places yet';
 }

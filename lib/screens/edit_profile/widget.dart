@@ -50,10 +50,6 @@ InputDecoration buildInputDecoration({
   ),
 );
 
-// ── Text fields ───────────────────────────────────────────────────────────────
-
-/// General-purpose text field.
-/// [errorText] is optional — pass it to show an inline validation message.
 Widget customTextField({
   required TextEditingController controller,
   required String hint,
@@ -79,66 +75,6 @@ Widget customTextField({
   );
 }
 
-/// Password field with show/hide toggle.
-Widget passwordTextfield(
-  TextEditingController controller,
-  String? errorText,
-  bool obscurePassword,
-  VoidCallback onToggle,
-  double height,
-  double width,
-  double hintFontSize,
-) {
-  return TextField(
-    controller: controller,
-    obscureText: obscurePassword,
-    decoration: buildInputDecoration(
-      height: height,
-      width: width,
-      hintFontSize: hintFontSize,
-      hint: "Enter your password",
-      errorText: errorText,
-      suffixIcon: IconButton(
-        icon: Icon(obscurePassword ? Icons.visibility_off : Icons.visibility),
-        onPressed: onToggle,
-      ),
-    ),
-  );
-}
-
-/// Confirm-password field with show/hide toggle.
-Widget confirmPasswordTextfield(
-  TextEditingController controller,
-  String? errorText,
-  bool obscureConfirmPassword,
-  VoidCallback onToggle,
-  double height,
-  double width,
-  double hintFontSize,
-) {
-  return TextField(
-    controller: controller,
-    obscureText: obscureConfirmPassword,
-    decoration: buildInputDecoration(
-      height: height,
-      width: width,
-      hintFontSize: hintFontSize,
-      hint: "Confirm your password",
-      errorText: errorText,
-      suffixIcon: IconButton(
-        icon: Icon(
-          obscureConfirmPassword ? Icons.visibility_off : Icons.visibility,
-        ),
-        onPressed: onToggle,
-      ),
-    ),
-  );
-}
-
-// ── Dropdown ──────────────────────────────────────────────────────────────────
-
-// ── Place card ────────────────────────────────────────────────────────────────
-
 Widget buildPlaceCard({
   required String title,
   required String category,
@@ -157,7 +93,6 @@ Widget buildPlaceCard({
       padding: EdgeInsets.all(screenWidth * 0.025),
       child: Row(
         children: [
-          // Delete icon
           IconButton(
             icon: Icon(
               Icons.delete_outline,
@@ -169,8 +104,6 @@ Widget buildPlaceCard({
             constraints: const BoxConstraints(),
           ),
           SizedBox(width: screenWidth * 0.02),
-
-          // Image thumbnail
           ClipRRect(
             borderRadius: BorderRadius.circular(screenWidth * 0.02),
             child: Image.network(
@@ -181,8 +114,6 @@ Widget buildPlaceCard({
             ),
           ),
           SizedBox(width: screenWidth * 0.03),
-
-          // Text content
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -219,30 +150,22 @@ Future<String?> captureORselect(BuildContext context, String uid) async {
     context: context,
     builder: (BuildContext ctx) {
       return AlertDialog(
-        title: const Text("Choose Image Source"),
+        title: const Text('Choose Image Source'),
         actionsAlignment: MainAxisAlignment.spaceEvenly,
         actions: [
           TextButton(
             onPressed: () async {
               final path = await captureImageFromCamera();
-              if (ctx.mounted) {
-                Navigator.of(
-                  ctx,
-                ).pop(path); // only pops after capture completes
-              }
+              if (ctx.mounted) Navigator.of(ctx).pop(path);
             },
-            child: const Text("Capture"),
+            child: const Text('Capture'),
           ),
           TextButton(
             onPressed: () async {
               final path = await selectImageFromGallery();
-              if (ctx.mounted) {
-                Navigator.of(
-                  ctx,
-                ).pop(path); // only pops after gallery selection
-              }
+              if (ctx.mounted) Navigator.of(ctx).pop(path);
             },
-            child: const Text("Select"),
+            child: const Text('Select'),
           ),
         ],
       );
@@ -252,18 +175,15 @@ Future<String?> captureORselect(BuildContext context, String uid) async {
 
 Future<String?> selectImageFromGallery() async {
   if (await Permission.photos.request().isDenied) {
-    // The user denied permission
-    openAppSettings(); // optional: open app settings
+    openAppSettings();
   }
   final picker = ImagePicker();
   final XFile? picked = await picker.pickImage(source: ImageSource.gallery);
-
-  return picked?.path; // returns null if user cancels
+  return picked?.path;
 }
 
 Future<String?> captureImageFromCamera() async {
   final picker = ImagePicker();
   final XFile? captured = await picker.pickImage(source: ImageSource.camera);
-
-  return captured?.path; // returns null if cancelled
+  return captured?.path;
 }
