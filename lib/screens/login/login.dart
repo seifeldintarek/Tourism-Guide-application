@@ -174,7 +174,7 @@ class _LoginState extends State<Login> {
                   MaterialPageRoute(builder: (context) => SignUp()),
                 ),
               ),
-              SizedBox(height: height * 0.04),
+              SizedBox(height: height * 0.08),
             ],
           ),
         ),
