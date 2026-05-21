@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/default.dart';
 import 'package:flutter_application_1/models/Place.dart';
+import 'package:flutter_application_1/models/User.dart';
+import 'package:flutter_application_1/screens/home/service.dart';
 
 class TagChip extends StatelessWidget {
   final String label;
@@ -29,7 +31,7 @@ class TagChip extends StatelessWidget {
   }
 }
 
-class MainImageHeader extends StatelessWidget {
+class MainImageHeader extends StatefulWidget {
   final Place place;
   final double height;
   final double width;
@@ -42,24 +44,115 @@ class MainImageHeader extends StatelessWidget {
   });
 
   @override
+  State<MainImageHeader> createState() => _MainImageHeaderState();
+}
+
+class _MainImageHeaderState extends State<MainImageHeader> {
+  bool? _isSaved;
+  String? _userId;
+  bool _toggling = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _init();
+  }
+
+  Future<void> _init() async {
+    final AppUser? user = await AppUser.loadFromCache();
+    if (!mounted) return;
+
+    if (user == null) {
+      setState(() { _userId = null; _isSaved = false; });
+      return;
+    }
+
+    _userId = user.id;
+    final bool saved = await SavedPlacesService.isPlaceSaved(
+      userId: user.id,
+      placeId: widget.place.id,
+    );
+    if (mounted) setState(() => _isSaved = saved);
+  }
+
+  Future<void> _onBookmarkTap() async {
+    if (_toggling || _userId == null) return;
+    _toggling = true;
+
+    final bool optimistic = !(_isSaved ?? false);
+    setState(() => _isSaved = optimistic);
+
+    final bool confirmed = await SavedPlacesService.toggleSave(
+      userId: _userId!,
+      place: widget.place,
+    );
+
+    if (mounted && confirmed != optimistic) {
+      setState(() => _isSaved = confirmed);
+    }
+    _toggling = false;
+  }
+
+  Widget _buildBookmarkIcon() {
+    if (_isSaved == null) {
+      return const SizedBox(
+        width: 18, height: 18,
+        child: CircularProgressIndicator(strokeWidth: 1.8, color: Colors.white),
+      );
+    }
+    return AnimatedSwitcher(
+      duration: const Duration(milliseconds: 220),
+      child: Icon(
+        _isSaved! ? Icons.bookmark : Icons.bookmark_border,
+        key: ValueKey(_isSaved),
+        size: 22,
+        color: _isSaved! ? Colors.brown : Colors.white,
+      ),
+    );
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         ClipRRect(
           borderRadius: BorderRadius.circular(14),
           child: Image.network(
-            place.mainImage,
+            widget.place.mainImage,
             width: double.infinity,
-            height: height * .23,
+            height: widget.height * .23,
             fit: BoxFit.cover,
           ),
         ),
+
+        // Location badge (bottom-left, unchanged)
         Positioned(
-          bottom: height * .015,
-          left: width * .03,
+          bottom: widget.height * .015,
+          left: widget.width * .03,
           child: Default.locationBadge(
-            label: place.location,
-            mapUrl: place.mapUrl,
+            label: widget.place.location,
+            mapUrl: widget.place.mapUrl,
+          ),
+        ),
+
+        // Bookmark button (top-right, mirrors PlaceHomeCard)
+        Positioned(
+          top: 10,
+          right: 10,
+          child: GestureDetector(
+            onTap: _onBookmarkTap,
+            child: AnimatedContainer(
+              duration: const Duration(milliseconds: 220),
+              curve: Curves.easeOut,
+              padding: const EdgeInsets.all(6),
+              decoration: BoxDecoration(
+                color: (_isSaved ?? false)
+                    ? Colors.white.withOpacity(.85)
+                    : Colors.white.withOpacity(.35),
+                shape: BoxShape.circle,
+              ),
+              child: _buildBookmarkIcon(),
+            ),
           ),
         ),
       ],

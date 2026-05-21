@@ -5,6 +5,7 @@ import 'package:flutter_application_1/screens/home/home.dart';
 import 'package:flutter_application_1/screens/profile/profile.dart';
 import 'package:flutter_application_1/screens/search/search.dart';
 import 'package:flutter_application_1/screens/settings/hamburger.dart';
+import 'package:flutter_application_1/screens/saved_screen/saved_screen.dart';
 
 class Footer extends StatefulWidget {
   const Footer({super.key, required this.user});
@@ -25,7 +26,7 @@ class _FooterState extends State<Footer> {
     final List<Widget> screens = [
       Home_Screen(user: widget.user),
       const Search_Screen(),
-      Container(),
+      SavedPlacesScreen(),
       Profile(user: widget.user),
     ];
 
@@ -70,9 +71,9 @@ class _FooterState extends State<Footer> {
               label: 'Search',
             ),
             NavigationDestination(
-              icon: Icon(Icons.favorite_border),
-              selectedIcon: Icon(Icons.favorite),
-              label: 'Favorites',
+              icon: Icon(Icons.bookmark_border),
+              selectedIcon: Icon(Icons.bookmark),
+              label: 'Saved',
             ),
             NavigationDestination(
               icon: Icon(Icons.person_outline),
