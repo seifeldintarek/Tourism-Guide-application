@@ -806,9 +806,141 @@
   "description": "name of elmalky"
 },
 
+
 "aboutelmalky": "A legendary Egyptian dessert destination known for rice pudding, ice cream, and classic sweets.",
 "@aboutelmalky": {
   "description": "about description of elmalky"
+},
+
+"mosquehassanname": "Mosque-Madrassa Sultan Hassan",
+"@mosquehassanname":{
+  "description": "name of mosquesultanhassan "
+},
+"aboutmosquehassan": "A magnificent Mamluk mosque famous for its grand Islamic architecture and historic spiritual atmosphere.",
+"@aboutmosquehassan":{
+  "description": "about description of mosquesultanhassan "
+},
+"salaheldinlocation": "Salah El-Din Square, Islamic Cairo",
+"@salaheldinlocation":{
+  "description": "location of mosquesultanhassan "
+},
+"mosquehassantag0": "Islamic",
+"@mosquehassantag0":{
+  "description": "first tag of mosquesultanhassan "
+},
+"mosquehassantag1": "Mamluk",
+"@mosquehassantag1":{
+  "description": "second tag of mosquesultanhassan "
+},
+"mosquehassantag2": "Architecture",
+"@mosquehassantag2":{
+  "description": "third tag of mosquesultanhassan "
+},
+
+
+"saintcatherinemonasteryname": "Saint Catherine's Monastery",
+"@saintcatherinemonasteryname":{
+  "description": "name of saintcatherinemonasteryname "
+},
+"aboutsaintcatherinemonastery": "One of the oldest Christian monasteries in the world, located at the foot of Mount Sinai.",
+"@aboutsaintcatherinemonastery":{
+  "description": "about description of saintcatherinemonasteryname "
+},
+"mountsinailocation": "Mount Sinai, Saint Catherine",
+"@mountsinailocation":{
+  "description": "location of saintcatherinemonasteryname "
+},
+"southsinai": "South Sinai",
+"@southsinai":{
+  "description": "city of saintcatherinemonasteryname "
+},
+"saintcatherinemonasterytag0": "Christian",
+"@saintcatherinemonasterytag0":{
+  "description": "first tag of saintcatherinemonasteryname "
+},
+"saintcatherinemonasterytag1": "Monastery",
+"@saintcatherinemonasterytag1":{
+  "description": "second tag of saintcatherinemonasteryname "
+},
+"saintcatherinemonasterytag2": "Pilgrimage",
+"@saintcatherinemonasterytag2":{
+  "description": "third tag of saintcatherinemonasteryname "
+},
+
+
+
+"mosqueofalhakimbiamrallahname": "Mosque of al-Hakim bi-Amr Allah",
+"@mosqueofalhakimbiamrallahname":{
+  "description": "name of mosqueofalhakimbiamrallah "
+},
+"aboutmosqueofalhakimbiamrallah": "A historic Fatimid mosque known for its impressive architecture and spiritual importance in Islamic Cairo.",
+"@aboutmosqueofalhakimbiamrallah":{
+  "description": "about description  of mosqueofalhakimbiamrallah "
+},
+"almuizzstreetlocation": "Al-Muizz Street, Cairo",
+"@almuizzstreetlocation":{
+  "description": "location of mosqueofalhakimbiamrallah "
+},
+"mosqueofalhakimbiamrallahtag0": "Fatimid",
+"@mosqueofalhakimbiamrallahtag0":{
+  "description": "first tag of mosqueofalhakimbiamrallah "
+},
+"mosqueofalhakimbiamrallahtag1": "Mosque",
+"@mosqueofalhakimbiamrallahtag1":{
+  "description": "second tag of mosqueofalhakimbiamrallah "
+},
+"mosqueofalhakimbiamrallahtag2": "Heritage",
+"@mosqueofalhakimbiamrallahtag2":{
+  "description": "third tag of mosqueofalhakimbiamrallah "
+},
+
+
+
+"alhusseinmosquename": "Al-Hussein Mosque",
+"@alhusseinmosquename":{
+  "description": "name of alhusseinmosque "
+},
+"aboutalhusseinmosque": "One of Egypt’s most sacred mosques, located in the heart of historic Islamic Cairo near Khan El Khalili.",
+"@aboutalhusseinmosque":{
+  "description": "about description of alhusseinmosque "
+},
+"khanelkhalililocation": "Khan El Khalili, Islamic Cairo",
+"@khanelkhalililocation":{
+  "description": "location of alhusseinmosque "
+},
+"alhusseinmosquetag0": "Islamic",
+"@alhusseinmosquetag0":{
+  "description": "first tag of alhusseinmosque "
+},
+"alhusseinmosquetag1": "Heritage",
+"@alhusseinmosquetag1":{
+  "description": "second tag of alhusseinmosque "
+},
+"alhusseinmosquetag2": "Landmark",
+"@alhusseinmosquetag2":{
+  "description": "third tag of alhusseinmosque "
+},
+
+
+"alrifaimosquename": "Al-Rifa'i Mosque",
+"@alrifaimosquename":{
+  "description": "name of alhusseinmosque "
+},
+"aboutalrifaimosque": "A royal mosque famous for its Ottoman-inspired architecture and the tombs of Egyptian royals.",
+"@aboutalrifaimosque":{
+  "description": "about description of alhusseinmosque "
+},
+"alrifaimosquetag0": "Ottoman",
+"@alrifaimosquetag0":{
+  "description": "first of alhusseinmosque "
+},
+"alrifaimosquetag1": "Mosque",
+"@alrifaimosquetag1":{
+  "description": "second tag of alhusseinmosque "
+},
+"alrifaimosquetag2": "Architecture",
+"@alrifaimosquetag2":{
+  "description": "thrid tag of alhusseinmosque "
 },
 
 "elmoattam": "ElMoattam",

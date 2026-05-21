@@ -160,6 +160,44 @@ extension LocalizationHelper on AppLocalizations {
       'qena': qena,
       'northSinai': northSinai,
       'sohag': sohag,
+
+
+  'mosquehassanname': mosquehassanname,
+      'aboutmosquehassan': aboutmosquehassan,
+      'salaheldinlocation': salaheldinlocation,
+      'mosquehassantag0': mosquehassantag0,
+      'mosquehassantag1': mosquehassantag1,
+      'mosquehassantag2': mosquehassantag2,
+
+      'saintcatherinemonasteryname': saintcatherinemonasteryname,
+      'aboutsaintcatherinemonastery': aboutsaintcatherinemonastery,
+      'mountsinailocation': mountsinailocation,
+      'southsinai': southsinai,
+      'saintcatherinemonasterytag0': saintcatherinemonasterytag0,
+      'saintcatherinemonasterytag1': saintcatherinemonasterytag1,
+      'saintcatherinemonasterytag2': saintcatherinemonasterytag2,
+
+      'mosqueofalhakimbiamrallahname': mosqueofalhakimbiamrallahname,
+      'aboutmosqueofalhakimbiamrallah': aboutmosqueofalhakimbiamrallah,
+      'almuizzstreetlocation': almuizzstreetlocation,
+      'mosqueofalhakimbiamrallahtag0': mosqueofalhakimbiamrallahtag0,
+      'mosqueofalhakimbiamrallahtag1': mosqueofalhakimbiamrallahtag1,
+      'mosqueofalhakimbiamrallahtag2': mosqueofalhakimbiamrallahtag2,
+
+      'alhusseinmosquename': alhusseinmosquename,
+      'aboutalhusseinmosque': aboutalhusseinmosque,
+      'khanelkhalililocation': khanelkhalililocation,
+      'alhusseinmosquetag0': alhusseinmosquetag0,
+      'alhusseinmosquetag1': alhusseinmosquetag1,
+      'alhusseinmosquetag2': alhusseinmosquetag2,
+
+      'alrifaimosquename': alrifaimosquename,
+      'aboutalrifaimosque': aboutalrifaimosque,
+      'salaheldinlocationn': salaheldinlocation,
+      'alrifaimosquetag0': alrifaimosquetag0,
+      'alrifaimosquetag1': alrifaimosquetag1,
+      'alrifaimosquetag2': alrifaimosquetag2,
+
     };
 
     return map[key] ?? key;
