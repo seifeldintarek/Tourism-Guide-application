@@ -135,6 +135,8 @@ extension LocalizationHelper on AppLocalizations {
       'government': government,
       'selectgov': selectgov,
 
+      'cairo': cairo,
+      'giza': giza,
       'alexandria': alexandria,
       'dakahlia': dakahlia,
       'redSea': redSea,
@@ -161,8 +163,7 @@ extension LocalizationHelper on AppLocalizations {
       'northSinai': northSinai,
       'sohag': sohag,
 
-
-  'mosquehassanname': mosquehassanname,
+      'mosquehassanname': mosquehassanname,
       'aboutmosquehassan': aboutmosquehassan,
       'salaheldinlocation': salaheldinlocation,
       'mosquehassantag0': mosquehassantag0,
@@ -197,7 +198,6 @@ extension LocalizationHelper on AppLocalizations {
       'alrifaimosquetag0': alrifaimosquetag0,
       'alrifaimosquetag1': alrifaimosquetag1,
       'alrifaimosquetag2': alrifaimosquetag2,
-
     };
 
     return map[key] ?? key;

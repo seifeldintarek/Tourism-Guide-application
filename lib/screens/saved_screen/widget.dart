@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/l10n/app_localizations.dart';
 import 'package:flutter_application_1/models/Place.dart';
+import 'package:flutter_application_1/root/themes.dart';
 import 'package:flutter_application_1/screens/info/info.dart';
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -7,7 +9,7 @@ import 'package:flutter_application_1/screens/info/info.dart';
 // ─────────────────────────────────────────────────────────────────────────────
 
 class PlaceCard extends StatelessWidget {
-  final Place  place;
+  final Place place;
   final double thumbSize;
   final double bodyFontSize;
   final double labelFontSize;
@@ -22,17 +24,15 @@ class PlaceCard extends StatelessWidget {
     required this.smallGap,
   });
 
-  // "location, city" — matches what Place stores
-  String get _subtitle => '${place.location} • ${place.city}';
-
   @override
   Widget build(BuildContext context) {
+    final lang = AppLocalizations.of(context)!;
     return Material(
-      color:        Colors.white,
+      color: Colors.white,
       borderRadius: BorderRadius.circular(16),
       child: InkWell(
-        borderRadius:   BorderRadius.circular(16),
-        splashColor:    const Color(0xFFE8E0D8),
+        borderRadius: BorderRadius.circular(16),
+        splashColor: const Color(0xFFE8E0D8),
         highlightColor: const Color(0xFFF0EBE5),
         onTap: () => Navigator.push(
           context,
@@ -41,7 +41,7 @@ class PlaceCard extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.symmetric(
             horizontal: thumbSize * 0.15,
-            vertical:   thumbSize * 0.15,
+            vertical: thumbSize * 0.15,
           ),
           child: Row(
             children: [
@@ -56,25 +56,25 @@ class PlaceCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      place.name,
+                      lang.getByKey(place.name),
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(
-                        fontSize:      bodyFontSize * 1.15,
-                        fontWeight:    FontWeight.w700,
-                        color:         const Color(0xFF1A1A1A),
-                        height:        1.25,
+                        fontSize: bodyFontSize * 1.15,
+                        fontWeight: FontWeight.w700,
+                        color: const Color(0xFF1A1A1A),
+                        height: 1.25,
                         letterSpacing: -0.1,
                       ),
                     ),
                     SizedBox(height: smallGap * 0.6),
                     Text(
-                      _subtitle,
+                      '${lang.getByKey(place.location)} • ${lang.getByKey(place.city)}',
                       style: TextStyle(
-                        fontSize:   labelFontSize,
+                        fontSize: labelFontSize,
                         fontWeight: FontWeight.w400,
-                        color:      const Color(0xFF8A8582),
-                        height:     1.3,
+                        color: const Color(0xFF8A8582),
+                        height: 1.3,
                       ),
                     ),
                   ],
@@ -87,7 +87,7 @@ class PlaceCard extends StatelessWidget {
                 child: Icon(
                   Icons.chevron_right_rounded,
                   color: const Color(0xFFBBB5AF),
-                  size:  bodyFontSize * 1.6,
+                  size: bodyFontSize * 1.6,
                 ),
               ),
             ],
@@ -106,18 +106,14 @@ class PlaceThumbnail extends StatelessWidget {
   final String imageUrl;
   final double size;
 
-  const PlaceThumbnail({
-    super.key,
-    required this.imageUrl,
-    required this.size,
-  });
+  const PlaceThumbnail({super.key, required this.imageUrl, required this.size});
 
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(size * 0.18),
       child: SizedBox(
-        width:  size,
+        width: size,
         height: size,
         child: imageUrl.isNotEmpty
             ? Image.network(
@@ -133,27 +129,23 @@ class PlaceThumbnail extends StatelessWidget {
   }
 
   Widget _shimmer() => Container(
-        color: const Color(0xFFE8E0D8),
-        child: const Center(
-          child: SizedBox(
-            width:  16,
-            height: 16,
-            child:  CircularProgressIndicator(
-              strokeWidth: 1.5,
-              color:       Color(0xFFC4945A),
-            ),
-          ),
+    color: const Color(0xFFE8E0D8),
+    child: const Center(
+      child: SizedBox(
+        width: 16,
+        height: 16,
+        child: CircularProgressIndicator(
+          strokeWidth: 1.5,
+          color: Color(0xFFC4945A),
         ),
-      );
+      ),
+    ),
+  );
 
   Widget _fallback() => Container(
-        color: const Color(0xFFD4C5B5),
-        child: Icon(
-          Icons.place_rounded,
-          color: Colors.white70,
-          size:  size * 0.45,
-        ),
-      );
+    color: const Color(0xFFD4C5B5),
+    child: Icon(Icons.place_rounded, color: Colors.white70, size: size * 0.45),
+  );
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -178,16 +170,16 @@ class EmptyPlacesView extends StatelessWidget {
         children: [
           Icon(
             Icons.bookmark_border_rounded,
-            size:  bodyFontSize * 4,
+            size: bodyFontSize * 4,
             color: const Color(0xFFCCC5BC),
           ),
           const SizedBox(height: 12),
           Text(
             'No saved places yet',
             style: TextStyle(
-              fontSize:   bodyFontSize * 1.15,
+              fontSize: bodyFontSize * 1.15,
               fontWeight: FontWeight.w600,
-              color:      const Color(0xFF8A8582),
+              color: const Color(0xFF8A8582),
             ),
           ),
           const SizedBox(height: 6),
@@ -195,7 +187,7 @@ class EmptyPlacesView extends StatelessWidget {
             'Places you save will appear here.',
             style: TextStyle(
               fontSize: labelFontSize,
-              color:    const Color(0xFFAEA9A4),
+              color: const Color(0xFFAEA9A4),
             ),
           ),
         ],
@@ -212,11 +204,7 @@ class ErrorPlacesView extends StatelessWidget {
   final double bodyFontSize;
   final VoidCallback? onRetry;
 
-  const ErrorPlacesView({
-    super.key,
-    required this.bodyFontSize,
-    this.onRetry,
-  });
+  const ErrorPlacesView({super.key, required this.bodyFontSize, this.onRetry});
 
   @override
   Widget build(BuildContext context) {
@@ -226,16 +214,16 @@ class ErrorPlacesView extends StatelessWidget {
         children: [
           Icon(
             Icons.wifi_off_rounded,
-            size:  bodyFontSize * 4,
+            size: bodyFontSize * 4,
             color: const Color(0xFFCCC5BC),
           ),
           const SizedBox(height: 12),
           Text(
             'Something went wrong',
             style: TextStyle(
-              fontSize:   bodyFontSize * 1.15,
+              fontSize: bodyFontSize * 1.15,
               fontWeight: FontWeight.w600,
-              color:      const Color(0xFF8A8582),
+              color: const Color(0xFF8A8582),
             ),
           ),
           if (onRetry != null) ...[

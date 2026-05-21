@@ -122,6 +122,18 @@ abstract class AppLocalizations {
   /// **'Invalid email or password'**
   String get invalidcreds;
 
+  /// No description provided for @passresetemailsent.
+  ///
+  /// In en, this message translates to:
+  /// **'Password reset email sent. Check your inbox.'**
+  String get passresetemailsent;
+
+  /// No description provided for @forgetpassemailhint.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your email address and we will send you a link to reset your password.'**
+  String get forgetpassemailhint;
+
   /// Sentence: Greeting message.
   ///
   /// In en, this message translates to:
@@ -175,6 +187,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Forgot password?'**
   String get forgotPassword;
+
+  /// No description provided for @resetpassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset password'**
+  String get resetpassword;
 
   /// Word: Divider text.
   ///
@@ -1933,6 +1951,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Hand-picked curation for your \njourney based on your city'**
   String get handpickedplaces;
+
+  /// No description provided for @nosavedplaces.
+  ///
+  /// In en, this message translates to:
+  /// **'You haven\'t saved any places yet'**
+  String get nosavedplaces;
+
+  /// No description provided for @novisitedplaces.
+  ///
+  /// In en, this message translates to:
+  /// **'You haven\'t visited any places yet'**
+  String get novisitedplaces;
 }
 
 class _AppLocalizationsDelegate

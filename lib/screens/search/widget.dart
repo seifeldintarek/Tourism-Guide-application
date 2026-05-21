@@ -159,7 +159,7 @@ Widget buildPlaceCard(Place place, {Place? originalPlace}) {
             ),
           ),
           title: Text(
-            place.name,
+            lang.getByKey(place.name),
             style: TextStyle(
               fontSize: 15,
               fontWeight: FontWeight.w600,

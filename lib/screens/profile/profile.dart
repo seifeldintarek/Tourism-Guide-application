@@ -150,16 +150,14 @@ class _ProfileState extends State<Profile> {
                               _buildPlacesTab(
                                 stream: visitedPlacesStream(user.id),
                                 emptyIcon: Icons.explore_outlined,
-                                emptyMessage:
-                                    "You haven't visited any places yet",
+                                emptyMessage: lang.novisitedplaces,
                                 height: height,
                               )
                             else
                               _buildPlacesTab(
                                 stream: savedPlacesStream(user.id),
                                 emptyIcon: Icons.bookmark_border,
-                                emptyMessage:
-                                    "You haven't saved any places yet",
+                                emptyMessage: lang.nosavedplaces,
                                 height: height,
                                 isBookmarked: true,
                               ),
