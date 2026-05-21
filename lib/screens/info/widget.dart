@@ -65,14 +65,17 @@ class _MainImageHeaderState extends State<MainImageHeader> {
     if (!mounted) return;
 
     if (user == null) {
-      setState(() { _userId = null; _isSaved = false; });
+      setState(() {
+        _userId = null;
+        _isSaved = false;
+      });
       return;
     }
 
     _userId = user.id;
     final bool saved = await SavedPlacesService.isPlaceSaved(
       userId: user.id,
-      placeId: widget.place.id,
+      placeId: widget.place.name.toLowerCase(),
     );
     if (mounted) setState(() => _isSaved = saved);
   }
@@ -98,7 +101,8 @@ class _MainImageHeaderState extends State<MainImageHeader> {
   Widget _buildBookmarkIcon() {
     if (_isSaved == null) {
       return const SizedBox(
-        width: 18, height: 18,
+        width: 18,
+        height: 18,
         child: CircularProgressIndicator(strokeWidth: 1.8, color: Colors.white),
       );
     }

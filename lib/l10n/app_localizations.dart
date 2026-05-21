@@ -332,10 +332,16 @@ abstract class AppLocalizations {
   /// **'VISITED'**
   String get visited;
 
-  /// Label for number of saved places (Word)
+  /// No description provided for @save.
   ///
   /// In en, this message translates to:
   /// **'Save'**
+  String get save;
+
+  /// Label for number of saved places (Word)
+  ///
+  /// In en, this message translates to:
+  /// **'Saved'**
   String get saved;
 
   /// Label for number of reviews (Word)
@@ -1483,186 +1489,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Desserts'**
   String get elmalkytag2;
-
-  /// name of mosquesultanhassan
-  ///
-  /// In en, this message translates to:
-  /// **'Mosque-Madrassa Sultan Hassan'**
-  String get mosquehassanname;
-
-  /// about description of mosquesultanhassan
-  ///
-  /// In en, this message translates to:
-  /// **'A magnificent Mamluk mosque famous for its grand Islamic architecture and historic spiritual atmosphere.'**
-  String get aboutmosquehassan;
-
-  /// location of mosquesultanhassan
-  ///
-  /// In en, this message translates to:
-  /// **'Salah El-Din Square, Islamic Cairo'**
-  String get salaheldinlocation;
-
-  /// first tag of mosquesultanhassan
-  ///
-  /// In en, this message translates to:
-  /// **'Islamic'**
-  String get mosquehassantag0;
-
-  /// second tag of mosquesultanhassan
-  ///
-  /// In en, this message translates to:
-  /// **'Mamluk'**
-  String get mosquehassantag1;
-
-  /// third tag of mosquesultanhassan
-  ///
-  /// In en, this message translates to:
-  /// **'Architecture'**
-  String get mosquehassantag2;
-
-  /// name of saintcatherinemonasteryname
-  ///
-  /// In en, this message translates to:
-  /// **'Saint Catherine\'s Monastery'**
-  String get saintcatherinemonasteryname;
-
-  /// about description of saintcatherinemonasteryname
-  ///
-  /// In en, this message translates to:
-  /// **'One of the oldest Christian monasteries in the world, located at the foot of Mount Sinai.'**
-  String get aboutsaintcatherinemonastery;
-
-  /// location of saintcatherinemonasteryname
-  ///
-  /// In en, this message translates to:
-  /// **'Mount Sinai, Saint Catherine'**
-  String get mountsinailocation;
-
-  /// city of saintcatherinemonasteryname
-  ///
-  /// In en, this message translates to:
-  /// **'South Sinai'**
-  String get southsinai;
-
-  /// first tag of saintcatherinemonasteryname
-  ///
-  /// In en, this message translates to:
-  /// **'Christian'**
-  String get saintcatherinemonasterytag0;
-
-  /// second tag of saintcatherinemonasteryname
-  ///
-  /// In en, this message translates to:
-  /// **'Monastery'**
-  String get saintcatherinemonasterytag1;
-
-  /// third tag of saintcatherinemonasteryname
-  ///
-  /// In en, this message translates to:
-  /// **'Pilgrimage'**
-  String get saintcatherinemonasterytag2;
-
-  /// name of mosqueofalhakimbiamrallah
-  ///
-  /// In en, this message translates to:
-  /// **'Mosque of al-Hakim bi-Amr Allah'**
-  String get mosqueofalhakimbiamrallahname;
-
-  /// about description  of mosqueofalhakimbiamrallah
-  ///
-  /// In en, this message translates to:
-  /// **'A historic Fatimid mosque known for its impressive architecture and spiritual importance in Islamic Cairo.'**
-  String get aboutmosqueofalhakimbiamrallah;
-
-  /// location of mosqueofalhakimbiamrallah
-  ///
-  /// In en, this message translates to:
-  /// **'Al-Muizz Street, Cairo'**
-  String get almuizzstreetlocation;
-
-  /// first tag of mosqueofalhakimbiamrallah
-  ///
-  /// In en, this message translates to:
-  /// **'Fatimid'**
-  String get mosqueofalhakimbiamrallahtag0;
-
-  /// second tag of mosqueofalhakimbiamrallah
-  ///
-  /// In en, this message translates to:
-  /// **'Mosque'**
-  String get mosqueofalhakimbiamrallahtag1;
-
-  /// third tag of mosqueofalhakimbiamrallah
-  ///
-  /// In en, this message translates to:
-  /// **'Heritage'**
-  String get mosqueofalhakimbiamrallahtag2;
-
-  /// name of alhusseinmosque
-  ///
-  /// In en, this message translates to:
-  /// **'Al-Hussein Mosque'**
-  String get alhusseinmosquename;
-
-  /// about description of alhusseinmosque
-  ///
-  /// In en, this message translates to:
-  /// **'One of Egypt’s most sacred mosques, located in the heart of historic Islamic Cairo near Khan El Khalili.'**
-  String get aboutalhusseinmosque;
-
-  /// location of alhusseinmosque
-  ///
-  /// In en, this message translates to:
-  /// **'Khan El Khalili, Islamic Cairo'**
-  String get khanelkhalililocation;
-
-  /// first tag of alhusseinmosque
-  ///
-  /// In en, this message translates to:
-  /// **'Islamic'**
-  String get alhusseinmosquetag0;
-
-  /// second tag of alhusseinmosque
-  ///
-  /// In en, this message translates to:
-  /// **'Heritage'**
-  String get alhusseinmosquetag1;
-
-  /// third tag of alhusseinmosque
-  ///
-  /// In en, this message translates to:
-  /// **'Landmark'**
-  String get alhusseinmosquetag2;
-
-  /// name of alhusseinmosque
-  ///
-  /// In en, this message translates to:
-  /// **'Al-Rifa\'i Mosque'**
-  String get alrifaimosquename;
-
-  /// about description of alhusseinmosque
-  ///
-  /// In en, this message translates to:
-  /// **'A royal mosque famous for its Ottoman-inspired architecture and the tombs of Egyptian royals.'**
-  String get aboutalrifaimosque;
-
-  /// first of alhusseinmosque
-  ///
-  /// In en, this message translates to:
-  /// **'Ottoman'**
-  String get alrifaimosquetag0;
-
-  /// second tag of alhusseinmosque
-  ///
-  /// In en, this message translates to:
-  /// **'Mosque'**
-  String get alrifaimosquetag1;
-
-  /// thrid tag of alhusseinmosque
-  ///
-  /// In en, this message translates to:
-  /// **'Architecture'**
-  String get alrifaimosquetag2;
 
   /// No description provided for @menu.
   ///

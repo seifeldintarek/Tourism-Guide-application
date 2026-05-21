@@ -20,7 +20,7 @@ class Profile extends StatefulWidget {
 
 class _ProfileState extends State<Profile> {
   int _selectedTab = 0; // 0 = Visited, 1 = Saved
-  int _visitedCount = 0;  // add this
+  int _visitedCount = 0; // add this
   int _savedCount = 0;
   Widget _buildPlacesTab({
     required Stream<List<Place>> stream,
@@ -56,12 +56,17 @@ class _ProfileState extends State<Profile> {
         if (places.isEmpty) {
           return buildEmptyState(icon: emptyIcon, message: emptyMessage);
         }
-        return buildPlacesList(places: places, height: height, isBookmarked: isBookmarked, id: widget.user.id, width: MediaQuery.of(context).size.width);
+        return buildPlacesList(
+          places: places,
+          height: height,
+          isBookmarked: isBookmarked,
+          id: widget.user.id,
+          width: MediaQuery.of(context).size.width,
+        );
       },
     );
   }
 
- 
   @override
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
@@ -72,7 +77,6 @@ class _ProfileState extends State<Profile> {
     return StreamBuilder<AppUser>(
       stream: userStream(widget.user.id),
       builder: (context, snapshot) {
-        
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const Scaffold(
             body: Center(child: CircularProgressIndicator()),
@@ -91,23 +95,6 @@ class _ProfileState extends State<Profile> {
 
         return Scaffold(
           backgroundColor: Default.backgroundColor,
-          appBar: AppBar(
-            actions: [
-              IconButton(
-                icon: Icon(Icons.edit, color: Default.buttonColor),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (_) => EditProfile(user: user),
-                    ),
-                  );
-                },
-              ),
-            ],
-            centerTitle: true,
-          ),
-
           body: ScrollConfiguration(
             behavior: const ScrollBehavior().copyWith(overscroll: false),
             child: SingleChildScrollView(
@@ -162,14 +149,16 @@ class _ProfileState extends State<Profile> {
                               _buildPlacesTab(
                                 stream: visitedPlacesStream(user.id),
                                 emptyIcon: Icons.explore_outlined,
-                                emptyMessage: "You haven't visited any places yet",
+                                emptyMessage:
+                                    "You haven't visited any places yet",
                                 height: height,
                               )
                             else
                               _buildPlacesTab(
                                 stream: savedPlacesStream(user.id),
                                 emptyIcon: Icons.bookmark_border,
-                                emptyMessage: "You haven't saved any places yet",
+                                emptyMessage:
+                                    "You haven't saved any places yet",
                                 height: height,
                                 isBookmarked: true,
                               ),
@@ -204,7 +193,8 @@ class _ProfileState extends State<Profile> {
                             radius: 60,
                             backgroundColor: Colors.grey.shade200,
                             child: ClipOval(
-                              child: (user.profilePictureUrl != null &&
+                              child:
+                                  (user.profilePictureUrl != null &&
                                       user.profilePictureUrl!.isNotEmpty)
                                   ? CachedNetworkImage(
                                       imageUrl: user.profilePictureUrl!,
@@ -258,7 +248,9 @@ class _ProfileState extends State<Profile> {
 
                         Container(
                           margin: EdgeInsets.symmetric(horizontal: width * 0.1),
-                          padding: EdgeInsets.symmetric(vertical: height * 0.02),
+                          padding: EdgeInsets.symmetric(
+                            vertical: height * 0.02,
+                          ),
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(16),
@@ -273,13 +265,21 @@ class _ProfileState extends State<Profile> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              buildStatColumn(_savedCount.toString(), lang.saved, height * 0.003),
+                              buildStatColumn(
+                                _savedCount.toString(),
+                                lang.saved,
+                                height * 0.003,
+                              ),
                               Container(
                                 height: height * 0.03,
                                 width: width * 0.004,
                                 color: Colors.grey.withOpacity(0.3),
                               ),
-                              buildStatColumn(_visitedCount.toString(), lang.visited, height * 0.003),
+                              buildStatColumn(
+                                _visitedCount.toString(),
+                                lang.visited,
+                                height * 0.003,
+                              ),
                             ],
                           ),
                         ),

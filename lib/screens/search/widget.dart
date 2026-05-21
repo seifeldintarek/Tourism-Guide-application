@@ -124,6 +124,8 @@ Widget searchTextfield(
 Widget buildPlaceCard(Place place, {Place? originalPlace}) {
   return LayoutBuilder(
     builder: (context, constraints) {
+      final locale = Localizations.localeOf(context).languageCode;
+      final lang = AppLocalizations.of(context)!;
       final width = MediaQuery.of(context).size.width;
       final height = MediaQuery.of(context).size.height;
 
@@ -165,7 +167,7 @@ Widget buildPlaceCard(Place place, {Place? originalPlace}) {
             ),
           ),
           subtitle: Text(
-            "${place.city} • ${place.startHr}:00–${place.endHr}:00",
+            "${lang.getByKey(place.city)} • ${place.startHr}:00–${place.endHr}:00",
             style: TextStyle(fontSize: 13, color: Colors.grey.shade500),
           ),
           trailing: Icon(

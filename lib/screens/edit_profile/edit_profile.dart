@@ -420,75 +420,75 @@ class _EditProfileState extends State<EditProfile> {
             SizedBox(height: height * 0.03),
 
             // ── Manage Saved Places ──────────────────────────────────────────
-Row(
-  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-  children: [
-    buildLabel(lang.manageSavedPlaces, 15),
-    TextButton(
-      onPressed: () {},
-      child: Text(
-        'EDIT SAVED',
-        style: TextStyle(
-          color: Default.buttonColor,
-          fontSize: 11,
-          fontWeight: FontWeight.bold,
-          letterSpacing: 0.5,
-        ),
-      ),
-    ),
-  ],
-),
-SizedBox(height: height * 0.01),
-
-StreamBuilder<List<Place>>(
-  stream: savedPlacesStream(_currentUser.id),
-  builder: (context, snapshot) {
-    if (snapshot.connectionState == ConnectionState.waiting) {
-      return Center(child: CircularProgressIndicator());
-    }
-
-    final places = snapshot.data ?? [];
-
-    if (places.isEmpty) {
-      return Padding(
-        padding: EdgeInsets.symmetric(vertical: height * 0.03),
-        child: Center(
-          child: Text(
-            "No saved places yet",
-            style: TextStyle(
-              color: NudePalette.nudeBrown,
-              fontFamily: 'Times New Roman',
-              fontSize: 13,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                buildLabel(lang.manageSavedPlaces, 15),
+                TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    'EDIT SAVED',
+                    style: TextStyle(
+                      color: Default.buttonColor,
+                      fontSize: 11,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 0.5,
+                    ),
+                  ),
+                ),
+              ],
             ),
-          ),
-        ),
-      );
-    }
+            SizedBox(height: height * 0.01),
 
-    return ListView.separated(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      itemCount: places.length,
-      separatorBuilder: (_, __) => SizedBox(height: height * 0.01),
-      itemBuilder: (context, index) {
-        final place = places[index];
-        return buildPlaceCard(
-          title: place.name,
-          category: place.category.toUpperCase(),
-          location: place.city.toUpperCase(),
-          imageUrl: place.mainImage,
-          screenWidth: width,
-          screenHeight: height,
-          onDelete: () async {
-            await deleteSavedPlace(_currentUser.id, place.id);
-          },
-        );
-      },
-    );
-  },
-),
+            StreamBuilder<List<Place>>(
+              stream: savedPlacesStream(_currentUser.id),
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return Center(child: CircularProgressIndicator());
+                }
 
-SizedBox(height: height * 0.02),
+                final places = snapshot.data ?? [];
+
+                if (places.isEmpty) {
+                  return Padding(
+                    padding: EdgeInsets.symmetric(vertical: height * 0.03),
+                    child: Center(
+                      child: Text(
+                        "No saved places yet",
+                        style: TextStyle(
+                          color: NudePalette.nudeBrown,
+                          fontFamily: 'Times New Roman',
+                          fontSize: 13,
+                        ),
+                      ),
+                    ),
+                  );
+                }
+
+                return ListView.separated(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemCount: places.length,
+                  separatorBuilder: (_, __) => SizedBox(height: height * 0.01),
+                  itemBuilder: (context, index) {
+                    final place = places[index];
+                    return buildPlaceCard(
+                      title: place.name,
+                      category: place.category.toUpperCase(),
+                      location: place.city.toUpperCase(),
+                      imageUrl: place.mainImage,
+                      screenWidth: width,
+                      screenHeight: height,
+                      onDelete: () async {
+                        await deleteSavedPlace(_currentUser.id, place.id);
+                      },
+                    );
+                  },
+                );
+              },
+            ),
+
+            SizedBox(height: height * 0.02),
 
             // ── Action buttons ───────────────────────────────────────────────
             Row(

@@ -72,13 +72,11 @@ class SavedPlacesService {
   /// Returns `[]` when empty, `null` on error.
   static Future<List<Place>?> getSavedPlaces(String userId) async {
     try {
-      final snapshot = await _savedCol(userId)
-          .orderBy('savedAt', descending: true)
-          .get();
+      final snapshot = await _savedCol(
+        userId,
+      ).orderBy('savedAt', descending: true).get();
 
-      return snapshot.docs
-          .map((doc) => Place.fromMap(doc.data()))
-          .toList();
+      return snapshot.docs.map((doc) => Place.fromMap(doc.data())).toList();
     } catch (e) {
       debugPrint('[SavedPlacesService] getSavedPlaces error: $e');
       return null;
@@ -143,11 +141,13 @@ class SavedPlacesService {
     required String userId,
     required Place place,
   }) async {
-    final bool alreadySaved =
-        await isPlaceSaved(userId: userId, placeId: place.id);
+    final bool alreadySaved = await isPlaceSaved(
+      userId: userId,
+      placeId: place.name,
+    );
 
     if (alreadySaved) {
-      await unsavePlace(userId: userId, placeId: place.id);
+      await unsavePlace(userId: userId, placeId: place.name);
       return false;
     } else {
       await savePlace(userId: userId, place: place);

@@ -4,10 +4,12 @@ import 'package:flutter_application_1/core/default.dart';
 import 'package:flutter_application_1/l10n/app_localizations.dart';
 import 'package:flutter_application_1/models/Category.dart';
 import 'package:flutter_application_1/models/Place.dart';
+import 'package:flutter_application_1/root/themes.dart';
 import 'package:flutter_application_1/screens/category/category.dart';
 import 'package:flutter_application_1/screens/home/service.dart';
 import 'package:flutter_application_1/screens/info/info.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart';
 
 Widget header({
   required double width,
@@ -138,6 +140,9 @@ Widget placeHomeCard({
   required double width,
   required BuildContext context,
 }) {
+  final lang = AppLocalizations.of(context)!;
+  final locale = Localizations.localeOf(context).languageCode;
+
   return InkWell(
     onTap: () => Navigator.push(
       context,
@@ -198,7 +203,7 @@ Widget placeHomeCard({
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        place.name,
+                        lang.getByKey(place.name),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: const TextStyle(
@@ -221,7 +226,7 @@ Widget placeHomeCard({
                           const SizedBox(width: 3),
                           Expanded(
                             child: Text(
-                              "${place.location}, ${place.city}",
+                              "${lang.getByKey(place.location)}, ${lang.getByKey(place.city)}",
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
                               style: const TextStyle(
@@ -250,7 +255,7 @@ Widget placeHomeCard({
                       const Icon(Icons.star, size: 11, color: Colors.brown),
                       const SizedBox(width: 3),
                       Text(
-                        place.rating.toString(),
+                        NumberFormat('#.#', locale).format(place.rating),
                         style: const TextStyle(
                           fontSize: 10,
                           fontWeight: FontWeight.bold,

@@ -123,6 +123,9 @@ class AppLocalizationsEs extends AppLocalizations {
   String get visited => 'VISITADOS';
 
   @override
+  String get save => 'Save';
+
+  @override
   String get saved => 'GUARDADOS';
 
   @override
@@ -717,101 +720,6 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get elmalkytag2 => 'Desserts';
-
-  @override
-  String get mosquehassanname => 'Mosque-Madrassa Sultan Hassan';
-
-  @override
-  String get aboutmosquehassan =>
-      'A magnificent Mamluk mosque famous for its grand Islamic architecture and historic spiritual atmosphere.';
-
-  @override
-  String get salaheldinlocation => 'Salah El-Din Square, Islamic Cairo';
-
-  @override
-  String get mosquehassantag0 => 'Islamic';
-
-  @override
-  String get mosquehassantag1 => 'Mamluk';
-
-  @override
-  String get mosquehassantag2 => 'Architecture';
-
-  @override
-  String get saintcatherinemonasteryname => 'Saint Catherine\'s Monastery';
-
-  @override
-  String get aboutsaintcatherinemonastery =>
-      'One of the oldest Christian monasteries in the world, located at the foot of Mount Sinai.';
-
-  @override
-  String get mountsinailocation => 'Mount Sinai, Saint Catherine';
-
-  @override
-  String get southsinai => 'South Sinai';
-
-  @override
-  String get saintcatherinemonasterytag0 => 'Christian';
-
-  @override
-  String get saintcatherinemonasterytag1 => 'Monastery';
-
-  @override
-  String get saintcatherinemonasterytag2 => 'Pilgrimage';
-
-  @override
-  String get mosqueofalhakimbiamrallahname => 'Mosque of al-Hakim bi-Amr Allah';
-
-  @override
-  String get aboutmosqueofalhakimbiamrallah =>
-      'A historic Fatimid mosque known for its impressive architecture and spiritual importance in Islamic Cairo.';
-
-  @override
-  String get almuizzstreetlocation => 'Al-Muizz Street, Cairo';
-
-  @override
-  String get mosqueofalhakimbiamrallahtag0 => 'Fatimid';
-
-  @override
-  String get mosqueofalhakimbiamrallahtag1 => 'Mosque';
-
-  @override
-  String get mosqueofalhakimbiamrallahtag2 => 'Heritage';
-
-  @override
-  String get alhusseinmosquename => 'Al-Hussein Mosque';
-
-  @override
-  String get aboutalhusseinmosque =>
-      'One of Egypt’s most sacred mosques, located in the heart of historic Islamic Cairo near Khan El Khalili.';
-
-  @override
-  String get khanelkhalililocation => 'Khan El Khalili, Islamic Cairo';
-
-  @override
-  String get alhusseinmosquetag0 => 'Islamic';
-
-  @override
-  String get alhusseinmosquetag1 => 'Heritage';
-
-  @override
-  String get alhusseinmosquetag2 => 'Landmark';
-
-  @override
-  String get alrifaimosquename => 'Al-Rifa\'i Mosque';
-
-  @override
-  String get aboutalrifaimosque =>
-      'A royal mosque famous for its Ottoman-inspired architecture and the tombs of Egyptian royals.';
-
-  @override
-  String get alrifaimosquetag0 => 'Ottoman';
-
-  @override
-  String get alrifaimosquetag1 => 'Mosque';
-
-  @override
-  String get alrifaimosquetag2 => 'Architecture';
 
   @override
   String get menu => 'Menu';
