@@ -18,7 +18,7 @@ Widget header({
 }) {
   return Container(
     padding: EdgeInsets.only(left: width * .1),
-    height: height * .28,
+    height: height * .25,
     width: width,
     color: Color(0xFFFCDFCF),
     child: Column(
