@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/default.dart';
 import 'package:flutter_application_1/l10n/app_localizations.dart';
 import 'package:flutter_application_1/models/Place.dart';
+import 'package:flutter_application_1/root/themes.dart';
 import 'package:flutter_application_1/screens/info/service.dart';
 import 'package:intl/intl.dart';
 import 'widget.dart';
@@ -27,6 +28,7 @@ class _InfoscreenState extends State<Infoscreen> {
         name: widget.place.name,
         city: widget.place.city,
         category: widget.place.category,
+        mainImage: widget.place.mainImage,
       );
     }
 
@@ -48,11 +50,16 @@ class _InfoscreenState extends State<Infoscreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            MainImageHeader(place: widget.place, height: height, width: width),
+            MainImageHeader(
+              place: widget.place,
+              height: height,
+              width: width,
+              locationName: lang.getByKey(widget.place.location),
+            ),
             SizedBox(height: height * .02),
 
             Text(
-              widget.place.name,
+              lang.getByKey(widget.place.name),
               style: TextStyle(
                 fontFamily: 'Serif',
                 fontSize: 22,
@@ -83,7 +90,7 @@ class _InfoscreenState extends State<Infoscreen> {
               spacing: 4,
               runSpacing: 4,
               children: widget.place.tags
-                  .map((tag) => TagChip(label: tag))
+                  .map((tag) => TagChip(label: lang.getByKey(tag)))
                   .toList(),
             ),
             SizedBox(height: height * .02),
@@ -95,7 +102,7 @@ class _InfoscreenState extends State<Infoscreen> {
                   Default.sectionTitle(lang.about),
                   SizedBox(height: height * .01),
                   Text(
-                    widget.place.about,
+                    lang.getByKey(widget.place.about),
                     style: TextStyle(
                       fontFamily: 'WorkSans',
                       height: 1.4,

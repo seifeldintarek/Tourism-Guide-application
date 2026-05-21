@@ -33,12 +33,14 @@ class MainImageHeader extends StatelessWidget {
   final Place place;
   final double height;
   final double width;
+  final String locationName;
 
   const MainImageHeader({
     super.key,
     required this.place,
     required this.height,
     required this.width,
+    required this.locationName,
   });
 
   @override
@@ -58,7 +60,7 @@ class MainImageHeader extends StatelessWidget {
           bottom: height * .015,
           left: width * .03,
           child: Default.locationBadge(
-            label: place.location,
+            label: locationName,
             mapUrl: place.mapUrl,
           ),
         ),

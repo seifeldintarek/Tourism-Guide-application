@@ -4,6 +4,7 @@ import 'package:flutter_application_1/l10n/app_localizations.dart';
 import 'package:flutter_application_1/models/Place.dart';
 import 'package:flutter_application_1/screens/info/info.dart';
 import 'package:flutter_application_1/screens/search/widget.dart';
+import 'package:flutter_application_1/root/themes.dart';
 
 Widget mainImage(BuildContext context, String? url, double height) {
   return Container(
@@ -46,7 +47,26 @@ Widget getCategoryPlaces(
               MaterialPageRoute(builder: (context) => Infoscreen(place: place)),
             );
           },
-          child: buildPlaceCard(place),
+          child: buildPlaceCard(
+            Place(
+              id: place.id,
+              name: lang.getByKey(place.name),
+              location: lang.getByKey(place.location),
+              city: lang.getByKey(place.city),
+              mainImage: place.mainImage,
+              category: place.category,
+              rating: place.rating,
+              about: place.about,
+              tags: place.tags,
+              startHr: place.startHr,
+              endHr: place.endHr,
+              ticketPrice: place.ticketPrice,
+              galleryImages: place.galleryImages,
+              mapUrl: place.mapUrl,
+              bookingUrl: place.bookingUrl,
+              ticketPriceEgyptian: place.ticketPriceEgyptian,
+            ),
+          ),
         );
       },
     ),

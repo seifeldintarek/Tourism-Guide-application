@@ -4,6 +4,7 @@ import 'package:flutter_application_1/core/default.dart';
 import 'package:flutter_application_1/l10n/app_localizations.dart';
 import 'package:flutter_application_1/models/Category.dart';
 import 'package:flutter_application_1/models/Place.dart';
+import 'package:flutter_application_1/root/themes.dart';
 import 'package:flutter_application_1/screens/category/category.dart';
 import 'package:flutter_application_1/screens/home/service.dart';
 import 'package:flutter_application_1/screens/info/info.dart';
@@ -126,6 +127,7 @@ Widget featuredPlaces({
         height: height,
         width: width,
         context: context,
+        lang: lang,
       );
     },
     separatorBuilder: (context, index) => SizedBox(width: width * .03),
@@ -137,6 +139,7 @@ Widget placeHomeCard({
   required double height,
   required double width,
   required BuildContext context,
+  required AppLocalizations lang,
 }) {
   return InkWell(
     onTap: () => Navigator.push(
@@ -198,7 +201,7 @@ Widget placeHomeCard({
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        place.name,
+                        lang.getByKey(place.name),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: const TextStyle(
@@ -221,7 +224,7 @@ Widget placeHomeCard({
                           const SizedBox(width: 3),
                           Expanded(
                             child: Text(
-                              "${place.location}, ${place.city}",
+                              "${lang.getByKey(place.location)}, ${lang.getByKey(place.city)}",
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
                               style: const TextStyle(
