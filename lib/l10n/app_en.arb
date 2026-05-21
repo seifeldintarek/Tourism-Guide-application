@@ -1126,6 +1126,9 @@
 
   "errorgetingdata" : "Error fetching data",
   "featuredplaces" : "Featured places",
-  "handpickedplaces" : "Hand-picked curation for your \njourney based on your city"
+  "handpickedplaces" : "Hand-picked curation for your \njourney based on your city",
+
+  "nosavedplaces": "You haven't saved any places yet",
+  "novisitedplaces" : "You haven't visited any places yet"
 
 }

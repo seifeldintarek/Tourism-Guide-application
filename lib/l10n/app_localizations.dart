@@ -1933,6 +1933,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Hand-picked curation for your \njourney based on your city'**
   String get handpickedplaces;
+
+  /// No description provided for @nosavedplaces.
+  ///
+  /// In en, this message translates to:
+  /// **'You haven\'t saved any places yet'**
+  String get nosavedplaces;
+
+  /// No description provided for @novisitedplaces.
+  ///
+  /// In en, this message translates to:
+  /// **'You haven\'t visited any places yet'**
+  String get novisitedplaces;
 }
 
 class _AppLocalizationsDelegate

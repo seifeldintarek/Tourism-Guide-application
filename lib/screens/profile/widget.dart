@@ -1,7 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/default.dart';
+import 'package:flutter_application_1/l10n/app_localizations.dart';
 import 'package:flutter_application_1/models/Place.dart';
+import 'package:flutter_application_1/root/themes.dart';
 import 'package:flutter_application_1/screens/edit_profile/service.dart';
 
 // ── Tab button ────────────────────────────────────────────────────────────────
@@ -65,7 +67,14 @@ Widget buildEmptyState({required IconData icon, required String message}) {
 }
 
 // ── Place card ────────────────────────────────────────────────────────────────
-Widget buildPlaceCard({required Place place, bool isBookmarked = false,required  String id, required double width, required double height}) {
+Widget buildPlaceCard({
+  required BuildContext context,
+  required Place place,
+  bool isBookmarked = false,
+  required String id,
+  required double width,
+  required double height,
+}) {
   return Container(
     padding: const EdgeInsets.all(12),
     decoration: BoxDecoration(
@@ -85,9 +94,7 @@ Widget buildPlaceCard({required Place place, bool isBookmarked = false,required 
               width: width * 0.16,
               height: height * 0.08,
               color: Colors.grey.shade200,
-              child: Center(
-                child: CircularProgressIndicator(strokeWidth: 2),
-              ),
+              child: Center(child: CircularProgressIndicator(strokeWidth: 2)),
             ),
             errorWidget: (context, url, error) => Container(
               width: width * 0.16,
@@ -103,7 +110,7 @@ Widget buildPlaceCard({required Place place, bool isBookmarked = false,required 
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                place.name,
+                AppLocalizations.of(context)!.getByKey(place.name),
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
@@ -112,7 +119,7 @@ Widget buildPlaceCard({required Place place, bool isBookmarked = false,required 
               ),
               SizedBox(height: height * 0.005),
               Text(
-                '${place.location.toUpperCase()} • ${place.city.toUpperCase()}',
+                '${AppLocalizations.of(context)!.getByKey(place.location)} • ${AppLocalizations.of(context)!.getByKey(place.city)}',
                 style: TextStyle(
                   fontSize: 9,
                   fontWeight: FontWeight.w600,
@@ -129,7 +136,7 @@ Widget buildPlaceCard({required Place place, bool isBookmarked = false,required 
             color: isBookmarked ? Default.buttonColor : NudePalette.nudeDark,
           ),
           onPressed: () async {
-              await deleteSavedPlace(id, place.id);
+            await deleteSavedPlace(id, place.id);
           },
         ),
       ],
@@ -138,13 +145,27 @@ Widget buildPlaceCard({required Place place, bool isBookmarked = false,required 
 }
 
 // ── Places list ───────────────────────────────────────────────────────────────
-Widget buildPlacesList({required List<Place> places, required double height, bool isBookmarked = false, required String id, required double width}) {
+Widget buildPlacesList({
+  required BuildContext context,
+  required List<Place> places,
+  required double height,
+  bool isBookmarked = false,
+  required String id,
+  required double width,
+}) {
   return ListView.separated(
     shrinkWrap: true,
     physics: const NeverScrollableScrollPhysics(),
     itemCount: places.length,
     separatorBuilder: (_, __) => SizedBox(height: height * 0.013),
-    itemBuilder: (_, index) => buildPlaceCard(place: places[index], isBookmarked: isBookmarked, id: id, width: width, height: height),
+    itemBuilder: (_, index) => buildPlaceCard(
+      context: context,
+      place: places[index],
+      isBookmarked: isBookmarked,
+      id: id,
+      width: width,
+      height: height,
+    ),
   );
 }
 

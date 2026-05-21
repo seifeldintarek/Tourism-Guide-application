@@ -948,4 +948,10 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get handpickedplaces =>
       'Hand-picked curation for your \njourney based on your city';
+
+  @override
+  String get nosavedplaces => 'You haven\'t saved any places yet';
+
+  @override
+  String get novisitedplaces => 'You haven\'t visited any places yet';
 }
