@@ -26,9 +26,6 @@ class _SignUpState extends State<SignUp> {
   String? _passwordError;
   String? _confirmPasswordError;
 
-  String? _selectedLanguage;
-  String? _selectedGovernorate;
-
   final List<String> languages = [
     "English",
     "Arabic",
@@ -72,6 +69,8 @@ class _SignUpState extends State<SignUp> {
   Widget build(BuildContext context) {
     final lang = AppLocalizations.of(context)!;
 
+    String? _selectedLanguage = languages[0];
+
     final List<String> egyptGovernorates = [
       lang.cairo,
       lang.giza,
@@ -101,6 +100,8 @@ class _SignUpState extends State<SignUp> {
       lang.northSinai,
       lang.sohag,
     ];
+
+    String? _selectedGovernorate = egyptGovernorates[0];
 
     void handleCreateAccount() async {
       final password = _passwordController.text;
@@ -148,6 +149,8 @@ class _SignUpState extends State<SignUp> {
         "lastName": _lastNameController.text.trim(),
         "email": _emailController.text.trim(),
         "password": _passwordController.text.trim(),
+        "city": _selectedGovernorate,
+        "language": _selectedLanguage,
       }, context);
 
       // ← Guard after async gap
