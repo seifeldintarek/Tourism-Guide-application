@@ -1,12 +1,16 @@
 {
   "@@locale": "es",
   "@@context": "AppTranslations",
-
-  "signInToYourJournal": "Inicia sesión en tu diario",
+  "egypttourismguide": "Guía de turismo de Egipto",
   "@signInToYourJournal": {
     "description": "Sentence: Header for the sign-in form."
   },
-  "welcomeBackExplorer": "Bienvenido de nuevo, Explorador",
+  "signInToYourJournal": "Inicia sesión en tu diario",
+  "invalidcreds": "Correo electrónico o contraseña inválidos",
+  "@invalidcreds": {
+    "description": "Sentence: user logged in with wrong email/password"
+  },
+  "welcomeBackExplorer": "Bienvenido de nuevo, \nExplorador",
   "@welcomeBackExplorer": {
     "description": "Sentence: Greeting message."
   },
@@ -14,14 +18,17 @@
   "@emailAddress": {
     "description": "Noun/Word: Used as a label for the email input field."
   },
-  "emailHint": "ej., journal@archive.com",
+  "emailHint": "Por favor, introduce tu correo electrónico",
   "@emailHint": {
     "description": "Sentence: Placeholder hint inside the email input field."
   },
+  "invalidEmailFormat": "Formato de correo electrónico inválido",
   "password": "Contraseña",
   "@password": {
     "description": "Noun/Word: Used as a label for the password input field."
   },
+  "currentpassword": "Contraseña actual",
+  "newpassword": "Nueva contraseña",
   "continueJourney": "Continuar viaje",
   "@continueJourney": {
     "description": "Action Phrase: Button text to submit the sign-in form."
@@ -42,11 +49,15 @@
   "@newHere": {
     "description": "Sentence/Question: Prompt asking if the user needs to register."
   },
+  "createAccount": "Crear cuenta",
+  "@createAccount": {
+    "description": "Action Phrase: Register to db."
+  },
   "createAnAccount": "Crear una cuenta",
   "@createAnAccount": {
     "description": "Action Phrase: Link to navigate to the registration page."
   },
-  "tellUsAboutYourself": "Cuéntanos sobre ti",
+  "tellUsAboutYourself": "Cuéntanos sobre \nti",
   "@tellUsAboutYourself": {
     "description": "Sentence: Header for the sign-up form."
   },
@@ -74,7 +85,7 @@
   "@currency": {
     "description": "Noun/Word: Label for the currency dropdown."
   },
-  "agreeToTermsPrefix": "Al crear una cuenta, acepto los ",
+  "agreeToTermsPrefix": "Al crear una cuenta, acepto ",
   "@agreeToTermsPrefix": {
     "description": "Sentence fragment: The beginning of the checkbox agreement text. Left a trailing space for RichText merging."
   },
@@ -82,7 +93,7 @@
   "@termsOfService": {
     "description": "Noun Phrase: Clickable Terms of Service link."
   },
-  "and": " y la ",
+  "and": " y ",
   "@and": {
     "description": "Word: Conjunction in the agreement text. Includes padding spaces."
   },
@@ -90,7 +101,7 @@
   "@privacyPolicy": {
     "description": "Noun Phrase: Clickable Privacy Policy link."
   },
-  "alreadyAMember": "¿Ya eres miembro?",
+  "alreadyAMember": "¿Ya tienes una cuenta?",
   "@alreadyAMember": {
     "description": "Sentence/Question: Prompt asking if the user already has an account."
   },
@@ -98,19 +109,17 @@
   "@signIn": {
     "description": "Action Phrase: Link to navigate back to the login page."
   },
-  "curatedJourneys": "VIAJES SELECTOS",
+  "curatedJourneys": "VIAJES SELECCIONADOS",
   "@curatedJourneys": {
     "description": "Small overline text above the main title"
   },
-  "exploreTheCollections": "Explora las colecciones",
-  "@exploreTheCollections": {
-    "description": "Main title on the home screen (Sentence)"
-  },
-  "searchDestination": "Busca un destino...",
+  "exploreThe": "Explora las",
+  "collections": "Colecciones",
+  "searchDestination": "Buscar un destino...",
   "@searchDestination": {
     "description": "Placeholder text in the search bar (Sentence)"
   },
-  "recentlyViewed": "Vistos recientemente",
+  "recentlyViewed": "Visto recientemente",
   "@recentlyViewed": {
     "description": "Section title for recently viewed items (Phrase)"
   },
@@ -126,7 +135,8 @@
   "@visited": {
     "description": "Label for number of visited places (Word)"
   },
-  "saved": "GUARDADOS",
+  "save": "Guardar",
+  "saved": "Guardado",
   "@saved": {
     "description": "Label for number of saved places (Word)"
   },
@@ -146,25 +156,25 @@
   "@historicMuseum": {
     "description": "Category tag for a museum (Phrase)"
   },
-  "nature": "NATURALEZA",
+  "nature": "Naturaleza",
   "@nature": {
-    "description": "Category tag for natural places (Word)"
+    "description": "nature category"
   },
   "wadiElRayan": "Wadi El Rayan",
-  "elFayoumEgypt": "El Fayum, Egipto",
+  "elFayoumEgypt": "El Fayoum, Egipto",
   "saltLake": "Lago salado",
   "siwaOasisEgypt": "Oasis de Siwa, Egipto",
   "abuSimbelTemple": "Templo de Abu Simbel",
   "aswanEgypt": "Asuán, Egipto",
   "redSea": "Mar Rojo",
-  "hurghadaEgypt": "Hurgada, Egipto",
+  "hurghadaEgypt": "Hurghada, Egipto",
   "pyramids": "Pirámides",
   "gizaEgypt": "Guiza, Egipto",
   "theGrandEgyptianMuseum": "El Gran Museo Egipcio",
   "kebdetElPrince": "Kebdet El-Prince",
   "sheikhZayedGizaEgypt": "Sheikh Zayed, Guiza, Egipto",
   "cairo": "El Cairo",
-  "philaeTemple": "Templo de Filae",
+  "philaeTemple": "Templo de File",
   "aswan": "Asuán",
   "egyptianMuseum": "Museo Egipcio",
   "@egyptianMuseum": {
@@ -216,7 +226,7 @@
   "@photos": {
     "description": "Label for photo count (Word)."
   },
-  "planMyVisit": "PLANIFICA MI VISITA",
+  "planMyVisit": "PLANIFICAR MI VISITA",
   "@planMyVisit": {
     "description": "Call to action button text (Sentence/Command)"
   },
@@ -237,7 +247,7 @@
   "northCoast": "Costa Norte",
   "food": "Comida",
   "@food": {
-    "description": "Category title (Word)"
+    "description": "food category"
   },
   "spiritual": "Espiritual",
   "@spiritual": {
@@ -275,7 +285,7 @@
   "@amrIbnAlAsMosque": {
     "description": "Landmark name (Phrase)"
   },
-  "alFustatOldCairoEgypt": "Al-Fustat (El Cairo Viejo), Egipto",
+  "alFustatOldCairoEgypt": "Al-Fustat (El Cairo Antiguo), Egipto",
   "@alFustatOldCairoEgypt": {
     "description": "Location (Phrase)"
   },
@@ -291,7 +301,7 @@
   "@theHangingChurch": {
     "description": "Landmark name (Phrase)"
   },
-  "copticCairoOldCairoEgypt": "El Cairo Copto, El Cairo Viejo, Egipto",
+  "copticCairoOldCairoEgypt": "El Cairo Copto, El Cairo Antiguo, Egipto",
   "@copticCairoOldCairoEgypt": {
     "description": "Location (Phrase)"
   },
@@ -307,8 +317,643 @@
   "@saintCatherineMonastery": {
     "description": "Landmark name (Phrase)"
   },
-  "southSinaiEgypt": "Sinaí del Sur, Egipto",
+  "southSinaiEgypt": "Sur del Sinaí, Egipto",
   "@southSinaiEgypt": {
     "description": "Location (Phrase)"
-  }
+  },
+  "failtostoreuser": "No se pudieron guardar los datos del usuario. Inténtalo de nuevo.",
+  "@failtostoreuser": {
+    "description": "Action Phrase: error uploading user"
+  },
+  "languageTitle": "Idioma",
+  "@languageTitle": {
+    "description": "App bar title for the language selection screen (Word)"
+  },
+  "preferenceSelection": "SELECCIÓN DE PREFERENCIAS",
+  "@preferenceSelection": {
+    "description": "Overline text above the main title on the language screen (Phrase)"
+  },
+  "curateYourExperience": "Personaliza tu experiencia",
+  "@curateYourExperience": {
+    "description": "Main title on the language selection screen (Sentence/Command)"
+  },
+  "countryEgypt": "Egipto",
+  "countryUk": "Reino Unido",
+  "countrySpain": "España",
+  "countryItaly": "Italia",
+  "countryGermany": "Alemania",
+  "editProfileTitle": "Editar perfil",
+  "@editProfileTitle": {
+    "description": "App bar title for the edit profile screen (Phrase)"
+  },
+  "changePhoto": "CAMBIAR FOTO",
+  "@changePhoto": {
+    "description": "Action text under the avatar to change the profile photo (Phrase)"
+  },
+  "fullNameLabel": "NOMBRE COMPLETO",
+  "@fullNameLabel": {
+    "description": "Label for the full name input field (Phrase)"
+  },
+  "titleLabel": "TÍTULO",
+  "@titleLabel": {
+    "description": "Label for the user role/title input field (Word)"
+  },
+  "manageSavedPlaces": "Administrar lugares guardados",
+  "@manageSavedPlaces": {
+    "description": "Section header for managing saved locations (Phrase)"
+  },
+  "editSaved": "EDITAR GUARDADOS",
+  "@editSaved": {
+    "description": "Action button to enter edit mode for saved places list (Phrase)"
+  },
+  "saveChanges": "Guardar cambios",
+  "@saveChanges": {
+    "description": "Primary button to submit and save profile edits (Phrase)"
+  },
+  "firstNameHint": "Edita tu nombre",
+  "@fullNameHint": {
+    "description": "404"
+  },
+  "lastNameHint": "Edita tu apellido",
+  "passwordHint": "Edita tu contraseña",
+  "orContinueWith": "O CONTINUAR CON",
+  "enterPassword": "Por favor, introduce tu contraseña",
+  "password8charserror": "La contraseña debe tener al menos 8 caracteres",
+  "passwordcapitalerror": "Añade al menos una letra mayúscula",
+  "passwordsmallerror": "Añade al menos una letra minúscula",
+  "passwordnumbererror": "Añade al menos un número",
+  "passwordspecialcharerror": "Añade al menos un carácter especial",
+  "nodatafound": "No se encontraron datos",
+  "heritagequote": "\"Para conocer el corazón de una cultura, hay que caminar entre los ecos de su piedra\"",
+  "@heritagequote": {
+    "description": "quote of heritage"
+  },
+  "spiritualquote": "\"Donde la fe y el silencio se encuentran, el espíritu empieza a sanar.\"",
+  "@spiritualquote": {
+    "description": "quote of spiritual"
+  },
+  "naturequote": "\"Para entender la tierra, hay que escuchar las historias escritas en sus ríos, cielos y silencio.\"",
+  "@naturequote": {
+    "description": "quote of nature"
+  },
+  "foodquote": "\"Cada plato cuenta una historia, sazonada con cultura, historia y la calidez de su gente.\"",
+  "@foodquote": {
+    "description": "quote of food"
+  },
+  "pyramidsname": "Pirámides",
+  "@pyramidsname": {
+    "description": "name of pyramids"
+  },
+  "aboutpyramids": "Las mundialmente famosas pirámides del antiguo Egipto, construidas como tumbas reales y consideradas una de las Siete Maravillas del Mundo Antiguo.",
+  "@aboutpyramids": {
+    "description": "about description of pyramids"
+  },
+  "alharam": "Al Haram",
+  "@alharam": {
+    "description": "location of pyramids"
+  },
+  "pyramidstag0": "PIRÁMIDES",
+  "@pyramidstag0": {
+    "description": "first tag of pyramids"
+  },
+  "pyramidstag1": "MARAVILLA",
+  "@pyramidstag1": {
+    "description": "second tag of pyramids"
+  },
+  "pyramidstag2": "MONUMENTO",
+  "@pyramidstag2": {
+    "description": "third tag of pyramids"
+  },
+  "abusimblename": "Templo de Abu Simbel",
+  "abusimbellocation": "Abu Simbel",
+  "aboutabusimbel": "Templos monumentales excavados en la roca y construidos por Ramsés II, famosos por sus estatuas gigantes y su notable traslado para protegerlos de las inundaciones.",
+  "abusimbletag0": "HISTÓRICO",
+  "abusimbletag1": "MONUMENTO",
+  "abusimbletag2": "UNESCO",
+  "hatshepsuttemplename": "Templo de Hatshepsut",
+  "hatshepsuttemplelocation": "Deir el-Bahari",
+  "luxor": "Luxor",
+  "aboutatshepsuttemple": "Un magnífico templo tallado en los acantilados de Luxor, construido para la reina Hatshepsut, una de las gobernantes más poderosas del antiguo Egipto.",
+  "hatshepsuttempletag0": "TEMPLO",
+  "hatshepsuttempletag1": "ARQUITECTURA",
+  "hatshepsuttempletag2": "HISTÓRICO",
+  "grandegyptianmuseumname": "El Gran Museo Egipcio",
+  "grandegyptianmuseumlocation": "Carretera El Cairo-Alejandría",
+  "giza": "Guiza",
+  "aboutgrandegyptianmuseum": "Un museo moderno cerca de las pirámides que exhibe miles de artefactos del antiguo Egipto, incluidos los tesoros del rey Tutankamón.",
+  "grandegyptianmuseumtag0": "ARTEFACTOS",
+  "grandegyptianmuseumtag1": "MUSEO",
+  "grandegyptianmuseumtag2": "CULTURA",
+  "philaetemplename": "Templo de File",
+  "philaetemplelocation": "Isla Agilkia",
+  "aboutphilaetemple": "Un hermoso templo isleño dedicado a la diosa Isis, conocido por sus impresionantes vistas del Nilo y sus antiguos grabados.",
+  "philaetempletag0": "ISLA",
+  "philaetempletag1": "TEMPLO",
+  "philaetempletag2": "PATRIMONIO",
+  "whitedesertname": "Desierto Blanco",
+  "@whitedesertname": {
+    "description": "white desert name"
+  },
+  "whitedesertnationalpark": "Parque Nacional del Desierto Blanco",
+  "@whitedesertnationalpark": {
+    "description": "white desert location"
+  },
+  "southwestofcairo": "Suroeste de El Cairo",
+  "@southwestofcairo": {
+    "description": "city of white desert"
+  },
+  "aboutwhitedesert": "Una reserva desértica impresionante, famosa por sus formaciones rocosas blancas únicas y experiencias de campamento.",
+  "@aboutwhitedesert": {
+    "description": "Information about white desert"
+  },
+  "whitedeserttag0": "DESIERTO",
+  "@whitedeserttag0": {
+    "description": "first tag of the white desert"
+  },
+  "whitedeserttag1": "CAMPAMENTO",
+  "@whitedeserttag1": {
+    "description": "second tag of the white desert"
+  },
+  "whitedeserttag2": "SAFARI",
+  "@whitedeserttag2": {
+    "description": "third tag of the white desert"
+  },
+  "blueholename": "Blue Hole",
+  "@blueholename": {
+    "description": "Blue Hole name"
+  },
+  "blueholeofdahab": "Blue Hole de Dahab",
+  "@blueholeofdahab": {
+    "description": "Blue Hole location"
+  },
+  "dahab": "Dahab",
+  "@dahab": {
+    "description": "city of Blue Hole"
+  },
+  "aboutbluehole": "Un destino de buceo mundialmente famoso, conocido por sus aguas cristalinas y sus vibrantes arrecifes de coral.",
+  "@aboutbluehole": {
+    "description": "Information about Blue Hole"
+  },
+  "blueholetag0": "BUCEO",
+  "@blueholetag0": {
+    "description": "first tag of theBlue Hole"
+  },
+  "blueholetag1": "CORAL",
+  "@blueholetag1": {
+    "description": "second tag of the Blue Hole"
+  },
+  "blueholetag2": "AVENTURA",
+  "@blueholetag2": {
+    "description": "third tag of the Blue Hole"
+  },
+  "abugaloumname": "Abu Galoum",
+  "@abugaloumname": {
+    "description": "Abu Galoum name"
+  },
+  "abugaloum": "Abu Galoum",
+  "@abugaloum": {
+    "description": "Abu Galoum location"
+  },
+  "neweiba": "Nuweiba",
+  "@neweiba": {
+    "description": "city of Abu Galoum"
+  },
+  "aboutabugaloum": "Una reserva costera protegida famosa por el esnórquel, los arrecifes de coral, las montañas y los campamentos beduinos.",
+  "@aboutabugaloum": {
+    "description": "Information about Abu Galoum"
+  },
+  "abugaloumtag0": "ESNÓRQUEL",
+  "@abugaloumtag0": {
+    "description": "first tag of Abu Galoum"
+  },
+  "abugaloumtag1": "NATURALEZA",
+  "@abugaloumtag1": {
+    "description": "second tag of Abu Galoum"
+  },
+  "abugaloumtag2": "CAMPAMENTO",
+  "@abugaloumtag2": {
+    "description": "third tag of Abu Galoum"
+  },
+  "wadielgemalname": "Wadi El Gemal",
+  "@wadielgemalname": {
+    "description": "Wadi El Gemal name"
+  },
+  "wadielgemalreserve": "Reserva Wadi El Gemal",
+  "@wadielgemalreserve": {
+    "description": "Wadi El Gemal location"
+  },
+  "marsaalam": "Marsa Alam",
+  "@marsaalam": {
+    "description": "city of Wadi El Gemal"
+  },
+  "aboutwadielgemal": "Una impresionante reserva natural que combina montañas desérticas, manglares, arrecifes de coral y fauna del Mar Rojo.",
+  "@aboutwadielgemal": {
+    "description": "Information about Wadi El Gemal"
+  },
+  "wadielgemaltag0": "MARINO",
+  "@wadielgemaltag0": {
+    "description": "first tag of Wadi El Gemal"
+  },
+  "wadielgemaltag1": "SAFARI",
+  "@wadielgemaltag1": {
+    "description": "second tag of Wadi El Gemal"
+  },
+  "wadielgemaltag2": "FAUNA",
+  "@wadielgemaltag2": {
+    "description": "third tag of Wadi El Gemal"
+  },
+  "wadielrayanname": "Wadi El Rayan",
+  "@wadielrayanname": {
+    "description": "Wadi el rayan name"
+  },
+  "wadielrayan": "Wadi El Rayan",
+  "@wadielrayan": {
+    "description": "Wadi el rayan location"
+  },
+  "faiyum": "Fayum",
+  "@faiyum": {
+    "description": "city of Wadi el rayan"
+  },
+  "aboutwadielrayan": "Un hermoso oasis desértico conocido por sus cascadas, lagos, dunas de arena y aventuras de safari.",
+  "@aboutwadielrayan": {
+    "description": "Information about Wadi el rayan"
+  },
+  "wadielrayantag0": "CASCADAS",
+  "@wadielrayantag0": {
+    "description": "first tag of Wadi el rayan"
+  },
+  "wadielrayantag1": "DESIERTO",
+  "@wadielrayantag1": {
+    "description": "second tag of Wadi el rayan"
+  },
+  "wadielrayantag2": "LAGOS",
+  "@wadielrayantag2": {
+    "description": "third tag of Wadi el rayan"
+  },
+  "arabiataname": "Arabiata",
+  "@arabiataname": {
+    "description": "name of arabiata"
+  },
+  "aboutarabiata": "Un popular restaurante egipcio que sirve auténtico ful, falafel y desayunos tradicionales.",
+  "@aboutarabiata": {
+    "description": "about description of arabiata"
+  },
+  "nasrcity": "Ciudad Nasr",
+  "@nasrcity": {
+    "description": "location of arabiata"
+  },
+  "arabiatatag0": "Desayuno",
+  "@arabiatatag0": {
+    "description": "first tag of arabiata"
+  },
+  "arabiatatag1": "ComidaCallejera",
+  "@arabiatatag1": {
+    "description": "second tag of arabiata"
+  },
+  "arabiatatag2": "Oriental",
+  "@arabiatatag2": {
+    "description": "third tag of arabiata"
+  },
+  "qasrelkababginame": "Qasr Elkababgi",
+  "@qasrelkababginame": {
+    "description": "name of qasr-elkababgi"
+  },
+  "aboutqasrelkababgi": "Una reconocida cadena de restaurantes egipcios celebrada por su auténtica cocina oriental, parrillas tradicionales y experiencias gastronómicas teatrales",
+  "@aboutqasrelkababgi": {
+    "description": "about description of qasr-elkababgi"
+  },
+  "fifthsettlement": "Quinto Asentamiento",
+  "@fifthsettlement": {
+    "description": "location of qasr-elkababgi"
+  },
+  "qasrelkababgitag0": "Parrillas",
+  "@qasrelkababgitag0": {
+    "description": "first tag of qasr-elkababgi"
+  },
+  "qasrelkababgitag1": "Comida",
+  "@qasrelkababgitag1": {
+    "description": "second tag of qasr-elkababgi"
+  },
+  "qasrelkababgitag2": "Oriental",
+  "@qasrelkababgitag2": {
+    "description": "third tag of qasr-elkababgi"
+  },
+  "baharyname": "Bahary",
+  "@baharyname": {
+    "description": "name of bahary"
+  },
+  "aboutbahary": "Un restaurante moderno de mariscos famoso por pescado a la parrilla, bandejas de mariscos y frescos sabores mediterráneos.",
+  "@aboutbahary": {
+    "description": "about description of bahary"
+  },
+  "baharytag0": "Mariscos",
+  "@baharytag0": {
+    "description": "first tag of bahary"
+  },
+  "baharytag1": "Fresco",
+  "@baharytag1": {
+    "description": "second tag of bahary"
+  },
+  "baharytag2": "SaboresMarinos",
+  "@baharytag2": {
+    "description": "third tag of bahary"
+  },
+  "koueidername": "Koueider",
+  "@koueidername": {
+    "description": "name of koueider"
+  },
+  "aboutkoueider": "Una de las pastelerías más antiguas de Egipto, famosa por dulces orientales y auténticos pasteles árabes.",
+  "@aboutkoueider": {
+    "description": "about description of koueider"
+  },
+  "heliopolis": "Heliópolis",
+  "@heliopolis": {
+    "description": "location of koueider"
+  },
+  "koueidertag0": "Postres",
+  "@koueidertag0": {
+    "description": "first tag of koueider"
+  },
+  "koueidertag1": "Helado",
+  "@koueidertag1": {
+    "description": "second tag of koueider"
+  },
+  "koueidertag2": "Dulces",
+  "@koueidertag2": {
+    "description": "third tag of koueider"
+  },
+  "elmalkyname": "ElMalky",
+  "@elmalkyname": {
+    "description": "name of elmalky"
+  },
+  "aboutelmalky": "Un legendario destino egipcio de postres conocido por el arroz con leche, el helado y los dulces clásicos.",
+  "@aboutelmalky": {
+    "description": "about description of elmalky"
+  },
+  "mosquehassanname": "Mezquita-Madrasa del Sultán Hassan",
+  "@mosquehassanname": {
+    "description": "name of mosquesultanhassan "
+  },
+  "aboutmosquehassan": "Una magnífica mezquita mameluca famosa por su gran arquitectura islámica y su ambiente histórico espiritual.",
+  "@aboutmosquehassan": {
+    "description": "about description of mosquesultanhassan "
+  },
+  "salaheldinlocation": "Plaza Salah El-Din, El Cairo Islámico",
+  "@salaheldinlocation": {
+    "description": "location of mosquesultanhassan "
+  },
+  "mosquehassantag0": "Islámico",
+  "@mosquehassantag0": {
+    "description": "first tag of mosquesultanhassan "
+  },
+  "mosquehassantag1": "Mameluco",
+  "@mosquehassantag1": {
+    "description": "second tag of mosquesultanhassan "
+  },
+  "mosquehassantag2": "Arquitectura",
+  "@mosquehassantag2": {
+    "description": "third tag of mosquesultanhassan "
+  },
+  "saintcatherinemonasteryname": "Monasterio de Santa Catalina",
+  "@saintcatherinemonasteryname": {
+    "description": "name of saintcatherinemonasteryname "
+  },
+  "aboutsaintcatherinemonastery": "Uno de los monasterios cristianos más antiguos del mundo, ubicado al pie del Monte Sinaí.",
+  "@aboutsaintcatherinemonastery": {
+    "description": "about description of saintcatherinemonasteryname "
+  },
+  "mountsinailocation": "Monte Sinaí, Santa Catalina",
+  "@mountsinailocation": {
+    "description": "location of saintcatherinemonasteryname "
+  },
+  "southsinai": "Sur del Sinaí",
+  "@southsinai": {
+    "description": "city of saintcatherinemonasteryname "
+  },
+  "saintcatherinemonasterytag0": "Cristiano",
+  "@saintcatherinemonasterytag0": {
+    "description": "first tag of saintcatherinemonasteryname "
+  },
+  "saintcatherinemonasterytag1": "Monasterio",
+  "@saintcatherinemonasterytag1": {
+    "description": "second tag of saintcatherinemonasteryname "
+  },
+  "saintcatherinemonasterytag2": "Peregrinación",
+  "@saintcatherinemonasterytag2": {
+    "description": "third tag of saintcatherinemonasteryname "
+  },
+  "mosqueofalhakimbiamrallahname": "Mezquita de al-Hakim bi-Amr Allah",
+  "@mosqueofalhakimbiamrallahname": {
+    "description": "name of mosqueofalhakimbiamrallah "
+  },
+  "aboutmosqueofalhakimbiamrallah": "Una histórica mezquita fatimí conocida por su impresionante arquitectura e importancia espiritual en El Cairo Islámico.",
+  "@aboutmosqueofalhakimbiamrallah": {
+    "description": "about description  of mosqueofalhakimbiamrallah "
+  },
+  "almuizzstreetlocation": "Calle Al-Muizz, El Cairo",
+  "@almuizzstreetlocation": {
+    "description": "location of mosqueofalhakimbiamrallah "
+  },
+  "mosqueofalhakimbiamrallahtag0": "Fatimí",
+  "@mosqueofalhakimbiamrallahtag0": {
+    "description": "first tag of mosqueofalhakimbiamrallah "
+  },
+  "mosqueofalhakimbiamrallahtag1": "Mezquita",
+  "@mosqueofalhakimbiamrallahtag1": {
+    "description": "second tag of mosqueofalhakimbiamrallah "
+  },
+  "mosqueofalhakimbiamrallahtag2": "Patrimonio",
+  "@mosqueofalhakimbiamrallahtag2": {
+    "description": "third tag of mosqueofalhakimbiamrallah "
+  },
+  "alhusseinmosquename": "Mezquita de Al-Hussein",
+  "@alhusseinmosquename": {
+    "description": "name of alhusseinmosque "
+  },
+  "aboutalhusseinmosque": "Una de las mezquitas más sagradas de Egipto, ubicada en el corazón del histórico El Cairo Islámico cerca de Khan El Khalili.",
+  "@aboutalhusseinmosque": {
+    "description": "about description of alhusseinmosque "
+  },
+  "khanelkhalililocation": "Khan El Khalili, El Cairo Islámico",
+  "@khanelkhalililocation": {
+    "description": "location of alhusseinmosque "
+  },
+  "alhusseinmosquetag0": "Islámico",
+  "@alhusseinmosquetag0": {
+    "description": "first tag of alhusseinmosque "
+  },
+  "alhusseinmosquetag1": "Patrimonio",
+  "@alhusseinmosquetag1": {
+    "description": "second tag of alhusseinmosque "
+  },
+  "alhusseinmosquetag2": "Monumento",
+  "@alhusseinmosquetag2": {
+    "description": "third tag of alhusseinmosque "
+  },
+  "alrifaimosquename": "Mezquita de Al-Rifa'i",
+  "@alrifaimosquename": {
+    "description": "name of alhusseinmosque "
+  },
+  "aboutalrifaimosque": "Una mezquita real famosa por su arquitectura de inspiración otomana y las tumbas de la realeza egipcia.",
+  "@aboutalrifaimosque": {
+    "description": "about description of alhusseinmosque "
+  },
+  "alrifaimosquetag0": "Otomano",
+  "@alrifaimosquetag0": {
+    "description": "first of alhusseinmosque "
+  },
+  "alrifaimosquetag1": "Mezquita",
+  "@alrifaimosquetag1": {
+    "description": "second tag of alhusseinmosque "
+  },
+  "alrifaimosquetag2": "Arquitectura",
+  "@alrifaimosquetag2": {
+    "description": "thrid tag of alhusseinmosque "
+  },
+  "elmoattam": "El Moattam",
+  "@elmoattam": {
+    "description": "location of elmalky"
+  },
+  "elmalkytag0": "Tradicional",
+  "@elmalkytag0": {
+    "description": "first tag of elmalky"
+  },
+  "elmalkytag1": "Helado",
+  "@elmalkytag1": {
+    "description": "second tag of elmalky"
+  },
+  "elmalkytag2": "Postres",
+  "@elmalkytag2": {
+    "description": "third tag of elmalky"
+  },
+  "menu": "Menú",
+  "manageProfile": "Administrar perfil",
+  "changeLanguage": "Cambiar idioma",
+  "logout": "Cerrar sesión",
+  "logoutConfirmTitle": "Cerrar sesión",
+  "logoutConfirmMessage": "¿Estás seguro de que quieres cerrar sesión?",
+  "cancel": "Cancelar",
+  "choosecategory": "Elige una categoría",
+  "changecategory": "Cambiar categoría",
+  "egyptian": "Egipcio",
+  "@egyptian": {
+    "description": "Ticket price label for Egyptian visitors"
+  },
+  "other": "Otro",
+  "@other": {
+    "description": "Ticket price label for non-Egyptian visitors"
+  },
+  "closed": "Cerrado",
+  "@closed": {
+    "description": "State indicating the place is not currently operating"
+  },
+  "government": "GOBERNACIÓN",
+  "selectlang": "Seleccionar idioma",
+  "selectgov": "Seleccionar gobernación",
+  "alexandria": "Alejandría",
+  "@alexandria": {
+    "description": "Governorate name"
+  },
+  "dakahlia": "Dacalia",
+  "@dakahlia": {
+    "description": "Governorate name"
+  },
+  "@redSea": {
+    "description": "Governorate name"
+  },
+  "beheira": "Beheira",
+  "@beheira": {
+    "description": "Governorate name"
+  },
+  "fayoum": "Fayum",
+  "@fayoum": {
+    "description": "Governorate name"
+  },
+  "gharbia": "Garbia",
+  "@gharbia": {
+    "description": "Governorate name"
+  },
+  "ismailia": "Ismailía",
+  "@ismailia": {
+    "description": "Governorate name"
+  },
+  "menofia": "Menufia",
+  "@menofia": {
+    "description": "Governorate name"
+  },
+  "minya": "Menia",
+  "@minya": {
+    "description": "Governorate name"
+  },
+  "qalyubia": "Caliubia",
+  "@qalyubia": {
+    "description": "Governorate name"
+  },
+  "newValley": "Nuevo Valle",
+  "@newValley": {
+    "description": "Governorate name"
+  },
+  "suez": "Suez",
+  "@suez": {
+    "description": "Governorate name"
+  },
+  "@aswan": {
+    "description": "Governorate name"
+  },
+  "assiut": "Asiut",
+  "@assiut": {
+    "description": "Governorate name"
+  },
+  "beniSuef": "Beni Suef",
+  "@beniSuef": {
+    "description": "Governorate name"
+  },
+  "portSaid": "Puerto Saíd",
+  "@portSaid": {
+    "description": "Governorate name"
+  },
+  "damietta": "Damieta",
+  "@damietta": {
+    "description": "Governorate name"
+  },
+  "sharkia": "Sharqia",
+  "@sharkia": {
+    "description": "Governorate name"
+  },
+  "southSinai": "Sur del Sinaí",
+  "@southSinai": {
+    "description": "Governorate name"
+  },
+  "kafrElSheikh": "Kafr El Sheikh",
+  "@kafrElSheikh": {
+    "description": "Governorate name"
+  },
+  "matrouh": "Matrouh",
+  "@matrouh": {
+    "description": "Governorate name"
+  },
+  "@luxor": {
+    "description": "Governorate name"
+  },
+  "qena": "Qena",
+  "@qena": {
+    "description": "Governorate name"
+  },
+  "northSinai": "Norte del Sinaí",
+  "@northSinai": {
+    "description": "Governorate name"
+  },
+  "sohag": "Sohag",
+  "@sohag": {
+    "description": "Governorate name"
+  },
+  "goodmorning": "Buenos días",
+  "discover": "Descubre",
+  "hidden": "ocultos",
+  "treasures": "tesoros",
+  "errorgetingdata": "Error al obtener datos",
+  "featuredplaces": "Lugares destacados",
+  "handpickedplaces": "Selección hecha a mano para tu \nviaje según tu ciudad",
+  "nosavedplaces": "Aún no has guardado ningún lugar",
+  "novisitedplaces": "Aún no has visitado ningún lugar"
 }

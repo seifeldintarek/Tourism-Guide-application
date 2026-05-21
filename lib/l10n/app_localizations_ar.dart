@@ -9,13 +9,13 @@ class AppLocalizationsAr extends AppLocalizations {
   AppLocalizationsAr([String locale = 'ar']) : super(locale);
 
   @override
-  String get egypttourismguide => 'Egypt Tourism Guide';
+  String get egypttourismguide => 'دليل السياحة في مصر';
 
   @override
-  String get signInToYourJournal => 'تسجيل الدخول إلى يومياتك';
+  String get signInToYourJournal => 'سجل الدخول إلى رحلتك';
 
   @override
-  String get invalidcreds => 'Invalid email or password';
+  String get invalidcreds => 'البريد الإلكتروني أو كلمة المرور غير صحيحة';
 
   @override
   String get passresetemailsent =>
@@ -26,28 +26,28 @@ class AppLocalizationsAr extends AppLocalizations {
       'Enter your email address and we will send you a link to reset your password.';
 
   @override
-  String get welcomeBackExplorer => 'مرحباً بعودتك، أيها المستكشف';
+  String get welcomeBackExplorer => 'مرحبًا بعودتك، \nأيها المستكشف';
 
   @override
   String get emailAddress => 'البريد الإلكتروني';
 
   @override
-  String get emailHint => 'على سبيل المثال: journal@archive.com';
+  String get emailHint => 'يرجى إدخال بريدك الإلكتروني';
 
   @override
-  String get invalidEmailFormat => 'Invalid email format';
+  String get invalidEmailFormat => 'صيغة البريد الإلكتروني غير صحيحة';
 
   @override
   String get password => 'كلمة المرور';
 
   @override
-  String get currentpassword => 'Current Password';
+  String get currentpassword => 'كلمة المرور الحالية';
 
   @override
-  String get newpassword => 'New Password';
+  String get newpassword => 'كلمة المرور الجديدة';
 
   @override
-  String get continueJourney => 'مواصلة الرحلة';
+  String get continueJourney => 'متابعة الرحلة';
 
   @override
   String get forgotPassword => 'هل نسيت كلمة المرور؟';
@@ -59,19 +59,19 @@ class AppLocalizationsAr extends AppLocalizations {
   String get or => 'أو';
 
   @override
-  String get signInWithGoogle => 'تسجيل الدخول باستخدام Google';
+  String get signInWithGoogle => 'تسجيل الدخول باستخدام جوجل';
 
   @override
-  String get newHere => 'هل أنت جديد هنا؟';
+  String get newHere => 'جديد هنا؟';
 
   @override
-  String get createAccount => 'Create account';
+  String get createAccount => 'إنشاء حساب';
 
   @override
-  String get createAnAccount => 'إنشاء حساب';
+  String get createAnAccount => 'إنشاء حساب جديد';
 
   @override
-  String get tellUsAboutYourself => 'أخبرنا عن نفسك';
+  String get tellUsAboutYourself => 'أخبرنا عن \nنفسك';
 
   @override
   String get firstName => 'الاسم الأول';
@@ -92,7 +92,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get currency => 'العملة';
 
   @override
-  String get agreeToTermsPrefix => 'بإنشاء حساب، فإنني أوافق على ';
+  String get agreeToTermsPrefix => 'بإنشاء حساب، فأنا أوافق على ';
 
   @override
   String get termsOfService => 'شروط الخدمة';
@@ -104,25 +104,25 @@ class AppLocalizationsAr extends AppLocalizations {
   String get privacyPolicy => 'سياسة الخصوصية';
 
   @override
-  String get alreadyAMember => 'هل أنت عضو بالفعل؟';
+  String get alreadyAMember => 'لديك حساب بالفعل؟';
 
   @override
   String get signIn => 'تسجيل الدخول';
 
   @override
-  String get curatedJourneys => 'رحلات منتقاة';
+  String get curatedJourneys => 'رحلات مختارة';
 
   @override
-  String get exploreThe => 'Explore the';
+  String get exploreThe => 'استكشف';
 
   @override
-  String get collections => 'Collections';
+  String get collections => 'المجموعات';
 
   @override
   String get searchDestination => 'ابحث عن وجهة...';
 
   @override
-  String get recentlyViewed => 'تم عرضها مؤخراً';
+  String get recentlyViewed => 'تمت مشاهدته مؤخرًا';
 
   @override
   String get savedPlaces => 'الأماكن المحفوظة';
@@ -131,16 +131,16 @@ class AppLocalizationsAr extends AppLocalizations {
   String get explorer => 'مستكشف';
 
   @override
-  String get visited => 'زيارات';
+  String get visited => 'تمت الزيارة';
 
   @override
-  String get save => 'Save';
+  String get save => 'حفظ';
 
   @override
-  String get saved => 'محفوظات';
+  String get saved => 'محفوظ';
 
   @override
-  String get reviews => 'تقييمات';
+  String get reviews => 'التقييمات';
 
   @override
   String get viewAll => 'عرض الكل';
@@ -152,7 +152,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get historicMuseum => 'متحف تاريخي';
 
   @override
-  String get nature => 'طبيعة';
+  String get nature => 'الطبيعة';
 
   @override
   String get wadiElRayan => 'وادي الريان';
@@ -161,7 +161,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get elFayoumEgypt => 'الفيوم، مصر';
 
   @override
-  String get saltLake => 'بحيرة الملح';
+  String get saltLake => 'البحيرة المالحة';
 
   @override
   String get siwaOasisEgypt => 'واحة سيوة، مصر';
@@ -215,10 +215,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get historical => 'تاريخي';
 
   @override
-  String get artifacts => 'قطع أثرية';
+  String get artifacts => 'آثار';
 
   @override
-  String get landmark => 'مَعْلَم';
+  String get landmark => 'معلم';
 
   @override
   String get about => 'نبذة';
@@ -233,22 +233,22 @@ class AppLocalizationsAr extends AppLocalizations {
   String get hours => 'ساعات العمل';
 
   @override
-  String get starting => 'يبدأ من';
+  String get starting => 'ابتداءً من';
 
   @override
-  String get egp => 'ج.م';
+  String get egp => 'جنيه';
 
   @override
   String get gallery => 'المعرض';
 
   @override
-  String get photos => 'صورة';
+  String get photos => 'صور';
 
   @override
   String get planMyVisit => 'خطط لزيارتي';
 
   @override
-  String get heritage => 'تراث';
+  String get heritage => 'التراث';
 
   @override
   String get all => 'الكل';
@@ -260,7 +260,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get luxorEgypt => 'الأقصر، مصر';
 
   @override
-  String get blueHole => 'البلو هول';
+  String get blueHole => 'الثقب الأزرق';
 
   @override
   String get dahabEgypt => 'دهب، مصر';
@@ -275,7 +275,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get northCoast => 'الساحل الشمالي';
 
   @override
-  String get food => 'طعام';
+  String get food => 'الطعام';
 
   @override
   String get spiritual => 'روحاني';
@@ -302,7 +302,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get asmak => 'أسماك';
 
   @override
-  String get amrIbnAlAsMosque => 'جامع عمرو بن العاص';
+  String get amrIbnAlAsMosque => 'مسجد عمرو بن العاص';
 
   @override
   String get alFustatOldCairoEgypt => 'الفسطاط (القاهرة القديمة)، مصر';
@@ -317,8 +317,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get theHangingChurch => 'الكنيسة المعلقة';
 
   @override
-  String get copticCairoOldCairoEgypt =>
-      'القاهرة القبطية، القاهرة القديمة، مصر';
+  String get copticCairoOldCairoEgypt => 'مصر القديمة القبطية، مصر';
 
   @override
   String get alHusseinMosque => 'مسجد الحسين';
@@ -333,139 +332,139 @@ class AppLocalizationsAr extends AppLocalizations {
   String get southSinaiEgypt => 'جنوب سيناء، مصر';
 
   @override
-  String get failtostoreuser => 'Failed to store user data. Please try again.';
+  String get failtostoreuser => 'فشل حفظ بيانات المستخدم. حاول مرة أخرى.';
 
   @override
-  String get languageTitle => 'Language';
+  String get languageTitle => 'اللغة';
 
   @override
-  String get preferenceSelection => 'PREFERENCE SELECTION';
+  String get preferenceSelection => 'اختيار التفضيلات';
 
   @override
-  String get curateYourExperience => 'Curate Your Experience';
+  String get curateYourExperience => 'خصص تجربتك';
 
   @override
-  String get countryEgypt => 'Egypt';
+  String get countryEgypt => 'مصر';
 
   @override
-  String get countryUk => 'UK';
+  String get countryUk => 'المملكة المتحدة';
 
   @override
-  String get countrySpain => 'Spain';
+  String get countrySpain => 'إسبانيا';
 
   @override
-  String get countryItaly => 'Italy';
+  String get countryItaly => 'إيطاليا';
 
   @override
-  String get countryGermany => 'Germany';
+  String get countryGermany => 'ألمانيا';
 
   @override
-  String get editProfileTitle => 'Edit Profile';
+  String get editProfileTitle => 'تعديل الملف الشخصي';
 
   @override
-  String get changePhoto => 'CHANGE PHOTO';
+  String get changePhoto => 'تغيير الصورة';
 
   @override
-  String get fullNameLabel => 'FULL NAME';
+  String get fullNameLabel => 'الاسم الكامل';
 
   @override
-  String get titleLabel => 'TITLE';
+  String get titleLabel => 'اللقب';
 
   @override
-  String get manageSavedPlaces => 'Manage Saved Places';
+  String get manageSavedPlaces => 'إدارة الأماكن المحفوظة';
 
   @override
-  String get editSaved => 'EDIT SAVED';
+  String get editSaved => 'تعديل المحفوظات';
 
   @override
-  String get saveChanges => 'Save Changes';
+  String get saveChanges => 'حفظ التغييرات';
 
   @override
-  String get firstNameHint => 'Edit your first name';
+  String get firstNameHint => 'عدل اسمك الأول';
 
   @override
-  String get lastNameHint => 'Edit your last name';
+  String get lastNameHint => 'عدل اسم العائلة';
 
   @override
-  String get passwordHint => 'Edit your password';
+  String get passwordHint => 'عدل كلمة المرور';
 
   @override
-  String get orContinueWith => 'OR CONTINUE WITH';
+  String get orContinueWith => 'أو المتابعة باستخدام';
 
   @override
-  String get enterPassword => 'Please enter your password';
+  String get enterPassword => 'يرجى إدخال كلمة المرور';
 
   @override
-  String get password8charserror => 'Password must be at least 8 characters';
+  String get password8charserror => 'يجب أن تكون كلمة المرور 8 أحرف على الأقل';
 
   @override
-  String get passwordcapitalerror => 'Add at least one capital letter';
+  String get passwordcapitalerror => 'أضف حرفًا كبيرًا واحدًا على الأقل';
 
   @override
-  String get passwordsmallerror => 'Add at least one small letter';
+  String get passwordsmallerror => 'أضف حرفًا صغيرًا واحدًا على الأقل';
 
   @override
-  String get passwordnumbererror => 'Add at least one number';
+  String get passwordnumbererror => 'أضف رقمًا واحدًا على الأقل';
 
   @override
-  String get passwordspecialcharerror => 'Add at least one special character';
+  String get passwordspecialcharerror => 'أضف رمزًا خاصًا واحدًا على الأقل';
 
   @override
-  String get nodatafound => 'No data found';
+  String get nodatafound => 'لم يتم العثور على بيانات';
 
   @override
   String get heritagequote =>
-      '\"To know the heart of a culture, one must walk through the echoes of its stone\"';
+      '\"لمعرفة قلب الثقافة، يجب أن تمشي بين أصداء حجارتها\"';
 
   @override
   String get spiritualquote =>
-      '\"Where faith and silence meet, the spirit begins to heal.\"';
+      '\"حيث يلتقي الإيمان بالصمت، تبدأ الروح في الشفاء.\"';
 
   @override
   String get naturequote =>
-      '\"To understand the earth, one must listen to the stories written in its rivers, skies, and silence.\"';
+      '\"لفهم الأرض، يجب الاستماع إلى القصص المكتوبة في أنهارها وسمائها وصمتها.\"';
 
   @override
   String get foodquote =>
-      '\"Every dish tells a story, seasoned with culture, history, and the warmth of its people.\"';
+      '\"كل طبق يروي قصة ممزوجة بالثقافة والتاريخ ودفء الناس.\"';
 
   @override
-  String get pyramidsname => 'Pyramids';
+  String get pyramidsname => 'الأهرامات';
 
   @override
   String get aboutpyramids =>
-      'The world-famous pyramids of ancient Egypt, built as royal tombs and considered one of the Seven Wonders of the Ancient World.';
+      'الأهرامات الشهيرة عالميًا في مصر القديمة، بُنيت كمقابر ملكية وتُعد إحدى عجائب الدنيا السبع.';
 
   @override
-  String get alharam => 'Al Haram';
+  String get alharam => 'الهرم';
 
   @override
-  String get pyramidstag0 => 'PYRAMIDS';
+  String get pyramidstag0 => 'أهرامات';
 
   @override
-  String get pyramidstag1 => 'WONDER';
+  String get pyramidstag1 => 'عجيبة';
 
   @override
-  String get pyramidstag2 => 'LANDMARK';
+  String get pyramidstag2 => 'معلم';
 
   @override
-  String get abusimblename => 'Abu Simbel Temple';
+  String get abusimblename => 'معبد أبو سمبل';
 
   @override
-  String get abusimbellocation => 'Abu Simbel';
+  String get abusimbellocation => 'أبو سمبل';
 
   @override
   String get aboutabusimbel =>
-      'Massive rock-cut temples built by Ramses II, famous for their giant statues and remarkable relocation to protect them from flooding.';
+      'معابد ضخمة منحوتة في الصخور بناها رمسيس الثاني، تشتهر بتماثيلها العملاقة ونقلها لحمايتها من الغرق.';
 
   @override
-  String get abusimbletag0 => 'HISTORICAL';
+  String get abusimbletag0 => 'تاريخي';
 
   @override
-  String get abusimbletag1 => 'MONUMENT';
+  String get abusimbletag1 => 'أثر';
 
   @override
-  String get abusimbletag2 => 'UNESCO';
+  String get abusimbletag2 => 'يونسكو';
 
   @override
   String get hatshepsuttemplename => 'Temple of Hatshepsut';
@@ -861,7 +860,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get other => 'Other';
 
   @override
-  String get closed => 'Closed';
+  String get closed => 'مغلق';
 
   @override
   String get government => 'GOVERNORATE';
@@ -939,30 +938,30 @@ class AppLocalizationsAr extends AppLocalizations {
   String get sohag => 'Sohag';
 
   @override
-  String get goodmorning => 'Good Morning';
+  String get goodmorning => 'صباح الخير';
 
   @override
-  String get discover => 'Discover';
+  String get discover => 'اكتشف';
 
   @override
-  String get hidden => 'hidden';
+  String get hidden => 'الكنوز';
 
   @override
-  String get treasures => 'treasures';
+  String get treasures => 'المخفية';
 
   @override
-  String get errorgetingdata => 'Error fetching data';
+  String get errorgetingdata => 'خطأ أثناء جلب البيانات';
 
   @override
-  String get featuredplaces => 'Featured places';
+  String get featuredplaces => 'أماكن مميزة';
 
   @override
   String get handpickedplaces =>
-      'Hand-picked curation for your \njourney based on your city';
+      'أماكن مختارة خصيصًا \nلرحلتك بناءً على مدينتك';
 
   @override
-  String get nosavedplaces => 'You haven\'t saved any places yet';
+  String get nosavedplaces => 'لم تقم بحفظ أي أماكن بعد';
 
   @override
-  String get novisitedplaces => 'You haven\'t visited any places yet';
+  String get novisitedplaces => 'لم تقم بزيارة أي أماكن بعد';
 }

@@ -9,13 +9,13 @@ class AppLocalizationsFr extends AppLocalizations {
   AppLocalizationsFr([String locale = 'fr']) : super(locale);
 
   @override
-  String get egypttourismguide => 'Egypt Tourism Guide';
+  String get egypttourismguide => 'Guide du tourisme en Égypte';
 
   @override
   String get signInToYourJournal => 'Connectez-vous à votre journal';
 
   @override
-  String get invalidcreds => 'Invalid email or password';
+  String get invalidcreds => 'Email ou mot de passe invalide';
 
   @override
   String get passresetemailsent =>
@@ -26,25 +26,25 @@ class AppLocalizationsFr extends AppLocalizations {
       'Enter your email address and we will send you a link to reset your password.';
 
   @override
-  String get welcomeBackExplorer => 'Bon retour, Explorateur';
+  String get welcomeBackExplorer => 'Bon retour,\nExplorateur';
 
   @override
   String get emailAddress => 'Adresse e-mail';
 
   @override
-  String get emailHint => 'ex., journal@archive.com';
+  String get emailHint => 'Veuillez entrer votre e-mail';
 
   @override
-  String get invalidEmailFormat => 'Invalid email format';
+  String get invalidEmailFormat => 'Format d’e-mail invalide';
 
   @override
   String get password => 'Mot de passe';
 
   @override
-  String get currentpassword => 'Current Password';
+  String get currentpassword => 'Mot de passe actuel';
 
   @override
-  String get newpassword => 'New Password';
+  String get newpassword => 'Nouveau mot de passe';
 
   @override
   String get continueJourney => 'Continuer le voyage';
@@ -65,19 +65,19 @@ class AppLocalizationsFr extends AppLocalizations {
   String get newHere => 'Nouveau ici ?';
 
   @override
-  String get createAccount => 'Create account';
+  String get createAccount => 'Créer un compte';
 
   @override
   String get createAnAccount => 'Créer un compte';
 
   @override
-  String get tellUsAboutYourself => 'Parlez-nous de vous';
+  String get tellUsAboutYourself => 'Parlez-nous de\nvous';
 
   @override
   String get firstName => 'Prénom';
 
   @override
-  String get lastName => 'Nom de famille';
+  String get lastName => 'Nom';
 
   @override
   String get createPassword => 'Créer un mot de passe';
@@ -92,25 +92,25 @@ class AppLocalizationsFr extends AppLocalizations {
   String get currency => 'Devise';
 
   @override
-  String get agreeToTermsPrefix => 'En créant un compte, j\'accepte les ';
+  String get agreeToTermsPrefix => 'En créant un compte, j’accepte les ';
 
   @override
-  String get termsOfService => 'Conditions d\'utilisation';
+  String get termsOfService => 'Conditions d’utilisation';
 
   @override
-  String get and => ' et la ';
+  String get and => ' et ';
 
   @override
   String get privacyPolicy => 'Politique de confidentialité';
 
   @override
-  String get alreadyAMember => 'Déjà membre ?';
+  String get alreadyAMember => 'Vous avez déjà un compte ?';
 
   @override
-  String get signIn => 'Se connecter';
+  String get signIn => 'Connexion';
 
   @override
-  String get curatedJourneys => 'VOYAGES SÉLECTIONNÉS';
+  String get curatedJourneys => 'CURATED JOURNEYS';
 
   @override
   String get exploreThe => 'Explore the';
@@ -119,217 +119,217 @@ class AppLocalizationsFr extends AppLocalizations {
   String get collections => 'Collections';
 
   @override
-  String get searchDestination => 'Rechercher une destination...';
+  String get searchDestination => 'Search a destination...';
 
   @override
-  String get recentlyViewed => 'Vus récemment';
+  String get recentlyViewed => 'Recently viewed';
 
   @override
-  String get savedPlaces => 'Lieux enregistrés';
+  String get savedPlaces => 'Saved places';
 
   @override
-  String get explorer => 'Explorateur';
+  String get explorer => 'Explorer';
 
   @override
-  String get visited => 'VISITÉS';
+  String get visited => 'VISITED';
 
   @override
   String get save => 'Save';
 
   @override
-  String get saved => 'ENREGISTRÉS';
+  String get saved => 'Saved';
 
   @override
-  String get reviews => 'AVIS';
+  String get reviews => 'REVIEWS';
 
   @override
-  String get viewAll => 'VOIR TOUT';
+  String get viewAll => 'VIEW ALL';
 
   @override
-  String get historicSite => 'SITE HISTORIQUE';
+  String get historicSite => 'HISTORIC SITE';
 
   @override
-  String get historicMuseum => 'MUSÉE HISTORIQUE';
+  String get historicMuseum => 'HISTORIC MUSEUM';
 
   @override
-  String get nature => 'NATURE';
+  String get nature => 'Nature';
 
   @override
   String get wadiElRayan => 'Wadi El Rayan';
 
   @override
-  String get elFayoumEgypt => 'Le Fayoum, Égypte';
+  String get elFayoumEgypt => 'El Fayoum, Egypt';
 
   @override
-  String get saltLake => 'Lac salé';
+  String get saltLake => 'Salt lake';
 
   @override
-  String get siwaOasisEgypt => 'Oasis de Siwa, Égypte';
+  String get siwaOasisEgypt => 'Siwa Oasis, Egypt';
 
   @override
-  String get abuSimbelTemple => 'Temple d\'Abou Simbel';
+  String get abuSimbelTemple => 'Abu Simbel Temple';
 
   @override
-  String get aswanEgypt => 'Assouan, Égypte';
+  String get aswanEgypt => 'Aswan, Egypt';
 
   @override
-  String get redSea => 'Mer Rouge';
+  String get redSea => 'Red Sea';
 
   @override
-  String get hurghadaEgypt => 'Hurghada, Égypte';
+  String get hurghadaEgypt => 'Hurghada, Egypt';
 
   @override
-  String get pyramids => 'Pyramides';
+  String get pyramids => 'Pyramids';
 
   @override
-  String get gizaEgypt => 'Gizeh, Égypte';
+  String get gizaEgypt => 'Giza, Egypt';
 
   @override
-  String get theGrandEgyptianMuseum => 'Le Grand Musée Égyptien';
+  String get theGrandEgyptianMuseum => 'The Grand Egyptian Museum';
 
   @override
   String get kebdetElPrince => 'Kebdet El-Prince';
 
   @override
-  String get sheikhZayedGizaEgypt => 'Cheikh Zayed, Gizeh, Égypte';
+  String get sheikhZayedGizaEgypt => 'Shekh Zayed, Giza, Egypt';
 
   @override
-  String get cairo => 'Le Caire';
+  String get cairo => 'Cairo';
 
   @override
-  String get philaeTemple => 'Temple de Philae';
+  String get philaeTemple => 'Philae Temple';
 
   @override
-  String get aswan => 'Assouan';
+  String get aswan => 'Aswan';
 
   @override
-  String get egyptianMuseum => 'Musée Égyptien';
+  String get egyptianMuseum => 'Egyptian Museum';
 
   @override
-  String get siwaOasis => 'Oasis de Siwa';
+  String get siwaOasis => 'Siwa Oasis';
 
   @override
-  String get westernDesert => 'Désert Occidental';
+  String get westernDesert => 'Western Desert';
 
   @override
-  String get historical => 'HISTORIQUE';
+  String get historical => 'HISTORICAL';
 
   @override
-  String get artifacts => 'ARTEFACTS';
+  String get artifacts => 'ARTIFACTS';
 
   @override
-  String get landmark => 'MONUMENT';
+  String get landmark => 'LANDMARK';
 
   @override
-  String get about => 'À propos';
+  String get about => 'About';
 
   @override
-  String get status => 'STATUT';
+  String get status => 'STATUS';
 
   @override
-  String get open => 'Ouvert';
+  String get open => 'Open';
 
   @override
-  String get hours => 'HORAIRES';
+  String get hours => 'HOURS';
 
   @override
-  String get starting => 'À PARTIR DE';
+  String get starting => 'STARTING';
 
   @override
   String get egp => 'EGP';
 
   @override
-  String get gallery => 'Galerie';
+  String get gallery => 'Gallery';
 
   @override
   String get photos => 'PHOTOS';
 
   @override
-  String get planMyVisit => 'PLANIFIER MA VISITE';
+  String get planMyVisit => 'PLAN MY VISIT';
 
   @override
-  String get heritage => 'Patrimoine';
+  String get heritage => 'Heritage';
 
   @override
-  String get all => 'Tout';
+  String get all => 'All';
 
   @override
-  String get templeOfHatshepsut => 'Temple d\'Hatchepsout';
+  String get templeOfHatshepsut => 'Temple of hatshepsut';
 
   @override
-  String get luxorEgypt => 'Louxor, Égypte';
+  String get luxorEgypt => 'Luxor, Egypt';
 
   @override
   String get blueHole => 'Blue Hole';
 
   @override
-  String get dahabEgypt => 'Dahab, Égypte';
+  String get dahabEgypt => 'Dahab, Egypt';
 
   @override
-  String get jabalMousa => 'Djebel Moussa';
+  String get jabalMousa => 'Jabal Mousa';
 
   @override
-  String get sinaiEgypt => 'Sinaï, Égypte';
+  String get sinaiEgypt => 'Sinai, Egypt';
 
   @override
-  String get northCoast => 'Côte Nord';
+  String get northCoast => 'North Coast';
 
   @override
-  String get food => 'Restauration';
+  String get food => 'Food';
 
   @override
-  String get spiritual => 'Spirituel';
+  String get spiritual => 'Spiritual';
 
   @override
   String get qasrElkababgi => 'Qasr Elkababgi';
 
   @override
-  String get newCairoCairoEgypt => 'Nouveau Caire, Le Caire, Égypte';
+  String get newCairoCairoEgypt => 'New Cairo, Cairo, Egypt';
 
   @override
   String get abouTarek => 'Abou Tarek';
 
   @override
-  String get cairoEgypt => 'Le Caire, Égypte';
+  String get cairoEgypt => 'Cairo, Egypt';
 
   @override
   String get arabiata => 'Arabiata';
 
   @override
-  String get elKorbaCairoEgypt => 'El Korba, Le Caire, Égypte';
+  String get elKorbaCairoEgypt => 'El korba, Cairo, Egypt';
 
   @override
   String get asmak => 'Asmak';
 
   @override
-  String get amrIbnAlAsMosque => 'Mosquée Amr Ibn Al-As';
+  String get amrIbnAlAsMosque => 'Amr Ibn AL-As Mosque';
 
   @override
-  String get alFustatOldCairoEgypt => 'Al-Fostat (Vieux Caire), Égypte';
+  String get alFustatOldCairoEgypt => 'Al-Fustat (Old Cairo), Egypt';
 
   @override
-  String get alAzharMosque => 'Mosquée Al-Azhar';
+  String get alAzharMosque => 'Al-Azhar Mosque';
 
   @override
-  String get islamicCairoEgypt => 'Caire Islamique, Égypte';
+  String get islamicCairoEgypt => 'Islamic Cairo, Egypt';
 
   @override
-  String get theHangingChurch => 'L\'Église Suspendue';
+  String get theHangingChurch => 'The Hanging Church';
 
   @override
-  String get copticCairoOldCairoEgypt => 'Caire Copte, Vieux Caire, Égypte';
+  String get copticCairoOldCairoEgypt => 'Coptic Cairo, Old Cairo, Egypt';
 
   @override
-  String get alHusseinMosque => 'Mosquée Al-Hussein';
+  String get alHusseinMosque => 'Al-Hussein Mosque';
 
   @override
-  String get husseinSquareCairoEgypt => 'Place Al-Hussein, Le Caire, Égypte';
+  String get husseinSquareCairoEgypt => 'Hussein Square, Cairo, Egypt';
 
   @override
-  String get saintCatherineMonastery => 'Monastère Sainte-Catherine';
+  String get saintCatherineMonastery => 'Saint Catherine Monastery';
 
   @override
-  String get southSinaiEgypt => 'Sinaï du Sud, Égypte';
+  String get southSinaiEgypt => 'South Sinai, Egypt';
 
   @override
   String get failtostoreuser => 'Failed to store user data. Please try again.';
@@ -377,7 +377,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get editSaved => 'EDIT SAVED';
 
   @override
-  String get saveChanges => 'Save Changes';
+  String get saveChanges => 'Enregistrer les modifications';
 
   @override
   String get firstNameHint => 'Edit your first name';
@@ -836,7 +836,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get changeLanguage => 'Change Language';
 
   @override
-  String get logout => 'Logout';
+  String get logout => 'Déconnexion';
 
   @override
   String get logoutConfirmTitle => 'Logout';
@@ -845,7 +845,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get logoutConfirmMessage => 'Are you sure you want to logout?';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Annuler';
 
   @override
   String get choosecategory => 'Choose a category';
@@ -938,10 +938,10 @@ class AppLocalizationsFr extends AppLocalizations {
   String get sohag => 'Sohag';
 
   @override
-  String get goodmorning => 'Good Morning';
+  String get goodmorning => 'Bonjour';
 
   @override
-  String get discover => 'Discover';
+  String get discover => 'Découvrir';
 
   @override
   String get hidden => 'hidden';
@@ -953,15 +953,15 @@ class AppLocalizationsFr extends AppLocalizations {
   String get errorgetingdata => 'Error fetching data';
 
   @override
-  String get featuredplaces => 'Featured places';
+  String get featuredplaces => 'Lieux en vedette';
 
   @override
   String get handpickedplaces =>
       'Hand-picked curation for your \njourney based on your city';
 
   @override
-  String get nosavedplaces => 'You haven\'t saved any places yet';
+  String get nosavedplaces => 'Vous n’avez encore enregistré aucun lieu';
 
   @override
-  String get novisitedplaces => 'You haven\'t visited any places yet';
+  String get novisitedplaces => 'Vous n’avez encore visité aucun lieu';
 }
