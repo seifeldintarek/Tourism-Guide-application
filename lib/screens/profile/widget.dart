@@ -5,6 +5,7 @@ import 'package:flutter_application_1/l10n/app_localizations.dart';
 import 'package:flutter_application_1/models/Place.dart';
 import 'package:flutter_application_1/root/themes.dart';
 import 'package:flutter_application_1/screens/edit_profile/service.dart';
+import 'package:flutter_application_1/screens/info/info.dart';
 
 // ── Tab button ────────────────────────────────────────────────────────────────
 Widget buildTabButton({
@@ -158,13 +159,23 @@ Widget buildPlacesList({
     physics: const NeverScrollableScrollPhysics(),
     itemCount: places.length,
     separatorBuilder: (_, __) => SizedBox(height: height * 0.013),
-    itemBuilder: (_, index) => buildPlaceCard(
-      context: context,
-      place: places[index],
-      isBookmarked: isBookmarked,
-      id: id,
-      width: width,
-      height: height,
+    itemBuilder: (_, index) => GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (_) => Infoscreen(place: places[index]),
+          ),
+        );
+      },
+      child: buildPlaceCard(
+        context: context,
+        place: places[index],
+        isBookmarked: isBookmarked,
+        id: id,
+        width: width,
+        height: height,
+      ),
     ),
   );
 }

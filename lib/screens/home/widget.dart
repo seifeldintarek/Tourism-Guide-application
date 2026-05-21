@@ -4,6 +4,7 @@ import 'package:flutter_application_1/core/default.dart';
 import 'package:flutter_application_1/l10n/app_localizations.dart';
 import 'package:flutter_application_1/models/Category.dart';
 import 'package:flutter_application_1/models/Place.dart';
+import 'package:flutter_application_1/models/user.dart';
 import 'package:flutter_application_1/root/themes.dart';
 import 'package:flutter_application_1/screens/category/category.dart';
 import 'package:flutter_application_1/screens/home/service.dart';
@@ -23,11 +24,12 @@ Widget header({
     width: width,
     color: Color(0xFFFCDFCF),
     child: Column(
-      crossAxisAlignment: .start,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SizedBox(height: height * .04),
+
         Text(
-          "${lang.goodmorning.toUpperCase()}, ${name}",
+          "${lang.goodmorning.toUpperCase()}, $name",
           style: TextStyle(
             fontFamily: "Sans-Serif",
             fontSize: 11,
@@ -47,6 +49,7 @@ Widget header({
             fontWeight: FontWeight.bold,
           ),
         ),
+
         Text(
           lang.hidden,
           style: GoogleFonts.cormorantGaramond(
@@ -55,6 +58,7 @@ Widget header({
             color: Default.textColor,
           ),
         ),
+
         Text(
           lang.treasures,
           style: TextStyle(
@@ -81,11 +85,13 @@ Widget categories({
     lang.spiritual,
     lang.food,
   ];
+
   return ListView.separated(
     scrollDirection: Axis.horizontal,
     itemCount: categories.length,
     padding: EdgeInsets.symmetric(horizontal: width * .05),
-    separatorBuilder: (context, index) => SizedBox(width: width * .03),
+    separatorBuilder: (context, index) =>
+        SizedBox(width: width * .03),
     itemBuilder: (context, i) {
       return Default.Button(
         onPressed: () async {
@@ -100,7 +106,8 @@ Widget categories({
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => Category_Screen(category: category),
+              builder: (context) =>
+                  Category_Screen(category: category),
             ),
           );
         },
@@ -120,156 +127,254 @@ Widget featuredPlaces({
   required AppLocalizations lang,
 }) {
   return ListView.separated(
-    scrollDirection: .horizontal,
+    scrollDirection: Axis.horizontal,
     itemCount: places.length,
+    separatorBuilder: (context, index) =>
+        SizedBox(width: width * .03),
     itemBuilder: (context, i) {
-      return placeHomeCard(
+      return PlaceHomeCard(
         place: places[i],
         height: height,
         width: width,
         context: context,
       );
     },
-    separatorBuilder: (context, index) => SizedBox(width: width * .03),
   );
 }
 
-Widget placeHomeCard({
-  required Place place,
-  required double height,
-  required double width,
-  required BuildContext context,
-}) {
-  final lang = AppLocalizations.of(context)!;
-  final locale = Localizations.localeOf(context).languageCode;
+class PlaceHomeCard extends StatefulWidget {
+  final Place place;
+  final double height;
+  final double width;
+  final BuildContext context;
 
-  return InkWell(
-    onTap: () => Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => Infoscreen(place: place)),
-    ),
-    child: Container(
-      width: width * .6,
-      decoration: BoxDecoration(
-        color: Default.backgroundColor,
-        borderRadius: BorderRadius.circular(14),
+  const PlaceHomeCard({
+    super.key,
+    required this.place,
+    required this.height,
+    required this.width,
+    required this.context,
+  });
+
+  @override
+  State<PlaceHomeCard> createState() => _PlaceHomeCardState();
+}
+
+class _PlaceHomeCardState extends State<PlaceHomeCard> {
+  bool _isSaved = false;
+  bool _loading = true;
+  bool _toggling = false;
+  String? _userId;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadSavedState();
+  }
+
+  Future<void> _loadSavedState() async {
+    final AppUser? user = await AppUser.loadFromCache();
+
+    if (user == null) {
+      if (mounted) {
+        setState(() {
+          _loading = false;
+        });
+      }
+      return;
+    }
+
+    _userId = user.id;
+
+    final saved = await SavedPlacesService.isPlaceSaved(
+      userId: user.id,
+      placeId: widget.place.name.toLowerCase(),
+    );
+
+    if (mounted) {
+      setState(() {
+        _isSaved = saved;
+        _loading = false;
+      });
+    }
+  }
+
+  Future<void> _toggleSave() async {
+    if (_toggling || _userId == null) return;
+
+    _toggling = true;
+
+    final optimistic = !_isSaved;
+
+    setState(() {
+      _isSaved = optimistic;
+    });
+
+    final confirmed = await SavedPlacesService.toggleSave(
+      userId: _userId!,
+      place: widget.place,
+    );
+
+    if (mounted && confirmed != optimistic) {
+      setState(() {
+        _isSaved = confirmed;
+      });
+    }
+
+    _toggling = false;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final lang = AppLocalizations.of(context)!;
+    final locale = Localizations.localeOf(context).languageCode;
+
+    return InkWell(
+      onTap: () => Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) =>
+              Infoscreen(place: widget.place),
+        ),
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Stack(
-            children: [
-              ClipRRect(
-                borderRadius: const BorderRadius.vertical(
-                  top: Radius.circular(14),
-                ),
-                child: CachedNetworkImage(
-                  imageUrl: place.mainImage,
-                  height: height * .28,
-                  width: double.infinity,
-                  fit: BoxFit.cover,
-                ),
-              ),
-
-              Positioned(
-                top: 10,
-                right: 10,
-                child: Container(
-                  padding: const EdgeInsets.all(6),
-                  decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(.35),
-                    shape: BoxShape.circle,
-                  ),
-                  child: const Icon(
-                    Icons.bookmark_border,
-                    size: 18,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-            ],
-          ),
-
-          Padding(
-            padding: EdgeInsets.symmetric(
-              horizontal: width * .03,
-              vertical: height * .01,
-            ),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
+      child: Container(
+        width: widget.width * .6,
+        decoration: BoxDecoration(
+          color: Default.backgroundColor,
+          borderRadius: BorderRadius.circular(14),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Stack(
               children: [
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        lang.getByKey(place.name),
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: const TextStyle(
-                          fontFamily: "Serif",
-                          fontSize: 13,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black87,
-                        ),
-                      ),
-
-                      const SizedBox(height: 4),
-
-                      Row(
-                        children: [
-                          const Icon(
-                            Icons.location_on_outlined,
-                            size: 12,
-                            color: Colors.black54,
-                          ),
-                          const SizedBox(width: 3),
-                          Expanded(
-                            child: Text(
-                              "${lang.getByKey(place.location)}, ${lang.getByKey(place.city)}",
-                              maxLines: 1,
-                              overflow: TextOverflow.ellipsis,
-                              style: const TextStyle(
-                                fontSize: 11,
-                                color: Colors.black54,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
+                ClipRRect(
+                  borderRadius: const BorderRadius.vertical(
+                    top: Radius.circular(14),
+                  ),
+                  child: CachedNetworkImage(
+                    imageUrl: widget.place.mainImage,
+                    height: widget.height * .28,
+                    width: double.infinity,
+                    fit: BoxFit.cover,
                   ),
                 ),
 
-                Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 8,
-                    vertical: 4,
-                  ),
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFF4DDC8),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Row(
-                    children: [
-                      const Icon(Icons.star, size: 11, color: Colors.brown),
-                      const SizedBox(width: 3),
-                      Text(
-                        NumberFormat('#.#', locale).format(place.rating),
-                        style: const TextStyle(
-                          fontSize: 10,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.brown,
-                        ),
+                Positioned(
+                  top: 10,
+                  right: 10,
+                  child: GestureDetector(
+                    onTap: _toggleSave,
+                    child: Container(
+                      padding: const EdgeInsets.all(6),
+                      decoration: BoxDecoration(
+                        color: Colors.white.withOpacity(.35),
+                        shape: BoxShape.circle,
                       ),
-                    ],
+                      child: Icon(
+                        _isSaved
+                            ? Icons.bookmark
+                            : Icons.bookmark_border,
+                        size: 18,
+                        color: Colors.white,
+                      ),
+                    ),
                   ),
                 ),
               ],
             ),
-          ),
-        ],
+
+            Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: widget.width * .03,
+                vertical: widget.height * .01,
+              ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment:
+                      CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          lang.getByKey(widget.place.name),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: const TextStyle(
+                            fontFamily: "Serif",
+                            fontSize: 13,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black87,
+                          ),
+                        ),
+
+                        const SizedBox(height: 4),
+
+                        Row(
+                          children: [
+                            const Icon(
+                              Icons.location_on_outlined,
+                              size: 12,
+                              color: Colors.black54,
+                            ),
+
+                            const SizedBox(width: 3),
+
+                            Expanded(
+                              child: Text(
+                                "${lang.getByKey(widget.place.location)}, ${lang.getByKey(widget.place.city)}",
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: const TextStyle(
+                                  fontSize: 11,
+                                  color: Colors.black54,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 8,
+                      vertical: 4,
+                    ),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFF4DDC8),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Row(
+                      children: [
+                        const Icon(
+                          Icons.star,
+                          size: 11,
+                          color: Colors.brown,
+                        ),
+
+                        const SizedBox(width: 3),
+
+                        Text(
+                          NumberFormat('#.#', locale)
+                              .format(widget.place.rating),
+                          style: const TextStyle(
+                            fontSize: 10,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.brown,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
-    ),
-  );
+    );
+  }
 }
