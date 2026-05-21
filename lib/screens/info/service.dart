@@ -10,6 +10,7 @@ class VisitedService {
     required String city,
     required String category,
     required String mainImage,
+    required String location,
   }) async {
     await _firestore
         .collection('users')
@@ -22,6 +23,7 @@ class VisitedService {
           'city': city,
           'category': category,
           'mainImage': mainImage,
+          'location': location,
           'visitedAt': FieldValue.serverTimestamp(),
         }, SetOptions(merge: true));
   }

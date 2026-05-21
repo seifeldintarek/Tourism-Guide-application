@@ -21,9 +21,11 @@ class _Home_ScreenState extends State<Home_Screen> {
   fetchFeaturedPlaces() async {
     final res = await fetchFeaturedPlacesFromDB(city: widget.user.city);
 
-    setState(() {
-      places = res;
-    });
+    if (mounted) {
+      setState(() {
+        places = res;
+      });
+    }
   }
 
   @override

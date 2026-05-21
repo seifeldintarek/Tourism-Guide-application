@@ -29,6 +29,7 @@ class _InfoscreenState extends State<Infoscreen> {
         city: widget.place.city,
         category: widget.place.category,
         mainImage: widget.place.mainImage,
+        location: widget.place.location,
       );
     }
 
