@@ -15,6 +15,11 @@ class LocaleProvider with ChangeNotifier {
 extension LocalizationHelper on AppLocalizations {
   String getByKey(String key) {
     final map = {
+      'heritagequote': heritagequote,
+      'spiritualquote': spiritualquote,
+      'naturequote': naturequote,
+      'foodquote': foodquote,
+
       'pyramidsname': pyramidsname,
       'alharam': alharam,
       'aboutpyramids': aboutpyramids,
