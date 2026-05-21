@@ -8,6 +8,7 @@ import 'package:flutter_application_1/screens/category/widget.dart';
 import 'package:flutter_auto_size_text/flutter_auto_size_text.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_application_1/root/themes.dart';
+import 'package:flutter_application_1/screens/saved_screen/skeleton.dart';
 
 class Category_Screen extends StatefulWidget {
   Category_Screen({super.key, required this.category});
@@ -96,9 +97,7 @@ class _Category_ScreenState extends State<Category_Screen> {
               future: fetchCategoryPlaces(widget.category.name),
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
-                  return const Center(
-                    child: CircularProgressIndicator(color: Colors.black),
-                  );
+                  return const SavedPlacesSkeletonList();
                 }
 
                 if (snapshot.hasError) {

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/controller/navigationbar.dart';
 import 'package:flutter_application_1/core/default.dart';
 import 'package:flutter_application_1/l10n/app_localizations.dart';
-import 'package:flutter_application_1/screens/settings/hamburger.dart';
 import 'package:flutter_application_1/screens/login/login.dart';
 import 'package:flutter_application_1/screens/signup/widget.dart';
 import 'package:flutter_application_1/screens/signup/service.dart';

@@ -43,6 +43,7 @@ void showLogoutDialog(BuildContext context) {
             );
           },
           style: ElevatedButton.styleFrom(
+        // ... rest of your styling
             backgroundColor: Colors.redAccent,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(width * 0.03),
