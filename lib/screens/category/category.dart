@@ -7,6 +7,7 @@ import 'package:flutter_application_1/screens/category/service.dart';
 import 'package:flutter_application_1/screens/category/widget.dart';
 import 'package:flutter_auto_size_text/flutter_auto_size_text.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_application_1/root/themes.dart';
 import 'package:flutter_application_1/screens/saved_screen/skeleton.dart';
 
 class Category_Screen extends StatefulWidget {
@@ -48,7 +49,7 @@ class _Category_ScreenState extends State<Category_Screen> {
                   bottom: height * .02,
                   left: width * .02,
                   child: Text(
-                    lang.heritage.toUpperCase(),
+                    lang.getByKey(widget.category.name).toUpperCase(),
                     // widget.category.name.toUpperCase(),
                     style: TextStyle(
                       color: Colors.white,
@@ -67,7 +68,7 @@ class _Category_ScreenState extends State<Category_Screen> {
               margin: EdgeInsets.only(bottom: height * .03),
               padding: EdgeInsets.symmetric(horizontal: width * .1),
               child: AutoSizeText(
-                widget.category.quote,
+                lang.getByKey(widget.category.quote),
                 style: GoogleFonts.ebGaramond(
                   color: Color(0xFF4A4A46),
                   fontSize: 18,

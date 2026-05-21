@@ -35,12 +35,14 @@ class MainImageHeader extends StatefulWidget {
   final Place place;
   final double height;
   final double width;
+  final String locationName;
 
   const MainImageHeader({
     super.key,
     required this.place,
     required this.height,
     required this.width,
+    required this.locationName,
   });
 
   @override

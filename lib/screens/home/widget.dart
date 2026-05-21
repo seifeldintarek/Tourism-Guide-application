@@ -4,6 +4,7 @@ import 'package:flutter_application_1/core/default.dart';
 import 'package:flutter_application_1/l10n/app_localizations.dart';
 import 'package:flutter_application_1/models/Category.dart';
 import 'package:flutter_application_1/models/Place.dart';
+import 'package:flutter_application_1/root/themes.dart';
 import 'package:flutter_application_1/models/User.dart';
 import 'package:flutter_application_1/screens/category/category.dart';
 import 'package:flutter_application_1/screens/home/service.dart';
@@ -22,7 +23,7 @@ Widget header({
 }) {
   return Container(
     padding: EdgeInsets.only(left: width * .1),
-    height: height * .28,
+    height: height * .25,
     width: width,
     color: const Color(0xFFFCDFCF),
     child: Column(
@@ -132,6 +133,53 @@ Widget featuredPlaces({
   return ListView.separated(
     scrollDirection: Axis.horizontal,
     itemCount: places.length,
+    itemBuilder: (context, i) {
+      return placeHomeCard(
+        place: places[i],
+        height: height,
+        width: width,
+        context: context,
+        lang: lang,
+      );
+    },
+    separatorBuilder: (context, index) => SizedBox(width: width * .03),
+  );
+}
+
+Widget placeHomeCard({
+  required Place place,
+  required double height,
+  required double width,
+  required BuildContext context,
+  required AppLocalizations lang,
+}) {
+  return InkWell(
+    onTap: () => Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => Infoscreen(place: place)),
+    ),
+    child: Container(
+      width: width * .6,
+      decoration: BoxDecoration(
+        color: Default.backgroundColor,
+        borderRadius: BorderRadius.circular(14),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Stack(
+            children: [
+              ClipRRect(
+                borderRadius: const BorderRadius.vertical(
+                  top: Radius.circular(14),
+                ),
+                child: CachedNetworkImage(
+                  imageUrl: place.mainImage,
+                  height: height * .28,
+                  width: double.infinity,
+                  fit: BoxFit.cover,
+                ),
+              ),
     separatorBuilder: (_, __) => SizedBox(width: width * .03),
     itemBuilder: (_, i) => PlaceHomeCard(
       place: places[i],
@@ -273,6 +321,28 @@ class _PlaceHomeCardState extends State<PlaceHomeCard> {
                   ),
                 ),
 
+          Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: width * .03,
+              vertical: height * .01,
+            ),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        lang.getByKey(place.name),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(
+                          fontFamily: "Serif",
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black87,
+                        ),
                 Positioned(
                   top: 10,
                   right: 10,
@@ -318,6 +388,15 @@ class _PlaceHomeCardState extends State<PlaceHomeCard> {
                             fontWeight: FontWeight.bold,
                             color: Colors.black87,
                           ),
+                          const SizedBox(width: 3),
+                          Expanded(
+                            child: Text(
+                              "${lang.getByKey(place.location)}, ${lang.getByKey(place.city)}",
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: const TextStyle(
+                                fontSize: 11,
+                                color: Colors.black54,
                         ),
                         const SizedBox(height: 4),
                         Row(

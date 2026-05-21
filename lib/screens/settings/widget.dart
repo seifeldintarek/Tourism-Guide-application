@@ -34,10 +34,10 @@ void showLogoutDialog(BuildContext context) {
             // 1. Clear session / tokens here
 
             // 2. Navigate using the dialog's own context ('ctx').
-            // The predicate (route) => false removes ALL previous routes, 
+            // The predicate (route) => false removes ALL previous routes,
             // which automatically closes this dialog for you.
             Navigator.pushAndRemoveUntil(
-              ctx, 
+              ctx,
               MaterialPageRoute(builder: (_) => Login()),
               (route) => false,
             );

@@ -4,6 +4,7 @@ import 'package:flutter_application_1/l10n/app_localizations.dart';
 import 'package:flutter_application_1/models/Place.dart';
 import 'package:flutter_application_1/screens/info/info.dart';
 import 'package:flutter_application_1/screens/search/service.dart';
+import 'package:flutter_application_1/root/themes.dart';
 
 Widget searchTextfield(
   BuildContext context,
@@ -86,7 +87,31 @@ Widget searchTextfield(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
                 itemCount: results.length,
-                itemBuilder: (context, index) => cardBuilder(results[index]),
+                itemBuilder: (context, index) {
+                  final place = results[index];
+
+                  return buildPlaceCard(
+                    Place(
+                      id: place.id,
+                      name: lang.getByKey(place.name),
+                      location: lang.getByKey(place.location),
+                      city: lang.getByKey(place.city),
+                      mainImage: place.mainImage,
+                      category: place.category,
+                      rating: place.rating,
+                      about: place.about,
+                      tags: place.tags,
+                      startHr: place.startHr,
+                      endHr: place.endHr,
+                      ticketPrice: place.ticketPrice,
+                      galleryImages: place.galleryImages,
+                      mapUrl: place.mapUrl,
+                      bookingUrl: place.bookingUrl,
+                      ticketPriceEgyptian: place.ticketPriceEgyptian,
+                    ),
+                    originalPlace: place,
+                  );
+                },
               );
             },
           );
@@ -96,7 +121,7 @@ Widget searchTextfield(
   );
 }
 
-Widget buildPlaceCard(Place place) {
+Widget buildPlaceCard(Place place, {Place? originalPlace}) {
   return LayoutBuilder(
     builder: (context, constraints) {
       final width = MediaQuery.of(context).size.width;
@@ -151,7 +176,9 @@ Widget buildPlaceCard(Place place) {
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => Infoscreen(place: place)),
+              MaterialPageRoute(
+                builder: (context) => Infoscreen(place: originalPlace ?? place),
+              ),
             );
           },
         ),

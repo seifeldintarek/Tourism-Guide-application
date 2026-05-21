@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/l10n/app_localizations.dart';
 import 'package:flutter_application_1/core/default.dart';
+import 'package:flutter_application_1/screens/login/service.dart';
+import 'package:flutter_application_1/models/User.dart';
+import 'package:flutter_application_1/controller/navigationbar.dart';
 
 String? validateEmail(String? value, AppLocalizations lang) {
   if (value == null || value.isEmpty) {
@@ -224,7 +227,21 @@ Widget socialLoginButtons(BuildContext context, double width, double height) {
     children: [
       Expanded(
         child: OutlinedButton.icon(
-          onPressed: () {},
+          onPressed: () async {
+            final AppUser? user = await signInWithGoogle(context);
+            if (user == null) {
+              ScaffoldMessenger.of(
+                context,
+              ).showSnackBar(SnackBar(content: Text(lang.invalidcreds)));
+              return;
+            }
+            await user.saveToCache();
+            Navigator.pushAndRemoveUntil(
+              context,
+              MaterialPageRoute(builder: (context) => Footer(user: user)),
+              (route) => false,
+            );
+          },
           icon: Image.network(
             'https://www.google.com/favicon.ico',
             width: 20,
