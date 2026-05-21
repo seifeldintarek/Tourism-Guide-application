@@ -14,6 +14,10 @@
   "@invalidcreds": {
     "description": "Sentence: user logged in with wrong email/password"
   },
+
+  "passresetemailsent" : "Password reset email sent. Check your inbox.",
+
+  "forgetpassemailhint" : "Enter your email address and we will send you a link to reset your password.",
   "welcomeBackExplorer": "Welcome back, \nExplorer",
   "@welcomeBackExplorer": {
     "description": "Sentence: Greeting message."
@@ -47,6 +51,7 @@
   "@forgotPassword": {
     "description": "Sentence/Question: Link for password recovery."
   },
+  "resetpassword": "Reset password",
   "or": "or",
   "@or": {
     "description": "Word: Divider text."

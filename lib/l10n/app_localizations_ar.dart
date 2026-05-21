@@ -18,6 +18,14 @@ class AppLocalizationsAr extends AppLocalizations {
   String get invalidcreds => 'Invalid email or password';
 
   @override
+  String get passresetemailsent =>
+      'Password reset email sent. Check your inbox.';
+
+  @override
+  String get forgetpassemailhint =>
+      'Enter your email address and we will send you a link to reset your password.';
+
+  @override
   String get welcomeBackExplorer => 'مرحباً بعودتك، أيها المستكشف';
 
   @override
@@ -43,6 +51,9 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get forgotPassword => 'هل نسيت كلمة المرور؟';
+
+  @override
+  String get resetpassword => 'Reset password';
 
   @override
   String get or => 'أو';

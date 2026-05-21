@@ -28,15 +28,17 @@ class Default {
           ),
           elevation: 2,
         ),
-        child: AutoSizeText(
-          child!.toUpperCase(),
-          maxLines: 1,
-          style: TextStyle(
-            fontSize: 13,
-            color: textColor,
-            fontFamily: 'WorkSans',
-            fontWeight: FontWeight.w600,
-            letterSpacing: 1.5,
+        child: Center(
+          child: AutoSizeText(
+            child!.toUpperCase(),
+            maxLines: 1,
+            style: TextStyle(
+              fontSize: 13,
+              color: textColor,
+              fontFamily: 'WorkSans',
+              fontWeight: FontWeight.w600,
+              letterSpacing: 1.5,
+            ),
           ),
         ),
       ),

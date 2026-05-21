@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/controller/navigationbar.dart';
 import 'package:flutter_application_1/core/default.dart';
 import 'package:flutter_application_1/models/User.dart';
+import 'package:flutter_application_1/screens/forgot_password/forgot_password.dart';
 import 'package:flutter_application_1/screens/signup/signup.dart';
 import 'package:flutter_application_1/l10n/app_localizations.dart';
 import 'package:flutter_application_1/screens/login/widget.dart';
@@ -148,9 +149,15 @@ class _LoginState extends State<Login> {
               ),
               SizedBox(height: height * 0.025),
               Center(
-                child: Text(
-                  lang.forgotPassword,
-                  style: const TextStyle(fontSize: 14, color: Colors.black87),
+                child: TextButton(
+                  onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => const ForgotPassword()),
+                  ),
+                  child: Text(
+                    lang.forgotPassword,
+                    style: const TextStyle(fontSize: 14, color: Colors.black87),
+                  ),
                 ),
               ),
               SizedBox(height: height * 0.04),

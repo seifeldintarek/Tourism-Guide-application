@@ -3,7 +3,8 @@ import 'package:flutter_application_1/l10n/app_localizations.dart';
 import 'package:flutter_application_1/models/User.dart';
 import 'package:flutter_application_1/screens/edit_profile/edit_profile.dart';
 import 'package:flutter_application_1/screens/language/languages.dart';
-import 'package:flutter_application_1/screens/settings/widget.dart'; //till manage profile is added
+import 'package:flutter_application_1/screens/settings/widget.dart';
+import 'package:flutter_application_1/screens/reset_password/reset_password.dart'; //till manage profile is added
 
 class Hamburger extends StatefulWidget {
   Hamburger({super.key, required this.user});
@@ -86,7 +87,26 @@ class _HamburgerState extends State<Hamburger> {
                 );
               },
             ),
-
+            ListTile(
+              leading: const Icon(Icons.lock_reset, color: Color(0xFF463427)),
+              title: Text(
+                lang.resetpassword,
+                style: TextStyle(
+                  fontSize: width * 0.04,
+                  color: const Color(0xFF463427),
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => ResetPassword(user: widget.user),
+                  ),
+                );
+              },
+            ),
             const Spacer(),
 
             const Divider(height: 1, color: Color(0xFFD8CFC5)),
