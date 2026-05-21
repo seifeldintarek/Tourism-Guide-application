@@ -5,6 +5,7 @@ import 'package:flutter_application_1/models/Place.dart';
 import 'package:flutter_application_1/models/User.dart';
 import 'package:flutter_application_1/screens/home/service.dart';
 import 'package:flutter_application_1/screens/home/widget.dart';
+import 'package:flutter_application_1/screens/home/skeleton.dart';
 
 class Home_Screen extends StatefulWidget {
   Home_Screen({super.key, required this.user});
@@ -17,15 +18,17 @@ class Home_Screen extends StatefulWidget {
 
 class _Home_ScreenState extends State<Home_Screen> {
   List<Place> places = [];
+  bool isLoading = true;
 
   fetchFeaturedPlaces() async {
     final res = await fetchFeaturedPlacesFromDB(city: widget.user.city);
 
-      if (mounted) {
-    setState(() {
-      places = res;
-    });
-  }
+    if (mounted) {
+      setState(() {
+        places = res;
+        isLoading = false;
+      });
+    }
   }
 
   @override
@@ -103,13 +106,16 @@ class _Home_ScreenState extends State<Home_Screen> {
               margin: EdgeInsets.only(left: width * .03),
               height: height * .4,
               width: width,
-              child: featuredPlaces(
-                places: places,
-                context: context,
-                height: height,
-                width: width,
-                lang: lang,
-              ),
+              child: isLoading
+                  ? const PlaceCardSkeletonList() // show skeleton
+                  : featuredPlaces(
+                      // show real cards
+                      places: places,
+                      context: context,
+                      height: height,
+                      width: width,
+                      lang: lang,
+                    ),
             ),
 
             SizedBox(height: height * .05),
