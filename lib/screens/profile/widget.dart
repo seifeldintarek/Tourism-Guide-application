@@ -110,7 +110,7 @@ Widget buildPlaceCard(Place place, {bool isBookmarked = false}) {
               ),
               const SizedBox(height: 4),
               Text(
-                '${place.location.toUpperCase()} • ${place.city.toUpperCase()}',
+                ' • ${place.city.toUpperCase()}',
                 style: TextStyle(
                   fontSize: 9,
                   fontWeight: FontWeight.w600,
