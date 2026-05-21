@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/default.dart';
 import 'package:flutter_application_1/models/Place.dart';
+import 'package:flutter_application_1/screens/edit_profile/service.dart';
 
 // ── Tab button ────────────────────────────────────────────────────────────────
 Widget buildTabButton({
@@ -9,6 +10,7 @@ Widget buildTabButton({
   required bool isSelected,
   required double width,
   required VoidCallback onTap,
+  required double height,
 }) {
   return GestureDetector(
     onTap: onTap,
@@ -24,10 +26,10 @@ Widget buildTabButton({
             color: isSelected ? Colors.black87 : NudePalette.nudeBrown,
           ),
         ),
-        const SizedBox(height: 4),
+        SizedBox(height: height * 0.005),
         AnimatedContainer(
           duration: const Duration(milliseconds: 200),
-          height: 2,
+          height: height * 0.003,
           width: isSelected ? width * 0.12 : 0,
           decoration: BoxDecoration(
             color: Default.buttonColor,
@@ -63,7 +65,7 @@ Widget buildEmptyState({required IconData icon, required String message}) {
 }
 
 // ── Place card ────────────────────────────────────────────────────────────────
-Widget buildPlaceCard(Place place, {bool isBookmarked = false}) {
+Widget buildPlaceCard({required Place place, bool isBookmarked = false,required  String id, required double width, required double height}) {
   return Container(
     padding: const EdgeInsets.all(12),
     decoration: BoxDecoration(
@@ -76,26 +78,26 @@ Widget buildPlaceCard(Place place, {bool isBookmarked = false}) {
           borderRadius: BorderRadius.circular(10),
           child: CachedNetworkImage(
             imageUrl: place.mainImage,
-            width: 56,
-            height: 56,
+            width: width * 0.16,
+            height: height * 0.08,
             fit: BoxFit.cover,
             placeholder: (context, url) => Container(
-              width: 56,
-              height: 56,
+              width: width * 0.16,
+              height: height * 0.08,
               color: Colors.grey.shade200,
-              child: const Center(
+              child: Center(
                 child: CircularProgressIndicator(strokeWidth: 2),
               ),
             ),
             errorWidget: (context, url, error) => Container(
-              width: 56,
-              height: 56,
+              width: width * 0.16,
+              height: height * 0.08,
               color: Colors.grey.shade200,
-              child: const Icon(Icons.image_not_supported, size: 24),
+              child: Icon(Icons.image_not_supported, size: 24),
             ),
           ),
         ),
-        const SizedBox(width: 16),
+        SizedBox(width: width * 0.04),
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -108,9 +110,9 @@ Widget buildPlaceCard(Place place, {bool isBookmarked = false}) {
                   color: NudePalette.nudeDark,
                 ),
               ),
-              const SizedBox(height: 4),
+              SizedBox(height: height * 0.005),
               Text(
-                ' • ${place.city.toUpperCase()}',
+                '${place.location.toUpperCase()} • ${place.city.toUpperCase()}',
                 style: TextStyle(
                   fontSize: 9,
                   fontWeight: FontWeight.w600,
@@ -126,7 +128,9 @@ Widget buildPlaceCard(Place place, {bool isBookmarked = false}) {
             isBookmarked ? Icons.bookmark : Icons.bookmark_border,
             color: isBookmarked ? Default.buttonColor : NudePalette.nudeDark,
           ),
-          onPressed: () {},
+          onPressed: () async {
+              await deleteSavedPlace(id, place.id);
+          },
         ),
       ],
     ),
@@ -134,13 +138,13 @@ Widget buildPlaceCard(Place place, {bool isBookmarked = false}) {
 }
 
 // ── Places list ───────────────────────────────────────────────────────────────
-Widget buildPlacesList({required List<Place> places, required double height, bool isBookmarked = false,}) {
+Widget buildPlacesList({required List<Place> places, required double height, bool isBookmarked = false, required String id, required double width}) {
   return ListView.separated(
     shrinkWrap: true,
     physics: const NeverScrollableScrollPhysics(),
     itemCount: places.length,
     separatorBuilder: (_, __) => SizedBox(height: height * 0.013),
-    itemBuilder: (_, index) => buildPlaceCard(places[index], isBookmarked: isBookmarked),
+    itemBuilder: (_, index) => buildPlaceCard(place: places[index], isBookmarked: isBookmarked, id: id, width: width, height: height),
   );
 }
 
@@ -157,7 +161,7 @@ Widget buildStatColumn(String number, String label, double height) {
           color: NudePalette.nudeDark,
         ),
       ),
-      SizedBox(height: height),
+      SizedBox(height: height * 0.01),
       Text(
         label,
         style: const TextStyle(

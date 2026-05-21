@@ -6,6 +6,7 @@ import 'package:flutter_application_1/models/User.dart';
 import 'package:flutter_application_1/screens/edit_profile/edit_profile.dart';
 import 'package:flutter_application_1/l10n/app_localizations.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:intl/intl.dart';
 import 'service.dart';
 import 'widget.dart';
 
@@ -19,6 +20,8 @@ class Profile extends StatefulWidget {
 
 class _ProfileState extends State<Profile> {
   int _selectedTab = 0; // 0 = Visited, 1 = Saved
+  int _visitedCount = 0;  // add this
+  int _savedCount = 0;
   Widget _buildPlacesTab({
     required Stream<List<Place>> stream,
     required IconData emptyIcon,
@@ -41,10 +44,19 @@ class _ProfileState extends State<Profile> {
           );
         }
         final places = snapshot.data ?? [];
+
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          if (_selectedTab == 0 && _visitedCount != places.length) {
+            setState(() => _visitedCount = places.length);
+          }
+          if (_selectedTab == 1 && _savedCount != places.length) {
+            setState(() => _savedCount = places.length);
+          }
+        });
         if (places.isEmpty) {
           return buildEmptyState(icon: emptyIcon, message: emptyMessage);
         }
-        return buildPlacesList(places: places, height: height, isBookmarked: isBookmarked);
+        return buildPlacesList(places: places, height: height, isBookmarked: isBookmarked, id: widget.user.id, width: MediaQuery.of(context).size.width);
       },
     );
   }
@@ -55,10 +67,12 @@ class _ProfileState extends State<Profile> {
     final double width = MediaQuery.of(context).size.width;
     final double height = MediaQuery.of(context).size.height;
     final lang = AppLocalizations.of(context)!;
+    final locale = Localizations.localeOf(context).languageCode;
 
     return StreamBuilder<AppUser>(
       stream: userStream(widget.user.id),
       builder: (context, snapshot) {
+        
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const Scaffold(
             body: Center(child: CircularProgressIndicator()),
@@ -128,6 +142,7 @@ class _ProfileState extends State<Profile> {
                                   isSelected: _selectedTab == 0,
                                   width: width,
                                   onTap: () => setState(() => _selectedTab = 0),
+                                  height: height,
                                 ),
                                 SizedBox(width: width * 0.06),
                                 buildTabButton(
@@ -135,6 +150,7 @@ class _ProfileState extends State<Profile> {
                                   isSelected: _selectedTab == 1,
                                   width: width,
                                   onTap: () => setState(() => _selectedTab = 1),
+                                  height: height,
                                 ),
                               ],
                             ),
@@ -230,7 +246,7 @@ class _ProfileState extends State<Profile> {
                         SizedBox(height: height * 0.005),
 
                         Text(
-                          '${lang.explorer} • ${lang.cairo}',
+                          '${lang.explorer} • ${widget.user.city}',
                           style: TextStyle(
                             fontSize: 13,
                             fontFamily: 'Times New Roman',
@@ -257,13 +273,13 @@ class _ProfileState extends State<Profile> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              buildStatColumn('42', lang.visited, height * 0.003),
+                              buildStatColumn(_savedCount.toString(), lang.saved, height * 0.003),
                               Container(
                                 height: height * 0.03,
                                 width: width * 0.004,
                                 color: Colors.grey.withOpacity(0.3),
                               ),
-                              buildStatColumn('128', lang.saved, height * 0.003),
+                              buildStatColumn(_visitedCount.toString(), lang.visited, height * 0.003),
                             ],
                           ),
                         ),
