@@ -20,7 +20,7 @@ Widget header({
 }) {
   return Container(
     padding: EdgeInsets.only(left: width * .1),
-    height: height * .28,
+    height: height * .25,
     width: width,
     color: Color(0xFFFCDFCF),
     child: Column(
@@ -90,8 +90,7 @@ Widget categories({
     scrollDirection: Axis.horizontal,
     itemCount: categories.length,
     padding: EdgeInsets.symmetric(horizontal: width * .05),
-    separatorBuilder: (context, index) =>
-        SizedBox(width: width * .03),
+    separatorBuilder: (context, index) => SizedBox(width: width * .03),
     itemBuilder: (context, i) {
       return Default.Button(
         onPressed: () async {
@@ -106,8 +105,7 @@ Widget categories({
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) =>
-                  Category_Screen(category: category),
+              builder: (context) => Category_Screen(category: category),
             ),
           );
         },
@@ -129,8 +127,7 @@ Widget featuredPlaces({
   return ListView.separated(
     scrollDirection: Axis.horizontal,
     itemCount: places.length,
-    separatorBuilder: (context, index) =>
-        SizedBox(width: width * .03),
+    separatorBuilder: (context, index) => SizedBox(width: width * .03),
     itemBuilder: (context, i) {
       return PlaceHomeCard(
         place: places[i],
@@ -233,8 +230,7 @@ class _PlaceHomeCardState extends State<PlaceHomeCard> {
       onTap: () => Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) =>
-              Infoscreen(place: widget.place),
+          builder: (context) => Infoscreen(place: widget.place),
         ),
       ),
       child: Container(
@@ -272,9 +268,7 @@ class _PlaceHomeCardState extends State<PlaceHomeCard> {
                         shape: BoxShape.circle,
                       ),
                       child: Icon(
-                        _isSaved
-                            ? Icons.bookmark
-                            : Icons.bookmark_border,
+                        _isSaved ? Icons.bookmark : Icons.bookmark_border,
                         size: 18,
                         color: Colors.white,
                       ),
@@ -294,8 +288,7 @@ class _PlaceHomeCardState extends State<PlaceHomeCard> {
                 children: [
                   Expanded(
                     child: Column(
-                      crossAxisAlignment:
-                      CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           lang.getByKey(widget.place.name),
@@ -349,17 +342,15 @@ class _PlaceHomeCardState extends State<PlaceHomeCard> {
                     ),
                     child: Row(
                       children: [
-                        const Icon(
-                          Icons.star,
-                          size: 11,
-                          color: Colors.brown,
-                        ),
+                        const Icon(Icons.star, size: 11, color: Colors.brown),
 
                         const SizedBox(width: 3),
 
                         Text(
-                          NumberFormat('#.#', locale)
-                              .format(widget.place.rating),
+                          NumberFormat(
+                            '#.#',
+                            locale,
+                          ).format(widget.place.rating),
                           style: const TextStyle(
                             fontSize: 10,
                             fontWeight: FontWeight.bold,
