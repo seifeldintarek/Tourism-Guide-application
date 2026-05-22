@@ -123,6 +123,8 @@ class _Search_ScreenState extends State<Search_Screen> {
                             bodyFontSize: fontSize,
                             color: Colors.white,
                           )
+                        : categoryMap[selectedCategory] == null
+                        ? SizedBox()
                         : searchTextfield(
                             context,
                             height,

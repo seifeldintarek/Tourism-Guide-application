@@ -73,7 +73,7 @@ class _ProfileState extends State<Profile> {
     final double width = MediaQuery.of(context).size.width;
     final double height = MediaQuery.of(context).size.height;
     final lang = AppLocalizations.of(context)!;
-    final locale = Localizations.localeOf(context).languageCode;
+    final locale = Localizations.localeOf(context).toString();
 
     return StreamBuilder<AppUser>(
       stream: userStream(widget.user.id),

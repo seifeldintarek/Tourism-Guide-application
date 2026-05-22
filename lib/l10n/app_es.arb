@@ -958,5 +958,9 @@
   "featuredplaces": "Lugares destacados",
   "handpickedplaces": "Selección curada para tu \nviaje según tu ciudad",
   "nosavedplaces": "Aún no has guardado ningún lugar",
-  "novisitedplaces": "Aún no has visitado ningún lugar"
+  "novisitedplaces": "Aún no has visitado ningún lugar",
+"resetemail": "Restablecer por correo electrónico",
+"passwordsdontmatch": "Las contraseñas no coinciden",
+"sendresetemail": "Enviar correo de restablecimiento",
+"resetemaildesc": "Introduce la dirección de correo electrónico vinculada a tu cuenta. Te enviaremos un enlace para restablecer tu contraseña."
 }

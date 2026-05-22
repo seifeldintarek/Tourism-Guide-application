@@ -958,5 +958,9 @@
   "featuredplaces": "Featured places",
   "handpickedplaces": "Hand-picked curation for your \njourney based on your city",
   "nosavedplaces": "You haven't saved any places yet",
-  "novisitedplaces": "You haven't visited any places yet"
+  "novisitedplaces": "You haven't visited any places yet",
+  "resetemail": "Réinitialiser par e-mail",
+  "sendresetemail": "Envoyer l'e-mail de réinitialisation",
+"resetemaildesc": "Entrez l'adresse e-mail liée à votre compte. Nous vous enverrons un lien pour réinitialiser votre mot de passe.",
+  "passwordsdontmatch": "Les mots de passe ne correspondent pas"
 }

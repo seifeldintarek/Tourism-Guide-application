@@ -162,6 +162,7 @@ extension LocalizationHelper on AppLocalizations {
       'qena': qena,
       'northSinai': northSinai,
       'sohag': sohag,
+      'neweiba': neweiba,
 
       'mosquehassanname': mosquehassanname,
       'aboutmosquehassan': aboutmosquehassan,

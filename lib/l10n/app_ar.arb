@@ -485,6 +485,10 @@
   "@blueholename": {
     "description": "Blue Hole name"
   },
+  "resetemail": "إعادة التعيين عبر البريد الإلكتروني",
+  "passwordsdontmatch": "كلمات المرور غير متطابقة",
+  "sendresetemail": "إرسال بريد إعادة التعيين",
+  "resetemaildesc": "أدخل عنوان البريد الإلكتروني المرتبط بحسابك. سنرسل لك رابطًا لإعادة تعيين كلمة المرور.",
   "blueholeofdahab": "الثقب الأزرق بدهب",
   "@blueholeofdahab": {
     "description": "Blue Hole location"

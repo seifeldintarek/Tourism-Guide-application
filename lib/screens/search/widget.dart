@@ -94,9 +94,9 @@ Widget searchTextfield(
                   return buildPlaceCard(
                     Place(
                       id: place.id,
-                      name: place.name,
-                      location: place.location,
-                      city: place.city,
+                      name: lang.getByKey(place.name),
+                      location: lang.getByKey(place.location),
+                      city: lang.getByKey(place.city),
                       mainImage: place.mainImage,
                       category: place.category,
                       rating: place.rating,
@@ -125,7 +125,7 @@ Widget searchTextfield(
 Widget buildPlaceCard(Place place, {Place? originalPlace}) {
   return LayoutBuilder(
     builder: (context, constraints) {
-      final locale = Localizations.localeOf(context).languageCode;
+      final locale = Localizations.localeOf(context).toString();
       final lang = AppLocalizations.of(context)!;
       final width = MediaQuery.of(context).size.width;
       final height = MediaQuery.of(context).size.height;
@@ -160,7 +160,7 @@ Widget buildPlaceCard(Place place, {Place? originalPlace}) {
             ),
           ),
           title: Text(
-            lang.getByKey(place.name),
+            place.name,
             style: TextStyle(
               fontSize: 15,
               fontWeight: FontWeight.w600,

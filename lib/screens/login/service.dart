@@ -16,10 +16,9 @@ Future<AppUser?> loginUser({
   required String password,
 }) async {
   try {
-    final hashedPass = hashPassword(password.trim());
     await FirebaseAuth.instance.signInWithEmailAndPassword(
       email: email.trim(),
-      password: hashedPass,
+      password: password.trim(),
     );
 
     final firebaseUser = FirebaseAuth.instance.currentUser;
@@ -105,9 +104,9 @@ Future<AppUser?> signInWithGoogle(BuildContext context) async {
       lastName: lastName,
       fullName: displayName,
       email: firebaseUser.email ?? "",
-      city: "Cairo",
+      city: "cairo",
       language: "en",
-      hashedPassword: "",
+      password: "",
       joinedAt: DateTime.now(),
       profilePictureUrl: firebaseUser.photoURL,
     );

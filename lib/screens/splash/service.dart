@@ -30,6 +30,8 @@ Future<void> initializeApp(BuildContext context) async {
 
     appUser = AppUser.fromMap(doc.data()!);
 
+    context.read<LocaleProvider>().setLocale(appUser.language as Locale);
+
     await appUser.saveToCache();
   } catch (e) {
     print("Firestore fetch failed, trying cache: $e");

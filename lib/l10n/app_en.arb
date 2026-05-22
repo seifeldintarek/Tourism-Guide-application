@@ -613,8 +613,10 @@
 },
 
 
-
-
+"resetemail": "Reset via Email",
+"passwordsdontmatch": "Passwords don't match",
+"sendresetemail": "Send Reset Email",
+"resetemaildesc": "Enter the email address linked to your account. We will send you a link to reset your password.",
 "wadielgemalname": "Wadi El Gemal",
 "@wadielgemalname": {
   "description": "Wadi El Gemal name"

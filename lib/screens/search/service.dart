@@ -16,7 +16,6 @@ Stream<List<Place>> searchPlaces({
         final allPlaces = snapshot.docs.map((doc) {
           final data = doc.data();
           data['id'] = doc.id;
-          data['name'] = doc.id;
           return Place.fromMap(data);
         }).toList()..sort((a, b) => b.rating.compareTo(a.rating));
 

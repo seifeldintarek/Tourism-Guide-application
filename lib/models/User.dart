@@ -10,7 +10,7 @@ class AppUser {
   final String email;
   final String city;
   final String language;
-  final String hashedPassword;
+  final String password;
   final DateTime joinedAt;
   String? profilePictureUrl;
 
@@ -21,7 +21,7 @@ class AppUser {
     required this.fullName,
     required this.email,
     required this.language,
-    required this.hashedPassword,
+    required this.password,
     required this.joinedAt,
     required this.city,
     this.profilePictureUrl,
@@ -38,7 +38,7 @@ class AppUser {
       "email": email,
       "city": city,
       "language": language,
-      "hashedPassword": hashedPassword,
+      "password": password,
       "joinedAt": joinedAt.toIso8601String(),
       "profilePictureUrl": profilePictureUrl,
     };
@@ -66,7 +66,7 @@ class AppUser {
       fullName: map["fullName"] ?? "",
       email: map["email"] ?? "",
       language: map["language"] ?? "",
-      hashedPassword: map["hashedPassword"] ?? "",
+      password: map["hashedPassword"] ?? "",
       city: map["city"] ?? "",
       joinedAt: parsedJoinedAt,
       profilePictureUrl: map["profilePictureUrl"],

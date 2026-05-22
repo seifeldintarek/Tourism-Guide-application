@@ -121,7 +121,7 @@ class _MainImageHeaderState extends State<MainImageHeader> {
 
   @override
   Widget build(BuildContext context) {
-    final locale = Localizations.localeOf(context).languageCode;
+    final locale = Localizations.localeOf(context).toString();
     final lang = AppLocalizations.of(context)!;
     return Stack(
       children: [

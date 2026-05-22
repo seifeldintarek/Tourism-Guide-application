@@ -599,6 +599,19 @@ class AppLocalizationsEs extends AppLocalizations {
   String get abugaloumtag2 => 'ACAMPADA';
 
   @override
+  String get resetemail => 'Restablecer por correo electrónico';
+
+  @override
+  String get passwordsdontmatch => 'Las contraseñas no coinciden';
+
+  @override
+  String get sendresetemail => 'Enviar correo de restablecimiento';
+
+  @override
+  String get resetemaildesc =>
+      'Introduce la dirección de correo electrónico vinculada a tu cuenta. Te enviaremos un enlace para restablecer tu contraseña.';
+
+  @override
   String get wadielgemalname => 'Wadi El Gemal';
 
   @override

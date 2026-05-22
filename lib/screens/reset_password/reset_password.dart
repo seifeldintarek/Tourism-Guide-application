@@ -4,7 +4,6 @@ import 'package:flutter_application_1/l10n/app_localizations.dart';
 import 'package:flutter_application_1/models/User.dart';
 import 'package:flutter_application_1/screens/reset_password/service.dart';
 import 'package:flutter_application_1/screens/reset_password/widget.dart';
-import 'package:flutter_application_1/screens/signup/service.dart';
 
 class ResetPassword extends StatefulWidget {
   const ResetPassword({super.key, required this.user});
@@ -16,19 +15,17 @@ class ResetPassword extends StatefulWidget {
 }
 
 class _ResetPasswordState extends State<ResetPassword> {
-  final TextEditingController _oldPasswordController = TextEditingController();
-  final TextEditingController _passwordController = TextEditingController();
-  final TextEditingController _confirmPasswordController =
-      TextEditingController();
+  // ── direct-change controllers ──────────────────────────────────────────────
 
-  bool _obscureOldPassword = true;
-  bool _obscurePassword = true;
-  bool _obscureConfirmPassword = true;
-  bool _isSaving = false;
+  // ── email-reset controller ─────────────────────────────────────────────────
+  final TextEditingController _emailController = TextEditingController();
 
-  String? _oldPasswordError;
-  String? _passwordError;
-  String? _confirmPasswordError;
+  bool _isSendingEmail = false;
+
+  String? _emailError;
+
+  // 0 = "I know my password", 1 = "Send reset email"
+  int _selectedTab = 0;
 
   late AppUser _currentUser;
 
@@ -36,107 +33,50 @@ class _ResetPasswordState extends State<ResetPassword> {
   void initState() {
     super.initState();
     _currentUser = widget.user;
+    // Pre-fill email field for convenience
+    _emailController.text = _currentUser.email ?? '';
   }
 
   @override
   void dispose() {
-    _oldPasswordController.dispose();
-    _passwordController.dispose();
-    _confirmPasswordController.dispose();
+    _emailController.dispose();
     super.dispose();
   }
 
-  bool _validate(AppLocalizations lang) {
-    bool valid = true;
-    String? oldErr;
-    String? pwdErr;
-    String? confirmErr;
+  // ── send reset email ──────────────────────────────────────────────────────
 
-    final oldPassword = _oldPasswordController.text;
-    final pwd = _passwordController.text;
-    final confirm = _confirmPasswordController.text;
+  Future<void> _sendResetEmail() async {
+    final email = _emailController.text.trim();
 
-    if (oldPassword.isEmpty) {
-      oldErr = lang.enterPassword;
-      valid = false;
-    } else if (hashPassword(oldPassword) != _currentUser.hashedPassword) {
-      oldErr = 'Type your current password correctly to change it';
-      valid = false;
+    if (email.isEmpty) {
+      setState(
+        () => _emailError = AppLocalizations.of(context)!.invalidEmailFormat,
+      );
+      return;
     }
 
-    if (pwd.isEmpty) {
-      pwdErr = lang.enterPassword;
-      valid = false;
-    } else {
-      final hasUpper = RegExp(r'[A-Z]').hasMatch(pwd);
-      final hasLower = RegExp(r'[a-z]').hasMatch(pwd);
-      final hasDigit = RegExp(r'[0-9]').hasMatch(pwd);
-      final hasSpecial = RegExp(r'[^a-zA-Z0-9]').hasMatch(pwd);
-
-      if (pwd.length < 8) {
-        pwdErr = lang.password8charserror;
-        valid = false;
-      } else if (!hasUpper) {
-        pwdErr = lang.passwordcapitalerror;
-        valid = false;
-      } else if (!hasLower) {
-        pwdErr = lang.passwordsmallerror;
-        valid = false;
-      } else if (!hasDigit) {
-        pwdErr = lang.passwordnumbererror;
-        valid = false;
-      } else if (!hasSpecial) {
-        pwdErr = lang.passwordspecialcharerror;
-        valid = false;
-      }
-    }
-
-    if (confirm.isEmpty) {
-      confirmErr = lang.enterPassword;
-      valid = false;
-    } else if (pwd != confirm) {
-      confirmErr = 'Passwords do not match';
-      valid = false;
+    // Very basic email format guard
+    if (!RegExp(r'^[^@\s]+@[^@\s]+\.[^@\s]+$').hasMatch(email)) {
+      setState(() => _emailError = AppLocalizations.of(context)!.emailHint);
+      return;
     }
 
     setState(() {
-      _oldPasswordError = oldErr;
-      _passwordError = pwdErr;
-      _confirmPasswordError = confirmErr;
+      _emailError = null;
+      _isSendingEmail = true;
     });
 
-    return valid;
-  }
-
-  Future<void> _save() async {
-    final lang = AppLocalizations.of(context)!;
-    if (!_validate(lang)) return;
-
-    setState(() => _isSaving = true);
-
     try {
-      final newHashedPassword = hashPassword(_passwordController.text);
-      final updated = await updateUserPassword(
-        newHashedPassword: newHashedPassword,
-        user: _currentUser,
-        context: context,
-      );
-
-      if (updated != null) {
-        _currentUser = updated;
-        _oldPasswordController.clear();
-        _passwordController.clear();
-        _confirmPasswordController.clear();
-      }
-
-      if (mounted) {
-        Default.appMsg(context, 'Password updated successfully.');
-        Navigator.pop(context, _currentUser);
-      }
+      await sendPasswordResetEmail(email: email, context: context);
+      // Success message is shown inside the service function.
+      // Optionally pop back after a short delay so the user can read the snackbar.
+      if (mounted) Navigator.pop(context);
     } finally {
-      if (mounted) setState(() => _isSaving = false);
+      if (mounted) setState(() => _isSendingEmail = false);
     }
   }
+
+  // ── build ─────────────────────────────────────────────────────────────────
 
   @override
   Widget build(BuildContext context) {
@@ -160,84 +100,74 @@ class _ResetPasswordState extends State<ResetPassword> {
         padding: EdgeInsets.symmetric(horizontal: width * 0.1),
         child: ListView(
           children: [
-            SizedBox(height: height * 0.05),
+            SizedBox(height: height * 0.04),
 
-            buildLabel(lang.currentpassword, width * 0.03),
-            SizedBox(height: height * 0.01),
-            passwordTextField(
-              controller: _oldPasswordController,
-              hint: lang.currentpassword,
-              errorText: _oldPasswordError,
-              obscurePassword: _obscureOldPassword,
-              onToggle: () =>
-                  setState(() => _obscureOldPassword = !_obscureOldPassword),
-              height: height,
-              width: width,
-              hintFontSize: width * 0.028,
-            ),
-            SizedBox(height: height * 0.03),
-
-            buildLabel(lang.newpassword, width * 0.03),
-            SizedBox(height: height * 0.01),
-            passwordTextField(
-              controller: _passwordController,
-              hint: lang.newpassword,
-              errorText: _passwordError,
-              obscurePassword: _obscurePassword,
-              onToggle: () =>
-                  setState(() => _obscurePassword = !_obscurePassword),
-              height: height,
-              width: width,
-              hintFontSize: width * 0.028,
-            ),
-            SizedBox(height: height * 0.03),
-
-            buildLabel(lang.confirmPassword, width * 0.03),
-            SizedBox(height: height * 0.01),
-            passwordTextField(
-              controller: _confirmPasswordController,
-              hint: lang.confirmPassword,
-              errorText: _confirmPasswordError,
-              obscurePassword: _obscureConfirmPassword,
-              onToggle: () => setState(
-                () => _obscureConfirmPassword = !_obscureConfirmPassword,
-              ),
-              height: height,
-              width: width,
-              hintFontSize: width * 0.028,
-            ),
-            SizedBox(height: height * 0.05),
-
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                if (_isSaving)
-                  SizedBox(
-                    width: height * 0.03,
-                    height: height * 0.03,
-                    child: const CircularProgressIndicator(strokeWidth: 2),
-                  )
-                else
-                  Default.Button(
-                    child: lang.saveChanges,
-                    onPressed: _save,
-                    width: width * 0.23,
-                    height: height * 0.06,
-                  ),
-                SizedBox(width: width * .04),
-                Default.Button(
-                  buttonColor: Colors.white,
-                  textColor: Default.buttonColor,
-                  child: lang.cancel,
-                  onPressed: () => Navigator.pop(context),
-                  width: width * 0.35,
-                  height: height * 0.06,
-                ),
-              ],
-            ),
+            _buildEmailResetBody(width, height),
           ],
         ),
       ),
+    );
+  }
+
+  Widget _buildEmailResetBody(double width, double height) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Enter the email address linked to your account. '
+          'We will send you a link to reset your password.',
+          style: TextStyle(
+            fontSize: width * 0.028,
+            color: Default.textColor.withOpacity(0.75),
+          ),
+        ),
+        SizedBox(height: height * 0.03),
+
+        buildLabel(AppLocalizations.of(context)!.emailAddress, width * 0.03),
+        SizedBox(height: height * 0.01),
+
+        // Plain text field reusing buildInputDecoration from widget.dart
+        TextField(
+          controller: _emailController,
+          keyboardType: TextInputType.emailAddress,
+          decoration: buildInputDecoration(
+            hint: AppLocalizations.of(context)!.emailHint,
+            errorText: _emailError,
+            width: width,
+            height: height,
+            hintFontSize: width * 0.028,
+          ),
+        ),
+        SizedBox(height: height * 0.05),
+
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            if (_isSendingEmail)
+              SizedBox(
+                width: height * 0.03,
+                height: height * 0.03,
+                child: const CircularProgressIndicator(strokeWidth: 2),
+              )
+            else
+              Default.Button(
+                child: AppLocalizations.of(context)!.sendresetemail,
+                onPressed: _sendResetEmail,
+                width: width * 0.4,
+                height: height * 0.06,
+              ),
+            SizedBox(width: width * .04),
+            Default.Button(
+              buttonColor: Colors.white,
+              textColor: Default.buttonColor,
+              child: AppLocalizations.of(context)!.cancel,
+              onPressed: () => Navigator.pop(context),
+              width: width * 0.35,
+              height: height * 0.06,
+            ),
+          ],
+        ),
+      ],
     );
   }
 }

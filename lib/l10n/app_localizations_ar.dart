@@ -598,6 +598,19 @@ class AppLocalizationsAr extends AppLocalizations {
   String get abugaloumtag2 => 'تخييم';
 
   @override
+  String get resetemail => 'إعادة التعيين عبر البريد الإلكتروني';
+
+  @override
+  String get passwordsdontmatch => 'كلمات المرور غير متطابقة';
+
+  @override
+  String get sendresetemail => 'إرسال بريد إعادة التعيين';
+
+  @override
+  String get resetemaildesc =>
+      'أدخل عنوان البريد الإلكتروني المرتبط بحسابك. سنرسل لك رابطًا لإعادة تعيين كلمة المرور.';
+
+  @override
   String get wadielgemalname => 'وادي الجمال';
 
   @override

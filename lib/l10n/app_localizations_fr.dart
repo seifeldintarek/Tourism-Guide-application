@@ -596,6 +596,19 @@ class AppLocalizationsFr extends AppLocalizations {
   String get abugaloumtag2 => 'CAMPING';
 
   @override
+  String get resetemail => 'Réinitialiser par e-mail';
+
+  @override
+  String get passwordsdontmatch => 'Les mots de passe ne correspondent pas';
+
+  @override
+  String get sendresetemail => 'Envoyer l\'e-mail de réinitialisation';
+
+  @override
+  String get resetemaildesc =>
+      'Entrez l\'adresse e-mail liée à votre compte. Nous vous enverrons un lien pour réinitialiser votre mot de passe.';
+
+  @override
   String get wadielgemalname => 'Wadi El Gemal';
 
   @override

@@ -9,12 +9,12 @@ import 'package:provider/provider.dart';
 
 Future<bool> storeUser(final userData, BuildContext context) async {
   UserCredential? userCredential;
-  final hashedPass = hashPassword(userData["password"]);
+  final password = userData["password"];
 
   try {
     userCredential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
       email: userData["email"].toString().trim(),
-      password: hashedPass,
+      password: password,
     );
   } catch (e) {
     print("Error creating Firebase Auth user: $e");
@@ -29,14 +29,14 @@ Future<bool> storeUser(final userData, BuildContext context) async {
     DateTime now = DateTime.now();
 
     final doc = FirebaseFirestore.instance.collection("users").doc(uid);
+
     await doc.set({
       "id": uid,
       "firstName": userData["firstName"],
       "lastName": userData["lastName"],
       "fullName": "${userData["firstName"]} ${userData["lastName"]}",
       "email": userData["email"],
-      "password": hashedPass,
-      "language": locale.toString().trim(),
+      "language": userData['language'] ?? locale.toString().trim(),
       "joinedAt": now,
       "profilePictureUrl": "",
       "city": userData["city"],
@@ -48,7 +48,7 @@ Future<bool> storeUser(final userData, BuildContext context) async {
       lastName: userData["lastName"],
       email: userData["email"],
       language: locale.toString().trim(),
-      hashedPassword: hashedPass,
+      password: password,
       fullName: "${userData["firstName"]} ${userData["lastName"]}",
       joinedAt: now,
       profilePictureUrl: "",
@@ -63,10 +63,4 @@ Future<bool> storeUser(final userData, BuildContext context) async {
     await userCredential.user!.delete();
     return false;
   }
-}
-
-String hashPassword(String password) {
-  final bytes = utf8.encode(password);
-  final hash = sha256.convert(bytes);
-  return hash.toString();
 }

@@ -39,7 +39,7 @@ class _InfoscreenState extends State<Infoscreen> {
   @override
   Widget build(BuildContext context) {
     final lang = AppLocalizations.of(context)!;
-    final locale = Localizations.localeOf(context).languageCode;
+    final locale = Localizations.localeOf(context).toString();
     double height = MediaQuery.sizeOf(context).height,
         width = MediaQuery.sizeOf(context).width;
 

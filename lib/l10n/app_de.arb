@@ -958,5 +958,9 @@
   "featuredplaces": "Empfohlene Orte",
   "handpickedplaces": "Handverlesene Auswahl für deine \nReise basierend auf deiner Stadt",
   "nosavedplaces": "Du hast noch keine Orte gespeichert",
-  "novisitedplaces": "Du hast noch keine Orte besucht"
+  "novisitedplaces": "Du hast noch keine Orte besucht",
+  "resetemail": "Per E-Mail zurücksetzen",
+  "sendresetemail": "E-Mail zum Zurücksetzen senden",
+"resetemaildesc": "Geben Sie die mit Ihrem Konto verknüpfte E-Mail-Adresse ein. Wir senden Ihnen einen Link zum Zurücksetzen Ihres Passworts.",
+  "passwordsdontmatch": "Die Passwörter stimmen nicht überein"
 }

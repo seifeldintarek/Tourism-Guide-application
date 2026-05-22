@@ -603,6 +603,19 @@ class AppLocalizationsDe extends AppLocalizations {
   String get abugaloumtag2 => 'CAMPING';
 
   @override
+  String get resetemail => 'Per E-Mail zurücksetzen';
+
+  @override
+  String get passwordsdontmatch => 'Die Passwörter stimmen nicht überein';
+
+  @override
+  String get sendresetemail => 'E-Mail zum Zurücksetzen senden';
+
+  @override
+  String get resetemaildesc =>
+      'Geben Sie die mit Ihrem Konto verknüpfte E-Mail-Adresse ein. Wir senden Ihnen einen Link zum Zurücksetzen Ihres Passworts.';
+
+  @override
   String get wadielgemalname => 'Wadi El Gemal';
 
   @override

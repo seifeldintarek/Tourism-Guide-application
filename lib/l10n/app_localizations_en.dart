@@ -596,6 +596,19 @@ class AppLocalizationsEn extends AppLocalizations {
   String get abugaloumtag2 => 'CAMPING';
 
   @override
+  String get resetemail => 'Reset via Email';
+
+  @override
+  String get passwordsdontmatch => 'Passwords don\'t match';
+
+  @override
+  String get sendresetemail => 'Send Reset Email';
+
+  @override
+  String get resetemaildesc =>
+      'Enter the email address linked to your account. We will send you a link to reset your password.';
+
+  @override
   String get wadielgemalname => 'Wadi El Gemal';
 
   @override

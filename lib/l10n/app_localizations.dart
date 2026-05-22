@@ -1250,6 +1250,30 @@ abstract class AppLocalizations {
   /// **'CAMPING'**
   String get abugaloumtag2;
 
+  /// No description provided for @resetemail.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset via Email'**
+  String get resetemail;
+
+  /// No description provided for @passwordsdontmatch.
+  ///
+  /// In en, this message translates to:
+  /// **'Passwords don\'t match'**
+  String get passwordsdontmatch;
+
+  /// No description provided for @sendresetemail.
+  ///
+  /// In en, this message translates to:
+  /// **'Send Reset Email'**
+  String get sendresetemail;
+
+  /// No description provided for @resetemaildesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter the email address linked to your account. We will send you a link to reset your password.'**
+  String get resetemaildesc;
+
   /// Wadi El Gemal name
   ///
   /// In en, this message translates to:
