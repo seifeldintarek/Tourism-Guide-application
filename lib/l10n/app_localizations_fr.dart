@@ -9,13 +9,13 @@ class AppLocalizationsFr extends AppLocalizations {
   AppLocalizationsFr([String locale = 'fr']) : super(locale);
 
   @override
-  String get egypttourismguide => 'Guide du tourisme en Égypte';
+  String get egypttourismguide => 'Egypt Tourism Guide';
 
   @override
-  String get signInToYourJournal => 'Connectez-vous à votre journal';
+  String get signInToYourJournal => 'Sign in to your journal';
 
   @override
-  String get invalidcreds => 'Email ou mot de passe invalide';
+  String get invalidcreds => 'Invalid email or password';
 
   @override
   String get passresetemailsent =>
@@ -26,88 +26,88 @@ class AppLocalizationsFr extends AppLocalizations {
       'Enter your email address and we will send you a link to reset your password.';
 
   @override
-  String get welcomeBackExplorer => 'Bon retour,\nExplorateur';
+  String get welcomeBackExplorer => 'Welcome back, \nExplorer';
 
   @override
-  String get emailAddress => 'Adresse e-mail';
+  String get emailAddress => 'Email Address';
 
   @override
-  String get emailHint => 'Veuillez entrer votre e-mail';
+  String get emailHint => 'Please enter your email';
 
   @override
-  String get invalidEmailFormat => 'Format d’e-mail invalide';
+  String get invalidEmailFormat => 'Invalid email format';
 
   @override
-  String get password => 'Mot de passe';
+  String get password => 'Password';
 
   @override
-  String get currentpassword => 'Mot de passe actuel';
+  String get currentpassword => 'Current Password';
 
   @override
-  String get newpassword => 'Nouveau mot de passe';
+  String get newpassword => 'New Password';
 
   @override
-  String get continueJourney => 'Continuer le voyage';
+  String get continueJourney => 'Continue Journey';
 
   @override
-  String get forgotPassword => 'Mot de passe oublié ?';
+  String get forgotPassword => 'Forgot password?';
 
   @override
   String get resetpassword => 'Reset password';
 
   @override
-  String get or => 'ou';
+  String get or => 'or';
 
   @override
-  String get signInWithGoogle => 'Se connecter avec Google';
+  String get signInWithGoogle => 'Sign in with Google';
 
   @override
-  String get newHere => 'Nouveau ici ?';
+  String get newHere => 'New here?';
 
   @override
-  String get createAccount => 'Créer un compte';
+  String get createAccount => 'Create account';
 
   @override
-  String get createAnAccount => 'Créer un compte';
+  String get createAnAccount => 'Create an account';
 
   @override
-  String get tellUsAboutYourself => 'Parlez-nous de\nvous';
+  String get tellUsAboutYourself => 'Tell us about \nyourself';
 
   @override
-  String get firstName => 'Prénom';
+  String get firstName => 'First Name';
 
   @override
-  String get lastName => 'Nom';
+  String get lastName => 'Last Name';
 
   @override
-  String get createPassword => 'Créer un mot de passe';
+  String get createPassword => 'Create Password';
 
   @override
-  String get confirmPassword => 'Confirmer le mot de passe';
+  String get confirmPassword => 'Confirm Password';
 
   @override
-  String get language => 'Langue';
+  String get language => 'Language';
 
   @override
-  String get currency => 'Devise';
+  String get currency => 'Currency';
 
   @override
-  String get agreeToTermsPrefix => 'En créant un compte, j’accepte les ';
+  String get agreeToTermsPrefix => 'By creating an account, I agree to ';
 
   @override
-  String get termsOfService => 'Conditions d’utilisation';
+  String get termsOfService => 'Terms of Service';
 
   @override
-  String get and => ' et ';
+  String get and => ' and ';
 
   @override
-  String get privacyPolicy => 'Politique de confidentialité';
+  String get privacyPolicy => 'Privacy Policy';
 
   @override
-  String get alreadyAMember => 'Vous avez déjà un compte ?';
+  String get alreadyAMember => 'Already have an account?';
 
   @override
-  String get signIn => 'Connexion';
+  String get signIn => 'Sign In';
 
   @override
   String get curatedJourneys => 'CURATED JOURNEYS';
@@ -377,7 +377,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get editSaved => 'EDIT SAVED';
 
   @override
-  String get saveChanges => 'Enregistrer les modifications';
+  String get saveChanges => 'Save Changes';
 
   @override
   String get firstNameHint => 'Edit your first name';
@@ -836,7 +836,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get changeLanguage => 'Change Language';
 
   @override
-  String get logout => 'Déconnexion';
+  String get logout => 'Logout';
 
   @override
   String get logoutConfirmTitle => 'Logout';
@@ -845,7 +845,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get logoutConfirmMessage => 'Are you sure you want to logout?';
 
   @override
-  String get cancel => 'Annuler';
+  String get cancel => 'Cancel';
 
   @override
   String get choosecategory => 'Choose a category';
@@ -938,10 +938,10 @@ class AppLocalizationsFr extends AppLocalizations {
   String get sohag => 'Sohag';
 
   @override
-  String get goodmorning => 'Bonjour';
+  String get goodmorning => 'Good Morning';
 
   @override
-  String get discover => 'Découvrir';
+  String get discover => 'Discover';
 
   @override
   String get hidden => 'hidden';
@@ -953,15 +953,15 @@ class AppLocalizationsFr extends AppLocalizations {
   String get errorgetingdata => 'Error fetching data';
 
   @override
-  String get featuredplaces => 'Lieux en vedette';
+  String get featuredplaces => 'Featured places';
 
   @override
   String get handpickedplaces =>
       'Hand-picked curation for your \njourney based on your city';
 
   @override
-  String get nosavedplaces => 'Vous n’avez encore enregistré aucun lieu';
+  String get nosavedplaces => 'You haven\'t saved any places yet';
 
   @override
-  String get novisitedplaces => 'Vous n’avez encore visité aucun lieu';
+  String get novisitedplaces => 'You haven\'t visited any places yet';
 }

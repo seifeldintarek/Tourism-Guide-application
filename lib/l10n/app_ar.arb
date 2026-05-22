@@ -1,227 +1,962 @@
 {
   "@@locale": "ar",
-
+  "@@context": "AppTranslations",
   "egypttourismguide": "دليل السياحة في مصر",
-  "signInToYourJournal": "سجل الدخول إلى رحلتك",
+  "signInToYourJournal": "سجّل الدخول إلى رحلتك",
+  "@signInToYourJournal": {
+    "description": "Sentence: Header for the sign-in form."
+  },
   "invalidcreds": "البريد الإلكتروني أو كلمة المرور غير صحيحة",
+  "@invalidcreds": {
+    "description": "Sentence: user logged in with wrong email/password"
+  },
+  "passresetemailsent": "تم إرسال بريد إعادة تعيين كلمة المرور. تحقق من صندوق الوارد.",
+  "forgetpassemailhint": "أدخل بريدك الإلكتروني وسنرسل لك رابطًا لإعادة تعيين كلمة المرور.",
   "welcomeBackExplorer": "مرحبًا بعودتك، \nأيها المستكشف",
-
+  "@welcomeBackExplorer": {
+    "description": "Sentence: Greeting message."
+  },
   "emailAddress": "البريد الإلكتروني",
+  "@emailAddress": {
+    "description": "Noun/Word: Used as a label for the email input field."
+  },
   "emailHint": "يرجى إدخال بريدك الإلكتروني",
+  "@emailHint": {
+    "description": "Sentence: Placeholder hint inside the email input field."
+  },
   "invalidEmailFormat": "صيغة البريد الإلكتروني غير صحيحة",
-
   "password": "كلمة المرور",
+  "@password": {
+    "description": "Noun/Word: Used as a label for the password input field."
+  },
   "currentpassword": "كلمة المرور الحالية",
   "newpassword": "كلمة المرور الجديدة",
-
   "continueJourney": "متابعة الرحلة",
+  "@continueJourney": {
+    "description": "Action Phrase: Button text to submit the sign-in form."
+  },
   "forgotPassword": "هل نسيت كلمة المرور؟",
+  "@forgotPassword": {
+    "description": "Sentence/Question: Link for password recovery."
+  },
+  "resetpassword": "إعادة تعيين كلمة المرور",
   "or": "أو",
-  "signInWithGoogle": "تسجيل الدخول باستخدام جوجل",
-
+  "@or": {
+    "description": "Word: Divider text."
+  },
+  "signInWithGoogle": "تسجيل الدخول باستخدام Google",
+  "@signInWithGoogle": {
+    "description": "Action Phrase: Button text for Google OAuth."
+  },
   "newHere": "جديد هنا؟",
+  "@newHere": {
+    "description": "Sentence/Question: Prompt asking if the user needs to register."
+  },
   "createAccount": "إنشاء حساب",
-  "createAnAccount": "إنشاء حساب جديد",
+  "@createAccount": {
+    "description": "Action Phrase: Register to db."
+  },
+  "createAnAccount": "إنشاء حساب",
+  "@createAnAccount": {
+    "description": "Action Phrase: Link to navigate to the registration page."
+  },
   "tellUsAboutYourself": "أخبرنا عن \nنفسك",
-
+  "@tellUsAboutYourself": {
+    "description": "Sentence: Header for the sign-up form."
+  },
   "firstName": "الاسم الأول",
+  "@firstName": {
+    "description": "Noun Phrase: Label for the first name input field."
+  },
   "lastName": "اسم العائلة",
+  "@lastName": {
+    "description": "Noun Phrase: Label for the last name input field."
+  },
   "createPassword": "إنشاء كلمة مرور",
+  "@createPassword": {
+    "description": "Action Phrase: Label for the new password input field."
+  },
   "confirmPassword": "تأكيد كلمة المرور",
-
+  "@confirmPassword": {
+    "description": "Action Phrase: Label for the confirm password input field."
+  },
   "language": "اللغة",
+  "@language": {
+    "description": "Noun/Word: Label for the language dropdown."
+  },
   "currency": "العملة",
-
-  "agreeToTermsPrefix": "بإنشاء حساب، فأنا أوافق على ",
+  "@currency": {
+    "description": "Noun/Word: Label for the currency dropdown."
+  },
+  "agreeToTermsPrefix": "بإنشاء حساب، أوافق على \n",
+  "@agreeToTermsPrefix": {
+    "description": "Sentence fragment: The beginning of the checkbox agreement text. Left a trailing space for RichText merging."
+  },
   "termsOfService": "شروط الخدمة",
+  "@termsOfService": {
+    "description": "Noun Phrase: Clickable Terms of Service link."
+  },
   "and": " و ",
+  "@and": {
+    "description": "Word: Conjunction in the agreement text. Includes padding spaces."
+  },
   "privacyPolicy": "سياسة الخصوصية",
-
+  "@privacyPolicy": {
+    "description": "Noun Phrase: Clickable Privacy Policy link."
+  },
   "alreadyAMember": "لديك حساب بالفعل؟",
+  "@alreadyAMember": {
+    "description": "Sentence/Question: Prompt asking if the user already has an account."
+  },
   "signIn": "تسجيل الدخول",
-
+  "@signIn": {
+    "description": "Action Phrase: Link to navigate back to the login page."
+  },
   "curatedJourneys": "رحلات مختارة",
+  "@curatedJourneys": {
+    "description": "Small overline text above the main title"
+  },
   "exploreThe": "استكشف",
   "collections": "المجموعات",
-
   "searchDestination": "ابحث عن وجهة...",
-  "recentlyViewed": "تمت مشاهدته مؤخرًا",
+  "@searchDestination": {
+    "description": "Placeholder text in the search bar (Sentence)"
+  },
+  "recentlyViewed": "شوهدت مؤخرًا",
+  "@recentlyViewed": {
+    "description": "Section title for recently viewed items (Phrase)"
+  },
   "savedPlaces": "الأماكن المحفوظة",
-
+  "@savedPlaces": {
+    "description": "App bar title and section title (Phrase)"
+  },
   "explorer": "مستكشف",
-  "visited": "تمت الزيارة",
+  "@explorer": {
+    "description": "User title or subtitle (Word)"
+  },
+  "visited": "تمت زيارتها",
+  "@visited": {
+    "description": "Label for number of visited places (Word)"
+  },
   "save": "حفظ",
   "saved": "محفوظ",
+  "@saved": {
+    "description": "Label for number of saved places (Word)"
+  },
   "reviews": "التقييمات",
+  "@reviews": {
+    "description": "Label for number of reviews (Word)"
+  },
   "viewAll": "عرض الكل",
-
+  "@viewAll": {
+    "description": "Button text to see all items in a list (Phrase)"
+  },
   "historicSite": "موقع تاريخي",
+  "@historicSite": {
+    "description": "Category tag for a place (Phrase)"
+  },
   "historicMuseum": "متحف تاريخي",
-
+  "@historicMuseum": {
+    "description": "Category tag for a museum (Phrase)"
+  },
   "nature": "الطبيعة",
-  "food": "الطعام",
-  "spiritual": "روحاني",
-  "heritage": "التراث",
-  "all": "الكل",
-
+  "@nature": {
+    "description": "nature category"
+  },
   "wadiElRayan": "وادي الريان",
   "elFayoumEgypt": "الفيوم، مصر",
-
-  "saltLake": "البحيرة المالحة",
+  "saltLake": "بحيرة الملح",
   "siwaOasisEgypt": "واحة سيوة، مصر",
-
   "abuSimbelTemple": "معبد أبو سمبل",
   "aswanEgypt": "أسوان، مصر",
-
   "redSea": "البحر الأحمر",
   "hurghadaEgypt": "الغردقة، مصر",
-
   "pyramids": "الأهرامات",
   "gizaEgypt": "الجيزة، مصر",
-
   "theGrandEgyptianMuseum": "المتحف المصري الكبير",
-
   "kebdetElPrince": "كبدة البرنس",
   "sheikhZayedGizaEgypt": "الشيخ زايد، الجيزة، مصر",
-
   "cairo": "القاهرة",
-
   "philaeTemple": "معبد فيلة",
   "aswan": "أسوان",
-
   "egyptianMuseum": "المتحف المصري",
-
+  "@egyptianMuseum": {
+    "description": "Main title of the screen (Phrase)"
+  },
   "siwaOasis": "واحة سيوة",
   "westernDesert": "الصحراء الغربية",
-
   "historical": "تاريخي",
+  "@historical": {
+    "description": "Filter/Category tag (Word)"
+  },
   "artifacts": "آثار",
+  "@artifacts": {
+    "description": "Filter/Category tag (Phrase)"
+  },
   "landmark": "معلم",
-
+  "@landmark": {
+    "description": "Filter/Category tag (Word)"
+  },
   "about": "نبذة",
+  "@about": {
+    "description": "Section title for the description (Word)."
+  },
   "status": "الحالة",
+  "@status": {
+    "description": "Label for current operational state (Word)"
+  },
   "open": "مفتوح",
-  "closed": "مغلق",
-
-  "hours": "ساعات العمل",
+  "@open": {
+    "description": "State indicating the place is currently operating (Word)"
+  },
+  "hours": "الساعات",
+  "@hours": {
+    "description": "Label for operating hours (Phrase)."
+  },
   "starting": "ابتداءً من",
+  "@starting": {
+    "description": "Label for base ticket price (Phrase)."
+  },
   "egp": "جنيه",
-
+  "@egp": {
+    "description": "Currency abbreviation for Egyptian Pound (Word/Abbreviation)."
+  },
   "gallery": "المعرض",
+  "@gallery": {
+    "description": "Section title for the image grid (Word)"
+  },
   "photos": "صور",
-
+  "@photos": {
+    "description": "Label for photo count (Word)."
+  },
   "planMyVisit": "خطط لزيارتي",
-
+  "@planMyVisit": {
+    "description": "Call to action button text (Sentence/Command)"
+  },
+  "heritage": "التراث",
+  "@heritage": {
+    "description": "Category title for historical sites"
+  },
+  "all": "الكل",
+  "@all": {
+    "description": "Filter button to show all items"
+  },
   "templeOfHatshepsut": "معبد حتشبسوت",
   "luxorEgypt": "الأقصر، مصر",
-
   "blueHole": "الثقب الأزرق",
   "dahabEgypt": "دهب، مصر",
-
   "jabalMousa": "جبل موسى",
   "sinaiEgypt": "سيناء، مصر",
-
   "northCoast": "الساحل الشمالي",
-
+  "food": "الطعام",
+  "@food": {
+    "description": "food category"
+  },
+  "spiritual": "روحاني",
+  "@spiritual": {
+    "description": "Category title (Word)"
+  },
   "qasrElkababgi": "قصر الكبابجي",
+  "@qasrElkababgi": {
+    "description": "Restaurant name (Phrase)"
+  },
   "newCairoCairoEgypt": "القاهرة الجديدة، القاهرة، مصر",
-
+  "@newCairoCairoEgypt": {
+    "description": "Location (Phrase)"
+  },
   "abouTarek": "أبو طارق",
+  "@abouTarek": {
+    "description": "Restaurant name (Phrase)"
+  },
   "cairoEgypt": "القاهرة، مصر",
-
+  "@cairoEgypt": {
+    "description": "Location (Phrase)"
+  },
   "arabiata": "أرابياتا",
+  "@arabiata": {
+    "description": "Restaurant name (Word)"
+  },
   "elKorbaCairoEgypt": "الكوربة، القاهرة، مصر",
-
+  "@elKorbaCairoEgypt": {
+    "description": "Location (Phrase)"
+  },
   "asmak": "أسماك",
-
+  "@asmak": {
+    "description": "Restaurant name (Word)"
+  },
   "amrIbnAlAsMosque": "مسجد عمرو بن العاص",
-  "alFustatOldCairoEgypt": "الفسطاط (القاهرة القديمة)، مصر",
-
-  "alAzharMosque": "الجامع الأزهر",
+  "@amrIbnAlAsMosque": {
+    "description": "Landmark name (Phrase)"
+  },
+  "alFustatOldCairoEgypt": "الفسطاط (مصر القديمة)، مصر",
+  "@alFustatOldCairoEgypt": {
+    "description": "Location (Phrase)"
+  },
+  "alAzharMosque": "مسجد الأزهر",
+  "@alAzharMosque": {
+    "description": "Landmark name (Phrase)"
+  },
   "islamicCairoEgypt": "القاهرة الإسلامية، مصر",
-
+  "@islamicCairoEgypt": {
+    "description": "Location (Phrase)"
+  },
   "theHangingChurch": "الكنيسة المعلقة",
-  "copticCairoOldCairoEgypt": "مصر القديمة القبطية، مصر",
-
+  "@theHangingChurch": {
+    "description": "Landmark name (Phrase)"
+  },
+  "copticCairoOldCairoEgypt": "القاهرة القبطية، مصر القديمة، مصر",
+  "@copticCairoOldCairoEgypt": {
+    "description": "Location (Phrase)"
+  },
   "alHusseinMosque": "مسجد الحسين",
+  "@alHusseinMosque": {
+    "description": "Landmark name (Phrase)"
+  },
   "husseinSquareCairoEgypt": "ميدان الحسين، القاهرة، مصر",
-
+  "@husseinSquareCairoEgypt": {
+    "description": "Location (Phrase)"
+  },
   "saintCatherineMonastery": "دير سانت كاترين",
+  "@saintCatherineMonastery": {
+    "description": "Landmark name (Phrase)"
+  },
   "southSinaiEgypt": "جنوب سيناء، مصر",
-
-  "failtostoreuser": "فشل حفظ بيانات المستخدم. حاول مرة أخرى.",
-
+  "@southSinaiEgypt": {
+    "description": "Location (Phrase)"
+  },
+  "failtostoreuser": "فشل حفظ بيانات المستخدم. يرجى المحاولة مرة أخرى.",
+  "@failtostoreuser": {
+    "description": "Action Phrase: error uploading user"
+  },
   "languageTitle": "اللغة",
+  "@languageTitle": {
+    "description": "App bar title for the language selection screen (Word)"
+  },
   "preferenceSelection": "اختيار التفضيلات",
+  "@preferenceSelection": {
+    "description": "Overline text above the main title on the language screen (Phrase)"
+  },
   "curateYourExperience": "خصص تجربتك",
-
+  "@curateYourExperience": {
+    "description": "Main title on the language selection screen (Sentence/Command)"
+  },
   "countryEgypt": "مصر",
   "countryUk": "المملكة المتحدة",
   "countrySpain": "إسبانيا",
   "countryItaly": "إيطاليا",
   "countryGermany": "ألمانيا",
-
   "editProfileTitle": "تعديل الملف الشخصي",
+  "@editProfileTitle": {
+    "description": "App bar title for the edit profile screen (Phrase)"
+  },
   "changePhoto": "تغيير الصورة",
-
+  "@changePhoto": {
+    "description": "Action text under the avatar to change the profile photo (Phrase)"
+  },
   "fullNameLabel": "الاسم الكامل",
+  "@fullNameLabel": {
+    "description": "Label for the full name input field (Phrase)"
+  },
   "titleLabel": "اللقب",
-
+  "@titleLabel": {
+    "description": "Label for the user role/title input field (Word)"
+  },
   "manageSavedPlaces": "إدارة الأماكن المحفوظة",
+  "@manageSavedPlaces": {
+    "description": "Section header for managing saved locations (Phrase)"
+  },
   "editSaved": "تعديل المحفوظات",
-
+  "@editSaved": {
+    "description": "Action button to enter edit mode for saved places list (Phrase)"
+  },
   "saveChanges": "حفظ التغييرات",
-
-  "firstNameHint": "عدل اسمك الأول",
-  "lastNameHint": "عدل اسم العائلة",
-  "passwordHint": "عدل كلمة المرور",
-
-  "orContinueWith": "أو المتابعة باستخدام",
-
+  "@saveChanges": {
+    "description": "Primary button to submit and save profile edits (Phrase)"
+  },
+  "firstNameHint": "عدّل اسمك الأول",
+  "@fullNameHint": {
+    "description": "404"
+  },
+  "lastNameHint": "عدّل اسم العائلة",
+  "passwordHint": "عدّل كلمة المرور",
+  "orContinueWith": "أو تابع باستخدام",
   "enterPassword": "يرجى إدخال كلمة المرور",
-
   "password8charserror": "يجب أن تكون كلمة المرور 8 أحرف على الأقل",
   "passwordcapitalerror": "أضف حرفًا كبيرًا واحدًا على الأقل",
   "passwordsmallerror": "أضف حرفًا صغيرًا واحدًا على الأقل",
   "passwordnumbererror": "أضف رقمًا واحدًا على الأقل",
   "passwordspecialcharerror": "أضف رمزًا خاصًا واحدًا على الأقل",
-
-  "nodatafound": "لم يتم العثور على بيانات",
-
-  "heritagequote": "\"لمعرفة قلب الثقافة، يجب أن تمشي بين أصداء حجارتها\"",
-  "spiritualquote": "\"حيث يلتقي الإيمان بالصمت، تبدأ الروح في الشفاء.\"",
-  "naturequote": "\"لفهم الأرض، يجب الاستماع إلى القصص المكتوبة في أنهارها وسمائها وصمتها.\"",
-  "foodquote": "\"كل طبق يروي قصة ممزوجة بالثقافة والتاريخ ودفء الناس.\"",
-
+  "nodatafound": "لا توجد بيانات",
+  "heritagequote": "\"لمعرفة قلب الثقافة، يجب أن نسير بين أصداء أحجارها\"",
+  "@heritagequote": {
+    "description": "quote of heritage"
+  },
+  "spiritualquote": "\"حيث يلتقي الإيمان بالصمت، تبدأ الروح في التعافي.\"",
+  "@spiritualquote": {
+    "description": "quote of spiritual"
+  },
+  "naturequote": "\"لفهم الأرض، يجب أن نصغي إلى القصص المكتوبة في أنهارها وسمائها وصمتها.\"",
+  "@naturequote": {
+    "description": "quote of nature"
+  },
+  "foodquote": "\"كل طبق يحكي قصة، متبلة بالثقافة والتاريخ ودفء أهلها.\"",
+  "@foodquote": {
+    "description": "quote of food"
+  },
   "pyramidsname": "الأهرامات",
-  "aboutpyramids": "الأهرامات الشهيرة عالميًا في مصر القديمة، بُنيت كمقابر ملكية وتُعد إحدى عجائب الدنيا السبع.",
+  "@pyramidsname": {
+    "description": "name of pyramids"
+  },
+  "aboutpyramids": "الأهرامات العالمية الشهيرة في مصر القديمة، بُنيت كمقابر ملكية وتُعد إحدى عجائب الدنيا السبع في العالم القديم.",
+  "@aboutpyramids": {
+    "description": "about description of pyramids"
+  },
   "alharam": "الهرم",
-
+  "@alharam": {
+    "description": "location of pyramids"
+  },
   "pyramidstag0": "أهرامات",
+  "@pyramidstag0": {
+    "description": "first tag of pyramids"
+  },
   "pyramidstag1": "عجيبة",
+  "@pyramidstag1": {
+    "description": "second tag of pyramids"
+  },
   "pyramidstag2": "معلم",
-
+  "@pyramidstag2": {
+    "description": "third tag of pyramids"
+  },
   "abusimblename": "معبد أبو سمبل",
   "abusimbellocation": "أبو سمبل",
-
-  "aboutabusimbel": "معابد ضخمة منحوتة في الصخور بناها رمسيس الثاني، تشتهر بتماثيلها العملاقة ونقلها لحمايتها من الغرق.",
-
+  "aboutabusimbel": "معابد ضخمة منحوتة في الصخر بناها رمسيس الثاني، وتشتهر بتماثيلها العملاقة وعملية نقلها المذهلة لحمايتها من الغرق.",
   "abusimbletag0": "تاريخي",
-  "abusimbletag1": "أثر",
+  "abusimbletag1": "نصب تذكاري",
   "abusimbletag2": "يونسكو",
-
+  "hatshepsuttemplename": "معبد حتشبسوت",
+  "hatshepsuttemplelocation": "الدير البحري",
+  "luxor": "الأقصر",
+  "aboutatshepsuttemple": "معبد رائع منحوت في منحدرات الأقصر، بُني للملكة حتشبسوت، إحدى أقوى حكام مصر القديمة.",
+  "hatshepsuttempletag0": "معبد",
+  "hatshepsuttempletag1": "عمارة",
+  "hatshepsuttempletag2": "تاريخي",
+  "grandegyptianmuseumname": "المتحف المصري الكبير",
+  "grandegyptianmuseumlocation": "طريق القاهرة - الإسكندرية الصحراوي",
+  "giza": "الجيزة",
+  "aboutgrandegyptianmuseum": "متحف حديث بالقرب من الأهرامات يعرض آلاف القطع الأثرية المصرية القديمة، بما في ذلك كنوز الملك توت عنخ آمون.",
+  "grandegyptianmuseumtag0": "آثار",
+  "grandegyptianmuseumtag1": "متحف",
+  "grandegyptianmuseumtag2": "ثقافة",
+  "philaetemplename": "معبد فيلة",
+  "philaetemplelocation": "جزيرة أجيليكا",
+  "aboutphilaetemple": "معبد جزيرة جميل مكرس للإلهة إيزيس، معروف بإطلالاته الرائعة على النيل ونقوشه القديمة.",
+  "philaetempletag0": "جزيرة",
+  "philaetempletag1": "معبد",
+  "philaetempletag2": "تراث",
+  "whitedesertname": "الصحراء البيضاء",
+  "@whitedesertname": {
+    "description": "white desert name"
+  },
+  "whitedesertnationalpark": "محمية الصحراء البيضاء",
+  "@whitedesertnationalpark": {
+    "description": "white desert location"
+  },
+  "southwestofcairo": "جنوب غرب القاهرة",
+  "@southwestofcairo": {
+    "description": "city of white desert"
+  },
+  "aboutwhitedesert": "محمية صحراوية خلابة تشتهر بتكويناتها الصخرية البيضاء الفريدة وتجارب التخييم.",
+  "@aboutwhitedesert": {
+    "description": "Information about white desert"
+  },
+  "whitedeserttag0": "صحراء",
+  "@whitedeserttag0": {
+    "description": "first tag of the white desert"
+  },
+  "whitedeserttag1": "تخييم",
+  "@whitedeserttag1": {
+    "description": "second tag of the white desert"
+  },
+  "whitedeserttag2": "سفاري",
+  "@whitedeserttag2": {
+    "description": "third tag of the white desert"
+  },
+  "blueholename": "الثقب الأزرق",
+  "@blueholename": {
+    "description": "Blue Hole name"
+  },
+  "blueholeofdahab": "الثقب الأزرق بدهب",
+  "@blueholeofdahab": {
+    "description": "Blue Hole location"
+  },
+  "dahab": "دهب",
+  "@dahab": {
+    "description": "city of Blue Hole"
+  },
+  "aboutbluehole": "وجهة غوص عالمية مشهورة بمياهها الصافية وشعابها المرجانية النابضة بالحياة.",
+  "@aboutbluehole": {
+    "description": "Information about Blue Hole"
+  },
+  "blueholetag0": "غوص",
+  "@blueholetag0": {
+    "description": "first tag of theBlue Hole"
+  },
+  "blueholetag1": "شعاب مرجانية",
+  "@blueholetag1": {
+    "description": "second tag of the Blue Hole"
+  },
+  "blueholetag2": "مغامرة",
+  "@blueholetag2": {
+    "description": "third tag of the Blue Hole"
+  },
+  "abugaloumname": "أبو جالوم",
+  "@abugaloumname": {
+    "description": "Abu Galoum name"
+  },
+  "abugaloum": "أبو جالوم",
+  "@abugaloum": {
+    "description": "Abu Galoum location"
+  },
+  "neweiba": "نويبع",
+  "@neweiba": {
+    "description": "city of Abu Galoum"
+  },
+  "aboutabugaloum": "محمية ساحلية تشتهر بالغطس والشعاب المرجانية والجبال والمخيمات البدوية.",
+  "@aboutabugaloum": {
+    "description": "Information about Abu Galoum"
+  },
+  "abugaloumtag0": "غطس",
+  "@abugaloumtag0": {
+    "description": "first tag of Abu Galoum"
+  },
+  "abugaloumtag1": "طبيعة",
+  "@abugaloumtag1": {
+    "description": "second tag of Abu Galoum"
+  },
+  "abugaloumtag2": "تخييم",
+  "@abugaloumtag2": {
+    "description": "third tag of Abu Galoum"
+  },
+  "wadielgemalname": "وادي الجمال",
+  "@wadielgemalname": {
+    "description": "Wadi El Gemal name"
+  },
+  "wadielgemalreserve": "محمية وادي الجمال",
+  "@wadielgemalreserve": {
+    "description": "Wadi El Gemal location"
+  },
+  "marsaalam": "مرسى علم",
+  "@marsaalam": {
+    "description": "city of Wadi El Gemal"
+  },
+  "aboutwadielgemal": "محمية طبيعية رائعة تجمع بين الجبال الصحراوية والمانغروف والشعاب المرجانية وحياة البحر الأحمر البرية.",
+  "@aboutwadielgemal": {
+    "description": "Information about Wadi El Gemal"
+  },
+  "wadielgemaltag0": "بحري",
+  "@wadielgemaltag0": {
+    "description": "first tag of Wadi El Gemal"
+  },
+  "wadielgemaltag1": "سفاري",
+  "@wadielgemaltag1": {
+    "description": "second tag of Wadi El Gemal"
+  },
+  "wadielgemaltag2": "حياة برية",
+  "@wadielgemaltag2": {
+    "description": "third tag of Wadi El Gemal"
+  },
+  "wadielrayanname": "وادي الريان",
+  "@wadielrayanname": {
+    "description": "Wadi el rayan name"
+  },
+  "wadielrayan": "وادي الريان",
+  "@wadielrayan": {
+    "description": "Wadi el rayan location"
+  },
+  "faiyum": "الفيوم",
+  "@faiyum": {
+    "description": "city of Wadi el rayan"
+  },
+  "aboutwadielrayan": "واحة صحراوية جميلة معروفة بالشلالات والبحيرات والكثبان الرملية ومغامرات السفاري.",
+  "@aboutwadielrayan": {
+    "description": "Information about Wadi el rayan"
+  },
+  "wadielrayantag0": "شلالات",
+  "@wadielrayantag0": {
+    "description": "first tag of Wadi el rayan"
+  },
+  "wadielrayantag1": "صحراء",
+  "@wadielrayantag1": {
+    "description": "second tag of Wadi el rayan"
+  },
+  "wadielrayantag2": "بحيرات",
+  "@wadielrayantag2": {
+    "description": "third tag of Wadi el rayan"
+  },
+  "arabiataname": "أرابياتا",
+  "@arabiataname": {
+    "description": "name of arabiata"
+  },
+  "aboutarabiata": "مطعم مصري شهير يقدم الفول والفلافل ووجبات الإفطار التقليدية الأصيلة.",
+  "@aboutarabiata": {
+    "description": "about description of arabiata"
+  },
+  "nasrcity": "مدينة نصر",
+  "@nasrcity": {
+    "description": "location of arabiata"
+  },
+  "arabiatatag0": "إفطار",
+  "@arabiatatag0": {
+    "description": "first tag of arabiata"
+  },
+  "arabiatatag1": "طعام شعبي",
+  "@arabiatatag1": {
+    "description": "second tag of arabiata"
+  },
+  "arabiatatag2": "شرقي",
+  "@arabiatatag2": {
+    "description": "third tag of arabiata"
+  },
+  "qasrelkababginame": "قصر الكبابجي",
+  "@qasrelkababginame": {
+    "description": "name of qasr-elkababgi"
+  },
+  "aboutqasrelkababgi": "سلسلة مطاعم مصرية معروفة بالمأكولات الشرقية الأصيلة والمشويات التقليدية وتجارب الطعام المميزة.",
+  "@aboutqasrelkababgi": {
+    "description": "about description of qasr-elkababgi"
+  },
+  "fifthsettlement": "التجمع الخامس",
+  "@fifthsettlement": {
+    "description": "location of qasr-elkababgi"
+  },
+  "qasrelkababgitag0": "مشويات",
+  "@qasrelkababgitag0": {
+    "description": "first tag of qasr-elkababgi"
+  },
+  "qasrelkababgitag1": "مطاعم",
+  "@qasrelkababgitag1": {
+    "description": "second tag of qasr-elkababgi"
+  },
+  "qasrelkababgitag2": "شرقي",
+  "@qasrelkababgitag2": {
+    "description": "third tag of qasr-elkababgi"
+  },
+  "baharyname": "بحري",
+  "@baharyname": {
+    "description": "name of bahary"
+  },
+  "aboutbahary": "مطعم مأكولات بحرية عصري يشتهر بالسمك المشوي وأطباق المأكولات البحرية والنكهات المتوسطية الطازجة.",
+  "@aboutbahary": {
+    "description": "about description of bahary"
+  },
+  "baharytag0": "مأكولات بحرية",
+  "@baharytag0": {
+    "description": "first tag of bahary"
+  },
+  "baharytag1": "طازج",
+  "@baharytag1": {
+    "description": "second tag of bahary"
+  },
+  "baharytag2": "نكهات بحرية",
+  "@baharytag2": {
+    "description": "third tag of bahary"
+  },
+  "koueidername": "قويدر",
+  "@koueidername": {
+    "description": "name of koueider"
+  },
+  "aboutkoueider": "أحد أقدم محلات الحلويات في مصر، مشهور بالحلويات الشرقية والمعجنات العربية الأصيلة.",
+  "@aboutkoueider": {
+    "description": "about description of koueider"
+  },
+  "heliopolis": "مصر الجديدة",
+  "@heliopolis": {
+    "description": "location of koueider"
+  },
+  "koueidertag0": "حلويات",
+  "@koueidertag0": {
+    "description": "first tag of koueider"
+  },
+  "koueidertag1": "آيس كريم",
+  "@koueidertag1": {
+    "description": "second tag of koueider"
+  },
+  "koueidertag2": "حلويات شرقية",
+  "@koueidertag2": {
+    "description": "third tag of koueider"
+  },
+  "elmalkyname": "المالكي",
+  "@elmalkyname": {
+    "description": "name of elmalky"
+  },
+  "aboutelmalky": "وجهة حلويات مصرية عريقة معروفة بالأرز باللبن والآيس كريم والحلويات الكلاسيكية.",
+  "@aboutelmalky": {
+    "description": "about description of elmalky"
+  },
+  "mosquehassanname": "مسجد ومدرسة السلطان حسن",
+  "@mosquehassanname": {
+    "description": "name of mosquesultanhassan "
+  },
+  "aboutmosquehassan": "مسجد مملوكي رائع يشتهر بعمارته الإسلامية العظيمة وأجوائه الروحانية التاريخية.",
+  "@aboutmosquehassan": {
+    "description": "about description of mosquesultanhassan "
+  },
+  "salaheldinlocation": "ميدان صلاح الدين، القاهرة الإسلامية",
+  "@salaheldinlocation": {
+    "description": "location of mosquesultanhassan "
+  },
+  "mosquehassantag0": "إسلامي",
+  "@mosquehassantag0": {
+    "description": "first tag of mosquesultanhassan "
+  },
+  "mosquehassantag1": "مملوكي",
+  "@mosquehassantag1": {
+    "description": "second tag of mosquesultanhassan "
+  },
+  "mosquehassantag2": "عمارة",
+  "@mosquehassantag2": {
+    "description": "third tag of mosquesultanhassan "
+  },
+  "saintcatherinemonasteryname": "دير سانت كاترين",
+  "@saintcatherinemonasteryname": {
+    "description": "name of saintcatherinemonasteryname "
+  },
+  "aboutsaintcatherinemonastery": "أحد أقدم الأديرة المسيحية في العالم، يقع عند سفح جبل سيناء.",
+  "@aboutsaintcatherinemonastery": {
+    "description": "about description of saintcatherinemonasteryname "
+  },
+  "mountsinailocation": "جبل سيناء، سانت كاترين",
+  "@mountsinailocation": {
+    "description": "location of saintcatherinemonasteryname "
+  },
+  "southsinai": "جنوب سيناء",
+  "@southsinai": {
+    "description": "city of saintcatherinemonasteryname "
+  },
+  "saintcatherinemonasterytag0": "مسيحي",
+  "@saintcatherinemonasterytag0": {
+    "description": "first tag of saintcatherinemonasteryname "
+  },
+  "saintcatherinemonasterytag1": "دير",
+  "@saintcatherinemonasterytag1": {
+    "description": "second tag of saintcatherinemonasteryname "
+  },
+  "saintcatherinemonasterytag2": "حج",
+  "@saintcatherinemonasterytag2": {
+    "description": "third tag of saintcatherinemonasteryname "
+  },
+  "mosqueofalhakimbiamrallahname": "مسجد الحاكم بأمر الله",
+  "@mosqueofalhakimbiamrallahname": {
+    "description": "name of mosqueofalhakimbiamrallah "
+  },
+  "aboutmosqueofalhakimbiamrallah": "مسجد فاطمي تاريخي معروف بعمارته المبهرة وأهميته الروحانية في القاهرة الإسلامية.",
+  "@aboutmosqueofalhakimbiamrallah": {
+    "description": "about description  of mosqueofalhakimbiamrallah "
+  },
+  "almuizzstreetlocation": "شارع المعز، القاهرة",
+  "@almuizzstreetlocation": {
+    "description": "location of mosqueofalhakimbiamrallah "
+  },
+  "mosqueofalhakimbiamrallahtag0": "فاطمي",
+  "@mosqueofalhakimbiamrallahtag0": {
+    "description": "first tag of mosqueofalhakimbiamrallah "
+  },
+  "mosqueofalhakimbiamrallahtag1": "مسجد",
+  "@mosqueofalhakimbiamrallahtag1": {
+    "description": "second tag of mosqueofalhakimbiamrallah "
+  },
+  "mosqueofalhakimbiamrallahtag2": "تراث",
+  "@mosqueofalhakimbiamrallahtag2": {
+    "description": "third tag of mosqueofalhakimbiamrallah "
+  },
+  "alhusseinmosquename": "مسجد الحسين",
+  "@alhusseinmosquename": {
+    "description": "name of alhusseinmosque "
+  },
+  "aboutalhusseinmosque": "أحد أكثر مساجد مصر قدسية، يقع في قلب القاهرة الإسلامية التاريخية بالقرب من خان الخليلي.",
+  "@aboutalhusseinmosque": {
+    "description": "about description of alhusseinmosque "
+  },
+  "khanelkhalililocation": "خان الخليلي، القاهرة الإسلامية",
+  "@khanelkhalililocation": {
+    "description": "location of alhusseinmosque "
+  },
+  "alhusseinmosquetag0": "إسلامي",
+  "@alhusseinmosquetag0": {
+    "description": "first tag of alhusseinmosque "
+  },
+  "alhusseinmosquetag1": "تراث",
+  "@alhusseinmosquetag1": {
+    "description": "second tag of alhusseinmosque "
+  },
+  "alhusseinmosquetag2": "معلم",
+  "@alhusseinmosquetag2": {
+    "description": "third tag of alhusseinmosque "
+  },
+  "alrifaimosquename": "مسجد الرفاعي",
+  "@alrifaimosquename": {
+    "description": "name of alhusseinmosque "
+  },
+  "aboutalrifaimosque": "مسجد ملكي مشهور بعمارته المستوحاة من الطراز العثماني ومقابر أفراد العائلة الملكية المصرية.",
+  "@aboutalrifaimosque": {
+    "description": "about description of alhusseinmosque "
+  },
+  "alrifaimosquetag0": "عثماني",
+  "@alrifaimosquetag0": {
+    "description": "first of alhusseinmosque "
+  },
+  "alrifaimosquetag1": "مسجد",
+  "@alrifaimosquetag1": {
+    "description": "second tag of alhusseinmosque "
+  },
+  "alrifaimosquetag2": "عمارة",
+  "@alrifaimosquetag2": {
+    "description": "thrid tag of alhusseinmosque "
+  },
+  "elmoattam": "المقطم",
+  "@elmoattam": {
+    "description": "location of elmalky"
+  },
+  "elmalkytag0": "تقليدي",
+  "@elmalkytag0": {
+    "description": "first tag of elmalky"
+  },
+  "elmalkytag1": "آيس كريم",
+  "@elmalkytag1": {
+    "description": "second tag of elmalky"
+  },
+  "elmalkytag2": "حلويات",
+  "@elmalkytag2": {
+    "description": "third tag of elmalky"
+  },
+  "menu": "القائمة",
+  "manageProfile": "إدارة الملف الشخصي",
+  "changeLanguage": "تغيير اللغة",
+  "logout": "تسجيل الخروج",
+  "logoutConfirmTitle": "تسجيل الخروج",
+  "logoutConfirmMessage": "هل أنت متأكد أنك تريد تسجيل الخروج؟",
+  "cancel": "إلغاء",
+  "choosecategory": "اختر فئة",
+  "changecategory": "تغيير الفئة",
+  "egyptian": "مصري",
+  "@egyptian": {
+    "description": "Ticket price label for Egyptian visitors"
+  },
+  "other": "أخرى",
+  "@other": {
+    "description": "Ticket price label for non-Egyptian visitors"
+  },
+  "closed": "مغلق",
+  "@closed": {
+    "description": "State indicating the place is not currently operating"
+  },
+  "government": "المحافظة",
+  "selectlang": "اختر اللغة",
+  "selectgov": "اختر المحافظة",
+  "alexandria": "الإسكندرية",
+  "@alexandria": {
+    "description": "Governorate name"
+  },
+  "dakahlia": "الدقهلية",
+  "@dakahlia": {
+    "description": "Governorate name"
+  },
+  "@redSea": {
+    "description": "Governorate name"
+  },
+  "beheira": "البحيرة",
+  "@beheira": {
+    "description": "Governorate name"
+  },
+  "fayoum": "الفيوم",
+  "@fayoum": {
+    "description": "Governorate name"
+  },
+  "gharbia": "الغربية",
+  "@gharbia": {
+    "description": "Governorate name"
+  },
+  "ismailia": "الإسماعيلية",
+  "@ismailia": {
+    "description": "Governorate name"
+  },
+  "menofia": "المنوفية",
+  "@menofia": {
+    "description": "Governorate name"
+  },
+  "minya": "المنيا",
+  "@minya": {
+    "description": "Governorate name"
+  },
+  "qalyubia": "القليوبية",
+  "@qalyubia": {
+    "description": "Governorate name"
+  },
+  "newValley": "الوادي الجديد",
+  "@newValley": {
+    "description": "Governorate name"
+  },
+  "suez": "السويس",
+  "@suez": {
+    "description": "Governorate name"
+  },
+  "@aswan": {
+    "description": "Governorate name"
+  },
+  "assiut": "أسيوط",
+  "@assiut": {
+    "description": "Governorate name"
+  },
+  "beniSuef": "بني سويف",
+  "@beniSuef": {
+    "description": "Governorate name"
+  },
+  "portSaid": "بورسعيد",
+  "@portSaid": {
+    "description": "Governorate name"
+  },
+  "damietta": "دمياط",
+  "@damietta": {
+    "description": "Governorate name"
+  },
+  "sharkia": "الشرقية",
+  "@sharkia": {
+    "description": "Governorate name"
+  },
+  "southSinai": "جنوب سيناء",
+  "@southSinai": {
+    "description": "Governorate name"
+  },
+  "kafrElSheikh": "كفر الشيخ",
+  "@kafrElSheikh": {
+    "description": "Governorate name"
+  },
+  "matrouh": "مطروح",
+  "@matrouh": {
+    "description": "Governorate name"
+  },
+  "@luxor": {
+    "description": "Governorate name"
+  },
+  "qena": "قنا",
+  "@qena": {
+    "description": "Governorate name"
+  },
+  "northSinai": "شمال سيناء",
+  "@northSinai": {
+    "description": "Governorate name"
+  },
+  "sohag": "سوهاج",
+  "@sohag": {
+    "description": "Governorate name"
+  },
   "goodmorning": "صباح الخير",
   "discover": "اكتشف",
-  "hidden": "الكنوز",
-  "treasures": "المخفية",
-
-  "errorgetingdata": "خطأ أثناء جلب البيانات",
-
+  "hidden": "كنوزًا",
+  "treasures": "خفية",
+  "errorgetingdata": "حدث خطأ أثناء جلب البيانات",
   "featuredplaces": "أماكن مميزة",
-
-  "handpickedplaces": "أماكن مختارة خصيصًا \nلرحلتك بناءً على مدينتك",
-
+  "handpickedplaces": "اختيارات منتقاة بعناية من أجل \nرحلتك حسب مدينتك",
   "nosavedplaces": "لم تقم بحفظ أي أماكن بعد",
-
   "novisitedplaces": "لم تقم بزيارة أي أماكن بعد"
 }

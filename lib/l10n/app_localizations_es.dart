@@ -9,33 +9,33 @@ class AppLocalizationsEs extends AppLocalizations {
   AppLocalizationsEs([String locale = 'es']) : super(locale);
 
   @override
-  String get egypttourismguide => 'Guía de turismo de Egipto';
+  String get egypttourismguide => 'Guía turística de Egipto';
 
   @override
   String get signInToYourJournal => 'Inicia sesión en tu diario';
 
   @override
-  String get invalidcreds => 'Correo electrónico o contraseña inválidos';
+  String get invalidcreds => 'Correo electrónico o contraseña no válidos';
 
   @override
   String get passresetemailsent =>
-      'Password reset email sent. Check your inbox.';
+      'Correo de restablecimiento de contraseña enviado. Revisa tu bandeja de entrada.';
 
   @override
   String get forgetpassemailhint =>
-      'Enter your email address and we will send you a link to reset your password.';
+      'Introduce tu dirección de correo electrónico y te enviaremos un enlace para restablecer tu contraseña.';
 
   @override
   String get welcomeBackExplorer => 'Bienvenido de nuevo, \nExplorador';
 
   @override
-  String get emailAddress => 'Correo electrónico';
+  String get emailAddress => 'Dirección de correo electrónico';
 
   @override
   String get emailHint => 'Por favor, introduce tu correo electrónico';
 
   @override
-  String get invalidEmailFormat => 'Formato de correo electrónico inválido';
+  String get invalidEmailFormat => 'Formato de correo electrónico no válido';
 
   @override
   String get password => 'Contraseña';
@@ -50,10 +50,10 @@ class AppLocalizationsEs extends AppLocalizations {
   String get continueJourney => 'Continuar viaje';
 
   @override
-  String get forgotPassword => '¿Olvidaste tu contraseña?';
+  String get forgotPassword => '¿Olvidaste la contraseña?';
 
   @override
-  String get resetpassword => 'Reset password';
+  String get resetpassword => 'Restablecer contraseña';
 
   @override
   String get or => 'o';
@@ -92,7 +92,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get currency => 'Moneda';
 
   @override
-  String get agreeToTermsPrefix => 'Al crear una cuenta, acepto ';
+  String get agreeToTermsPrefix => 'Al crear una cuenta, acepto los ';
 
   @override
   String get termsOfService => 'Términos de servicio';
@@ -131,7 +131,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get explorer => 'Explorador';
 
   @override
-  String get visited => 'VISITADOS';
+  String get visited => 'VISITADO';
 
   @override
   String get save => 'Guardar';
@@ -197,7 +197,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get cairo => 'El Cairo';
 
   @override
-  String get philaeTemple => 'Templo de File';
+  String get philaeTemple => 'Templo de Filae';
 
   @override
   String get aswan => 'Asuán';
@@ -305,20 +305,20 @@ class AppLocalizationsEs extends AppLocalizations {
   String get amrIbnAlAsMosque => 'Mezquita de Amr Ibn Al-As';
 
   @override
-  String get alFustatOldCairoEgypt => 'Al-Fustat (El Cairo Antiguo), Egipto';
+  String get alFustatOldCairoEgypt => 'Al-Fustat (El Cairo antiguo), Egipto';
 
   @override
   String get alAzharMosque => 'Mezquita de Al-Azhar';
 
   @override
-  String get islamicCairoEgypt => 'El Cairo Islámico, Egipto';
+  String get islamicCairoEgypt => 'El Cairo islámico, Egipto';
 
   @override
   String get theHangingChurch => 'La Iglesia Colgante';
 
   @override
   String get copticCairoOldCairoEgypt =>
-      'El Cairo Copto, El Cairo Antiguo, Egipto';
+      'El Cairo copto, El Cairo antiguo, Egipto';
 
   @override
   String get alHusseinMosque => 'Mezquita de Al-Hussein';
@@ -330,7 +330,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get saintCatherineMonastery => 'Monasterio de Santa Catalina';
 
   @override
-  String get southSinaiEgypt => 'Sur del Sinaí, Egipto';
+  String get southSinaiEgypt => 'Sinaí del Sur, Egipto';
 
   @override
   String get failtostoreuser =>
@@ -373,7 +373,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get titleLabel => 'TÍTULO';
 
   @override
-  String get manageSavedPlaces => 'Administrar lugares guardados';
+  String get manageSavedPlaces => 'Gestionar lugares guardados';
 
   @override
   String get editSaved => 'EDITAR GUARDADOS';
@@ -421,11 +421,11 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get spiritualquote =>
-      '\"Donde la fe y el silencio se encuentran, el espíritu empieza a sanar.\"';
+      '\"Donde se encuentran la fe y el silencio, el espíritu comienza a sanar.\"';
 
   @override
   String get naturequote =>
-      '\"Para entender la tierra, hay que escuchar las historias escritas en sus ríos, cielos y silencio.\"';
+      '\"Para comprender la tierra, hay que escuchar las historias escritas en sus ríos, cielos y silencio.\"';
 
   @override
   String get foodquote =>
@@ -436,7 +436,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get aboutpyramids =>
-      'Las mundialmente famosas pirámides del antiguo Egipto, construidas como tumbas reales y consideradas una de las Siete Maravillas del Mundo Antiguo.';
+      'Las pirámides mundialmente famosas del antiguo Egipto, construidas como tumbas reales y consideradas una de las Siete Maravillas del Mundo Antiguo.';
 
   @override
   String get alharam => 'Al Haram';
@@ -458,7 +458,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get aboutabusimbel =>
-      'Templos monumentales excavados en la roca y construidos por Ramsés II, famosos por sus estatuas gigantes y su notable traslado para protegerlos de las inundaciones.';
+      'Enormes templos excavados en la roca construidos por Ramsés II, famosos por sus estatuas gigantes y su notable traslado para protegerlos de las inundaciones.';
 
   @override
   String get abusimbletag0 => 'HISTÓRICO';
@@ -514,14 +514,14 @@ class AppLocalizationsEs extends AppLocalizations {
   String get grandegyptianmuseumtag2 => 'CULTURA';
 
   @override
-  String get philaetemplename => 'Templo de File';
+  String get philaetemplename => 'Templo de Filae';
 
   @override
   String get philaetemplelocation => 'Isla Agilkia';
 
   @override
   String get aboutphilaetemple =>
-      'Un hermoso templo isleño dedicado a la diosa Isis, conocido por sus impresionantes vistas del Nilo y sus antiguos grabados.';
+      'Un hermoso templo insular dedicado a la diosa Isis, conocido por sus impresionantes vistas del Nilo y sus antiguas tallas.';
 
   @override
   String get philaetempletag0 => 'ISLA';
@@ -543,13 +543,13 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get aboutwhitedesert =>
-      'Una reserva desértica impresionante, famosa por sus formaciones rocosas blancas únicas y experiencias de campamento.';
+      'Una impresionante reserva desértica famosa por sus singulares formaciones rocosas blancas y experiencias de acampada.';
 
   @override
   String get whitedeserttag0 => 'DESIERTO';
 
   @override
-  String get whitedeserttag1 => 'CAMPAMENTO';
+  String get whitedeserttag1 => 'ACAMPADA';
 
   @override
   String get whitedeserttag2 => 'SAFARI';
@@ -565,7 +565,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get aboutbluehole =>
-      'Un destino de buceo mundialmente famoso, conocido por sus aguas cristalinas y sus vibrantes arrecifes de coral.';
+      'Un destino de buceo mundialmente famoso conocido por sus aguas cristalinas y vibrantes arrecifes de coral.';
 
   @override
   String get blueholetag0 => 'BUCEO';
@@ -596,13 +596,13 @@ class AppLocalizationsEs extends AppLocalizations {
   String get abugaloumtag1 => 'NATURALEZA';
 
   @override
-  String get abugaloumtag2 => 'CAMPAMENTO';
+  String get abugaloumtag2 => 'ACAMPADA';
 
   @override
   String get wadielgemalname => 'Wadi El Gemal';
 
   @override
-  String get wadielgemalreserve => 'Reserva Wadi El Gemal';
+  String get wadielgemalreserve => 'Reserva de Wadi El Gemal';
 
   @override
   String get marsaalam => 'Marsa Alam';
@@ -627,11 +627,11 @@ class AppLocalizationsEs extends AppLocalizations {
   String get wadielrayan => 'Wadi El Rayan';
 
   @override
-  String get faiyum => 'Fayum';
+  String get faiyum => 'Fayún';
 
   @override
   String get aboutwadielrayan =>
-      'Un hermoso oasis desértico conocido por sus cascadas, lagos, dunas de arena y aventuras de safari.';
+      'Un hermoso oasis desértico conocido por cascadas, lagos, dunas de arena y aventuras de safari.';
 
   @override
   String get wadielrayantag0 => 'CASCADAS';
@@ -656,7 +656,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get arabiatatag0 => 'Desayuno';
 
   @override
-  String get arabiatatag1 => 'ComidaCallejera';
+  String get arabiatatag1 => 'Comida callejera';
 
   @override
   String get arabiatatag2 => 'Oriental';
@@ -666,7 +666,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get aboutqasrelkababgi =>
-      'Una reconocida cadena de restaurantes egipcios celebrada por su auténtica cocina oriental, parrillas tradicionales y experiencias gastronómicas teatrales';
+      'Una reconocida cadena de restaurantes egipcios celebrada por su auténtica cocina oriental, parrilladas tradicionales y experiencias gastronómicas teatrales';
 
   @override
   String get fifthsettlement => 'Quinto Asentamiento';
@@ -685,7 +685,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get aboutbahary =>
-      'Un restaurante moderno de mariscos famoso por pescado a la parrilla, bandejas de mariscos y frescos sabores mediterráneos.';
+      'Un moderno restaurante de mariscos famoso por el pescado a la parrilla, bandejas de mariscos y sabores mediterráneos frescos.';
 
   @override
   String get baharytag0 => 'Mariscos';
@@ -694,14 +694,14 @@ class AppLocalizationsEs extends AppLocalizations {
   String get baharytag1 => 'Fresco';
 
   @override
-  String get baharytag2 => 'SaboresMarinos';
+  String get baharytag2 => 'Sabores del océano';
 
   @override
   String get koueidername => 'Koueider';
 
   @override
   String get aboutkoueider =>
-      'Una de las pastelerías más antiguas de Egipto, famosa por dulces orientales y auténticos pasteles árabes.';
+      'Una de las pastelerías más antiguas de Egipto, famosa por los dulces orientales y la auténtica repostería árabe.';
 
   @override
   String get heliopolis => 'Heliópolis';
@@ -727,10 +727,10 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get aboutmosquehassan =>
-      'Una magnífica mezquita mameluca famosa por su gran arquitectura islámica y su ambiente histórico espiritual.';
+      'Una magnífica mezquita mameluca famosa por su grandiosa arquitectura islámica y su atmósfera espiritual histórica.';
 
   @override
-  String get salaheldinlocation => 'Plaza Salah El-Din, El Cairo Islámico';
+  String get salaheldinlocation => 'Plaza Salah El-Din, El Cairo islámico';
 
   @override
   String get mosquehassantag0 => 'Islámico';
@@ -752,7 +752,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get mountsinailocation => 'Monte Sinaí, Santa Catalina';
 
   @override
-  String get southsinai => 'Sur del Sinaí';
+  String get southsinai => 'Sinaí del Sur';
 
   @override
   String get saintcatherinemonasterytag0 => 'Cristiano';
@@ -769,7 +769,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get aboutmosqueofalhakimbiamrallah =>
-      'Una histórica mezquita fatimí conocida por su impresionante arquitectura e importancia espiritual en El Cairo Islámico.';
+      'Una histórica mezquita fatimí conocida por su impresionante arquitectura y su importancia espiritual en El Cairo islámico.';
 
   @override
   String get almuizzstreetlocation => 'Calle Al-Muizz, El Cairo';
@@ -788,10 +788,10 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get aboutalhusseinmosque =>
-      'Una de las mezquitas más sagradas de Egipto, ubicada en el corazón del histórico El Cairo Islámico cerca de Khan El Khalili.';
+      'Una de las mezquitas más sagradas de Egipto, ubicada en el corazón del histórico Cairo islámico, cerca de Khan El Khalili.';
 
   @override
-  String get khanelkhalililocation => 'Khan El Khalili, El Cairo Islámico';
+  String get khanelkhalililocation => 'Khan El Khalili, El Cairo islámico';
 
   @override
   String get alhusseinmosquetag0 => 'Islámico';
@@ -803,7 +803,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get alhusseinmosquetag2 => 'Monumento';
 
   @override
-  String get alrifaimosquename => 'Mezquita de Al-Rifa\'i';
+  String get alrifaimosquename => 'Mezquita de Al-Rifa’i';
 
   @override
   String get aboutalrifaimosque =>
@@ -834,7 +834,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get menu => 'Menú';
 
   @override
-  String get manageProfile => 'Administrar perfil';
+  String get manageProfile => 'Gestionar perfil';
 
   @override
   String get changeLanguage => 'Cambiar idioma';
@@ -886,10 +886,10 @@ class AppLocalizationsEs extends AppLocalizations {
   String get beheira => 'Beheira';
 
   @override
-  String get fayoum => 'Fayum';
+  String get fayoum => 'Fayún';
 
   @override
-  String get gharbia => 'Garbia';
+  String get gharbia => 'Gharbia';
 
   @override
   String get ismailia => 'Ismailía';
@@ -901,7 +901,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get minya => 'Menia';
 
   @override
-  String get qalyubia => 'Caliubia';
+  String get qalyubia => 'Qalyubia';
 
   @override
   String get newValley => 'Nuevo Valle';
@@ -925,7 +925,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get sharkia => 'Sharqia';
 
   @override
-  String get southSinai => 'Sur del Sinaí';
+  String get southSinai => 'Sinaí del Sur';
 
   @override
   String get kafrElSheikh => 'Kafr El Sheikh';
@@ -937,7 +937,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get qena => 'Qena';
 
   @override
-  String get northSinai => 'Norte del Sinaí';
+  String get northSinai => 'Sinaí del Norte';
 
   @override
   String get sohag => 'Sohag';
@@ -962,7 +962,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get handpickedplaces =>
-      'Selección hecha a mano para tu \nviaje según tu ciudad';
+      'Selección curada para tu \nviaje según tu ciudad';
 
   @override
   String get nosavedplaces => 'Aún no has guardado ningún lugar';

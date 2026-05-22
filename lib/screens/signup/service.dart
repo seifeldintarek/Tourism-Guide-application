@@ -9,12 +9,12 @@ import 'package:provider/provider.dart';
 
 Future<bool> storeUser(final userData, BuildContext context) async {
   UserCredential? userCredential;
-  final pass = userData["password"].toString().trim();
+  final hashedPass = hashPassword(userData["password"]);
 
   try {
     userCredential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
       email: userData["email"].toString().trim(),
-      password: hashPassword(pass),
+      password: hashedPass,
     );
   } catch (e) {
     print("Error creating Firebase Auth user: $e");
@@ -22,7 +22,6 @@ Future<bool> storeUser(final userData, BuildContext context) async {
   }
 
   final uid = userCredential.user!.uid;
-  final hashedPass = hashPassword(userData["password"]);
 
   try {
     final locale = context.read<LocaleProvider>().locale;

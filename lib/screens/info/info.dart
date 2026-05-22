@@ -76,7 +76,7 @@ class _InfoscreenState extends State<Infoscreen> {
                 Icon(Icons.star, color: Colors.amber, size: 15),
                 SizedBox(width: width * .005),
                 Text(
-                  '${widget.place.rating}',
+                  '${NumberFormat('#.#', locale).format(widget.place.rating)}',
                   style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.normal,
@@ -131,7 +131,7 @@ class _InfoscreenState extends State<Infoscreen> {
                     ),
                   ),
                   Text(
-                    "${widget.place.startHr} AM - ${widget.place.endHr} PM",
+                    "${NumberFormat('#', locale).format(widget.place.startHr)} AM - ${NumberFormat('#', locale).format(widget.place.endHr)} PM",
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 14,
@@ -190,7 +190,7 @@ class _InfoscreenState extends State<Infoscreen> {
                                   ),
                                   TextSpan(
                                     text:
-                                        '${lang.egp} ${widget.place.ticketPriceEgyptian}',
+                                        '${lang.egp} ${NumberFormat('#', locale).format(widget.place.ticketPriceEgyptian)}',
                                     style: TextStyle(
                                       fontSize: 14,
                                       fontFamily: 'WorkSans',
@@ -214,7 +214,7 @@ class _InfoscreenState extends State<Infoscreen> {
                                   ),
                                   TextSpan(
                                     text:
-                                        '${lang.egp} ${widget.place.ticketPrice}',
+                                        '${lang.egp} ${NumberFormat('#', locale).format(widget.place.ticketPrice)}',
                                     style: TextStyle(
                                       fontSize: 14,
                                       fontFamily: 'WorkSans',

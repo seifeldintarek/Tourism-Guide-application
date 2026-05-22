@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/default.dart';
+import 'package:flutter_application_1/l10n/app_localizations.dart';
 import 'package:flutter_application_1/models/Place.dart';
 import 'package:flutter_application_1/models/User.dart';
+import 'package:flutter_application_1/root/themes.dart';
 import 'package:flutter_application_1/screens/home/service.dart';
 
 class TagChip extends StatelessWidget {
@@ -119,6 +121,8 @@ class _MainImageHeaderState extends State<MainImageHeader> {
 
   @override
   Widget build(BuildContext context) {
+    final locale = Localizations.localeOf(context).languageCode;
+    final lang = AppLocalizations.of(context)!;
     return Stack(
       children: [
         ClipRRect(
@@ -136,7 +140,7 @@ class _MainImageHeaderState extends State<MainImageHeader> {
           bottom: widget.height * .015,
           left: widget.width * .03,
           child: Default.locationBadge(
-            label: widget.place.location,
+            label: lang.getByKey(widget.place.location),
             mapUrl: widget.place.mapUrl,
           ),
         ),

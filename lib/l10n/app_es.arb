@@ -1,20 +1,22 @@
 {
   "@@locale": "es",
   "@@context": "AppTranslations",
-  "egypttourismguide": "Guía de turismo de Egipto",
+  "egypttourismguide": "Guía turística de Egipto",
   "@signInToYourJournal": {
     "description": "Sentence: Header for the sign-in form."
   },
   "signInToYourJournal": "Inicia sesión en tu diario",
-  "invalidcreds": "Correo electrónico o contraseña inválidos",
+  "invalidcreds": "Correo electrónico o contraseña no válidos",
   "@invalidcreds": {
     "description": "Sentence: user logged in with wrong email/password"
   },
+  "passresetemailsent": "Correo de restablecimiento de contraseña enviado. Revisa tu bandeja de entrada.",
+  "forgetpassemailhint": "Introduce tu dirección de correo electrónico y te enviaremos un enlace para restablecer tu contraseña.",
   "welcomeBackExplorer": "Bienvenido de nuevo, \nExplorador",
   "@welcomeBackExplorer": {
     "description": "Sentence: Greeting message."
   },
-  "emailAddress": "Correo electrónico",
+  "emailAddress": "Dirección de correo electrónico",
   "@emailAddress": {
     "description": "Noun/Word: Used as a label for the email input field."
   },
@@ -22,7 +24,7 @@
   "@emailHint": {
     "description": "Sentence: Placeholder hint inside the email input field."
   },
-  "invalidEmailFormat": "Formato de correo electrónico inválido",
+  "invalidEmailFormat": "Formato de correo electrónico no válido",
   "password": "Contraseña",
   "@password": {
     "description": "Noun/Word: Used as a label for the password input field."
@@ -33,10 +35,11 @@
   "@continueJourney": {
     "description": "Action Phrase: Button text to submit the sign-in form."
   },
-  "forgotPassword": "¿Olvidaste tu contraseña?",
+  "forgotPassword": "¿Olvidaste la contraseña?",
   "@forgotPassword": {
     "description": "Sentence/Question: Link for password recovery."
   },
+  "resetpassword": "Restablecer contraseña",
   "or": "o",
   "@or": {
     "description": "Word: Divider text."
@@ -85,7 +88,7 @@
   "@currency": {
     "description": "Noun/Word: Label for the currency dropdown."
   },
-  "agreeToTermsPrefix": "Al crear una cuenta, acepto ",
+  "agreeToTermsPrefix": "Al crear una cuenta, acepto los ",
   "@agreeToTermsPrefix": {
     "description": "Sentence fragment: The beginning of the checkbox agreement text. Left a trailing space for RichText merging."
   },
@@ -131,7 +134,7 @@
   "@explorer": {
     "description": "User title or subtitle (Word)"
   },
-  "visited": "VISITADOS",
+  "visited": "VISITADO",
   "@visited": {
     "description": "Label for number of visited places (Word)"
   },
@@ -174,7 +177,7 @@
   "kebdetElPrince": "Kebdet El-Prince",
   "sheikhZayedGizaEgypt": "Sheikh Zayed, Guiza, Egipto",
   "cairo": "El Cairo",
-  "philaeTemple": "Templo de File",
+  "philaeTemple": "Templo de Filae",
   "aswan": "Asuán",
   "egyptianMuseum": "Museo Egipcio",
   "@egyptianMuseum": {
@@ -285,7 +288,7 @@
   "@amrIbnAlAsMosque": {
     "description": "Landmark name (Phrase)"
   },
-  "alFustatOldCairoEgypt": "Al-Fustat (El Cairo Antiguo), Egipto",
+  "alFustatOldCairoEgypt": "Al-Fustat (El Cairo antiguo), Egipto",
   "@alFustatOldCairoEgypt": {
     "description": "Location (Phrase)"
   },
@@ -293,7 +296,7 @@
   "@alAzharMosque": {
     "description": "Landmark name (Phrase)"
   },
-  "islamicCairoEgypt": "El Cairo Islámico, Egipto",
+  "islamicCairoEgypt": "El Cairo islámico, Egipto",
   "@islamicCairoEgypt": {
     "description": "Location (Phrase)"
   },
@@ -301,7 +304,7 @@
   "@theHangingChurch": {
     "description": "Landmark name (Phrase)"
   },
-  "copticCairoOldCairoEgypt": "El Cairo Copto, El Cairo Antiguo, Egipto",
+  "copticCairoOldCairoEgypt": "El Cairo copto, El Cairo antiguo, Egipto",
   "@copticCairoOldCairoEgypt": {
     "description": "Location (Phrase)"
   },
@@ -317,7 +320,7 @@
   "@saintCatherineMonastery": {
     "description": "Landmark name (Phrase)"
   },
-  "southSinaiEgypt": "Sur del Sinaí, Egipto",
+  "southSinaiEgypt": "Sinaí del Sur, Egipto",
   "@southSinaiEgypt": {
     "description": "Location (Phrase)"
   },
@@ -358,7 +361,7 @@
   "@titleLabel": {
     "description": "Label for the user role/title input field (Word)"
   },
-  "manageSavedPlaces": "Administrar lugares guardados",
+  "manageSavedPlaces": "Gestionar lugares guardados",
   "@manageSavedPlaces": {
     "description": "Section header for managing saved locations (Phrase)"
   },
@@ -388,11 +391,11 @@
   "@heritagequote": {
     "description": "quote of heritage"
   },
-  "spiritualquote": "\"Donde la fe y el silencio se encuentran, el espíritu empieza a sanar.\"",
+  "spiritualquote": "\"Donde se encuentran la fe y el silencio, el espíritu comienza a sanar.\"",
   "@spiritualquote": {
     "description": "quote of spiritual"
   },
-  "naturequote": "\"Para entender la tierra, hay que escuchar las historias escritas en sus ríos, cielos y silencio.\"",
+  "naturequote": "\"Para comprender la tierra, hay que escuchar las historias escritas en sus ríos, cielos y silencio.\"",
   "@naturequote": {
     "description": "quote of nature"
   },
@@ -404,7 +407,7 @@
   "@pyramidsname": {
     "description": "name of pyramids"
   },
-  "aboutpyramids": "Las mundialmente famosas pirámides del antiguo Egipto, construidas como tumbas reales y consideradas una de las Siete Maravillas del Mundo Antiguo.",
+  "aboutpyramids": "Las pirámides mundialmente famosas del antiguo Egipto, construidas como tumbas reales y consideradas una de las Siete Maravillas del Mundo Antiguo.",
   "@aboutpyramids": {
     "description": "about description of pyramids"
   },
@@ -426,7 +429,7 @@
   },
   "abusimblename": "Templo de Abu Simbel",
   "abusimbellocation": "Abu Simbel",
-  "aboutabusimbel": "Templos monumentales excavados en la roca y construidos por Ramsés II, famosos por sus estatuas gigantes y su notable traslado para protegerlos de las inundaciones.",
+  "aboutabusimbel": "Enormes templos excavados en la roca construidos por Ramsés II, famosos por sus estatuas gigantes y su notable traslado para protegerlos de las inundaciones.",
   "abusimbletag0": "HISTÓRICO",
   "abusimbletag1": "MONUMENTO",
   "abusimbletag2": "UNESCO",
@@ -444,9 +447,9 @@
   "grandegyptianmuseumtag0": "ARTEFACTOS",
   "grandegyptianmuseumtag1": "MUSEO",
   "grandegyptianmuseumtag2": "CULTURA",
-  "philaetemplename": "Templo de File",
+  "philaetemplename": "Templo de Filae",
   "philaetemplelocation": "Isla Agilkia",
-  "aboutphilaetemple": "Un hermoso templo isleño dedicado a la diosa Isis, conocido por sus impresionantes vistas del Nilo y sus antiguos grabados.",
+  "aboutphilaetemple": "Un hermoso templo insular dedicado a la diosa Isis, conocido por sus impresionantes vistas del Nilo y sus antiguas tallas.",
   "philaetempletag0": "ISLA",
   "philaetempletag1": "TEMPLO",
   "philaetempletag2": "PATRIMONIO",
@@ -462,7 +465,7 @@
   "@southwestofcairo": {
     "description": "city of white desert"
   },
-  "aboutwhitedesert": "Una reserva desértica impresionante, famosa por sus formaciones rocosas blancas únicas y experiencias de campamento.",
+  "aboutwhitedesert": "Una impresionante reserva desértica famosa por sus singulares formaciones rocosas blancas y experiencias de acampada.",
   "@aboutwhitedesert": {
     "description": "Information about white desert"
   },
@@ -470,7 +473,7 @@
   "@whitedeserttag0": {
     "description": "first tag of the white desert"
   },
-  "whitedeserttag1": "CAMPAMENTO",
+  "whitedeserttag1": "ACAMPADA",
   "@whitedeserttag1": {
     "description": "second tag of the white desert"
   },
@@ -490,7 +493,7 @@
   "@dahab": {
     "description": "city of Blue Hole"
   },
-  "aboutbluehole": "Un destino de buceo mundialmente famoso, conocido por sus aguas cristalinas y sus vibrantes arrecifes de coral.",
+  "aboutbluehole": "Un destino de buceo mundialmente famoso conocido por sus aguas cristalinas y vibrantes arrecifes de coral.",
   "@aboutbluehole": {
     "description": "Information about Blue Hole"
   },
@@ -530,7 +533,7 @@
   "@abugaloumtag1": {
     "description": "second tag of Abu Galoum"
   },
-  "abugaloumtag2": "CAMPAMENTO",
+  "abugaloumtag2": "ACAMPADA",
   "@abugaloumtag2": {
     "description": "third tag of Abu Galoum"
   },
@@ -538,7 +541,7 @@
   "@wadielgemalname": {
     "description": "Wadi El Gemal name"
   },
-  "wadielgemalreserve": "Reserva Wadi El Gemal",
+  "wadielgemalreserve": "Reserva de Wadi El Gemal",
   "@wadielgemalreserve": {
     "description": "Wadi El Gemal location"
   },
@@ -570,11 +573,11 @@
   "@wadielrayan": {
     "description": "Wadi el rayan location"
   },
-  "faiyum": "Fayum",
+  "faiyum": "Fayún",
   "@faiyum": {
     "description": "city of Wadi el rayan"
   },
-  "aboutwadielrayan": "Un hermoso oasis desértico conocido por sus cascadas, lagos, dunas de arena y aventuras de safari.",
+  "aboutwadielrayan": "Un hermoso oasis desértico conocido por cascadas, lagos, dunas de arena y aventuras de safari.",
   "@aboutwadielrayan": {
     "description": "Information about Wadi el rayan"
   },
@@ -606,7 +609,7 @@
   "@arabiatatag0": {
     "description": "first tag of arabiata"
   },
-  "arabiatatag1": "ComidaCallejera",
+  "arabiatatag1": "Comida callejera",
   "@arabiatatag1": {
     "description": "second tag of arabiata"
   },
@@ -618,7 +621,7 @@
   "@qasrelkababginame": {
     "description": "name of qasr-elkababgi"
   },
-  "aboutqasrelkababgi": "Una reconocida cadena de restaurantes egipcios celebrada por su auténtica cocina oriental, parrillas tradicionales y experiencias gastronómicas teatrales",
+  "aboutqasrelkababgi": "Una reconocida cadena de restaurantes egipcios celebrada por su auténtica cocina oriental, parrilladas tradicionales y experiencias gastronómicas teatrales",
   "@aboutqasrelkababgi": {
     "description": "about description of qasr-elkababgi"
   },
@@ -642,7 +645,7 @@
   "@baharyname": {
     "description": "name of bahary"
   },
-  "aboutbahary": "Un restaurante moderno de mariscos famoso por pescado a la parrilla, bandejas de mariscos y frescos sabores mediterráneos.",
+  "aboutbahary": "Un moderno restaurante de mariscos famoso por el pescado a la parrilla, bandejas de mariscos y sabores mediterráneos frescos.",
   "@aboutbahary": {
     "description": "about description of bahary"
   },
@@ -654,7 +657,7 @@
   "@baharytag1": {
     "description": "second tag of bahary"
   },
-  "baharytag2": "SaboresMarinos",
+  "baharytag2": "Sabores del océano",
   "@baharytag2": {
     "description": "third tag of bahary"
   },
@@ -662,7 +665,7 @@
   "@koueidername": {
     "description": "name of koueider"
   },
-  "aboutkoueider": "Una de las pastelerías más antiguas de Egipto, famosa por dulces orientales y auténticos pasteles árabes.",
+  "aboutkoueider": "Una de las pastelerías más antiguas de Egipto, famosa por los dulces orientales y la auténtica repostería árabe.",
   "@aboutkoueider": {
     "description": "about description of koueider"
   },
@@ -694,11 +697,11 @@
   "@mosquehassanname": {
     "description": "name of mosquesultanhassan "
   },
-  "aboutmosquehassan": "Una magnífica mezquita mameluca famosa por su gran arquitectura islámica y su ambiente histórico espiritual.",
+  "aboutmosquehassan": "Una magnífica mezquita mameluca famosa por su grandiosa arquitectura islámica y su atmósfera espiritual histórica.",
   "@aboutmosquehassan": {
     "description": "about description of mosquesultanhassan "
   },
-  "salaheldinlocation": "Plaza Salah El-Din, El Cairo Islámico",
+  "salaheldinlocation": "Plaza Salah El-Din, El Cairo islámico",
   "@salaheldinlocation": {
     "description": "location of mosquesultanhassan "
   },
@@ -726,7 +729,7 @@
   "@mountsinailocation": {
     "description": "location of saintcatherinemonasteryname "
   },
-  "southsinai": "Sur del Sinaí",
+  "southsinai": "Sinaí del Sur",
   "@southsinai": {
     "description": "city of saintcatherinemonasteryname "
   },
@@ -746,7 +749,7 @@
   "@mosqueofalhakimbiamrallahname": {
     "description": "name of mosqueofalhakimbiamrallah "
   },
-  "aboutmosqueofalhakimbiamrallah": "Una histórica mezquita fatimí conocida por su impresionante arquitectura e importancia espiritual en El Cairo Islámico.",
+  "aboutmosqueofalhakimbiamrallah": "Una histórica mezquita fatimí conocida por su impresionante arquitectura y su importancia espiritual en El Cairo islámico.",
   "@aboutmosqueofalhakimbiamrallah": {
     "description": "about description  of mosqueofalhakimbiamrallah "
   },
@@ -770,11 +773,11 @@
   "@alhusseinmosquename": {
     "description": "name of alhusseinmosque "
   },
-  "aboutalhusseinmosque": "Una de las mezquitas más sagradas de Egipto, ubicada en el corazón del histórico El Cairo Islámico cerca de Khan El Khalili.",
+  "aboutalhusseinmosque": "Una de las mezquitas más sagradas de Egipto, ubicada en el corazón del histórico Cairo islámico, cerca de Khan El Khalili.",
   "@aboutalhusseinmosque": {
     "description": "about description of alhusseinmosque "
   },
-  "khanelkhalililocation": "Khan El Khalili, El Cairo Islámico",
+  "khanelkhalililocation": "Khan El Khalili, El Cairo islámico",
   "@khanelkhalililocation": {
     "description": "location of alhusseinmosque "
   },
@@ -790,7 +793,7 @@
   "@alhusseinmosquetag2": {
     "description": "third tag of alhusseinmosque "
   },
-  "alrifaimosquename": "Mezquita de Al-Rifa'i",
+  "alrifaimosquename": "Mezquita de Al-Rifa’i",
   "@alrifaimosquename": {
     "description": "name of alhusseinmosque "
   },
@@ -827,7 +830,7 @@
     "description": "third tag of elmalky"
   },
   "menu": "Menú",
-  "manageProfile": "Administrar perfil",
+  "manageProfile": "Gestionar perfil",
   "changeLanguage": "Cambiar idioma",
   "logout": "Cerrar sesión",
   "logoutConfirmTitle": "Cerrar sesión",
@@ -865,11 +868,11 @@
   "@beheira": {
     "description": "Governorate name"
   },
-  "fayoum": "Fayum",
+  "fayoum": "Fayún",
   "@fayoum": {
     "description": "Governorate name"
   },
-  "gharbia": "Garbia",
+  "gharbia": "Gharbia",
   "@gharbia": {
     "description": "Governorate name"
   },
@@ -885,7 +888,7 @@
   "@minya": {
     "description": "Governorate name"
   },
-  "qalyubia": "Caliubia",
+  "qalyubia": "Qalyubia",
   "@qalyubia": {
     "description": "Governorate name"
   },
@@ -920,7 +923,7 @@
   "@sharkia": {
     "description": "Governorate name"
   },
-  "southSinai": "Sur del Sinaí",
+  "southSinai": "Sinaí del Sur",
   "@southSinai": {
     "description": "Governorate name"
   },
@@ -939,7 +942,7 @@
   "@qena": {
     "description": "Governorate name"
   },
-  "northSinai": "Norte del Sinaí",
+  "northSinai": "Sinaí del Norte",
   "@northSinai": {
     "description": "Governorate name"
   },
@@ -953,7 +956,7 @@
   "treasures": "tesoros",
   "errorgetingdata": "Error al obtener datos",
   "featuredplaces": "Lugares destacados",
-  "handpickedplaces": "Selección hecha a mano para tu \nviaje según tu ciudad",
+  "handpickedplaces": "Selección curada para tu \nviaje según tu ciudad",
   "nosavedplaces": "Aún no has guardado ningún lugar",
   "novisitedplaces": "Aún no has visitado ningún lugar"
 }

@@ -5,11 +5,13 @@
   "@signInToYourJournal": {
     "description": "Sentence: Header for the sign-in form."
   },
-  "signInToYourJournal": "Melde dich in deinem Reisejournal an",
+  "signInToYourJournal": "Melde dich in deinem Reisetagebuch an",
   "invalidcreds": "Ungültige E-Mail-Adresse oder ungültiges Passwort",
   "@invalidcreds": {
     "description": "Sentence: user logged in with wrong email/password"
   },
+  "passresetemailsent": "E-Mail zum Zurücksetzen des Passworts wurde gesendet. Prüfe deinen Posteingang.",
+  "forgetpassemailhint": "Gib deine E-Mail-Adresse ein und wir senden dir einen Link zum Zurücksetzen deines Passworts.",
   "welcomeBackExplorer": "Willkommen zurück, \nEntdecker",
   "@welcomeBackExplorer": {
     "description": "Sentence: Greeting message."
@@ -37,6 +39,7 @@
   "@forgotPassword": {
     "description": "Sentence/Question: Link for password recovery."
   },
+  "resetpassword": "Passwort zurücksetzen",
   "or": "oder",
   "@or": {
     "description": "Word: Divider text."
@@ -85,7 +88,7 @@
   "@currency": {
     "description": "Noun/Word: Label for the currency dropdown."
   },
-  "agreeToTermsPrefix": "Mit der Erstellung eines Kontos stimme ich zu: ",
+  "agreeToTermsPrefix": "Durch das Erstellen eines Kontos stimme ich zu: \n",
   "@agreeToTermsPrefix": {
     "description": "Sentence fragment: The beginning of the checkbox agreement text. Left a trailing space for RichText merging."
   },
@@ -101,7 +104,7 @@
   "@privacyPolicy": {
     "description": "Noun Phrase: Clickable Privacy Policy link."
   },
-  "alreadyAMember": "Hast du bereits ein Konto?",
+  "alreadyAMember": "Du hast bereits ein Konto?",
   "@alreadyAMember": {
     "description": "Sentence/Question: Prompt asking if the user already has an account."
   },
@@ -119,7 +122,7 @@
   "@searchDestination": {
     "description": "Placeholder text in the search bar (Sentence)"
   },
-  "recentlyViewed": "Kürzlich angesehen",
+  "recentlyViewed": "Zuletzt angesehen",
   "@recentlyViewed": {
     "description": "Section title for recently viewed items (Phrase)"
   },
@@ -144,7 +147,7 @@
   "@reviews": {
     "description": "Label for number of reviews (Word)"
   },
-  "viewAll": "ALLE ANZEIGEN",
+  "viewAll": "ALLE ANSEHEN",
   "@viewAll": {
     "description": "Button text to see all items in a list (Phrase)"
   },
@@ -161,10 +164,10 @@
     "description": "nature category"
   },
   "wadiElRayan": "Wadi El Rayan",
-  "elFayoumEgypt": "El Fayoum, Ägypten",
+  "elFayoumEgypt": "El-Fayoum, Ägypten",
   "saltLake": "Salzsee",
-  "siwaOasisEgypt": "Oase Siwa, Ägypten",
-  "abuSimbelTemple": "Tempel von Abu Simbel",
+  "siwaOasisEgypt": "Siwa-Oase, Ägypten",
+  "abuSimbelTemple": "Abu-Simbel-Tempel",
   "aswanEgypt": "Assuan, Ägypten",
   "redSea": "Rotes Meer",
   "hurghadaEgypt": "Hurghada, Ägypten",
@@ -172,7 +175,7 @@
   "gizaEgypt": "Gizeh, Ägypten",
   "theGrandEgyptianMuseum": "Das Große Ägyptische Museum",
   "kebdetElPrince": "Kebdet El-Prince",
-  "sheikhZayedGizaEgypt": "Scheich Zayed, Gizeh, Ägypten",
+  "sheikhZayedGizaEgypt": "Sheikh Zayed, Gizeh, Ägypten",
   "cairo": "Kairo",
   "philaeTemple": "Philae-Tempel",
   "aswan": "Assuan",
@@ -180,7 +183,7 @@
   "@egyptianMuseum": {
     "description": "Main title of the screen (Phrase)"
   },
-  "siwaOasis": "Oase Siwa",
+  "siwaOasis": "Siwa-Oase",
   "westernDesert": "Westliche Wüste",
   "historical": "HISTORISCH",
   "@historical": {
@@ -226,7 +229,7 @@
   "@photos": {
     "description": "Label for photo count (Word)."
   },
-  "planMyVisit": "BESUCH PLANEN",
+  "planMyVisit": "MEINEN BESUCH PLANEN",
   "@planMyVisit": {
     "description": "Call to action button text (Sentence/Command)"
   },
@@ -257,7 +260,7 @@
   "@qasrElkababgi": {
     "description": "Restaurant name (Phrase)"
   },
-  "newCairoCairoEgypt": "Neu-Kairo, Kairo, Ägypten",
+  "newCairoCairoEgypt": "New Cairo, Kairo, Ägypten",
   "@newCairoCairoEgypt": {
     "description": "Location (Phrase)"
   },
@@ -338,7 +341,7 @@
     "description": "Main title on the language selection screen (Sentence/Command)"
   },
   "countryEgypt": "Ägypten",
-  "countryUk": "Großbritannien",
+  "countryUk": "Vereinigtes Königreich",
   "countrySpain": "Spanien",
   "countryItaly": "Italien",
   "countryGermany": "Deutschland",
@@ -370,12 +373,12 @@
   "@saveChanges": {
     "description": "Primary button to submit and save profile edits (Phrase)"
   },
-  "firstNameHint": "Vorname bearbeiten",
+  "firstNameHint": "Bearbeite deinen Vornamen",
   "@fullNameHint": {
     "description": "404"
   },
-  "lastNameHint": "Nachname bearbeiten",
-  "passwordHint": "Passwort bearbeiten",
+  "lastNameHint": "Bearbeite deinen Nachnamen",
+  "passwordHint": "Bearbeite dein Passwort",
   "orContinueWith": "ODER FORTFAHREN MIT",
   "enterPassword": "Bitte gib dein Passwort ein",
   "password8charserror": "Das Passwort muss mindestens 8 Zeichen lang sein",
@@ -384,19 +387,19 @@
   "passwordnumbererror": "Füge mindestens eine Zahl hinzu",
   "passwordspecialcharerror": "Füge mindestens ein Sonderzeichen hinzu",
   "nodatafound": "Keine Daten gefunden",
-  "heritagequote": "\"Um das Herz einer Kultur zu kennen, muss man durch das Echo ihrer Steine gehen\"",
+  "heritagequote": "„Um das Herz einer Kultur zu kennen, muss man durch die Echos ihrer Steine gehen.“",
   "@heritagequote": {
     "description": "quote of heritage"
   },
-  "spiritualquote": "\"Wo Glaube und Stille aufeinandertreffen, beginnt die Seele zu heilen.\"",
+  "spiritualquote": "„Wo Glaube und Stille sich treffen, beginnt der Geist zu heilen.“",
   "@spiritualquote": {
     "description": "quote of spiritual"
   },
-  "naturequote": "\"Um die Erde zu verstehen, muss man den Geschichten lauschen, die in ihren Flüssen, Himmeln und ihrer Stille geschrieben stehen.\"",
+  "naturequote": "„Um die Erde zu verstehen, muss man den Geschichten lauschen, die in ihren Flüssen, Himmeln und ihrer Stille geschrieben stehen.“",
   "@naturequote": {
     "description": "quote of nature"
   },
-  "foodquote": "\"Jedes Gericht erzählt eine Geschichte, gewürzt mit Kultur, Geschichte und der Wärme seiner Menschen.\"",
+  "foodquote": "„Jedes Gericht erzählt eine Geschichte, gewürzt mit Kultur, Geschichte und der Wärme seiner Menschen.“",
   "@foodquote": {
     "description": "quote of food"
   },
@@ -404,7 +407,7 @@
   "@pyramidsname": {
     "description": "name of pyramids"
   },
-  "aboutpyramids": "Die weltberühmten Pyramiden des alten Ägypten wurden als Königsgräber erbaut und gelten als eines der sieben Weltwunder der Antike.",
+  "aboutpyramids": "Die weltberühmten Pyramiden des alten Ägypten, erbaut als königliche Gräber und als eines der Sieben Weltwunder der Antike betrachtet.",
   "@aboutpyramids": {
     "description": "about description of pyramids"
   },
@@ -416,7 +419,7 @@
   "@pyramidstag0": {
     "description": "first tag of pyramids"
   },
-  "pyramidstag1": "WUNDER",
+  "pyramidstag1": "WELTWUNDER",
   "@pyramidstag1": {
     "description": "second tag of pyramids"
   },
@@ -424,32 +427,32 @@
   "@pyramidstag2": {
     "description": "third tag of pyramids"
   },
-  "abusimblename": "Tempel von Abu Simbel",
+  "abusimblename": "Abu-Simbel-Tempel",
   "abusimbellocation": "Abu Simbel",
-  "aboutabusimbel": "Massive Felsentempel, die von Ramses II. erbaut wurden, berühmt für ihre riesigen Statuen und ihre bemerkenswerte Verlegung zum Schutz vor Überschwemmungen.",
+  "aboutabusimbel": "Massive, in den Fels gehauene Tempel, erbaut von Ramses II., berühmt für ihre riesigen Statuen und ihre bemerkenswerte Verlegung zum Schutz vor Überschwemmungen.",
   "abusimbletag0": "HISTORISCH",
   "abusimbletag1": "DENKMAL",
   "abusimbletag2": "UNESCO",
   "hatshepsuttemplename": "Tempel der Hatschepsut",
   "hatshepsuttemplelocation": "Deir el-Bahari",
   "luxor": "Luxor",
-  "aboutatshepsuttemple": "Ein prächtiger Tempel, der in die Klippen von Luxor gehauen wurde und für Königin Hatschepsut, eine der mächtigsten Herrscherinnen des alten Ägypten, erbaut wurde.",
+  "aboutatshepsuttemple": "Ein prächtiger Tempel, der in die Klippen von Luxor gehauen wurde und für Königin Hatschepsut erbaut wurde, eine der mächtigsten Herrscherinnen des alten Ägypten.",
   "hatshepsuttempletag0": "TEMPEL",
   "hatshepsuttempletag1": "ARCHITEKTUR",
   "hatshepsuttempletag2": "HISTORISCH",
   "grandegyptianmuseumname": "Das Große Ägyptische Museum",
   "grandegyptianmuseumlocation": "Kairo-Alexandria-Straße",
   "giza": "Gizeh",
-  "aboutgrandegyptianmuseum": "Ein modernes Museum nahe den Pyramiden, das Tausende altägyptischer Artefakte zeigt, darunter die Schätze von König Tutanchamun.",
+  "aboutgrandegyptianmuseum": "Ein modernes Museum in der Nähe der Pyramiden, das Tausende altägyptische Artefakte zeigt, darunter die Schätze von König Tutanchamun.",
   "grandegyptianmuseumtag0": "ARTEFAKTE",
   "grandegyptianmuseumtag1": "MUSEUM",
   "grandegyptianmuseumtag2": "KULTUR",
   "philaetemplename": "Philae-Tempel",
   "philaetemplelocation": "Insel Agilkia",
-  "aboutphilaetemple": "Ein wunderschöner Inseltempel, der der Göttin Isis gewidmet ist und für seinen beeindruckenden Nilblick und antike Reliefs bekannt ist.",
+  "aboutphilaetemple": "Ein wunderschöner Inseltempel, der der Göttin Isis gewidmet ist und für seine beeindruckenden Nilblicke und antiken Schnitzereien bekannt ist.",
   "philaetempletag0": "INSEL",
   "philaetempletag1": "TEMPEL",
-  "philaetempletag2": "HERITAGE",
+  "philaetempletag2": "KULTURERBE",
   "whitedesertname": "Weiße Wüste",
   "@whitedesertname": {
     "description": "white desert name"
@@ -462,7 +465,7 @@
   "@southwestofcairo": {
     "description": "city of white desert"
   },
-  "aboutwhitedesert": "Ein atemberaubendes Wüstenreservat, berühmt für einzigartige weiße Felsformationen und Camping-Erlebnisse.",
+  "aboutwhitedesert": "Ein atemberaubendes Wüstenreservat, berühmt für seine einzigartigen weißen Felsformationen und Camping-Erlebnisse.",
   "@aboutwhitedesert": {
     "description": "Information about white desert"
   },
@@ -490,7 +493,7 @@
   "@dahab": {
     "description": "city of Blue Hole"
   },
-  "aboutbluehole": "Ein weltberühmtes Tauchziel, bekannt für kristallklares Wasser und farbenfrohe Korallenriffe.",
+  "aboutbluehole": "Ein weltberühmtes Tauchziel, bekannt für kristallklares Wasser und lebendige Korallenriffe.",
   "@aboutbluehole": {
     "description": "Information about Blue Hole"
   },
@@ -546,7 +549,7 @@
   "@marsaalam": {
     "description": "city of Wadi El Gemal"
   },
-  "aboutwadielgemal": "Ein beeindruckendes Naturreservat mit Wüstenbergen, Mangroven, Korallenriffen und Tierwelt des Roten Meeres.",
+  "aboutwadielgemal": "Ein beeindruckendes Naturreservat, das Wüstenberge, Mangroven, Korallenriffe und die Tierwelt des Roten Meeres verbindet.",
   "@aboutwadielgemal": {
     "description": "Information about Wadi El Gemal"
   },
@@ -558,7 +561,7 @@
   "@wadielgemaltag1": {
     "description": "second tag of Wadi El Gemal"
   },
-  "wadielgemaltag2": "TIERWELT",
+  "wadielgemaltag2": "WILDTIERE",
   "@wadielgemaltag2": {
     "description": "third tag of Wadi El Gemal"
   },
@@ -570,11 +573,11 @@
   "@wadielrayan": {
     "description": "Wadi el rayan location"
   },
-  "faiyum": "Fayum",
+  "faiyum": "Faiyum",
   "@faiyum": {
     "description": "city of Wadi el rayan"
   },
-  "aboutwadielrayan": "Eine schöne Wüstenoase, bekannt für Wasserfälle, Seen, Sanddünen und Safari-Abenteuer.",
+  "aboutwadielrayan": "Eine wunderschöne Wüstenoase, bekannt für Wasserfälle, Seen, Sanddünen und Safari-Abenteuer.",
   "@aboutwadielrayan": {
     "description": "Information about Wadi el rayan"
   },
@@ -618,7 +621,7 @@
   "@qasrelkababginame": {
     "description": "name of qasr-elkababgi"
   },
-  "aboutqasrelkababgi": "Eine bekannte ägyptische Restaurantkette, geschätzt für authentische orientalische Küche, traditionelle Grillgerichte und ein besonderes Speiseerlebnis",
+  "aboutqasrelkababgi": "Eine renommierte ägyptische Restaurantkette, bekannt für authentische orientalische Küche, traditionelle Grillgerichte und besondere kulinarische Erlebnisse.",
   "@aboutqasrelkababgi": {
     "description": "about description of qasr-elkababgi"
   },
@@ -630,7 +633,7 @@
   "@qasrelkababgitag0": {
     "description": "first tag of qasr-elkababgi"
   },
-  "qasrelkababgitag1": "Essen",
+  "qasrelkababgitag1": "Essen gehen",
   "@qasrelkababgitag1": {
     "description": "second tag of qasr-elkababgi"
   },
@@ -662,7 +665,7 @@
   "@koueidername": {
     "description": "name of koueider"
   },
-  "aboutkoueider": "Eines der ältesten Dessertgeschäfte Ägyptens, berühmt für orientalische Süßigkeiten und authentisches arabisches Gebäck.",
+  "aboutkoueider": "Eines der ältesten Dessertgeschäfte Ägyptens, berühmt für orientalische Süßspeisen und authentisches arabisches Gebäck.",
   "@aboutkoueider": {
     "description": "about description of koueider"
   },
@@ -686,15 +689,15 @@
   "@elmalkyname": {
     "description": "name of elmalky"
   },
-  "aboutelmalky": "Ein legendärer ägyptischer Dessertort, bekannt für Milchreis, Eiscreme und klassische Süßigkeiten.",
+  "aboutelmalky": "Ein legendäres ägyptisches Dessertziel, bekannt für Milchreis, Eiscreme und klassische Süßspeisen.",
   "@aboutelmalky": {
     "description": "about description of elmalky"
   },
-  "mosquehassanname": "Moschee-Madrasa Sultan Hassan",
+  "mosquehassanname": "Sultan-Hassan-Moschee-Madrasa",
   "@mosquehassanname": {
     "description": "name of mosquesultanhassan "
   },
-  "aboutmosquehassan": "Eine prächtige Mamlukenmoschee, berühmt für ihre großartige islamische Architektur und historische spirituelle Atmosphäre.",
+  "aboutmosquehassan": "Eine prächtige mamlukische Moschee, berühmt für ihre großartige islamische Architektur und historische spirituelle Atmosphäre.",
   "@aboutmosquehassan": {
     "description": "about description of mosquesultanhassan "
   },
@@ -718,7 +721,7 @@
   "@saintcatherinemonasteryname": {
     "description": "name of saintcatherinemonasteryname "
   },
-  "aboutsaintcatherinemonastery": "Eines der ältesten christlichen Klöster der Welt, am Fuß des Berges Sinai gelegen.",
+  "aboutsaintcatherinemonastery": "Eines der ältesten christlichen Klöster der Welt, gelegen am Fuß des Berges Sinai.",
   "@aboutsaintcatherinemonastery": {
     "description": "about description of saintcatherinemonasteryname "
   },
@@ -738,11 +741,11 @@
   "@saintcatherinemonasterytag1": {
     "description": "second tag of saintcatherinemonasteryname "
   },
-  "saintcatherinemonasterytag2": "Pilgerstätte",
+  "saintcatherinemonasterytag2": "Pilgerreise",
   "@saintcatherinemonasterytag2": {
     "description": "third tag of saintcatherinemonasteryname "
   },
-  "mosqueofalhakimbiamrallahname": "Moschee des al-Hakim bi-Amr Allah",
+  "mosqueofalhakimbiamrallahname": "Al-Hakim-bi-Amr-Allah-Moschee",
   "@mosqueofalhakimbiamrallahname": {
     "description": "name of mosqueofalhakimbiamrallah "
   },
@@ -770,7 +773,7 @@
   "@alhusseinmosquename": {
     "description": "name of alhusseinmosque "
   },
-  "aboutalhusseinmosque": "Eine der heiligsten Moscheen Ägyptens, im Herzen des historischen Islamischen Kairo nahe Khan El Khalili gelegen.",
+  "aboutalhusseinmosque": "Eine der heiligsten Moscheen Ägyptens, gelegen im Herzen des historischen Islamischen Kairo nahe Khan El Khalili.",
   "@aboutalhusseinmosque": {
     "description": "about description of alhusseinmosque "
   },
@@ -786,7 +789,7 @@
   "@alhusseinmosquetag1": {
     "description": "second tag of alhusseinmosque "
   },
-  "alhusseinmosquetag2": "Landmark",
+  "alhusseinmosquetag2": "Wahrzeichen",
   "@alhusseinmosquetag2": {
     "description": "third tag of alhusseinmosque "
   },
@@ -831,7 +834,7 @@
   "changeLanguage": "Sprache ändern",
   "logout": "Abmelden",
   "logoutConfirmTitle": "Abmelden",
-  "logoutConfirmMessage": "Möchtest du dich wirklich abmelden?",
+  "logoutConfirmMessage": "Bist du sicher, dass du dich abmelden möchtest?",
   "cancel": "Abbrechen",
   "choosecategory": "Kategorie auswählen",
   "changecategory": "Kategorie ändern",
@@ -865,7 +868,7 @@
   "@beheira": {
     "description": "Governorate name"
   },
-  "fayoum": "Fayum",
+  "fayoum": "Fayoum",
   "@fayoum": {
     "description": "Governorate name"
   },
@@ -889,7 +892,7 @@
   "@qalyubia": {
     "description": "Governorate name"
   },
-  "newValley": "Neues Tal",
+  "newValley": "New Valley",
   "@newValley": {
     "description": "Governorate name"
   },
@@ -949,7 +952,7 @@
   },
   "goodmorning": "Guten Morgen",
   "discover": "Entdecke",
-  "hidden": "versteckte",
+  "hidden": "verborgene",
   "treasures": "Schätze",
   "errorgetingdata": "Fehler beim Abrufen der Daten",
   "featuredplaces": "Empfohlene Orte",

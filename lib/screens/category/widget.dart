@@ -50,9 +50,9 @@ Widget getCategoryPlaces(
           child: buildPlaceCard(
             Place(
               id: place.id,
-              name: lang.getByKey(place.name),
-              location: lang.getByKey(place.location),
-              city: lang.getByKey(place.city),
+              name: place.name,
+              location: place.location,
+              city: place.city,
               mainImage: place.mainImage,
               category: place.category,
               rating: place.rating,

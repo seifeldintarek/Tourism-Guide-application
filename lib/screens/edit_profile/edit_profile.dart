@@ -6,6 +6,7 @@ import 'package:flutter_application_1/core/default.dart';
 import 'package:flutter_application_1/l10n/app_localizations.dart';
 import 'package:flutter_application_1/models/Place.dart';
 import 'package:flutter_application_1/models/User.dart';
+import 'package:flutter_application_1/root/themes.dart';
 import 'package:flutter_application_1/screens/edit_profile/service.dart';
 import 'package:flutter_application_1/screens/edit_profile/widget.dart';
 
@@ -31,6 +32,7 @@ class _EditProfileState extends State<EditProfile> {
 
   dynamic _avatarSource;
   File? _pendingImageFile;
+  int _cacheVersion = 0;
 
   @override
   void initState() {
@@ -124,6 +126,7 @@ class _EditProfileState extends State<EditProfile> {
           setState(() {
             _avatarSource = uploadedUrl;
             _pendingImageFile = null;
+            _cacheVersion++;
           });
         }
       }
@@ -194,7 +197,7 @@ class _EditProfileState extends State<EditProfile> {
                                   (_avatarSource as String).contains(
                                     'supabase.co',
                                   )
-                                  ? '${_avatarSource}?v=${DateTime.now().millisecondsSinceEpoch}'
+                                  ? '${_avatarSource}?v=$_cacheVersion'
                                   : _avatarSource as String,
                               width: 110,
                               height: 110,
@@ -321,9 +324,9 @@ class _EditProfileState extends State<EditProfile> {
                   itemBuilder: (context, index) {
                     final place = places[index];
                     return buildPlaceCard(
-                      title: place.name,
+                      title: lang.getByKey(place.name),
                       category: place.category.toUpperCase(),
-                      location: place.city.toUpperCase(),
+                      location: lang.getByKey(place.city),
                       imageUrl: place.mainImage,
                       screenWidth: width,
                       screenHeight: height,

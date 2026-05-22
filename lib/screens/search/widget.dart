@@ -5,6 +5,7 @@ import 'package:flutter_application_1/models/Place.dart';
 import 'package:flutter_application_1/screens/info/info.dart';
 import 'package:flutter_application_1/screens/search/service.dart';
 import 'package:flutter_application_1/root/themes.dart';
+import 'package:intl/intl.dart';
 
 Widget searchTextfield(
   BuildContext context,
@@ -93,9 +94,9 @@ Widget searchTextfield(
                   return buildPlaceCard(
                     Place(
                       id: place.id,
-                      name: lang.getByKey(place.name),
-                      location: lang.getByKey(place.location),
-                      city: lang.getByKey(place.city),
+                      name: place.name,
+                      location: place.location,
+                      city: place.city,
                       mainImage: place.mainImage,
                       category: place.category,
                       rating: place.rating,
@@ -167,7 +168,7 @@ Widget buildPlaceCard(Place place, {Place? originalPlace}) {
             ),
           ),
           subtitle: Text(
-            "${lang.getByKey(place.city)} • ${place.startHr}:00–${place.endHr}:00",
+            "${lang.getByKey(place.city)} • ${NumberFormat('#', locale).format(place.startHr)} – ${NumberFormat('#', locale).format(place.endHr)}",
             style: TextStyle(fontSize: 13, color: Colors.grey.shade500),
           ),
           trailing: Icon(

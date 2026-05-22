@@ -14,8 +14,10 @@ Stream<List<Place>> savedPlacesStream(String userId) {
       .doc(userId)
       .collection('saved')
       .snapshots()
-      .map((snapshot) =>
-          snapshot.docs.map((doc) => Place.fromMap(doc.data())).toList());
+      .map(
+        (snapshot) =>
+            snapshot.docs.map((doc) => Place.fromMap(doc.data())).toList(),
+      );
 }
 
 Future<void> deleteSavedPlace(String userId, String placeId) async {
@@ -46,7 +48,10 @@ Future<AppUser?> _patchUser({
     final uid = await _getAuthUid(context);
     if (uid == null) return null;
 
-    await FirebaseFirestore.instance.collection('users').doc(user.id).update(fields);
+    await FirebaseFirestore.instance
+        .collection('users')
+        .doc(user.id)
+        .update(fields);
 
     final updatedMap = {
       ...user.toMap(),
@@ -69,22 +74,22 @@ Future<AppUser?> updateUserFirstName(
   AppUser user,
   BuildContext context,
 ) => _patchUser(
-      user: user,
-      fields: {'firstName': newFirstName},
-      context: context,
-      errorLabel: 'first name',
-    );
+  user: user,
+  fields: {'firstName': newFirstName},
+  context: context,
+  errorLabel: 'first name',
+);
 
 Future<AppUser?> updateUserLastName(
   String newLastName,
   AppUser user,
   BuildContext context,
 ) => _patchUser(
-      user: user,
-      fields: {'lastName': newLastName},
-      context: context,
-      errorLabel: 'last name',
-    );
+  user: user,
+  fields: {'lastName': newLastName},
+  context: context,
+  errorLabel: 'last name',
+);
 
 Future<AppUser?> updateUserFullName(
   String newFirstName,
@@ -110,11 +115,11 @@ Future<AppUser?> updateProfilePictureUrl(
   AppUser user,
   BuildContext context,
 ) => _patchUser(
-      user: user,
-      fields: {'profilePictureUrl': newUrl},
-      context: context,
-      errorLabel: 'profile picture URL',
-    );
+  user: user,
+  fields: {'profilePictureUrl': newUrl},
+  context: context,
+  errorLabel: 'profile picture URL',
+);
 
 final SupabaseClient supabase = Supabase.instance.client;
 
@@ -122,10 +127,12 @@ const String _bucketName = 'pictures';
 
 String getUserImagePath(AppUser user) => 'pp/${user.id}.jpg';
 
-String getPublicUrl(AppUser user) {
+String getPublicUrl(AppUser user, {int? version}) {
   try {
     final path = getUserImagePath(user);
-    return supabase.storage.from(_bucketName).getPublicUrl(path);
+    final base = supabase.storage.from(_bucketName).getPublicUrl(path);
+    final v = version ?? DateTime.now().millisecondsSinceEpoch;
+    return '$base?v=$v';
   } catch (_) {
     return user.profilePictureUrl ?? '';
   }
@@ -166,7 +173,11 @@ Future<String?> updateImage({
 
     await supabase.storage
         .from(_bucketName)
-        .update(path, newImageFile, fileOptions: const FileOptions(upsert: true));
+        .update(
+          path,
+          newImageFile,
+          fileOptions: const FileOptions(upsert: true),
+        );
 
     final publicUrl = getPublicUrl(user);
 

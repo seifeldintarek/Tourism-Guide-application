@@ -174,8 +174,10 @@ Future<String?> captureORselect(BuildContext context, String uid) async {
 }
 
 Future<String?> selectImageFromGallery() async {
-  if (await Permission.photos.request().isDenied) {
+  final status = await Permission.photos.request();
+  if (status.isDenied || status.isPermanentlyDenied) {
     openAppSettings();
+    return null;
   }
   final picker = ImagePicker();
   final XFile? picked = await picker.pickImage(source: ImageSource.gallery);
