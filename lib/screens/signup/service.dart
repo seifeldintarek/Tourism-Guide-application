@@ -25,6 +25,7 @@ Future<bool> storeUser(final userData, BuildContext context) async {
 
   try {
     final locale = context.read<LocaleProvider>().locale;
+    final selectedLanguage = userData["language"] ?? locale.languageCode;
 
     DateTime now = DateTime.now();
 
@@ -36,7 +37,7 @@ Future<bool> storeUser(final userData, BuildContext context) async {
       "lastName": userData["lastName"],
       "fullName": "${userData["firstName"]} ${userData["lastName"]}",
       "email": userData["email"],
-      "language": userData['language'] ?? locale.toString().trim(),
+      "language": selectedLanguage,
       "joinedAt": now,
       "profilePictureUrl": "",
       "city": userData["city"],
@@ -47,7 +48,7 @@ Future<bool> storeUser(final userData, BuildContext context) async {
       firstName: userData["firstName"],
       lastName: userData["lastName"],
       email: userData["email"],
-      language: locale.toString().trim(),
+      language: selectedLanguage,
       password: password,
       fullName: "${userData["firstName"]} ${userData["lastName"]}",
       joinedAt: now,
