@@ -19,7 +19,7 @@ Widget header({
   required String name,
 }) {
   return Container(
-    padding: EdgeInsets.only(left: width * .1),
+    padding: EdgeInsets.symmetric(horizontal: width * .1),
     height: height * .25,
     width: width,
     color: Color(0xFFFCDFCF),
