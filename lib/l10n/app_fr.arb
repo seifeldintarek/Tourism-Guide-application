@@ -1,161 +1,161 @@
 {
   "@@locale": "fr",
   "@@context": "AppTranslations",
-  "egypttourismguide": "Egypt Tourism Guide",
+  "egypttourismguide": "Guide Touristique de l'Égypte",
   "@signInToYourJournal": {
     "description": "Sentence: Header for the sign-in form."
   },
-  "signInToYourJournal": "Sign in to your journal",
-  "invalidcreds": "Invalid email or password",
+  "signInToYourJournal": "Connectez-vous à votre journal",
+  "invalidcreds": "E-mail ou mot de passe invalide",
   "@invalidcreds": {
     "description": "Sentence: user logged in with wrong email/password"
   },
-  "passresetemailsent": "Password reset email sent. Check your inbox.",
-  "forgetpassemailhint": "Enter your email address and we will send you a link to reset your password.",
-  "welcomeBackExplorer": "Welcome back, \nExplorer",
+  "passresetemailsent": "E-mail de réinitialisation envoyé. Vérifiez votre boîte de réception.",
+  "forgetpassemailhint": "Entrez votre adresse e-mail et nous vous enverrons un lien pour réinitialiser votre mot de passe.",
+  "welcomeBackExplorer": "Bon retour parmi nous, \nExplorateur",
   "@welcomeBackExplorer": {
     "description": "Sentence: Greeting message."
   },
-  "emailAddress": "Email Address",
+  "emailAddress": "Adresse e-mail",
   "@emailAddress": {
     "description": "Noun/Word: Used as a label for the email input field."
   },
-  "emailHint": "Please enter your email",
+  "emailHint": "Veuillez entrer votre e-mail",
   "@emailHint": {
     "description": "Sentence: Placeholder hint inside the email input field."
   },
-  "invalidEmailFormat": "Invalid email format",
-  "password": "Password",
+  "invalidEmailFormat": "Format d'e-mail invalide",
+  "password": "Mot de passe",
   "@password": {
     "description": "Noun/Word: Used as a label for the password input field."
   },
-  "currentpassword": "Current Password",
-  "newpassword": "New Password",
-  "continueJourney": "Continue Journey",
+  "currentpassword": "Mot de passe actuel",
+  "newpassword": "Nouveau mot de passe",
+  "continueJourney": "Continuer le voyage",
   "@continueJourney": {
     "description": "Action Phrase: Button text to submit the sign-in form."
   },
-  "forgotPassword": "Forgot password?",
+  "forgotPassword": "Mot de passe oublié ?",
   "@forgotPassword": {
     "description": "Sentence/Question: Link for password recovery."
   },
-  "resetpassword": "Reset password",
-  "or": "or",
+  "resetpassword": "Réinitialiser le mot de passe",
+  "or": "ou",
   "@or": {
     "description": "Word: Divider text."
   },
-  "signInWithGoogle": "Sign in with Google",
+  "signInWithGoogle": "Se connecter avec Google",
   "@signInWithGoogle": {
     "description": "Action Phrase: Button text for Google OAuth."
   },
-  "newHere": "New here?",
+  "newHere": "Nouveau ici ?",
   "@newHere": {
     "description": "Sentence/Question: Prompt asking if the user needs to register."
   },
-  "createAccount": "Create account",
+  "createAccount": "Créer un compte",
   "@createAccount": {
     "description": "Action Phrase: Register to db."
   },
-  "createAnAccount": "Create an account",
+  "createAnAccount": "Créer un compte",
   "@createAnAccount": {
     "description": "Action Phrase: Link to navigate to the registration page."
   },
-  "tellUsAboutYourself": "Tell us about \nyourself",
+  "tellUsAboutYourself": "Parlez-nous de \nvous",
   "@tellUsAboutYourself": {
     "description": "Sentence: Header for the sign-up form."
   },
-  "firstName": "First Name",
+  "firstName": "Prénom",
   "@firstName": {
     "description": "Noun Phrase: Label for the first name input field."
   },
-  "lastName": "Last Name",
+  "lastName": "Nom",
   "@lastName": {
     "description": "Noun Phrase: Label for the last name input field."
   },
-  "createPassword": "Create Password",
+  "createPassword": "Créer un mot de passe",
   "@createPassword": {
     "description": "Action Phrase: Label for the new password input field."
   },
-  "confirmPassword": "Confirm Password",
+  "confirmPassword": "Confirmer le mot de passe",
   "@confirmPassword": {
     "description": "Action Phrase: Label for the confirm password input field."
   },
-  "language": "Language",
+  "language": "Langue",
   "@language": {
     "description": "Noun/Word: Label for the language dropdown."
   },
-  "currency": "Currency",
+  "currency": "Devise",
   "@currency": {
     "description": "Noun/Word: Label for the currency dropdown."
   },
-  "agreeToTermsPrefix": "By creating an account, I agree to ",
+  "agreeToTermsPrefix": "En créant un compte, j'accepte les ",
   "@agreeToTermsPrefix": {
     "description": "Sentence fragment: The beginning of the checkbox agreement text. Left a trailing space for RichText merging."
   },
-  "termsOfService": "Terms of Service",
+  "termsOfService": "Conditions d'utilisation",
   "@termsOfService": {
     "description": "Noun Phrase: Clickable Terms of Service link."
   },
-  "and": " and ",
+  "and": " et la ",
   "@and": {
     "description": "Word: Conjunction in the agreement text. Includes padding spaces."
   },
-  "privacyPolicy": "Privacy Policy",
+  "privacyPolicy": "Politique de confidentialité",
   "@privacyPolicy": {
     "description": "Noun Phrase: Clickable Privacy Policy link."
   },
-  "alreadyAMember": "Already have an account?",
+  "alreadyAMember": "Vous avez déjà un compte ?",
   "@alreadyAMember": {
     "description": "Sentence/Question: Prompt asking if the user already has an account."
   },
-  "signIn": "Sign In",
+  "signIn": "Se connecter",
   "@signIn": {
     "description": "Action Phrase: Link to navigate back to the login page."
   },
-  "curatedJourneys": "CURATED JOURNEYS",
+  "curatedJourneys": "VOYAGES SUR MESURE",
   "@curatedJourneys": {
     "description": "Small overline text above the main title"
   },
-  "exploreThe": "Explore the",
+  "exploreThe": "Explorez les",
   "collections": "Collections",
-  "searchDestination": "Search a destination...",
+  "searchDestination": "Rechercher une destination...",
   "@searchDestination": {
     "description": "Placeholder text in the search bar (Sentence)"
   },
-  "recentlyViewed": "Recently viewed",
+  "recentlyViewed": "Consultés récemment",
   "@recentlyViewed": {
     "description": "Section title for recently viewed items (Phrase)"
   },
-  "savedPlaces": "Saved places",
+  "savedPlaces": "Lieux enregistrés",
   "@savedPlaces": {
     "description": "App bar title and section title (Phrase)"
   },
-  "explorer": "Explorer",
+  "explorer": "Explorateur",
   "@explorer": {
     "description": "User title or subtitle (Word)"
   },
-  "visited": "VISITED",
+  "visited": "VISITÉ",
   "@visited": {
     "description": "Label for number of visited places (Word)"
   },
-  "save": "Save",
-  "saved": "Saved",
+  "save": "Enregistrer",
+  "saved": "Enregistré",
   "@saved": {
     "description": "Label for number of saved places (Word)"
   },
-  "reviews": "REVIEWS",
+  "reviews": "AVIS",
   "@reviews": {
     "description": "Label for number of reviews (Word)"
   },
-  "viewAll": "VIEW ALL",
+  "viewAll": "VOIR TOUT",
   "@viewAll": {
     "description": "Button text to see all items in a list (Phrase)"
   },
-  "historicSite": "HISTORIC SITE",
+  "historicSite": "SITE HISTORIQUE",
   "@historicSite": {
     "description": "Category tag for a place (Phrase)"
   },
-  "historicMuseum": "HISTORIC MUSEUM",
+  "historicMuseum": "MUSÉE HISTORIQUE",
   "@historicMuseum": {
     "description": "Category tag for a museum (Phrase)"
   },
@@ -164,56 +164,56 @@
     "description": "nature category"
   },
   "wadiElRayan": "Wadi El Rayan",
-  "elFayoumEgypt": "El Fayoum, Egypt",
-  "saltLake": "Salt lake",
-  "siwaOasisEgypt": "Siwa Oasis, Egypt",
-  "abuSimbelTemple": "Abu Simbel Temple",
-  "aswanEgypt": "Aswan, Egypt",
-  "redSea": "Red Sea",
-  "hurghadaEgypt": "Hurghada, Egypt",
-  "pyramids": "Pyramids",
-  "gizaEgypt": "Giza, Egypt",
-  "theGrandEgyptianMuseum": "The Grand Egyptian Museum",
+  "elFayoumEgypt": "El Fayoum, Égypte",
+  "saltLake": "Lac salé",
+  "siwaOasisEgypt": "Oasis de Siwa, Égypte",
+  "abuSimbelTemple": "Temple d'Abou Simbel",
+  "aswanEgypt": "Assouan, Égypte",
+  "redSea": "Mer Rouge",
+  "hurghadaEgypt": "Hurghada, Égypte",
+  "pyramids": "Pyramides",
+  "gizaEgypt": "Gizeh, Égypte",
+  "theGrandEgyptianMuseum": "Le Grand Musée Égyptien",
   "kebdetElPrince": "Kebdet El-Prince",
-  "sheikhZayedGizaEgypt": "Shekh Zayed, Giza, Egypt",
-  "cairo": "Cairo",
-  "philaeTemple": "Philae Temple",
-  "aswan": "Aswan",
-  "egyptianMuseum": "Egyptian Museum",
+  "sheikhZayedGizaEgypt": "Sheikh Zayed, Gizeh, Égypte",
+  "cairo": "Le Caire",
+  "philaeTemple": "Temple de Philae",
+  "aswan": "Assouan",
+  "egyptianMuseum": "Musée Égyptien",
   "@egyptianMuseum": {
     "description": "Main title of the screen (Phrase)"
   },
-  "siwaOasis": "Siwa Oasis",
-  "westernDesert": "Western Desert",
-  "historical": "HISTORICAL",
+  "siwaOasis": "Oasis de Siwa",
+  "westernDesert": "Désert Occidental",
+  "historical": "HISTORIQUE",
   "@historical": {
     "description": "Filter/Category tag (Word)"
   },
-  "artifacts": "ARTIFACTS",
+  "artifacts": "ARTEFACTS",
   "@artifacts": {
     "description": "Filter/Category tag (Phrase)"
   },
-  "landmark": "LANDMARK",
+  "landmark": "MONUMENT",
   "@landmark": {
     "description": "Filter/Category tag (Word)"
   },
-  "about": "About",
+  "about": "À propos",
   "@about": {
     "description": "Section title for the description (Word)."
   },
-  "status": "STATUS",
+  "status": "STATUT",
   "@status": {
     "description": "Label for current operational state (Word)"
   },
-  "open": "Open",
+  "open": "Ouvert",
   "@open": {
     "description": "State indicating the place is currently operating (Word)"
   },
-  "hours": "HOURS",
+  "hours": "HORAIRES",
   "@hours": {
     "description": "Label for operating hours (Phrase)."
   },
-  "starting": "STARTING",
+  "starting": "À PARTIR DE",
   "@starting": {
     "description": "Label for base ticket price (Phrase)."
   },
@@ -221,7 +221,7 @@
   "@egp": {
     "description": "Currency abbreviation for Egyptian Pound (Word/Abbreviation)."
   },
-  "gallery": "Gallery",
+  "gallery": "Galerie",
   "@gallery": {
     "description": "Section title for the image grid (Word)"
   },
@@ -229,30 +229,30 @@
   "@photos": {
     "description": "Label for photo count (Word)."
   },
-  "planMyVisit": "PLAN MY VISIT",
+  "planMyVisit": "PLANIFIER MA VISITE",
   "@planMyVisit": {
     "description": "Call to action button text (Sentence/Command)"
   },
-  "heritage": "Heritage",
+  "heritage": "Patrimoine",
   "@heritage": {
     "description": "Category title for historical sites"
   },
-  "all": "All",
+  "all": "Tout",
   "@all": {
     "description": "Filter button to show all items"
   },
-  "templeOfHatshepsut": "Temple of hatshepsut",
-  "luxorEgypt": "Luxor, Egypt",
-  "blueHole": "Blue Hole",
-  "dahabEgypt": "Dahab, Egypt",
-  "jabalMousa": "Jabal Mousa",
-  "sinaiEgypt": "Sinai, Egypt",
-  "northCoast": "North Coast",
-  "food": "Food",
+  "templeOfHatshepsut": "Temple d'Hatshepsout",
+  "luxorEgypt": "Louxor, Égypte",
+  "blueHole": "Trou Bleu (Blue Hole)",
+  "dahabEgypt": "Dahab, Égypte",
+  "jabalMousa": "Mont Sinaï (Jabal Mousa)",
+  "sinaiEgypt": "Sinaï, Égypte",
+  "northCoast": "Côte Nord",
+  "food": "Gastronomie",
   "@food": {
     "description": "food category"
   },
-  "spiritual": "Spiritual",
+  "spiritual": "Spirituel",
   "@spiritual": {
     "description": "Category title (Word)"
   },
@@ -260,7 +260,7 @@
   "@qasrElkababgi": {
     "description": "Restaurant name (Phrase)"
   },
-  "newCairoCairoEgypt": "New Cairo, Cairo, Egypt",
+  "newCairoCairoEgypt": "Nouveau Caire, Le Caire, Égypte",
   "@newCairoCairoEgypt": {
     "description": "Location (Phrase)"
   },
@@ -268,7 +268,7 @@
   "@abouTarek": {
     "description": "Restaurant name (Phrase)"
   },
-  "cairoEgypt": "Cairo, Egypt",
+  "cairoEgypt": "Le Caire, Égypte",
   "@cairoEgypt": {
     "description": "Location (Phrase)"
   },
@@ -276,7 +276,7 @@
   "@arabiata": {
     "description": "Restaurant name (Word)"
   },
-  "elKorbaCairoEgypt": "El korba, Cairo, Egypt",
+  "elKorbaCairoEgypt": "El Korba, Le Caire, Égypte",
   "@elKorbaCairoEgypt": {
     "description": "Location (Phrase)"
   },
@@ -284,130 +284,130 @@
   "@asmak": {
     "description": "Restaurant name (Word)"
   },
-  "amrIbnAlAsMosque": "Amr Ibn AL-As Mosque",
+  "amrIbnAlAsMosque": "Mosquée Amr ibn al-As",
   "@amrIbnAlAsMosque": {
     "description": "Landmark name (Phrase)"
   },
-  "alFustatOldCairoEgypt": "Al-Fustat (Old Cairo), Egypt",
+  "alFustatOldCairoEgypt": "Al-Fustat (Vieux-Caire), Égypte",
   "@alFustatOldCairoEgypt": {
     "description": "Location (Phrase)"
   },
-  "alAzharMosque": "Al-Azhar Mosque",
+  "alAzharMosque": "Mosquée d'Al-Azhar",
   "@alAzharMosque": {
     "description": "Landmark name (Phrase)"
   },
-  "islamicCairoEgypt": "Islamic Cairo, Egypt",
+  "islamicCairoEgypt": "Le Caire islamique, Égypte",
   "@islamicCairoEgypt": {
     "description": "Location (Phrase)"
   },
-  "theHangingChurch": "The Hanging Church",
+  "theHangingChurch": "L'Église Suspendue",
   "@theHangingChurch": {
     "description": "Landmark name (Phrase)"
   },
-  "copticCairoOldCairoEgypt": "Coptic Cairo, Old Cairo, Egypt",
+  "copticCairoOldCairoEgypt": "Le Caire copte, Vieux-Caire, Égypte",
   "@copticCairoOldCairoEgypt": {
     "description": "Location (Phrase)"
   },
-  "alHusseinMosque": "Al-Hussein Mosque",
+  "alHusseinMosque": "Mosquée Al-Hussein",
   "@alHusseinMosque": {
     "description": "Landmark name (Phrase)"
   },
-  "husseinSquareCairoEgypt": "Hussein Square, Cairo, Egypt",
+  "husseinSquareCairoEgypt": "Place Hussein, Le Caire, Égypte",
   "@husseinSquareCairoEgypt": {
     "description": "Location (Phrase)"
   },
-  "saintCatherineMonastery": "Saint Catherine Monastery",
+  "saintCatherineMonastery": "Monastère Sainte-Catherine",
   "@saintCatherineMonastery": {
     "description": "Landmark name (Phrase)"
   },
-  "southSinaiEgypt": "South Sinai, Egypt",
+  "southSinaiEgypt": "Sinaï Sud, Égypte",
   "@southSinaiEgypt": {
     "description": "Location (Phrase)"
   },
-  "failtostoreuser": "Failed to store user data. Please try again.",
+  "failtostoreuser": "Échec de l'enregistrement des données utilisateur. Veuillez réessayer.",
   "@failtostoreuser": {
     "description": "Action Phrase: error uploading user"
   },
-  "languageTitle": "Language",
+  "languageTitle": "Langue",
   "@languageTitle": {
     "description": "App bar title for the language selection screen (Word)"
   },
-  "preferenceSelection": "PREFERENCE SELECTION",
+  "preferenceSelection": "SÉLECTION DES PRÉFÉRENCES",
   "@preferenceSelection": {
     "description": "Overline text above the main title on the language screen (Phrase)"
   },
-  "curateYourExperience": "Curate Your Experience",
+  "curateYourExperience": "Personnalisez votre expérience",
   "@curateYourExperience": {
     "description": "Main title on the language selection screen (Sentence/Command)"
   },
-  "countryEgypt": "Egypt",
-  "countryUk": "UK",
-  "countrySpain": "Spain",
-  "countryItaly": "Italy",
-  "countryGermany": "Germany",
-  "editProfileTitle": "Edit Profile",
+  "countryEgypt": "Égypte",
+  "countryUk": "Royaume-Uni",
+  "countrySpain": "Espagne",
+  "countryItaly": "Italie",
+  "countryGermany": "Allemagne",
+  "editProfileTitle": "Modifier le profil",
   "@editProfileTitle": {
     "description": "App bar title for the edit profile screen (Phrase)"
   },
-  "changePhoto": "CHANGE PHOTO",
+  "changePhoto": "CHANGER DE PHOTO",
   "@changePhoto": {
     "description": "Action text under the avatar to change the profile photo (Phrase)"
   },
-  "fullNameLabel": "FULL NAME",
+  "fullNameLabel": "NOM COMPLET",
   "@fullNameLabel": {
     "description": "Label for the full name input field (Phrase)"
   },
-  "titleLabel": "TITLE",
+  "titleLabel": "TITRE",
   "@titleLabel": {
     "description": "Label for the user role/title input field (Word)"
   },
-  "manageSavedPlaces": "Manage Saved Places",
+  "manageSavedPlaces": "Gérer les lieux enregistrés",
   "@manageSavedPlaces": {
     "description": "Section header for managing saved locations (Phrase)"
   },
-  "editSaved": "EDIT SAVED",
+  "editSaved": "MODIFIER LES ENREGISTREMENTS",
   "@editSaved": {
     "description": "Action button to enter edit mode for saved places list (Phrase)"
   },
-  "saveChanges": "Save Changes",
+  "saveChanges": "Enregistrer les modifications",
   "@saveChanges": {
     "description": "Primary button to submit and save profile edits (Phrase)"
   },
-  "firstNameHint": "Edit your first name",
+  "firstNameHint": "Modifier votre prénom",
   "@fullNameHint": {
     "description": "404"
   },
-  "lastNameHint": "Edit your last name",
-  "passwordHint": "Edit your password",
-  "orContinueWith": "OR CONTINUE WITH",
-  "enterPassword": "Please enter your password",
-  "password8charserror": "Password must be at least 8 characters",
-  "passwordcapitalerror": "Add at least one capital letter",
-  "passwordsmallerror": "Add at least one small letter",
-  "passwordnumbererror": "Add at least one number",
-  "passwordspecialcharerror": "Add at least one special character",
-  "nodatafound": "No data found",
-  "heritagequote": "\"To know the heart of a culture, one must walk through the echoes of its stone\"",
+  "lastNameHint": "Modifier votre nom",
+  "passwordHint": "Modifier votre mot de passe",
+  "orContinueWith": "OU CONTINUER AVEC",
+  "enterPassword": "Veuillez entrer votre mot de passe",
+  "password8charserror": "Le mot de passe doit contenir au moins 8 caractères",
+  "passwordcapitalerror": "Ajoutez au moins une lettre majuscule",
+  "passwordsmallerror": "Ajoutez au moins une lettre minuscule",
+  "passwordnumbererror": "Ajoutez au moins un chiffre",
+  "passwordspecialcharerror": "Ajoutez au moins un caractère spécial",
+  "nodatafound": "Aucune donnée trouvée",
+  "heritagequote": "\"Pour connaître le cœur d'une culture, il faut marcher à travers les échos de ses pierres.\"",
   "@heritagequote": {
     "description": "quote of heritage"
   },
-  "spiritualquote": "\"Where faith and silence meet, the spirit begins to heal.\"",
+  "spiritualquote": "\"Là où la foi et le silence se rencontrent, l'esprit commence à guérir.\"",
   "@spiritualquote": {
     "description": "quote of spiritual"
   },
-  "naturequote": "\"To understand the earth, one must listen to the stories written in its rivers, skies, and silence.\"",
+  "naturequote": "\"Pour comprendre la terre, il faut écouter les histoires écrites dans ses rivières, ses cieux et son silence.\"",
   "@naturequote": {
     "description": "quote of nature"
   },
-  "foodquote": "\"Every dish tells a story, seasoned with culture, history, and the warmth of its people.\"",
+  "foodquote": "\"Chaque plat raconte une histoire, assaisonnée de culture, d'histoire et de la chaleur de son peuple.\"",
   "@foodquote": {
     "description": "quote of food"
   },
-  "pyramidsname": "Pyramids",
+  "pyramidsname": "Pyramides",
   "@pyramidsname": {
     "description": "name of pyramids"
   },
-  "aboutpyramids": "The world-famous pyramids of ancient Egypt, built as royal tombs and considered one of the Seven Wonders of the Ancient World.",
+  "aboutpyramids": "Les célèbres pyramides de l'Égypte ancienne, construites comme tombeaux royaux et considérées comme l'une des sept merveilles du monde antique.",
   "@aboutpyramids": {
     "description": "about description of pyramids"
   },
@@ -415,61 +415,61 @@
   "@alharam": {
     "description": "location of pyramids"
   },
-  "pyramidstag0": "PYRAMIDS",
+  "pyramidstag0": "PYRAMIDES",
   "@pyramidstag0": {
     "description": "first tag of pyramids"
   },
-  "pyramidstag1": "WONDER",
+  "pyramidstag1": "MERVEILLE",
   "@pyramidstag1": {
     "description": "second tag of pyramids"
   },
-  "pyramidstag2": "LANDMARK",
+  "pyramidstag2": "MONUMENT",
   "@pyramidstag2": {
     "description": "third tag of pyramids"
   },
-  "abusimblename": "Abu Simbel Temple",
-  "abusimbellocation": "Abu Simbel",
-  "aboutabusimbel": "Massive rock-cut temples built by Ramses II, famous for their giant statues and remarkable relocation to protect them from flooding.",
-  "abusimbletag0": "HISTORICAL",
+  "abusimblename": "Temple d'Abou Simbel",
+  "abusimbellocation": "Abou Simbel",
+  "aboutabusimbel": "Temples massifs taillés dans la roche construits par Ramsès II, célèbres pour leurs statues géantes et leur remarquable déplacement pour les protéger des inondations.",
+  "abusimbletag0": "HISTORIQUE",
   "abusimbletag1": "MONUMENT",
   "abusimbletag2": "UNESCO",
-  "hatshepsuttemplename": "Temple of Hatshepsut",
+  "hatshepsuttemplename": "Temple d'Hatshepsout",
   "hatshepsuttemplelocation": "Deir el-Bahari",
-  "luxor": "Luxor",
-  "aboutatshepsuttemple": "A magnificent temple carved into the cliffs of Luxor, built for Queen Hatshepsut, one of ancient Egypt’s most powerful rulers.",
+  "luxor": "Louxor",
+  "aboutatshepsuttemple": "Un magnifique temple sculpté dans les falaises de Louxor, construit pour la reine Hatshepsout, l'une des dirigeantes les plus puissantes de l'Égypte ancienne.",
   "hatshepsuttempletag0": "TEMPLE",
   "hatshepsuttempletag1": "ARCHITECTURE",
-  "hatshepsuttempletag2": "HISTORICAL",
-  "grandegyptianmuseumname": "The Grand Egyptian Museum",
-  "grandegyptianmuseumlocation": "Cairo-Alex Road",
-  "giza": "Giza",
-  "aboutgrandegyptianmuseum": "A modern museum near the pyramids showcasing thousands of ancient Egyptian artifacts, including King Tutankhamun’s treasures.",
-  "grandegyptianmuseumtag0": "ARTIFACTS",
-  "grandegyptianmuseumtag1": "MUSEUM",
+  "hatshepsuttempletag2": "HISTORIQUE",
+  "grandegyptianmuseumname": "Le Grand Musée Égyptien",
+  "grandegyptianmuseumlocation": "Route Le Caire-Alexandrie",
+  "giza": "Gizeh",
+  "aboutgrandegyptianmuseum": "Un musée moderne à proximité des pyramides, abritant des milliers d'artefacts de l'Égypte ancienne, y compris les trésors du roi Toutânkhamon.",
+  "grandegyptianmuseumtag0": "ARTEFACTS",
+  "grandegyptianmuseumtag1": "MUSÉE",
   "grandegyptianmuseumtag2": "CULTURE",
-  "philaetemplename": "Philae Temple",
-  "philaetemplelocation": "Agilkia Island",
-  "aboutphilaetemple": "A beautiful island temple dedicated to the goddess Isis, known for its stunning Nile views and ancient carvings.",
-  "philaetempletag0": "ISLAND",
+  "philaetemplename": "Temple de Philae",
+  "philaetemplelocation": "Île d'Agilkia",
+  "aboutphilaetemple": "Un magnifique temple insulaire dédié à la déesse Isis, réputé pour ses superbes vues sur le Nil et ses gravures anciennes.",
+  "philaetempletag0": "ÎLE",
   "philaetempletag1": "TEMPLE",
-  "philaetempletag2": "HERITAGE",
-  "whitedesertname": "White Desert",
+  "philaetempletag2": "PATRIMOINE",
+  "whitedesertname": "Désert Blanc",
   "@whitedesertname": {
     "description": "white desert name"
   },
-  "whitedesertnationalpark": "White Desert National Park",
+  "whitedesertnationalpark": "Parc National du Désert Blanc",
   "@whitedesertnationalpark": {
     "description": "white desert location"
   },
-  "southwestofcairo": "South West of Cairo",
+  "southwestofcairo": "Sud-Ouest du Caire",
   "@southwestofcairo": {
     "description": "city of white desert"
   },
-  "aboutwhitedesert": "A breathtaking desert reserve famous for its unique white rock formations and camping experiences.",
+  "aboutwhitedesert": "Une réserve désertique à couper le souffle, célèbre pour ses formations rocheuses blanches uniques et ses expériences de camping.",
   "@aboutwhitedesert": {
     "description": "Information about white desert"
   },
-  "whitedeserttag0": "DESERT",
+  "whitedeserttag0": "DÉSERT",
   "@whitedeserttag0": {
     "description": "first tag of the white desert"
   },
@@ -481,11 +481,11 @@
   "@whitedeserttag2": {
     "description": "third tag of the white desert"
   },
-  "blueholename": "Blue Hole",
+  "blueholename": "Trou Bleu (Blue Hole)",
   "@blueholename": {
     "description": "Blue Hole name"
   },
-  "blueholeofdahab": "Blue Hole of Dahab",
+  "blueholeofdahab": "Trou Bleu de Dahab",
   "@blueholeofdahab": {
     "description": "Blue Hole location"
   },
@@ -493,35 +493,35 @@
   "@dahab": {
     "description": "city of Blue Hole"
   },
-  "aboutbluehole": "A world-famous diving destination known for crystal-clear waters and vibrant coral reefs.",
+  "aboutbluehole": "Une destination de plongée de renommée mondiale, connue pour ses eaux cristallines et ses récifs coralliens vibrants.",
   "@aboutbluehole": {
     "description": "Information about Blue Hole"
   },
-  "blueholetag0": "DIVING",
+  "blueholetag0": "PLONGÉE",
   "@blueholetag0": {
     "description": "first tag of theBlue Hole"
   },
-  "blueholetag1": "CORAL",
+  "blueholetag1": "CORAIL",
   "@blueholetag1": {
     "description": "second tag of the Blue Hole"
   },
-  "blueholetag2": "ADVENTURE",
+  "blueholetag2": "AVENTURE",
   "@blueholetag2": {
     "description": "third tag of the Blue Hole"
   },
-  "abugaloumname": "Abu Galoum",
+  "abugaloumname": "Abou Galoum",
   "@abugaloumname": {
     "description": "Abu Galoum name"
   },
-  "abugaloum": "Abu Galoum",
+  "abugaloum": "Abou Galoum",
   "@abugaloum": {
     "description": "Abu Galoum location"
   },
-  "neweiba": "Neweiba",
+  "neweiba": "Nuweiba",
   "@neweiba": {
     "description": "city of Abu Galoum"
   },
-  "aboutabugaloum": "A protected coastal reserve famous for snorkeling, coral reefs, mountains, and Bedouin camps.",
+  "aboutabugaloum": "Une réserve côtière protégée célèbre pour le snorkeling, ses récifs coralliens, ses montagnes et ses campements bédouins.",
   "@aboutabugaloum": {
     "description": "Information about Abu Galoum"
   },
@@ -541,7 +541,7 @@
   "@wadielgemalname": {
     "description": "Wadi El Gemal name"
   },
-  "wadielgemalreserve": "Wadi El Gemal Reserve",
+  "wadielgemalreserve": "Réserve de Wadi El Gemal",
   "@wadielgemalreserve": {
     "description": "Wadi El Gemal location"
   },
@@ -549,11 +549,11 @@
   "@marsaalam": {
     "description": "city of Wadi El Gemal"
   },
-  "aboutwadielgemal": "A stunning natural reserve combining desert mountains, mangroves, coral reefs, and Red Sea wildlife.",
+  "aboutwadielgemal": "Une superbe réserve naturelle combinant montagnes désertiques, mangroves, récifs coralliens et faune de la mer Rouge.",
   "@aboutwadielgemal": {
     "description": "Information about Wadi El Gemal"
   },
-  "wadielgemaltag0": "MARINE",
+  "wadielgemaltag0": "MARIN",
   "@wadielgemaltag0": {
     "description": "first tag of Wadi El Gemal"
   },
@@ -561,35 +561,35 @@
   "@wadielgemaltag1": {
     "description": "second tag of Wadi El Gemal"
   },
-  "wadielgemaltag2": "WILDLIFE",
+  "wadielgemaltag2": "FAUNE",
   "@wadielgemaltag2": {
     "description": "third tag of Wadi El Gemal"
   },
-  "wadielrayanname": "Wadi el rayan",
+  "wadielrayanname": "Wadi El Rayan",
   "@wadielrayanname": {
     "description": "Wadi el rayan name"
   },
-  "wadielrayan": "Wadi el rayan",
+  "wadielrayan": "Wadi El Rayan",
   "@wadielrayan": {
     "description": "Wadi el rayan location"
   },
-  "faiyum": "Faiyum",
+  "faiyum": "Fayoum",
   "@faiyum": {
     "description": "city of Wadi el rayan"
   },
-  "aboutwadielrayan": "A beautiful desert oasis known for waterfalls, lakes, sand dunes, and safari adventures.",
+  "aboutwadielrayan": "Une magnifique oasis du désert connue pour ses cascades, ses lacs, ses dunes de sable et ses aventures en safari.",
   "@aboutwadielrayan": {
     "description": "Information about Wadi el rayan"
   },
-  "wadielrayantag0": "WATERFALLS",
+  "wadielrayant0": "CASCADES",
   "@wadielrayantag0": {
     "description": "first tag of Wadi el rayan"
   },
-  "wadielrayantag1": "DESERT",
+  "wadielrayant1": "DÉSERT",
   "@wadielrayantag1": {
     "description": "second tag of Wadi el rayan"
   },
-  "wadielrayantag2": "LAKES",
+  "wadielrayant2": "LACS",
   "@wadielrayantag2": {
     "description": "third tag of Wadi el rayan"
   },
@@ -597,7 +597,7 @@
   "@arabiataname": {
     "description": "name of arabiata"
   },
-  "aboutarabiata": "A popular Egyptian restaurant serving authentic foul, falafel, and traditional breakfast meals.",
+  "aboutarabiata": "Un restaurant égyptien populaire servant d'authentiques foul, falafels et petits-déjeuners traditionnels.",
   "@aboutarabiata": {
     "description": "about description of arabiata"
   },
@@ -605,7 +605,7 @@
   "@nasrcity": {
     "description": "location of arabiata"
   },
-  "arabiatatag0": "Breakfast",
+  "arabiatatag0": "PetitDéjeuner",
   "@arabiatatag0": {
     "description": "first tag of arabiata"
   },
@@ -621,19 +621,19 @@
   "@qasrelkababginame": {
     "description": "name of qasr-elkababgi"
   },
-  "aboutqasrelkababgi": "A renowned Egyptian restaurant chain celebrated for authentic oriental cuisine, traditional grills, and theatrical dining experiences",
+  "aboutqasrelkababgi": "Une chaîne de restaurants égyptiens de renom, célèbre pour sa cuisine orientale authentique, ses grillades traditionnelles et ses expériences culinaires spectaculaires.",
   "@aboutqasrelkababgi": {
     "description": "about description of qasr-elkababgi"
   },
-  "fifthsettlement": "Fifth Settlement",
+  "fifthsettlement": "Cinquième Établissement",
   "@fifthsettlement": {
     "description": "location of qasr-elkababgi"
   },
-  "qasrelkababgitag0": "Grills",
+  "qasrelkababgitag0": "Grillades",
   "@qasrelkababgitag0": {
     "description": "first tag of qasr-elkababgi"
   },
-  "qasrelkababgitag1": "Dining",
+  "qasrelkababgitag1": "Dîner",
   "@qasrelkababgitag1": {
     "description": "second tag of qasr-elkababgi"
   },
@@ -645,19 +645,19 @@
   "@baharyname": {
     "description": "name of bahary"
   },
-  "aboutbahary": "A modern seafood restaurant famous for grilled fish, seafood platters, and fresh Mediterranean flavors.",
+  "aboutbahary": "Un restaurant de fruits de mer moderne, célèbre pour ses poissons grillés, ses plateaux de fruits de mer et ses saveurs méditerranéennes fraîches.",
   "@aboutbahary": {
     "description": "about description of bahary"
   },
-  "baharytag0": "SeaFood",
+  "baharytag0": "FruitsDeMer",
   "@baharytag0": {
     "description": "first tag of bahary"
   },
-  "baharytag1": "Fresh",
+  "baharytag1": "Frais",
   "@baharytag1": {
     "description": "second tag of bahary"
   },
-  "baharytag2": "OceanFlavors",
+  "baharytag2": "SaveursMarines",
   "@baharytag2": {
     "description": "third tag of bahary"
   },
@@ -665,11 +665,11 @@
   "@koueidername": {
     "description": "name of koueider"
   },
-  "aboutkoueider": "One of Egypt’s oldest dessert shops, famous for oriental sweets and authentic Arabic pastries.",
+  "aboutkoueider": "L'une des plus anciennes pâtisseries d'Égypte, célèbre pour ses douceurs orientales et ses gâteaux arabes authentiques.",
   "@aboutkoueider": {
     "description": "about description of koueider"
   },
-  "heliopolis": "Heliopolis",
+  "heliopolis": "Héliopolis",
   "@heliopolis": {
     "description": "location of koueider"
   },
@@ -677,11 +677,11 @@
   "@koueidertag0": {
     "description": "first tag of koueider"
   },
-  "koueidertag1": "Ice Cream",
+  "koueidertag1": "Glace",
   "@koueidertag1": {
     "description": "second tag of koueider"
   },
-  "koueidertag2": "Sweets",
+  "koueidertag2": "Douceurs",
   "@koueidertag2": {
     "description": "third tag of koueider"
   },
@@ -689,27 +689,27 @@
   "@elmalkyname": {
     "description": "name of elmalky"
   },
-  "aboutelmalky": "A legendary Egyptian dessert destination known for rice pudding, ice cream, and classic sweets.",
+  "aboutelmalky": "Une enseigne de desserts égyptienne légendaire, connue pour son riz au lait, ses glaces et ses douceurs classiques.",
   "@aboutelmalky": {
     "description": "about description of elmalky"
   },
-  "mosquehassanname": "Mosque-Madrassa Sultan Hassan",
+  "mosquehassanname": "Mosquée-Madrassa du Sultan Hassan",
   "@mosquehassanname": {
     "description": "name of mosquesultanhassan "
   },
-  "aboutmosquehassan": "A magnificent Mamluk mosque famous for its grand Islamic architecture and historic spiritual atmosphere.",
+  "aboutmosquehassan": "Une magnifique mosquée mamelouke, célèbre pour sa grandiose architecture islamique et son atmosphère spirituelle historique.",
   "@aboutmosquehassan": {
     "description": "about description of mosquesultanhassan "
   },
-  "salaheldinlocation": "Salah El-Din Square, Islamic Cairo",
+  "salaheldinlocation": "Place Salah El-Din, Le Caire islamique",
   "@salaheldinlocation": {
     "description": "location of mosquesultanhassan "
   },
-  "mosquehassantag0": "Islamic",
+  "mosquehassantag0": "Islamique",
   "@mosquehassantag0": {
     "description": "first tag of mosquesultanhassan "
   },
-  "mosquehassantag1": "Mamluk",
+  "mosquehassantag1": "Mamelouk",
   "@mosquehassantag1": {
     "description": "second tag of mosquesultanhassan "
   },
@@ -717,87 +717,87 @@
   "@mosquehassantag2": {
     "description": "third tag of mosquesultanhassan "
   },
-  "saintcatherinemonasteryname": "Saint Catherine's Monastery",
+  "saintcatherinemonasteryname": "Monastère Sainte-Catherine",
   "@saintcatherinemonasteryname": {
     "description": "name of saintcatherinemonasteryname "
   },
-  "aboutsaintcatherinemonastery": "One of the oldest Christian monasteries in the world, located at the foot of Mount Sinai.",
+  "aboutsaintcatherinemonastery": "L'un des plus anciens monastères chrétiens au monde, situé au pied du mont Sinaï.",
   "@aboutsaintcatherinemonastery": {
     "description": "about description of saintcatherinemonasteryname "
   },
-  "mountsinailocation": "Mount Sinai, Saint Catherine",
+  "mountsinailocation": "Mont Sinaï, Sainte-Catherine",
   "@mountsinailocation": {
     "description": "location of saintcatherinemonasteryname "
   },
-  "southsinai": "South Sinai",
+  "southsinai": "Sinaï Sud",
   "@southsinai": {
     "description": "city of saintcatherinemonasteryname "
   },
-  "saintcatherinemonasterytag0": "Christian",
+  "saintcatherinemonasterytag0": "Chrétien",
   "@saintcatherinemonasterytag0": {
     "description": "first tag of saintcatherinemonasteryname "
   },
-  "saintcatherinemonasterytag1": "Monastery",
+  "saintcatherinemonasterytag1": "Monastère",
   "@saintcatherinemonasterytag1": {
     "description": "second tag of saintcatherinemonasteryname "
   },
-  "saintcatherinemonasterytag2": "Pilgrimage",
+  "saintcatherinemonasterytag2": "Pèlerinage",
   "@saintcatherinemonasterytag2": {
     "description": "third tag of saintcatherinemonasteryname "
   },
-  "mosqueofalhakimbiamrallahname": "Mosque of al-Hakim bi-Amr Allah",
+  "mosqueofalhakimbiamrallahname": "Mosquée d'al-Hakim bi-Amr Allah",
   "@mosqueofalhakimbiamrallahname": {
     "description": "name of mosqueofalhakimbiamrallah "
   },
-  "aboutmosqueofalhakimbiamrallah": "A historic Fatimid mosque known for its impressive architecture and spiritual importance in Islamic Cairo.",
+  "aboutmosqueofalhakimbiamrallah": "Une mosquée fatimide historique connue pour son architecture impressionnante et son importance spirituelle dans Le Caire islamique.",
   "@aboutmosqueofalhakimbiamrallah": {
     "description": "about description  of mosqueofalhakimbiamrallah "
   },
-  "almuizzstreetlocation": "Al-Muizz Street, Cairo",
+  "almuizzstreetlocation": "Rue Al-Muizz, Le Caire",
   "@almuizzstreetlocation": {
     "description": "location of mosqueofalhakimbiamrallah "
   },
-  "mosqueofalhakimbiamrallahtag0": "Fatimid",
+  "mosqueofalhakimbiamrallahtag0": "Fatimide",
   "@mosqueofalhakimbiamrallahtag0": {
     "description": "first tag of mosqueofalhakimbiamrallah "
   },
-  "mosqueofalhakimbiamrallahtag1": "Mosque",
+  "mosqueofalhakimbiamrallahtag1": "Mosquée",
   "@mosqueofalhakimbiamrallahtag1": {
     "description": "second tag of mosqueofalhakimbiamrallah "
   },
-  "mosqueofalhakimbiamrallahtag2": "Heritage",
+  "mosqueofalhakimbiamrallahtag2": "Patrimoine",
   "@mosqueofalhakimbiamrallahtag2": {
     "description": "third tag of mosqueofalhakimbiamrallah "
   },
-  "alhusseinmosquename": "Al-Hussein Mosque",
+  "alhusseinmosquename": "Mosquée Al-Hussein",
   "@alhusseinmosquename": {
     "description": "name of alhusseinmosque "
   },
-  "aboutalhusseinmosque": "One of Egypt’s most sacred mosques, located in the heart of historic Islamic Cairo near Khan El Khalili.",
+  "aboutalhusseinmosque": "L'une des mosquées les plus sacrées d'Égypte, située au cœur du Caire islamique historique, près de Khan El Khalili.",
   "@aboutalhusseinmosque": {
     "description": "about description of alhusseinmosque "
   },
-  "khanelkhalililocation": "Khan El Khalili, Islamic Cairo",
+  "khanelkhalililocation": "Khan El Khalili, Le Caire islamique",
   "@khanelkhalililocation": {
     "description": "location of alhusseinmosque "
   },
-  "alhusseinmosquetag0": "Islamic",
+  "alhusseinmosquetag0": "Islamique",
   "@alhusseinmosquetag0": {
     "description": "first tag of alhusseinmosque "
   },
-  "alhusseinmosquetag1": "Heritage",
+  "alhusseinmosquetag1": "Patrimoine",
   "@alhusseinmosquetag1": {
     "description": "second tag of alhusseinmosque "
   },
-  "alhusseinmosquetag2": "Landmark",
+  "alhusseinmosquetag2": "Monument",
   "@alhusseinmosquetag2": {
     "description": "third tag of alhusseinmosque "
   },
-  "alrifaimosquename": "Al-Rifa'i Mosque",
+  "alrifaimosquename": "Mosquée Al-Rifa'i",
   "@alrifaimosquename": {
     "description": "name of alhusseinmosque "
   },
-  "aboutalrifaimosque": "A royal mosque famous for its Ottoman-inspired architecture and the tombs of Egyptian royals.",
+  "aboutalrifaimosque": "Une mosquée royale célèbre pour son architecture d'inspiration ottomane et ses tombeaux de la famille royale égyptienne.",
   "@aboutalrifaimosque": {
     "description": "about description of alhusseinmosque "
   },
@@ -805,7 +805,7 @@
   "@alrifaimosquetag0": {
     "description": "first of alhusseinmosque "
   },
-  "alrifaimosquetag1": "Mosque",
+  "alrifaimosquetag1": "Mosquée",
   "@alrifaimosquetag1": {
     "description": "second tag of alhusseinmosque "
   },
@@ -813,15 +813,15 @@
   "@alrifaimosquetag2": {
     "description": "thrid tag of alhusseinmosque "
   },
-  "elmoattam": "ElMoattam",
+  "elmoattam": "El Moqattam",
   "@elmoattam": {
     "description": "location of elmalky"
   },
-  "elmalkytag0": "Traditional",
+  "elmalkytag0": "Traditionnel",
   "@elmalkytag0": {
     "description": "first tag of elmalky"
   },
-  "elmalkytag1": "Ice Cream",
+  "elmalkytag1": "Glace",
   "@elmalkytag1": {
     "description": "second tag of elmalky"
   },
@@ -830,30 +830,30 @@
     "description": "third tag of elmalky"
   },
   "menu": "Menu",
-  "manageProfile": "Manage Profile",
-  "changeLanguage": "Change Language",
-  "logout": "Logout",
-  "logoutConfirmTitle": "Logout",
-  "logoutConfirmMessage": "Are you sure you want to logout?",
-  "cancel": "Cancel",
-  "choosecategory": "Choose a category",
-  "changecategory": "Change category",
-  "egyptian": "Egyptian",
+  "manageProfile": "Gérer le profil",
+  "changeLanguage": "Changer de langue",
+  "logout": "Se déconnecter",
+  "logoutConfirmTitle": "Déconnexion",
+  "logoutConfirmMessage": "Êtes-vous sûr de vouloir vous déconnecter ?",
+  "cancel": "Annuler",
+  "choosecategory": "Choisir une catégorie",
+  "changecategory": "Changer de catégorie",
+  "egyptian": "Égyptien",
   "@egyptian": {
     "description": "Ticket price label for Egyptian visitors"
   },
-  "other": "Other",
+  "other": "Autre",
   "@other": {
     "description": "Ticket price label for non-Egyptian visitors"
   },
-  "closed": "Closed",
+  "closed": "Fermé",
   "@closed": {
     "description": "State indicating the place is not currently operating"
   },
-  "government": "GOVERNORATE",
-  "selectlang": "Select Language",
-  "selectgov": "Select Governorate",
-  "alexandria": "Alexandria",
+  "government": "GOUVERNORAT",
+  "selectlang": "Sélectionner la langue",
+  "selectgov": "Sélectionner le gouvernorat",
+  "alexandria": "Alexandrie",
   "@alexandria": {
     "description": "Governorate name"
   },
@@ -876,7 +876,7 @@
   "@gharbia": {
     "description": "Governorate name"
   },
-  "ismailia": "Ismailia",
+  "ismailia": "Ismaïlia",
   "@ismailia": {
     "description": "Governorate name"
   },
@@ -892,7 +892,7 @@
   "@qalyubia": {
     "description": "Governorate name"
   },
-  "newValley": "New Valley",
+  "newValley": "Nouvelle-Vallée",
   "@newValley": {
     "description": "Governorate name"
   },
@@ -903,7 +903,7 @@
   "@aswan": {
     "description": "Governorate name"
   },
-  "assiut": "Assiut",
+  "assiut": "Assiout",
   "@assiut": {
     "description": "Governorate name"
   },
@@ -911,11 +911,11 @@
   "@beniSuef": {
     "description": "Governorate name"
   },
-  "portSaid": "Port Said",
+  "portSaid": "Port-Saïd",
   "@portSaid": {
     "description": "Governorate name"
   },
-  "damietta": "Damietta",
+  "damietta": "Damiette",
   "@damietta": {
     "description": "Governorate name"
   },
@@ -923,15 +923,15 @@
   "@sharkia": {
     "description": "Governorate name"
   },
-  "southSinai": "South Sinai",
+  "southSinai": "Sinaï Sud",
   "@southSinai": {
     "description": "Governorate name"
   },
-  "kafrElSheikh": "Kafr El Sheikh",
+  "kafrElSheikh": "Kafr El-Sheikh",
   "@kafrElSheikh": {
     "description": "Governorate name"
   },
-  "matrouh": "Matrouh",
+  "matrouh": "Marsa Matrouh",
   "@matrouh": {
     "description": "Governorate name"
   },
@@ -942,7 +942,7 @@
   "@qena": {
     "description": "Governorate name"
   },
-  "northSinai": "North Sinai",
+  "northSinai": "Sinaï Nord",
   "@northSinai": {
     "description": "Governorate name"
   },
@@ -950,17 +950,17 @@
   "@sohag": {
     "description": "Governorate name"
   },
-  "goodmorning": "Good Morning",
-  "discover": "Discover",
-  "hidden": "hidden",
-  "treasures": "treasures",
-  "errorgetingdata": "Error fetching data",
-  "featuredplaces": "Featured places",
-  "handpickedplaces": "Hand-picked curation for your \njourney based on your city",
-  "nosavedplaces": "You haven't saved any places yet",
-  "novisitedplaces": "You haven't visited any places yet",
+  "goodmorning": "Bon matin",
+  "discover": "Découvrez",
+  "hidden": "les trésors",
+  "treasures": "cachés",
+  "errorgetingdata": "Erreur lors de la récupération des données",
+  "featuredplaces": "Lieux à la une",
+  "handpickedplaces": "Une sélection sur mesure pour votre \nvoyage selon votre ville",
+  "nosavedplaces": "Vous n'avez pas encore enregistré de lieux",
+  "novisitedplaces": "Vous n'avez pas encore visité de lieux",
   "resetemail": "Réinitialiser par e-mail",
   "sendresetemail": "Envoyer l'e-mail de réinitialisation",
-"resetemaildesc": "Entrez l'adresse e-mail liée à votre compte. Nous vous enverrons un lien pour réinitialiser votre mot de passe.",
+  "resetemaildesc": "Entrez l'adresse e-mail liée à votre compte. Nous vous enverrons un lien pour réinitialiser votre mot de passe.",
   "passwordsdontmatch": "Les mots de passe ne correspondent pas"
 }
