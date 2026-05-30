@@ -44,6 +44,7 @@
     "description": "Noun/Word: Used as a label for the password input field."
   },
   "continueJourney": "Continue Journey",
+  "continueButton" : "Continue",
   "@continueJourney": {
     "description": "Action Phrase: Button text to submit the sign-in form."
   },

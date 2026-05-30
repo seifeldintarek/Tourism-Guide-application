@@ -182,6 +182,12 @@ abstract class AppLocalizations {
   /// **'Continue Journey'**
   String get continueJourney;
 
+  /// No description provided for @continueButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue'**
+  String get continueButton;
+
   /// Sentence/Question: Link for password recovery.
   ///
   /// In en, this message translates to:

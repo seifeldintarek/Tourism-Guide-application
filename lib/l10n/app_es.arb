@@ -328,6 +328,8 @@
   "@failtostoreuser": {
     "description": "Action Phrase: error uploading user"
   },
+
+  "continueButton": "Continuar",
   
   "pwdhintyoussef": "Introduce tu contraseña",
   "languageTitle": "Idioma",

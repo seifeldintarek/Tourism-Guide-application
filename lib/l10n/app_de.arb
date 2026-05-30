@@ -16,6 +16,8 @@
   "@welcomeBackExplorer": {
     "description": "Sentence: Greeting message."
   },
+
+  "continueButton": "Weiter",
   
   "pwdhintyoussef": "Geben Sie Ihr Passwort ein",
   "emailAddress": "E-Mail-Adresse",

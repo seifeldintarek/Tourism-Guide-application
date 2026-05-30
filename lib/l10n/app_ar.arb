@@ -296,6 +296,8 @@
   "@alAzharMosque": {
     "description": "Landmark name (Phrase)"
   },
+
+  "continueButton": "متابعة",
   
   "pwdhintyoussef": "أدخل كلمة المرور",
   "islamicCairoEgypt": "القاهرة الإسلامية، مصر",

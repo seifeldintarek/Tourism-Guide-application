@@ -50,6 +50,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get continueJourney => 'Continue Journey';
 
   @override
+  String get continueButton => 'Continue';
+
+  @override
   String get forgotPassword => 'Forgot password?';
 
   @override

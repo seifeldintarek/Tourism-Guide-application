@@ -20,9 +20,8 @@ class _SplashScreenState extends State<SplashScreen> {
   void startApp() async {
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       await Future.delayed(const Duration(seconds: 1));
-
       if (!mounted) return;
-      initializeApp(context);
+      await initializeApp(context);
     });
   }
 
@@ -40,17 +39,14 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Spacer(),
-
+            const Spacer(),
             Image.asset(
               'assets/images/splash/splash_logo.png',
               width: width * 0.8,
               height: height * 0.4,
               fit: BoxFit.contain,
             ),
-
-            Spacer(),
-
+            const Spacer(),
             Text(
               lang.egypttourismguide,
               style: TextStyle(
@@ -60,7 +56,6 @@ class _SplashScreenState extends State<SplashScreen> {
                 letterSpacing: 0.5,
               ),
             ),
-
             SizedBox(height: height * 0.06),
           ],
         ),
