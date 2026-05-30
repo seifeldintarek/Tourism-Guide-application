@@ -264,6 +264,8 @@
   "@newCairoCairoEgypt": {
     "description": "Location (Phrase)"
   },
+  
+  "pwdhintyoussef": "Entrez votre mot de passe",
   "abouTarek": "Abou Tarek",
   "@abouTarek": {
     "description": "Restaurant name (Phrase)"

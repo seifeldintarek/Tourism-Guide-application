@@ -390,6 +390,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get passwordHint => 'عدّل كلمة المرور';
 
   @override
+  String get pwdhintyoussef => 'أدخل كلمة المرور';
+
+  @override
   String get orContinueWith => 'أو تابع باستخدام';
 
   @override

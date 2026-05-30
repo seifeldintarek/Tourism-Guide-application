@@ -8,15 +8,22 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:provider/provider.dart';
 
 Future<void> initializeApp(BuildContext context) async {
+  final navigator = Navigator.of(context);
+  final localeProvider = context.read<LocaleProvider>();
+
+  void goToLogin() {
+    navigator.pushAndRemoveUntil(
+      MaterialPageRoute(builder: (_) => const Login()),
+      (route) => false,
+    );
+  }
+
   final user = FirebaseAuth.instance.currentUser;
 
   if (user == null) {
     await AppUser.clearCache();
-    Navigator.pushAndRemoveUntil(
-      context,
-      MaterialPageRoute(builder: (context) => const Login()),
-      (route) => false,
-    );
+    if (!context.mounted) return;
+    goToLogin();
     return;
   }
 
@@ -29,32 +36,24 @@ Future<void> initializeApp(BuildContext context) async {
         .get();
 
     appUser = AppUser.fromMap(doc.data()!);
-
-    context.read<LocaleProvider>().setLocale(appUser.language as Locale);
-
     await appUser.saveToCache();
   } catch (e) {
-    print("Firestore fetch failed, trying cache: $e");
-
+    debugPrint('Firestore fetch failed, trying cache: $e');
     appUser = await AppUser.loadFromCache();
   }
 
-  if (appUser == null) {
-    Navigator.pushAndRemoveUntil(
-      context,
-      MaterialPageRoute(builder: (context) => const Login()),
-      (route) => false,
-    );
+  if (!context.mounted) return;
+
+  final loadedUser = appUser;
+  if (loadedUser == null) {
+    goToLogin();
     return;
   }
 
-  context.read<LocaleProvider>().setLocale(
-    Locale(appUser.language.toLowerCase()),
-  );
+  localeProvider.setLocale(Locale(loadedUser.language.toLowerCase()));
 
-  Navigator.pushAndRemoveUntil(
-    context,
-    MaterialPageRoute(builder: (context) => Footer(user: appUser!)),
+  navigator.pushAndRemoveUntil(
+    MaterialPageRoute(builder: (_) => Footer(user: loadedUser)),
     (route) => false,
   );
 }

@@ -860,6 +860,12 @@ abstract class AppLocalizations {
   /// **'Edit your password'**
   String get passwordHint;
 
+  /// No description provided for @pwdhintyoussef.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your password'**
+  String get pwdhintyoussef;
+
   /// No description provided for @orContinueWith.
   ///
   /// In en, this message translates to:

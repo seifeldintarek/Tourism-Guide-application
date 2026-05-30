@@ -389,6 +389,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get passwordHint => 'Edit your password';
 
   @override
+  String get pwdhintyoussef => 'Enter your password';
+
+  @override
   String get orContinueWith => 'OR CONTINUE WITH';
 
   @override

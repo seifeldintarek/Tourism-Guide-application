@@ -403,6 +403,7 @@
   "@fullNameHint": {
     "description": "Hint or placeholder text for the full name input field (Name)"
   },
+  "pwdhintyoussef" : "Enter your password",
   "orContinueWith": "OR CONTINUE WITH",
 "enterPassword": "Please enter your password",
   "password8charserror" : "Password must be at least 8 characters",

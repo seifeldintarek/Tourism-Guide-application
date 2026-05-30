@@ -391,6 +391,9 @@ class AppLocalizationsEs extends AppLocalizations {
   String get passwordHint => 'Edita tu contraseña';
 
   @override
+  String get pwdhintyoussef => 'Introduce tu contraseña';
+
+  @override
   String get orContinueWith => 'O CONTINUAR CON';
 
   @override

@@ -392,6 +392,9 @@ class AppLocalizationsDe extends AppLocalizations {
   String get passwordHint => 'Bearbeite dein Passwort';
 
   @override
+  String get pwdhintyoussef => 'Geben Sie Ihr Passwort ein';
+
+  @override
   String get orContinueWith => 'ODER FORTFAHREN MIT';
 
   @override

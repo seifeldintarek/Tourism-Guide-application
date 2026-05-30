@@ -50,7 +50,6 @@ class _Category_ScreenState extends State<Category_Screen> {
                   left: width * .02,
                   child: Text(
                     lang.getByKey(widget.category.name).toUpperCase(),
-                    // widget.category.name.toUpperCase(),
                     style: TextStyle(
                       color: Colors.white,
                       fontFamily: "Serif",
