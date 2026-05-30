@@ -118,7 +118,7 @@ class _SavedCardSkeleton extends StatelessWidget {
 
           // Chevron placeholder
           Padding(
-            padding: EdgeInsets.only(left: smallGap),
+            padding: EdgeInsets.symmetric(horizontal: smallGap),
             child: _box(w: width * 0.04, h: height * 0.025, radius: 4),
           ),
         ],

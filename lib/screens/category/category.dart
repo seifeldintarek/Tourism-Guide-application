@@ -76,7 +76,7 @@ class _Category_ScreenState extends State<Category_Screen> {
             ),
 
             Container(
-              margin: EdgeInsets.only(left: width * .05),
+              margin: EdgeInsets.symmetric(horizontal: width * .05),
               height: height * .04,
               width: width * .15,
               decoration: BoxDecoration(

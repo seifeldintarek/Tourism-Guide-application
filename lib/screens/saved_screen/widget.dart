@@ -83,7 +83,7 @@ class PlaceCard extends StatelessWidget {
 
               // Chevron
               Padding(
-                padding: EdgeInsets.only(left: smallGap),
+                padding: EdgeInsets.symmetric(horizontal: smallGap),
                 child: Icon(
                   Icons.chevron_right_rounded,
                   color: const Color(0xFFBBB5AF),
