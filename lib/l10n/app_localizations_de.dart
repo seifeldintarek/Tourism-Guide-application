@@ -51,6 +51,9 @@ class AppLocalizationsDe extends AppLocalizations {
   String get continueJourney => 'Reise fortsetzen';
 
   @override
+  String get continueButton => 'Weiter';
+
+  @override
   String get forgotPassword => 'Passwort vergessen?';
 
   @override
@@ -390,6 +393,9 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get passwordHint => 'Bearbeite dein Passwort';
+
+  @override
+  String get pwdhintyoussef => 'Geben Sie Ihr Passwort ein';
 
   @override
   String get orContinueWith => 'ODER FORTFAHREN MIT';

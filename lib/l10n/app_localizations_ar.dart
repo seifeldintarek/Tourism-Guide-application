@@ -50,6 +50,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get continueJourney => 'متابعة الرحلة';
 
   @override
+  String get continueButton => 'متابعة';
+
+  @override
   String get forgotPassword => 'هل نسيت كلمة المرور؟';
 
   @override
@@ -388,6 +391,9 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get passwordHint => 'عدّل كلمة المرور';
+
+  @override
+  String get pwdhintyoussef => 'أدخل كلمة المرور';
 
   @override
   String get orContinueWith => 'أو تابع باستخدام';

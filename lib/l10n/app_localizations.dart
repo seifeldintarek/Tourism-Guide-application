@@ -182,6 +182,12 @@ abstract class AppLocalizations {
   /// **'Continue Journey'**
   String get continueJourney;
 
+  /// No description provided for @continueButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue'**
+  String get continueButton;
+
   /// Sentence/Question: Link for password recovery.
   ///
   /// In en, this message translates to:
@@ -859,6 +865,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Edit your password'**
   String get passwordHint;
+
+  /// No description provided for @pwdhintyoussef.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your password'**
+  String get pwdhintyoussef;
 
   /// No description provided for @orContinueWith.
   ///

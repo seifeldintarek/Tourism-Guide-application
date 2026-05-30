@@ -79,12 +79,13 @@ Widget categories({
   required double width,
   required AppLocalizations lang,
 }) {
-  List<String> categories = [
-    lang.heritage,
-    lang.nature,
-    lang.spiritual,
-    lang.food,
+  final List<({String key, String label})> categories = [
+    (key: 'heritage',  label: lang.heritage),
+    (key: 'nature',    label: lang.nature),
+    (key: 'spiritual', label: lang.spiritual),
+    (key: 'food',      label: lang.food),
   ];
+
 
   return ListView.separated(
     scrollDirection: Axis.horizontal,
@@ -95,7 +96,7 @@ Widget categories({
       return Default.Button(
         onPressed: () async {
           Category? category = await fetchCategory(
-            categoryName: categories[i],
+            categoryName: categories[i].key,
             context: context,
             lang: lang,
           );
@@ -109,7 +110,7 @@ Widget categories({
             ),
           );
         },
-        child: categories[i],
+        child: categories[i].label,
         width: width * .4,
         height: height * .05,
       );

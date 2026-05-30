@@ -328,6 +328,10 @@
   "@failtostoreuser": {
     "description": "Action Phrase: error uploading user"
   },
+
+  "continueButton": "Continuar",
+  
+  "pwdhintyoussef": "Introduce tu contraseña",
   "languageTitle": "Idioma",
   "@languageTitle": {
     "description": "App bar title for the language selection screen (Word)"

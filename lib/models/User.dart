@@ -66,7 +66,7 @@ class AppUser {
       fullName: map["fullName"] ?? "",
       email: map["email"] ?? "",
       language: map["language"] ?? "",
-      password: map["hashedPassword"] ?? "",
+      password: map["password"] ?? "",
       city: map["city"] ?? "",
       joinedAt: parsedJoinedAt,
       profilePictureUrl: map["profilePictureUrl"],
@@ -106,4 +106,14 @@ class AppUser {
 
     await user.saveToCache();
   }
+
+  static Future<void> updateCachedLanguage(String language) async {
+  final prefs = await SharedPreferences.getInstance();
+  final cachedUser = prefs.getString(cacheKey);
+  if (cachedUser == null) return;
+
+  final Map<String, dynamic> userMap = jsonDecode(cachedUser);
+  userMap['language'] = language;
+  await prefs.setString(cacheKey, jsonEncode(userMap));
+}
 }

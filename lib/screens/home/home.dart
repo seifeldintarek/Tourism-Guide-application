@@ -74,7 +74,7 @@ class _Home_ScreenState extends State<Home_Screen> {
             SizedBox(height: height * .03),
 
             Container(
-              margin: EdgeInsets.only(left: width * .06),
+              margin: EdgeInsets.symmetric(horizontal: width * .06),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -103,7 +103,7 @@ class _Home_ScreenState extends State<Home_Screen> {
             SizedBox(height: height * .03),
 
             Container(
-              margin: EdgeInsets.only(left: width * .03),
+              margin: EdgeInsets.symmetric(horizontal: width * .03),
               height: height * .4,
               width: width,
               child: isLoading

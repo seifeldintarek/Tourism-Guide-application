@@ -94,7 +94,7 @@ Widget passwordTextfield(
         validator: (value) => validatePassword(value, lang),
         autovalidateMode: AutovalidateMode.onUserInteraction,
         decoration: InputDecoration(
-          hintText: lang.passwordHint,
+          hintText: lang.pwdhintyoussef,
           hintStyle: const TextStyle(color: Colors.black38),
           filled: true,
           fillColor: const Color(0xFFEDE4D8),

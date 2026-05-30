@@ -16,6 +16,10 @@
   "@welcomeBackExplorer": {
     "description": "Sentence: Greeting message."
   },
+
+  "continueButton": "Weiter",
+  
+  "pwdhintyoussef": "Geben Sie Ihr Passwort ein",
   "emailAddress": "E-Mail-Adresse",
   "@emailAddress": {
     "description": "Noun/Word: Used as a label for the email input field."
