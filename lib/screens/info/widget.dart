@@ -77,7 +77,7 @@ class _MainImageHeaderState extends State<MainImageHeader> {
     _userId = user.id;
     final bool saved = await SavedPlacesService.isPlaceSaved(
       userId: user.id,
-      placeId: widget.place.name.toLowerCase(),
+      placeId: widget.place.id,
     );
     if (mounted) setState(() => _isSaved = saved);
   }

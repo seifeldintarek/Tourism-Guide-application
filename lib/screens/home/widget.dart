@@ -186,7 +186,7 @@ class _PlaceHomeCardState extends State<PlaceHomeCard> {
 
     final saved = await SavedPlacesService.isPlaceSaved(
       userId: user.id,
-      placeId: widget.place.name.toLowerCase(),
+      placeId: widget.place.id,
     );
 
     if (mounted) {

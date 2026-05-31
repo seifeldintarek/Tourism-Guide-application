@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_application_1/models/Place.dart';
 import 'package:flutter_application_1/models/User.dart';
 
-// ── User stream ───────────────────────────────────────────────────────────────
+
 Stream<AppUser> userStream(String userId) {
   return FirebaseFirestore.instance
       .collection('users')
@@ -11,7 +11,6 @@ Stream<AppUser> userStream(String userId) {
       .map((doc) => AppUser.fromMap(doc.data() as Map<String, dynamic>));
 }
 
-// ── Visited places stream ─────────────────────────────────────────────────────
 Stream<List<Place>> visitedPlacesStream(String userId) {
   return FirebaseFirestore.instance
       .collection('users')
@@ -22,7 +21,6 @@ Stream<List<Place>> visitedPlacesStream(String userId) {
           snapshot.docs.map((doc) => Place.fromMap(doc.data())).toList());
 }
 
-// ── Saved places stream ───────────────────────────────────────────────────────
 Stream<List<Place>> savedPlacesStream(String userId) {
   return FirebaseFirestore.instance
       .collection('users')
@@ -31,4 +29,13 @@ Stream<List<Place>> savedPlacesStream(String userId) {
       .snapshots()
       .map((snapshot) =>
           snapshot.docs.map((doc) => Place.fromMap(doc.data())).toList());
+}
+
+Future<void> savePlace(String userId, Place place) {
+  return FirebaseFirestore.instance
+      .collection('users')
+      .doc(userId)
+      .collection('saved')
+      .doc(place.id)
+      .set(Place.toMap(place));
 }

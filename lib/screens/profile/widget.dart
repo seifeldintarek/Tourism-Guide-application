@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/default.dart';
 import 'package:flutter_application_1/l10n/app_localizations.dart';
 import 'package:flutter_application_1/models/Place.dart';
-import 'package:flutter_application_1/root/themes.dart';
 import 'package:flutter_application_1/screens/edit_profile/service.dart';
 import 'package:flutter_application_1/screens/info/info.dart';
+import 'package:flutter_application_1/screens/profile/service.dart';
+import 'package:flutter_application_1/root/themes.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
-// ── Tab button ────────────────────────────────────────────────────────────────
 Widget buildTabButton({
   required String label,
   required bool isSelected,
@@ -44,7 +45,7 @@ Widget buildTabButton({
   );
 }
 
-// ── Empty state ───────────────────────────────────────────────────────────────
+//Empty state 
 Widget buildEmptyState({required IconData icon, required String message}) {
   return Padding(
     padding: const EdgeInsets.symmetric(vertical: 32),
@@ -67,85 +68,148 @@ Widget buildEmptyState({required IconData icon, required String message}) {
   );
 }
 
-// ── Place card ────────────────────────────────────────────────────────────────
-Widget buildPlaceCard({
-  required BuildContext context,
-  required Place place,
-  bool isBookmarked = false,
-  required String id,
-  required double width,
-  required double height,
-}) {
-  return Container(
-    padding: const EdgeInsets.all(12),
-    decoration: BoxDecoration(
-      color: const Color(0xFFF7F4EF),
-      borderRadius: BorderRadius.circular(12),
-    ),
-    child: Row(
-      children: [
-        ClipRRect(
-          borderRadius: BorderRadius.circular(10),
-          child: CachedNetworkImage(
-            imageUrl: place.mainImage,
-            width: width * 0.16,
-            height: height * 0.08,
-            fit: BoxFit.cover,
-            placeholder: (context, url) => Container(
-              width: width * 0.16,
-              height: height * 0.08,
-              color: Colors.grey.shade200,
-              child: Center(child: CircularProgressIndicator(strokeWidth: 2)),
-            ),
-            errorWidget: (context, url, error) => Container(
-              width: width * 0.16,
-              height: height * 0.08,
-              color: Colors.grey.shade200,
-              child: Icon(Icons.image_not_supported, size: 24),
-            ),
-          ),
-        ),
-        SizedBox(width: width * 0.04),
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                AppLocalizations.of(context)!.getByKey(place.name),
-                style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                  color: NudePalette.nudeDark,
-                ),
-              ),
-              SizedBox(height: height * 0.005),
-              Text(
-                '${AppLocalizations.of(context)!.getByKey(place.location)} • ${AppLocalizations.of(context)!.getByKey(place.city)}',
-                style: TextStyle(
-                  fontSize: 9,
-                  fontWeight: FontWeight.w600,
-                  color: NudePalette.nudeBrown,
-                  letterSpacing: 0.8,
-                ),
-              ),
-            ],
-          ),
-        ),
-        IconButton(
-          icon: Icon(
-            isBookmarked ? Icons.bookmark : Icons.bookmark_border,
-            color: isBookmarked ? Default.buttonColor : NudePalette.nudeDark,
-          ),
-          onPressed: () async {
-            await deleteSavedPlace(id, place.id);
-          },
-        ),
-      ],
-    ),
-  );
+
+class PlaceCard extends StatefulWidget {
+  final Place place;
+  final bool isBookmarked;
+  final String id;
+  final double width;
+  final double height;
+  final bool isVisitedTab;
+
+  const PlaceCard({
+    super.key,
+    required this.place,
+    required this.id,
+    required this.width,
+    required this.height,
+    this.isBookmarked = false,
+    this.isVisitedTab = false,
+  });
+
+  @override
+  State<PlaceCard> createState() => _PlaceCardState();
 }
 
-// ── Places list ───────────────────────────────────────────────────────────────
+class _PlaceCardState extends State<PlaceCard> {
+  bool _saved = false;
+  bool _loading = true;
+
+  @override
+  void initState() {
+    super.initState();
+    if (widget.isVisitedTab) {
+      _checkIfSaved();
+    } else {
+      _saved = widget.isBookmarked;
+      _loading = false;
+    }
+  }
+
+  Future<void> _checkIfSaved() async {
+    final doc = await FirebaseFirestore.instance
+        .collection('users')
+        .doc(widget.id)
+        .collection('saved')
+        .doc(widget.place.id)
+        .get();
+    if (mounted) {
+      setState(() {
+        _saved = doc.exists;
+        _loading = false;
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: const Color(0xFFF7F4EF),
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Row(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(10),
+            child: CachedNetworkImage(
+              imageUrl: widget.place.mainImage,
+              width: widget.width * 0.16,
+              height: widget.height * 0.08,
+              fit: BoxFit.cover,
+              placeholder: (context, url) => Container(
+                width: widget.width * 0.16,
+                height: widget.height * 0.08,
+                color: Colors.grey.shade200,
+                child: const Center(
+                  child: CircularProgressIndicator(strokeWidth: 2),
+                ),
+              ),
+              errorWidget: (context, url, error) => Container(
+                width: widget.width * 0.16,
+                height: widget.height * 0.08,
+                color: Colors.grey.shade200,
+                child: const Icon(Icons.image_not_supported, size: 24),
+              ),
+            ),
+          ),
+          SizedBox(width: widget.width * 0.04),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  AppLocalizations.of(context)!.getByKey(widget.place.name),
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                    color: NudePalette.nudeDark,
+                  ),
+                ),
+                SizedBox(height: widget.height * 0.005),
+                Text(
+                  '${AppLocalizations.of(context)!.getByKey(widget.place.location)} • ${AppLocalizations.of(context)!.getByKey(widget.place.city)}',
+                  style: TextStyle(
+                    fontSize: 9,
+                    fontWeight: FontWeight.w600,
+                    color: NudePalette.nudeBrown,
+                    letterSpacing: 0.8,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          _loading
+              ? const SizedBox(
+                  width: 24,
+                  height: 24,
+                  child: CircularProgressIndicator(strokeWidth: 2),
+                )
+              : IconButton(
+                  icon: Icon(
+                    _saved ? Icons.bookmark : Icons.bookmark_border,
+                    color: _saved ? Default.buttonColor : NudePalette.nudeDark,
+                  ),
+                  onPressed: () async {
+                    if (widget.isVisitedTab) {
+                      if (_saved) {
+                        await deleteSavedPlace(widget.id, widget.place.id);
+                      } else {
+                        await savePlace(widget.id, widget.place);
+                      }
+                      setState(() => _saved = !_saved);
+                    } else {
+                      await deleteSavedPlace(widget.id, widget.place.id);
+                    }
+                  },
+                ),
+        ],
+      ),
+    );
+  }
+}
+
 Widget buildPlacesList({
   required BuildContext context,
   required List<Place> places,
@@ -153,6 +217,7 @@ Widget buildPlacesList({
   bool isBookmarked = false,
   required String id,
   required double width,
+  bool isVisitedTab = false,
 }) {
   return ListView.separated(
     shrinkWrap: true,
@@ -163,24 +228,21 @@ Widget buildPlacesList({
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(
-            builder: (_) => Infoscreen(place: places[index]),
-          ),
+          MaterialPageRoute(builder: (_) => Infoscreen(place: places[index])),
         );
       },
-      child: buildPlaceCard(
-        context: context,
+      child: PlaceCard(
         place: places[index],
         isBookmarked: isBookmarked,
         id: id,
         width: width,
         height: height,
+        isVisitedTab: isVisitedTab,
       ),
     ),
   );
 }
 
-// ── Stat column ───────────────────────────────────────────────────────────────
 Widget buildStatColumn(String number, String label, double height) {
   return Column(
     children: [
