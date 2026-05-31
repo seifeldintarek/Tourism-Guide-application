@@ -23,14 +23,9 @@ class _InfoscreenState extends State<Infoscreen> {
 
     if (user != null) {
       await VisitedService.addVisitedPlace(
-        uid: user.uid,
-        id: widget.place.id,
-        name: widget.place.name,
-        city: widget.place.city,
-        category: widget.place.category,
-        mainImage: widget.place.mainImage,
-        location: widget.place.location,
-      );
+      uid: user.uid,
+      place: widget.place,
+    );
     }
 
     Default.navigateToExternalUrl(widget.place.bookingUrl);

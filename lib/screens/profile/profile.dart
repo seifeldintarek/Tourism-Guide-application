@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/default.dart';
 import 'package:flutter_application_1/models/Place.dart';
 import 'package:flutter_application_1/models/User.dart';
-import 'package:flutter_application_1/screens/edit_profile/edit_profile.dart';
 import 'package:flutter_application_1/l10n/app_localizations.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:intl/intl.dart';
 import 'service.dart';
 import 'widget.dart';
 
@@ -28,6 +26,7 @@ class _ProfileState extends State<Profile> {
     required String emptyMessage,
     required double height,
     bool isBookmarked = false,
+    bool isVisitedTab = false,
   }) {
     return StreamBuilder<List<Place>>(
       stream: stream,
@@ -63,6 +62,7 @@ class _ProfileState extends State<Profile> {
           isBookmarked: isBookmarked,
           id: widget.user.id,
           width: MediaQuery.of(context).size.width,
+          isVisitedTab: isVisitedTab,
         );
       },
     );
@@ -152,6 +152,7 @@ class _ProfileState extends State<Profile> {
                                 emptyIcon: Icons.explore_outlined,
                                 emptyMessage: lang.novisitedplaces,
                                 height: height,
+                                isVisitedTab: true,
                               )
                             else
                               _buildPlacesTab(

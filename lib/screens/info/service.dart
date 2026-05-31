@@ -1,30 +1,21 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter_application_1/models/Place.dart';
 
 class VisitedService {
   static final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
   static Future<void> addVisitedPlace({
     required String uid,
-    required String id,
-    required String name,
-    required String city,
-    required String category,
-    required String mainImage,
-    required String location,
+    required Place place,
   }) async {
+    final map = Place.toMap(place);
+    map['visitedAt'] = FieldValue.serverTimestamp();
+
     await _firestore
         .collection('users')
         .doc(uid)
         .collection('visited')
-        .doc(id)
-        .set({
-          'id': id,
-          'name': name,
-          'city': city,
-          'category': category,
-          'mainImage': mainImage,
-          'location': location,
-          'visitedAt': FieldValue.serverTimestamp(),
-        }, SetOptions(merge: true));
+        .doc(place.id)
+        .set(map, SetOptions(merge: true));
   }
 }
