@@ -33,7 +33,6 @@ class _Home_ScreenState extends State<Home_Screen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     fetchFeaturedPlaces();
   }

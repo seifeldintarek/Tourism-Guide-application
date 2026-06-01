@@ -5,10 +5,6 @@ import 'package:flutter_application_1/l10n/app_localizations.dart';
 import 'package:flutter_application_1/models/Category.dart';
 import 'package:flutter_application_1/models/Place.dart';
 
-// ─────────────────────────────────────────────────────────────────────────────
-//  General DB helpers
-// ─────────────────────────────────────────────────────────────────────────────
-
 Future<Category?> fetchCategory({
   required String categoryName,
   required BuildContext context,
@@ -50,15 +46,6 @@ Future<List<Place>> fetchFeaturedPlacesFromDB({required String city}) async {
   return places;
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-//  SavedPlacesService
-//
-//  Firestore path:  users/{userId}/saved/{place.id}
-//
-//  Documents are written with Place.toMap() so they can be read back with
-//  Place.fromMap() — no separate model needed.
-//  A `savedAt` server timestamp is appended for ordering.
-// ─────────────────────────────────────────────────────────────────────────────
 
 class SavedPlacesService {
   static final FirebaseFirestore _db = FirebaseFirestore.instance;
@@ -66,24 +53,6 @@ class SavedPlacesService {
   static CollectionReference<Map<String, dynamic>> _savedCol(String userId) =>
       _db.collection('users').doc(userId).collection('saved');
 
-  // ── READ ──────────────────────────────────────────────────────────────────
-
-  /// Returns all saved [Place]s for [userId], ordered most-recent first.
-  /// Returns `[]` when empty, `null` on error.
-  static Future<List<Place>?> getSavedPlaces(String userId) async {
-    try {
-      final snapshot = await _savedCol(
-        userId,
-      ).orderBy('savedAt', descending: true).get();
-
-      return snapshot.docs.map((doc) => Place.fromMap(doc.data())).toList();
-    } catch (e) {
-      debugPrint('[SavedPlacesService] getSavedPlaces error: $e');
-      return null;
-    }
-  }
-
-  /// Returns `true` if [placeId] exists in the user's saved collection.
   static Future<bool> isPlaceSaved({
     required String userId,
     required String placeId,
@@ -97,11 +66,7 @@ class SavedPlacesService {
     }
   }
 
-  // ── WRITE ─────────────────────────────────────────────────────────────────
 
-  /// Saves [place] under `users/{userId}/saved/{place.id}`.
-  /// The "saved" sub-collection is created automatically on first write.
-  /// Returns `true` on success, `false` on error.
   static Future<bool> savePlace({
     required String userId,
     required Place place,
@@ -119,8 +84,7 @@ class SavedPlacesService {
     }
   }
 
-  /// Removes [placeId] from `users/{userId}/saved`.
-  /// Returns `true` on success, `false` on error.
+
   static Future<bool> unsavePlace({
     required String userId,
     required String placeId,
@@ -135,8 +99,6 @@ class SavedPlacesService {
     }
   }
 
-  /// Checks current state then saves or removes [place].
-  /// Returns the new saved state: `true` = saved, `false` = unsaved.
   static Future<bool> toggleSave({
     required String userId,
     required Place place,

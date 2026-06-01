@@ -258,8 +258,8 @@ class _PlaceHomeCardState extends State<PlaceHomeCard> {
                 ),
 
                 Positioned(
-                  top: 10,
-                  right: 10,
+                  top: widget.height * .01,
+                  right: widget.width * .01,
                   child: GestureDetector(
                     onTap: _toggleSave,
                     child: Container(
@@ -303,24 +303,24 @@ class _PlaceHomeCardState extends State<PlaceHomeCard> {
                           ),
                         ),
 
-                        const SizedBox(height: 4),
+                        SizedBox(height: widget.height * .005),
 
                         Row(
                           children: [
-                            const Icon(
+                            Icon(
                               Icons.location_on_outlined,
                               size: 12,
                               color: Colors.black54,
                             ),
 
-                            const SizedBox(width: 3),
+                            SizedBox(width: widget.width * .01),
 
                             Expanded(
                               child: Text(
                                 "${lang.getByKey(widget.place.location)}, ${lang.getByKey(widget.place.city)}",
                                 maxLines: 1,
                                 overflow: TextOverflow.ellipsis,
-                                style: const TextStyle(
+                                style:  TextStyle(
                                   fontSize: 11,
                                   color: Colors.black54,
                                 ),
@@ -333,9 +333,9 @@ class _PlaceHomeCardState extends State<PlaceHomeCard> {
                   ),
 
                   Container(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 8,
-                      vertical: 4,
+                    padding:  EdgeInsets.symmetric(
+                      horizontal: widget.width * .02,
+                      vertical: widget.height * .01,
                     ),
                     decoration: BoxDecoration(
                       color: const Color(0xFFF4DDC8),
@@ -345,7 +345,7 @@ class _PlaceHomeCardState extends State<PlaceHomeCard> {
                       children: [
                         const Icon(Icons.star, size: 11, color: Colors.brown),
 
-                        const SizedBox(width: 3),
+                        SizedBox(width: widget.width * .01),
 
                         Text(
                           NumberFormat(

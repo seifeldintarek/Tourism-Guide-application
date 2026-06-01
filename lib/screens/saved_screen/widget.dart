@@ -4,9 +4,6 @@ import 'package:flutter_application_1/models/Place.dart';
 import 'package:flutter_application_1/root/themes.dart';
 import 'package:flutter_application_1/screens/info/info.dart';
 
-// ─────────────────────────────────────────────────────────────────────────────
-//  PlaceCard  — card row in the saved places list
-// ─────────────────────────────────────────────────────────────────────────────
 
 class PlaceCard extends StatelessWidget {
   final Place place;
@@ -98,9 +95,6 @@ class PlaceCard extends StatelessWidget {
   }
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-//  PlaceThumbnail
-// ─────────────────────────────────────────────────────────────────────────────
 
 class PlaceThumbnail extends StatelessWidget {
   final String imageUrl;
@@ -148,10 +142,6 @@ class PlaceThumbnail extends StatelessWidget {
   );
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-//  EmptyPlacesView
-// ─────────────────────────────────────────────────────────────────────────────
-
 class EmptyPlacesView extends StatelessWidget {
   final double bodyFontSize;
   final double labelFontSize;
@@ -195,10 +185,6 @@ class EmptyPlacesView extends StatelessWidget {
     );
   }
 }
-
-// ─────────────────────────────────────────────────────────────────────────────
-//  ErrorPlacesView
-// ─────────────────────────────────────────────────────────────────────────────
 
 class ErrorPlacesView extends StatelessWidget {
   final double bodyFontSize;
