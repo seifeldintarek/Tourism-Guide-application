@@ -6,14 +6,10 @@ import 'package:flutter_application_1/screens/language/languages.dart';
 import 'package:flutter_application_1/screens/settings/widget.dart';
 import 'package:flutter_application_1/screens/reset_password/reset_password.dart'; //till manage profile is added
 
-class Hamburger extends StatefulWidget {
-  Hamburger({super.key, required this.user});
-  AppUser user;
-  @override
-  State<Hamburger> createState() => _HamburgerState();
-}
+class Hamburger extends StatelessWidget {
+  final AppUser user;
+  const Hamburger({super.key, required this.user});
 
-class _HamburgerState extends State<Hamburger> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width,
@@ -62,7 +58,7 @@ class _HamburgerState extends State<Hamburger> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (_) => EditProfile(user: widget.user),
+                    builder: (_) => EditProfile(user: user),
                   ),
                 );
               },
@@ -102,7 +98,7 @@ class _HamburgerState extends State<Hamburger> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (_) => ResetPassword(user: widget.user),
+                    builder: (_) => ResetPassword(user: user),
                   ),
                 );
               },
