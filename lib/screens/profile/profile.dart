@@ -18,7 +18,7 @@ class Profile extends StatefulWidget {
 
 class _ProfileState extends State<Profile> {
   int _selectedTab = 0; // 0 = Visited, 1 = Saved
-  int _visitedCount = 0; // add this
+  int _visitedCount = 0;
   int _savedCount = 0;
   Widget _buildPlacesTab({
     required Stream<List<Place>> stream,

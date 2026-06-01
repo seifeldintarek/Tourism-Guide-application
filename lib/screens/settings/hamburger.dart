@@ -43,7 +43,7 @@ class _HamburgerState extends State<Hamburger> {
 
             const Divider(height: 1, color: Color(0xFFD8CFC5)),
 
-            // ── Manage Profile ─────────────────────────────────────────────
+            // Manage Profile
             ListTile(
               leading: const Icon(
                 Icons.person_outline,
@@ -68,7 +68,7 @@ class _HamburgerState extends State<Hamburger> {
               },
             ),
 
-            // ── Change Language ────────────────────────────────────────────
+            //Change Language
             ListTile(
               leading: const Icon(Icons.language, color: Color(0xFF463427)),
               title: Text(
@@ -111,7 +111,7 @@ class _HamburgerState extends State<Hamburger> {
 
             const Divider(height: 1, color: Color(0xFFD8CFC5)),
 
-            // ── Logout ─────────────────────────────────────────────────────
+            //Logout 
             ListTile(
               leading: const Icon(Icons.logout, color: Colors.redAccent),
               title: Text(
